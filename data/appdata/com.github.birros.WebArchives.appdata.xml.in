@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+    <id>com.github.birros.WebArchives.desktop</id>
+    <license>CC0</license>
+    <project_license>GPL-3.0+</project_license>
+    <name>Web archives</name>
+    <summary>Web archives viewer</summary>
+    <description>
+        <p>
+            A Web archives viewer, featuring tight integration with the desktop.
+        </p>
+    </description>
+    <screenshots>
+        <screenshot type="default">
+            <image width="800" height="450">http://localhost:7899/home.png</image>
+        </screenshot>
+        <screenshot>
+            <image width="800" height="450">http://localhost:7899/web-wikipedia.png</image>
+        </screenshot>
+        <screenshot>
+            <image width="800" height="450">http://localhost:7899/search.png</image>
+        </screenshot>
+        <screenshot>
+            <image width="800" height="450">http://localhost:7899/web-earth.png</image>
+        </screenshot>
+    </screenshots>
+    <url type="homepage">https://github.com/birros/web-archives</url>
+    <url type="bugtracker">https://github.com/birros/web-archives/issues</url>
+    <url type="donation"></url>
+    <url type="help"></url>
+    <url type="translate"></url>
+    <translation type="gettext">web-archives</translation>
+</component>

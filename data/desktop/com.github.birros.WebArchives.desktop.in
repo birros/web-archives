@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Web archives
+Comment=Read Web archives offline
+Keywords=archive;web;offline;
+Exec=web-archives
+StartupNotify=true
+Terminal=false
+Type=Application
+Icon=com.github.birros.WebArchives
+Categories=GTK;GNOME;Utility;Archiving;

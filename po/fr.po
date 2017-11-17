@@ -1,0 +1,428 @@
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-17 16:50+0100\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:6
+#: data/desktop/com.github.birros.WebArchives.desktop.in:3
+#: src/app/states/title-logic.vala:17
+msgid "Web archives"
+msgstr "Archives Web"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
+msgid "Web archives viewer"
+msgstr "Visioneur d'archives web"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:9
+msgid "A Web archives viewer, featuring tight integration with the desktop."
+msgstr ""
+"Un visioneur d'archives web, ayant pour caractéristique première une bonne "
+"intégration avec l'environnement de bureau."
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:4
+msgid "Read Web archives offline"
+msgstr "Visioner des archives web hors ligne"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:5
+msgid "archive;web;offline;"
+msgstr "archive;web;hors ligne;"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:10
+msgid "com.github.birros.WebArchives"
+msgstr ""
+
+#: src/app/resources/gtk/help-overlay.ui:13
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Général"
+
+#: src/app/resources/gtk/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "New window"
+msgstr "Nouvelle fenêtre"
+
+#: src/app/resources/gtk/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Close window or tab"
+msgstr "Fermer la fenêtre ou l'onglet"
+
+#: src/app/resources/gtk/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Shortcuts"
+msgstr "Raccourcis"
+
+#: src/app/resources/gtk/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Night mode"
+msgstr "Mode nuit"
+
+#: src/app/resources/gtk/help-overlay.ui:47
+msgctxt "shortcut window"
+msgid "Opening"
+msgstr "Ouvrir"
+
+#: src/app/resources/gtk/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Open an archive"
+msgstr "Ouvrir une archive"
+
+#: src/app/resources/gtk/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Onglets"
+
+#: src/app/resources/gtk/help-overlay.ui:64
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Nouvel onglet"
+
+#: src/app/resources/gtk/help-overlay.ui:71
+msgctxt "shortcut window"
+msgid "Go to previous tab"
+msgstr "Aller à l'onglet précédent"
+
+#: src/app/resources/gtk/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Go to next tab"
+msgstr "Aller à l'onglet suivant"
+
+#: src/app/resources/gtk/help-overlay.ui:85
+msgctxt "shortcut window"
+msgid "Open tab"
+msgstr "Ouvrir un onglet"
+
+#: src/app/resources/gtk/help-overlay.ui:94
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr ""
+
+#: src/app/resources/gtk/help-overlay.ui:98
+msgctxt "shortcut window"
+msgid "Go back"
+msgstr "Aller en arrière"
+
+#: src/app/resources/gtk/help-overlay.ui:105
+msgctxt "shortcut window"
+msgid "Go forward"
+msgstr "Aller en avant"
+
+#: src/app/resources/gtk/help-overlay.ui:114
+msgctxt "shortcut window"
+msgid "Archive"
+msgstr ""
+
+#: src/app/resources/gtk/help-overlay.ui:118
+msgctxt "shortcut window"
+msgid "Main page"
+msgstr "Page d'accueil"
+
+#: src/app/resources/gtk/help-overlay.ui:125
+msgctxt "shortcut window"
+msgid "Search a page"
+msgstr "Chercher une page"
+
+#: src/app/resources/gtk/help-overlay.ui:132
+msgctxt "shortcut window"
+msgid "Random page"
+msgstr "Page au hasard"
+
+#: src/app/resources/gtk/help-overlay.ui:139
+msgctxt "shortcut window"
+msgid "Show bookmarks"
+msgstr "Afficher les signets"
+
+#: src/app/resources/gtk/help-overlay.ui:146
+msgctxt "shortcut window"
+msgid "Show history"
+msgstr "Afficher l'historique"
+
+#: src/app/resources/gtk/help-overlay.ui:155
+msgctxt "shortcut window"
+msgid "Page"
+msgstr ""
+
+#: src/app/resources/gtk/help-overlay.ui:159
+msgctxt "shortcut window"
+msgid "Search in page"
+msgstr "Chercher dans la page"
+
+#: src/app/resources/gtk/help-overlay.ui:166
+msgctxt "shortcut window"
+msgid "Toggle bookmark for current page"
+msgstr "Commuter le signet pour la page actuelle"
+
+#: src/app/resources/gtk/help-overlay.ui:173
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "Imprimer"
+
+#: src/app/resources/gtk/help-overlay.ui:182
+msgctxt "shortcut window"
+msgid "Search in"
+msgstr "Rechercher dans la page"
+
+#: src/app/resources/gtk/help-overlay.ui:186
+msgctxt "shortcut window"
+msgid "Next match"
+msgstr "Correspondance suivante"
+
+#: src/app/resources/gtk/help-overlay.ui:193
+msgctxt "shortcut window"
+msgid "Previous match"
+msgstr "Correspondance précédente"
+
+#: src/app/resources/gtk/help-overlay.ui:202
+msgctxt "shortcut window"
+msgid "Zoom"
+msgstr ""
+
+#: src/app/resources/gtk/help-overlay.ui:206
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr "Zoom avant"
+
+#: src/app/resources/gtk/help-overlay.ui:213
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "Zoom arrière"
+
+#: src/app/resources/gtk/help-overlay.ui:220
+msgctxt "shortcut window"
+msgid "Reset zoom"
+msgstr "Remettre à zéro le zoom"
+
+#: src/app/states/title-logic.vala:23 src/app/ui/content/archive-row.vala:122
+msgid "Details"
+msgstr "Détails"
+
+#: src/app/states/title-logic.vala:37
+#: src/app/ui/header-bar/popover-menu.vala:53
+msgid "Bookmarks"
+msgstr "Signets"
+
+#: src/app/states/title-logic.vala:44
+#: src/app/ui/header-bar/popover-menu.vala:59
+msgid "History"
+msgstr "Historique"
+
+#: src/app/utils/language-formater.vala:45
+msgid "Unspecified language"
+msgstr "Langue non spécifiée"
+
+#: src/app/utils/tag-formater.vala:6
+msgid "No pictures"
+msgstr "Pas d'images"
+
+#: src/app/utils/tag-formater.vala:7
+msgid "No videos"
+msgstr "Pas de vidéos"
+
+#: src/app/utils/tag-formater.vala:8
+msgid "Full text index"
+msgstr "Index texte intégral"
+
+#: src/app/ui/content/search-view.vala:31
+msgid "No recent searches."
+msgstr "Aucune recherches récentes."
+
+#: src/app/ui/content/search-view.vala:45
+msgid "No results."
+msgstr "Pas de résultats."
+
+#: src/app/ui/content/history-view.vala:27
+msgid "No browsing history."
+msgstr "Pas d'historique de navigation."
+
+#: src/app/ui/content/history-view.vala:76
+msgid "%e %b %y"
+msgstr ""
+
+#: src/app/ui/content/archive-row.vala:131
+msgid "Remove"
+msgstr "Retirer"
+
+#: src/app/ui/content/details-view.vala:83
+msgid "Favicon"
+msgstr ""
+
+#: src/app/ui/content/details-view.vala:84
+msgid "Title"
+msgstr "Titre"
+
+#: src/app/ui/content/details-view.vala:85
+msgid "Path"
+msgstr "Chemin d'accès"
+
+#: src/app/ui/content/details-view.vala:86
+msgid "Date"
+msgstr ""
+
+#: src/app/ui/content/details-view.vala:87
+msgid "Lang"
+msgstr "Langue"
+
+#: src/app/ui/content/details-view.vala:89
+msgid "Size"
+msgstr "Taille"
+
+#: src/app/ui/content/details-view.vala:90
+msgid "Name"
+msgstr "Nom"
+
+#: src/app/ui/content/details-view.vala:91
+msgid "Id"
+msgstr ""
+
+#: src/app/ui/content/details-view.vala:92
+msgid "Description"
+msgstr ""
+
+#: src/app/ui/content/details-view.vala:93
+msgid "Article count"
+msgstr "Nombre d'articles"
+
+#: src/app/ui/content/details-view.vala:94
+msgid "Media count"
+msgstr "Nombre de médias"
+
+#: src/app/ui/content/details-view.vala:95
+msgid "Creator"
+msgstr "Créateur"
+
+#: src/app/ui/content/details-view.vala:96
+msgid "Publisher"
+msgstr "Éditeur"
+
+#: src/app/ui/content/details-view.vala:100
+msgid "Tags"
+msgstr "Étiquettes"
+
+#: src/app/ui/content/details-view.vala:102
+msgid "Url"
+msgstr ""
+
+#: src/app/ui/content/bookmark-view.vala:22
+msgid "No bookmarks saved."
+msgstr "Pas de signets sauvegardés."
+
+#: src/app/ui/content/status-label.vala:29
+#, c-format
+msgid "%s: %u %%"
+msgstr ""
+
+#: src/app/ui/content/status-label.vala:34
+#: src/app/ui/content/status-label.vala:47
+msgid "Never refreshed"
+msgstr "Jamais actualisé"
+
+#: src/app/ui/content/status-label.vala:39
+msgid "Last refreshed: %H:%M - %e %b %Y"
+msgstr "Dernière actualisation: %H:%M - %e %b %Y"
+
+#: src/app/ui/content/status-label.vala:62
+#, c-format
+msgid "%lluY ago"
+msgstr "il y a %lluA"
+
+#: src/app/ui/content/status-label.vala:64
+#, c-format
+msgid "%lluM ago"
+msgstr "il y a %lluM"
+
+#: src/app/ui/content/status-label.vala:66
+#, c-format
+msgid "%lluD ago"
+msgstr "il y a %lluJ"
+
+#: src/app/ui/content/status-label.vala:68
+#, c-format
+msgid "%lluh ago"
+msgstr "il y a %lluh"
+
+#: src/app/ui/content/status-label.vala:70
+#, c-format
+msgid "%llum ago"
+msgstr "il y a %llum"
+
+#: src/app/ui/content/status-label.vala:72
+#, c-format
+msgid "%llus ago"
+msgstr "il y a %llus"
+
+#: src/app/ui/content/home-view.vala:23
+msgid "Cannot open the archive file"
+msgstr "Impossible d'ouvrir l'archive"
+
+#. RECENTS
+#: src/app/ui/content/home-view.vala:56
+msgid "Recents"
+msgstr "Récents"
+
+#: src/app/ui/content/home-view.vala:82
+msgid "No archive recently opened."
+msgstr "Aucune archive récemment ouverte."
+
+#: src/app/ui/content/home-view.vala:104
+msgid "Local"
+msgstr ""
+
+#: src/app/ui/content/home-view.vala:122 src/app/ui/content/home-view.vala:198
+msgid "Refresh"
+msgstr "Actualiser"
+
+#: src/app/ui/content/home-view.vala:140
+msgid "No archive automaticly detected on your system."
+msgstr "Aucune archive automatiquement détectée sur votre système."
+
+#: src/app/ui/content/home-view.vala:162
+msgid "Remote"
+msgstr "Distant"
+
+#: src/app/ui/content/home-view.vala:193
+msgid "Downloading"
+msgstr "Téléchargement"
+
+#: src/app/ui/content/home-view.vala:216
+msgid "No archive available for download."
+msgstr "Aucune archive disponible en téléchargement."
+
+#: src/app/ui/gtk/notebook/notebook-popup-menu.vala:13
+msgid "Detach to a new window"
+msgstr "Déplacer dans une nouvelle fenêtre"
+
+#: src/app/ui/header-bar/popover-menu.vala:25
+msgid "Search in..."
+msgstr "Rechercher dans la page..."
+
+#: src/app/ui/header-bar/popover-menu.vala:31
+msgid "Print"
+msgstr "Imprimer"
+
+#: src/app/ui/header-bar/popover-menu.vala:39
+msgid "Main page"
+msgstr "Page d'accueil"
+
+#: src/app/ui/header-bar/popover-menu.vala:45
+msgid "Random page"
+msgstr "Page au hasard"
+
+#: src/app/ui/header-bar/popover-menu.vala:72
+msgid "New window"
+msgstr "Nouvelle fenêtre"
+
+#: src/app/ui/header-bar/popover-menu.vala:83
+msgid "Keyboard shortcuts"
+msgstr "Raccourcis clavier"
+
+#: src/app/ui/header-bar/night-mode-button.vala:9
+msgid "Night mode"
+msgstr "Mode nuit"
+
+#: src/app/ui/window.vala:370
+msgid "Please choose a file"
+msgstr "Veuillez choisir un fichier"
+
+#: src/app/ui/window.vala:440
+msgid "Are you sure to open external link ?"
+msgstr "Êtes-vous sûr d'ouvrir le lien externe ?"

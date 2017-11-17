@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+    <gresource prefix="/com/github/birros/WebArchives">
+        <file>ui/gtk/notebook/notebook.css</file>
+        <file>ui/content/history-view.css</file>
+        <file>ui/content/shadow.css</file>
+        <file alias="gtk/help-overlay.ui">resources/gtk/help-overlay.ui</file>
+        <file compressed="true" alias="icons/scalable/actions/ephy-bookmarks-symbolic.svg">resources/icons/scalable/actions/ephy-bookmarks-symbolic.svg</file>
+    </gresource>
+</gresources>

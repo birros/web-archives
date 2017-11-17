@@ -1,0 +1,7 @@
+/**
+ *  Fix the white background color of the Gtk.Notebook widget when opening
+ *  multiple tabs in the same window.
+ */
+notebook stack {
+    background-color: transparent;
+}

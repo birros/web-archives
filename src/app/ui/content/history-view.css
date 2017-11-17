@@ -1,0 +1,38 @@
+/**
+ * Add right, bottom, left borders to root list.
+ */
+list.history {
+    border-style: solid;
+	border-color: @borders;
+	border-left-width : 1px;
+	border-right-width : 1px;
+	border-bottom-width : 1px;
+}
+
+/**
+ * Override list border using negative margins and set background color to
+ * default widget background color.
+ */
+list.history > box {
+    background-color: @theme_bg_color;
+    margin-left: -1px;
+    margin-right: -1px;
+	border-style: solid;
+}
+
+/**
+ * Add a bottom border to previous list using header's top border only if it's
+ * not the first header.
+ */
+list.history > box:not(.first) {
+	border-top-width : 1px;
+	border-top-color: @borders;
+}
+
+/**
+ * Add a top border to next list using header's bottom border.
+ */
+list.history > box {
+	border-bottom-width : 1px;
+	border-bottom-color: @borders;
+}

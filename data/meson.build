@@ -1,0 +1,2 @@
+subdir('appdata')
+subdir('desktop')

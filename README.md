@@ -14,8 +14,10 @@ articles from large community projects such as [Wikipedia] or [Wikisource].
 This software, despite its defects, bugs and instability, can be useful for
 anyone who needs to browse important websites such as Wikipedia or Wikisource
 without any Internet connection.
+
 No guarantee regarding the update of internal databases until the release of a
 stable version.
+
 As long as it has not been improved, it is recommended to use it wisely.
 Also, it only allows reading [ZIM] files for the moment.
 
@@ -29,7 +31,7 @@ Also, it only allows reading [ZIM] files for the moment.
 - [X] List available local web archives.
 - [X] List of web archives available to download.
 - [X] Print a page.
-- [-] Night mode.
+- [X] Night mode (Basic support).
 - [X] Zoom controls.
 - [X] Search in page.
 - [X] History.
@@ -67,11 +69,13 @@ Also, it only allows reading [ZIM] files for the moment.
 ## Targeted platform
 
 Priority given to GNU/Linux systems, especially the GNOME desktop environment.
+
 But may be carried on other platforms in the future.
 
 ## Installation
 
 Requires to be built directly from sources for now.
+
 See [HACKING.md] for instructions.
 
 ## For contributions and technical documentation

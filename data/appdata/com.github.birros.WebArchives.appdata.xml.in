@@ -12,16 +12,16 @@
     </description>
     <screenshots>
         <screenshot type="default">
-            <image width="800" height="450">http://localhost:7899/home.png</image>
+            <image width="800" height="450">https://raw.githubusercontent.com/birros/web-archives/master/data/appdata/screenshots/home.png</image>
         </screenshot>
         <screenshot>
-            <image width="800" height="450">http://localhost:7899/web-wikipedia.png</image>
+            <image width="800" height="450">https://raw.githubusercontent.com/birros/web-archives/master/data/appdata/screenshots/web-wikipedia.png</image>
         </screenshot>
         <screenshot>
-            <image width="800" height="450">http://localhost:7899/search.png</image>
+            <image width="800" height="450">https://raw.githubusercontent.com/birros/web-archives/master/data/appdata/screenshots/search.png</image>
         </screenshot>
         <screenshot>
-            <image width="800" height="450">http://localhost:7899/web-earth.png</image>
+            <image width="800" height="450">https://raw.githubusercontent.com/birros/web-archives/master/data/appdata/screenshots/web-earth.png</image>
         </screenshot>
     </screenshots>
     <url type="homepage">https://github.com/birros/web-archives</url>

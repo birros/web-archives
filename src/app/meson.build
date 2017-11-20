@@ -58,6 +58,7 @@ web_archives_sources = [
     'states/title-logic.vala',
     'states/navigation-logic.vala',
     'states/search-in-logic.vala',
+    'states/search-bar-logic.vala',
     'states/bookmark-logic.vala',
     'states/random-logic.vala',
     'states/history-logic.vala',

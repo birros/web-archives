@@ -38,6 +38,7 @@ public class WebArchives.Context : Object {
     private TitleLogic title_logic;
     private NavigationLogic navigation_logic;
     private SearchInLogic search_in_logic;
+    private SearchBarLogic search_bar_logic;
     private BookmarkLogic bookmark_logic;
     private LoadUriLogic load_uri_logic;
     private RandomLogic random_logic;
@@ -170,6 +171,7 @@ public class WebArchives.Context : Object {
         title_logic = new TitleLogic (this);
         navigation_logic = new NavigationLogic (this);
         search_in_logic = new SearchInLogic (this);
+        search_bar_logic = new SearchBarLogic (this);
         bookmark_logic = new BookmarkLogic (this);
         load_uri_logic = new LoadUriLogic (this);
         random_logic = new RandomLogic (this);

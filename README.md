@@ -78,6 +78,15 @@ Requires to be built directly from sources for now.
 
 See [HACKING.md] for instructions.
 
+## Alternatives
+
+This software is directly inspired by [Kiwix] applications.
+
+It also relies on several libraries and content developed or packaged by them.
+
+The applications they have developed are also free software, don't hesitate to
+use them.
+
 ## For contributions and technical documentation
 
 See: [HACKING.md].
@@ -87,4 +96,5 @@ See: [HACKING.md].
 [Wikipedia]: https://en.wikipedia.org/wiki/Wikipedia
 [Wikisource]: https://en.wikipedia.org/wiki/Wikisource
 [ZIM]: https://en.wikipedia.org/wiki/ZIM_(file_format)
+[Kiwix]: http://www.kiwix.org/
 [HACKING.md]: HACKING.md

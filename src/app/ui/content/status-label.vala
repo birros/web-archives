@@ -55,7 +55,7 @@ public class WebArchives.StatusLabel : Gtk.Label {
         int64 diff_m = diff_s / 60;
         int64 diff_h = diff_m / 60;
         int64 diff_D = diff_h / 24;
-        int64 diff_M = diff_h / 30;
+        int64 diff_M = diff_D / 30;
         int64 diff_Y = diff_D / 365;
 
         if (diff_Y > 0) {

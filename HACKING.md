@@ -123,6 +123,9 @@ flatpak run com.github.birros.WebArchives
 - Use thread and async.
 - Separate the ZIM file format code from the rest of the code, as a plugin.
 - Favicon caching management.
+- Reduce state dependencies between views.
+- Add a custom ContextMenu to WebView to manage the opening of a link in a new
+  tab or window.
 
 ---
 

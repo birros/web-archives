@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Birros <birros@protonmail.com> -->
 <component type="desktop">
     <id>com.github.birros.WebArchives.desktop</id>
-    <license>CC0</license>
+    <metadata_license>CC0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     <name>Web archives</name>
     <summary>Web archives viewer</summary>
@@ -29,5 +30,6 @@
     <url type="donation"></url>
     <url type="help"></url>
     <url type="translate"></url>
+    <update_contact>birros@protonmail.com</update_contact>
     <translation type="gettext">web-archives</translation>
 </component>

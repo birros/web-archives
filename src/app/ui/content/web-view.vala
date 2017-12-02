@@ -1,5 +1,3 @@
-private extern const string WEB_EXTENSIONS_DIRECTORY;
-
 class WebArchives.WebView : Gtk.Box {
     private Context context;
     private WebKit.WebView web_view;
@@ -374,7 +372,7 @@ class WebArchives.WebView : Gtk.Box {
         info ("on_initialize_web_extensions");
         Variant prefix = new Variant.string (context.server.url);
         web_view_context.set_web_extensions_directory (
-            WEB_EXTENSIONS_DIRECTORY
+            WebArchives.Config.WEB_EXTENSIONS_DIRECTORY
         );
         web_view_context.set_web_extensions_initialization_user_data (prefix);
     }

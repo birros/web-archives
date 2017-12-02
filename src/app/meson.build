@@ -1,4 +1,8 @@
-configure_file(output: 'config.h', configuration: conf)
+config_file = configure_file(
+    input: 'config.vala.in',
+    output: 'config.vala',
+    configuration: conf
+)
 
 resources = gnome.compile_resources(
     'resources',
@@ -114,8 +118,8 @@ web_archives_sources = [
 
 executable(
     'web-archives',
-    web_archives_sources,
-    c_args: ['-include', 'config.h'],
+    [config_file, web_archives_sources],
+    c_args: ['-DGETTEXT_PACKAGE='+conf.get('GETTEXT_PACKAGE')],
     dependencies: [
         gtk_dep,
         kiwix_dep,

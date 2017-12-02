@@ -68,6 +68,7 @@ web_archives_sources = [
     'states/history-logic.vala',
     'states/main-page-logic.vala',
     'states/load-uri-logic.vala',
+    'states/about-state.vala',
     'models/archive-store.vala',
     'models/archive-model.vala',
     'models/archive-item.vala',

@@ -85,6 +85,12 @@ public class WebArchives.HeaderBarPopover : Gtk.Popover {
         shortcuts_button.action_name = "win.show-help-overlay";
         box_app.add (shortcuts_button);
 
+        Gtk.ModelButton about_button = new Gtk.ModelButton ();
+        about_button.label = _("About");
+        about_button.xalign = 0;
+        about_button.clicked.connect (on_about);
+        box_app.add (about_button);
+
         box.show_all ();
     }
 
@@ -115,6 +121,10 @@ public class WebArchives.HeaderBarPopover : Gtk.Popover {
 
     private void on_new_window () {
         context.popover_menu_state.new_window ();
+    }
+
+    private void on_about () {
+        context.about_state.show_about ();
     }
 
     private void on_route () {

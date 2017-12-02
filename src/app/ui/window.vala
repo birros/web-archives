@@ -126,6 +126,7 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
 
         context.new_tab_button_state.clicked.connect (new_tab);
         context.popover_menu_state.new_window.connect (new_window);
+        context.about_state.show_about.connect (show_about);
     }
 
     private void zoom_in () {
@@ -295,6 +296,22 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
         } else {
             notebook.prev_page ();
         }
+    }
+
+    private void show_about () {
+        string [] authors = { "Birros <birros@protonmail.com>" };
+        Gtk.show_about_dialog (
+            this,
+            program_name: _("Web archives"),
+            comments: _("A Web archives viewer."),
+            copyright: _("Copyright © 2017-2017 - Birros"),
+            version: WebArchives.Config.VERSION,
+            authors: authors,
+            license_type: Gtk.License.GPL_3_0,
+            wrap_license: true,
+            logo_icon_name: "com.github.birros.WebArchives",
+            website: "https://github.com/birros/web-archives"
+        );
     }
 
     private void add_tab (Gtk.Widget? label = null, Gtk.Widget? page = null) {

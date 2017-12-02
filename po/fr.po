@@ -1,12 +1,12 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-02 17:33+0100\n"
+"POT-Creation-Date: 2017-12-02 18:06+0100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
 #: data/desktop/com.github.birros.WebArchives.desktop.in:3
-#: src/app/states/title-logic.vala:17
+#: src/app/states/title-logic.vala:17 src/app/ui/window.vala:305
 msgid "Web archives"
 msgstr "Archives Web"
 
@@ -419,14 +419,26 @@ msgstr "Nouvelle fenêtre"
 msgid "Keyboard shortcuts"
 msgstr "Raccourcis clavier"
 
+#: src/app/ui/header-bar/popover-menu.vala:89
+msgid "About"
+msgstr "À propos"
+
 #: src/app/ui/header-bar/night-mode-button.vala:9
 msgid "Night mode"
 msgstr "Mode nuit"
 
-#: src/app/ui/window.vala:370
+#: src/app/ui/window.vala:306
+msgid "A Web archives viewer."
+msgstr "Un visioneur d'archives web."
+
+#: src/app/ui/window.vala:307
+msgid "Copyright © 2017-2017 - Birros"
+msgstr ""
+
+#: src/app/ui/window.vala:387
 msgid "Please choose a file"
 msgstr "Veuillez choisir un fichier"
 
-#: src/app/ui/window.vala:440
+#: src/app/ui/window.vala:457
 msgid "Are you sure to open external link ?"
 msgstr "Êtes-vous sûr d'ouvrir le lien externe ?"

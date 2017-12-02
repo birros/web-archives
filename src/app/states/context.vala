@@ -19,6 +19,7 @@ public class WebArchives.Context : Object {
     // WINDOW
     public NewTabButtonState new_tab_button_state {get; private set;}
     public PopoverMenuState popover_menu_state    {get; private set;}
+    public AboutState about_state                 {get; private set;}
 
     // TAB
     public AddArchiveButtonState add_archive_button_state {get; private set;}
@@ -132,11 +133,13 @@ public class WebArchives.Context : Object {
     private void copy_window (Context parent) {
         new_tab_button_state = parent.new_tab_button_state;
         popover_menu_state = parent.popover_menu_state;
+        about_state = parent.about_state;
     }
 
     private void init_window () {
         new_tab_button_state = new NewTabButtonState ();
         popover_menu_state = new PopoverMenuState ();
+        about_state = new AboutState ();
     }
 
     private void copy_tab (Context parent) {

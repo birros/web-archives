@@ -1,5 +1,6 @@
 public class WebArchives.Persistence : Object {
-    private Database database;
+    private Database cache_database;
+    private Database data_database;
     private ArchiveDatabase archive_database;
     private SearchRecentDatabase search_recent_database;
     private BookmarkDatabase bookmark_database;
@@ -7,21 +8,24 @@ public class WebArchives.Persistence : Object {
     private TimestampDatabase timestamp_database;
 
     public Persistence (Context context) {
-        database = new Database (Database.Type.CACHE);
+        cache_database = new Database (Database.Type.CACHE);
+        data_database = new Database (Database.Type.DATA);
+
         archive_database = new ArchiveDatabase (
-            database, context.archive_store
+            cache_database, context.archive_store
         );
         search_recent_database = new SearchRecentDatabase (
-            database, context.search_recent_store
-        );
-        bookmark_database = new BookmarkDatabase (
-            database, context.bookmark_store
+            cache_database, context.search_recent_store
         );
         history_database = new HistoryDatabase (
-            database, context.history_store
+            cache_database, context.history_store
         );
         timestamp_database = new TimestampDatabase (
-            database, context.tracker, context.remote
+            cache_database, context.tracker, context.remote
+        );
+
+        bookmark_database = new BookmarkDatabase (
+            data_database, context.bookmark_store
         );
     }
 }

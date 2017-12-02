@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-02 18:06+0100\n"
+"POT-Creation-Date: 2017-12-02 18:31+0100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
@@ -422,6 +422,10 @@ msgstr "Raccourcis clavier"
 #: src/app/ui/header-bar/popover-menu.vala:89
 msgid "About"
 msgstr "À propos"
+
+#: src/app/ui/header-bar/popover-menu.vala:95
+msgid "Quit"
+msgstr "Quitter"
 
 #: src/app/ui/header-bar/night-mode-button.vala:9
 msgid "Night mode"

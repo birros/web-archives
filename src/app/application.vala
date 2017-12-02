@@ -9,6 +9,9 @@ public class WebArchives.Application : Gtk.Application {
         },
         { null }
     };
+    private const GLib.ActionEntry [] action_entries = {
+        { "quit", on_quit }
+    };
 
     public Application () {
         GLib.Object (
@@ -31,6 +34,8 @@ public class WebArchives.Application : Gtk.Application {
 
     protected override void startup () {
         base.startup ();
+
+        add_action_entries (action_entries, this);
 
         context = new Context ();
         persistence = new Persistence (context);
@@ -71,5 +76,9 @@ public class WebArchives.Application : Gtk.Application {
             "gtk-application-prefer-dark-theme",
             context.night_mode_state.active
         );
+    }
+
+    private void on_quit () {
+        base.quit ();
     }
 }

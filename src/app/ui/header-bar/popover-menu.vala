@@ -91,6 +91,12 @@ public class WebArchives.HeaderBarPopover : Gtk.Popover {
         about_button.clicked.connect (on_about);
         box_app.add (about_button);
 
+        Gtk.ModelButton quit_button = new Gtk.ModelButton ();
+        quit_button.label = _("Quit");
+        quit_button.xalign = 0;
+        quit_button.action_name = "app.quit";
+        box_app.add (quit_button);
+
         box.show_all ();
     }
 

@@ -1,12 +1,32 @@
 public class WebArchives.Application : Gtk.Application {
     private Context context;
     private Persistence persistence;
+    private const OptionEntry [] option_entries = {
+        {
+            "version", 'v', 0,
+            OptionArg.NONE, null,
+            N_("Print version number"), null
+        },
+        { null }
+    };
 
     public Application () {
         GLib.Object (
             application_id: "com.github.birros.WebArchives",
             flags: ApplicationFlags.FLAGS_NONE
         );
+
+        add_main_option_entries (option_entries);
+    }
+
+    protected override int handle_local_options (VariantDict options) {
+        if (options.contains ("version")) {
+            stdout.printf (
+                "%s %s\n", "web-archives", WebArchives.Config.VERSION
+            );
+            return 0;
+        }
+        return -1;
     }
 
     protected override void startup () {

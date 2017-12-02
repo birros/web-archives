@@ -1,4 +1,5 @@
 public class WebArchives.Config : Object {
+    public const string VERSION = @VERSION@;
     public const string GETTEXT_PACKAGE = @GETTEXT_PACKAGE@;
     public const string LOCALEDIR = @LOCALEDIR@;
     public const string WEB_EXTENSIONS_DIRECTORY = @WEB_EXTENSIONS_DIRECTORY@;

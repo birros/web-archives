@@ -13,6 +13,7 @@ localedir = join_paths(prefix, datadir, 'locale')
 webextensionsdir = join_paths(prefix, libdir, meson.project_name(), 'web-extensions')
 
 conf = configuration_data()
+conf.set_quoted('VERSION', meson.project_version())
 conf.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 conf.set_quoted('LOCALEDIR', localedir)
 conf.set_quoted('WEB_EXTENSIONS_DIRECTORY', webextensionsdir)

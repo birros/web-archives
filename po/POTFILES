@@ -1,6 +1,7 @@
 data/appdata/com.github.birros.WebArchives.appdata.xml.in
 data/desktop/com.github.birros.WebArchives.desktop.in
 src/app/resources/gtk/help-overlay.ui
+src/app/application.vala
 src/app/states/title-logic.vala
 src/app/utils/language-formater.vala
 src/app/utils/tag-formater.vala

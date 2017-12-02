@@ -1,20 +1,20 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-17 16:50+0100\n"
+"POT-Creation-Date: 2017-12-02 17:33+0100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:6
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
 #: data/desktop/com.github.birros.WebArchives.desktop.in:3
 #: src/app/states/title-logic.vala:17
 msgid "Web archives"
 msgstr "Archives Web"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:8
 msgid "Web archives viewer"
 msgstr "Visioneur d'archives web"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:9
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:10
 msgid "A Web archives viewer, featuring tight integration with the desktop."
 msgstr ""
 "Un visioneur d'archives web, ayant pour caractéristique première une bonne "
@@ -191,6 +191,10 @@ msgstr "Zoom arrière"
 msgctxt "shortcut window"
 msgid "Reset zoom"
 msgstr "Remettre à zéro le zoom"
+
+#: src/app/application.vala:8
+msgid "Print version number"
+msgstr "Afficher le numéro de version"
 
 #: src/app/states/title-logic.vala:23 src/app/ui/content/archive-row.vala:122
 msgid "Details"

@@ -1,4 +1,9 @@
 public class WebArchives.Database : Object {
+    public enum Type {
+        CACHE,
+        CONFIG,
+        DATA
+    }
     private Sqlite.Database _db;
     public Sqlite.Database db {
         get {
@@ -7,15 +12,41 @@ public class WebArchives.Database : Object {
         private set {}
     }
 
-    public Database () {
-        string cache_dir = Environment.get_user_cache_dir ();
-        string app_folder = Path.build_filename (cache_dir, "web-archives");
-        string db_path = Path.build_filename(app_folder, "db.sqlite3");
+    public Database (Type type) {
+        string parent_dir;
+        switch (type) {
+            case Type.CACHE:
+            {
+                parent_dir = Environment.get_user_cache_dir ();
+                break;
+            }
+            case Type.CONFIG:
+            {
+                parent_dir = Environment.get_user_config_dir ();
+                break;
+            }
+            case Type.DATA:
+            {
+                parent_dir = Environment.get_user_data_dir ();
+                break;
+            }
+            /**
+             * This is used to prevent possible unset parent_dir variable
+             * warning.
+             */
+            default:
+            {
+                parent_dir = "/tmp";
+                break;
+            }
+        }
+        string database_dir = Path.build_filename (parent_dir, "web-archives");
+        string db_path = Path.build_filename (database_dir, "db.sqlite3");
 
-        File app_folder_file = File.new_for_path (app_folder);
-        if (!app_folder_file.query_exists ()) {
+        File database_dir_file = File.new_for_path (database_dir);
+        if (!database_dir_file.query_exists ()) {
             try {
-                app_folder_file.make_directory_with_parents ();
+                database_dir_file.make_directory_with_parents ();
             } catch (Error e) {
                 warning (e.message);
             }

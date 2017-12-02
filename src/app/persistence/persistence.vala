@@ -7,7 +7,7 @@ public class WebArchives.Persistence : Object {
     private TimestampDatabase timestamp_database;
 
     public Persistence (Context context) {
-        database = new Database ();
+        database = new Database (Database.Type.CACHE);
         archive_database = new ArchiveDatabase (
             database, context.archive_store
         );

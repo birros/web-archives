@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-02 18:31+0100\n"
+"POT-Creation-Date: 2017-12-02 18:37+0100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
@@ -57,137 +57,142 @@ msgctxt "shortcut window"
 msgid "Night mode"
 msgstr "Mode nuit"
 
-#: src/app/resources/gtk/help-overlay.ui:47
+#: src/app/resources/gtk/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Quit the application"
+msgstr "Quitter l'application"
+
+#: src/app/resources/gtk/help-overlay.ui:54
 msgctxt "shortcut window"
 msgid "Opening"
 msgstr "Ouvrir"
 
-#: src/app/resources/gtk/help-overlay.ui:51
+#: src/app/resources/gtk/help-overlay.ui:58
 msgctxt "shortcut window"
 msgid "Open an archive"
 msgstr "Ouvrir une archive"
 
-#: src/app/resources/gtk/help-overlay.ui:60
+#: src/app/resources/gtk/help-overlay.ui:67
 msgctxt "shortcut window"
 msgid "Tabs"
 msgstr "Onglets"
 
-#: src/app/resources/gtk/help-overlay.ui:64
+#: src/app/resources/gtk/help-overlay.ui:71
 msgctxt "shortcut window"
 msgid "New tab"
 msgstr "Nouvel onglet"
 
-#: src/app/resources/gtk/help-overlay.ui:71
+#: src/app/resources/gtk/help-overlay.ui:78
 msgctxt "shortcut window"
 msgid "Go to previous tab"
 msgstr "Aller à l'onglet précédent"
 
-#: src/app/resources/gtk/help-overlay.ui:78
+#: src/app/resources/gtk/help-overlay.ui:85
 msgctxt "shortcut window"
 msgid "Go to next tab"
 msgstr "Aller à l'onglet suivant"
 
-#: src/app/resources/gtk/help-overlay.ui:85
+#: src/app/resources/gtk/help-overlay.ui:92
 msgctxt "shortcut window"
 msgid "Open tab"
 msgstr "Ouvrir un onglet"
 
-#: src/app/resources/gtk/help-overlay.ui:94
+#: src/app/resources/gtk/help-overlay.ui:101
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr ""
 
-#: src/app/resources/gtk/help-overlay.ui:98
+#: src/app/resources/gtk/help-overlay.ui:105
 msgctxt "shortcut window"
 msgid "Go back"
 msgstr "Aller en arrière"
 
-#: src/app/resources/gtk/help-overlay.ui:105
+#: src/app/resources/gtk/help-overlay.ui:112
 msgctxt "shortcut window"
 msgid "Go forward"
 msgstr "Aller en avant"
 
-#: src/app/resources/gtk/help-overlay.ui:114
+#: src/app/resources/gtk/help-overlay.ui:121
 msgctxt "shortcut window"
 msgid "Archive"
 msgstr ""
 
-#: src/app/resources/gtk/help-overlay.ui:118
+#: src/app/resources/gtk/help-overlay.ui:125
 msgctxt "shortcut window"
 msgid "Main page"
 msgstr "Page d'accueil"
 
-#: src/app/resources/gtk/help-overlay.ui:125
+#: src/app/resources/gtk/help-overlay.ui:132
 msgctxt "shortcut window"
 msgid "Search a page"
 msgstr "Chercher une page"
 
-#: src/app/resources/gtk/help-overlay.ui:132
+#: src/app/resources/gtk/help-overlay.ui:139
 msgctxt "shortcut window"
 msgid "Random page"
 msgstr "Page au hasard"
 
-#: src/app/resources/gtk/help-overlay.ui:139
+#: src/app/resources/gtk/help-overlay.ui:146
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "Afficher les signets"
 
-#: src/app/resources/gtk/help-overlay.ui:146
+#: src/app/resources/gtk/help-overlay.ui:153
 msgctxt "shortcut window"
 msgid "Show history"
 msgstr "Afficher l'historique"
 
-#: src/app/resources/gtk/help-overlay.ui:155
+#: src/app/resources/gtk/help-overlay.ui:162
 msgctxt "shortcut window"
 msgid "Page"
 msgstr ""
 
-#: src/app/resources/gtk/help-overlay.ui:159
+#: src/app/resources/gtk/help-overlay.ui:166
 msgctxt "shortcut window"
 msgid "Search in page"
 msgstr "Chercher dans la page"
 
-#: src/app/resources/gtk/help-overlay.ui:166
+#: src/app/resources/gtk/help-overlay.ui:173
 msgctxt "shortcut window"
 msgid "Toggle bookmark for current page"
 msgstr "Commuter le signet pour la page actuelle"
 
-#: src/app/resources/gtk/help-overlay.ui:173
+#: src/app/resources/gtk/help-overlay.ui:180
 msgctxt "shortcut window"
 msgid "Print"
 msgstr "Imprimer"
 
-#: src/app/resources/gtk/help-overlay.ui:182
+#: src/app/resources/gtk/help-overlay.ui:189
 msgctxt "shortcut window"
 msgid "Search in"
 msgstr "Rechercher dans la page"
 
-#: src/app/resources/gtk/help-overlay.ui:186
+#: src/app/resources/gtk/help-overlay.ui:193
 msgctxt "shortcut window"
 msgid "Next match"
 msgstr "Correspondance suivante"
 
-#: src/app/resources/gtk/help-overlay.ui:193
+#: src/app/resources/gtk/help-overlay.ui:200
 msgctxt "shortcut window"
 msgid "Previous match"
 msgstr "Correspondance précédente"
 
-#: src/app/resources/gtk/help-overlay.ui:202
+#: src/app/resources/gtk/help-overlay.ui:209
 msgctxt "shortcut window"
 msgid "Zoom"
 msgstr ""
 
-#: src/app/resources/gtk/help-overlay.ui:206
+#: src/app/resources/gtk/help-overlay.ui:213
 msgctxt "shortcut window"
 msgid "Zoom in"
 msgstr "Zoom avant"
 
-#: src/app/resources/gtk/help-overlay.ui:213
+#: src/app/resources/gtk/help-overlay.ui:220
 msgctxt "shortcut window"
 msgid "Zoom out"
 msgstr "Zoom arrière"
 
-#: src/app/resources/gtk/help-overlay.ui:220
+#: src/app/resources/gtk/help-overlay.ui:227
 msgctxt "shortcut window"
 msgid "Reset zoom"
 msgstr "Remettre à zéro le zoom"

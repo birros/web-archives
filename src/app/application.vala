@@ -36,6 +36,7 @@ public class WebArchives.Application : Gtk.Application {
         base.startup ();
 
         add_action_entries (action_entries, this);
+        set_accels_for_action ("app.quit", {"<Primary>q"});
 
         context = new Context ();
         persistence = new Persistence (context);

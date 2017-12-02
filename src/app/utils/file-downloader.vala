@@ -54,9 +54,11 @@ public class WebArchives.FileDownloader : Object {
 
         session.queue_message (msg, (session, msg) => {
             if (
-                !canceled_status &&
-                content_length > 0 &&
-                current_length == content_length
+                !canceled_status && (
+                    (content_length > 0 && current_length == content_length) ||
+                    // FIXME: bypass even if content_length is not given.
+                    (current_length > 0)
+                )
             ) {
                 try {
                     dos.flush ();

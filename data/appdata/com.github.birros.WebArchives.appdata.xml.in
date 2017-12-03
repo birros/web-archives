@@ -5,11 +5,32 @@
     <metadata_license>CC0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     <name>Web archives</name>
-    <summary>Web archives viewer</summary>
+    <summary>A web archives viewer</summary>
     <description>
         <p>
-            A Web archives viewer, featuring tight integration with the desktop.
+            A web archives viewer offering the ability to browse offline
+            millions of articles from large community projects such as Wikipedia
+            or Wikisource.
         </p>
+        <p>Features:</p>
+        <ul>
+            <li>List recently opened web archives</li>
+            <li>List available local web archives</li>
+            <li>List of web archives available to download</li>
+            <li>Print a page</li>
+            <li>Night mode (Basic support)</li>
+            <li>Zoom controls</li>
+            <li>Search in page</li>
+            <li>History</li>
+            <li>Bookmarks</li>
+            <li>Search a page</li>
+            <li>Keyboard shortcuts</li>
+            <li>Multi-windows</li>
+            <li>Multi-tabs</li>
+            <li>Random page</li>
+            <li>Sandboxed pages (Pages are isolated from the web)</li>
+            <li>Ask for confirmation when opening an external link</li>
+        </ul>
     </description>
     <screenshots>
         <screenshot type="default">
@@ -27,9 +48,15 @@
     </screenshots>
     <url type="homepage">https://github.com/birros/web-archives</url>
     <url type="bugtracker">https://github.com/birros/web-archives/issues</url>
-    <url type="donation"></url>
-    <url type="help"></url>
-    <url type="translate"></url>
     <update_contact>birros@protonmail.com</update_contact>
     <translation type="gettext">web-archives</translation>
+    <releases>
+        <release version="0.0.1" date="2017-12-3">
+            <description>
+                <p>
+                    Initial release.
+                </p>
+            </description>
+        </release>
+    </releases>
 </component>

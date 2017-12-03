@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-02 18:37+0100\n"
+"POT-Creation-Date: 2017-12-03 11:07+0100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
@@ -11,14 +11,91 @@ msgid "Web archives"
 msgstr "Archives Web"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:8
-msgid "Web archives viewer"
-msgstr "Visioneur d'archives web"
+msgid "A web archives viewer"
+msgstr "Un visioneur d'archives web"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:10
-msgid "A Web archives viewer, featuring tight integration with the desktop."
+msgid ""
+"A web archives viewer offering the ability to browse offline millions of "
+"articles from large community projects such as Wikipedia or Wikisource."
 msgstr ""
-"Un visioneur d'archives web, ayant pour caractéristique première une bonne "
-"intégration avec l'environnement de bureau."
+"Un visioneur d'archives Web offrant la possibilité de parcourir hors ligne "
+"des millions d'articles provenant de grands projets communautaires tels que "
+"Wikipédia ou Wikisource."
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:15
+msgid "Features:"
+msgstr "Fonctionnalités:"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:17
+msgid "List recently opened web archives"
+msgstr "Liste des archives web récemment ouvertes"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:18
+msgid "List available local web archives"
+msgstr "Liste des archives web locales disponibles"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:19
+msgid "List of web archives available to download"
+msgstr "Liste des archives web à télécharger"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:20
+msgid "Print a page"
+msgstr "Imprimer une page"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:21
+msgid "Night mode (Basic support)"
+msgstr "Mode nuit (Support basique)"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:22
+msgid "Zoom controls"
+msgstr "Commandes de zoom"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:23
+msgid "Search in page"
+msgstr "Chercher dans la page"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:24
+#: src/app/states/title-logic.vala:44
+#: src/app/ui/header-bar/popover-menu.vala:59
+msgid "History"
+msgstr "Historique"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:25
+#: src/app/states/title-logic.vala:37
+#: src/app/ui/header-bar/popover-menu.vala:53
+msgid "Bookmarks"
+msgstr "Signets"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:26
+msgid "Search a page"
+msgstr "Chercher une page"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:27
+#: src/app/ui/header-bar/popover-menu.vala:83
+msgid "Keyboard shortcuts"
+msgstr "Raccourcis clavier"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:28
+msgid "Multi-windows"
+msgstr "Multi-fenêtres"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:29
+msgid "Multi-tabs"
+msgstr "Multi-onglets"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:30
+#: src/app/ui/header-bar/popover-menu.vala:45
+msgid "Random page"
+msgstr "Page au hasard"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:31
+msgid "Sandboxed pages (Pages are isolated from the web)"
+msgstr "Pages en bac à sable (les pages sont isolées du web)"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:32
+msgid "Ask for confirmation when opening an external link"
+msgstr "Demander confirmation lors de l'ouverture d'un lien externe"
 
 #: data/desktop/com.github.birros.WebArchives.desktop.in:4
 msgid "Read Web archives offline"
@@ -204,16 +281,6 @@ msgstr "Afficher le numéro de version"
 #: src/app/states/title-logic.vala:23 src/app/ui/content/archive-row.vala:122
 msgid "Details"
 msgstr "Détails"
-
-#: src/app/states/title-logic.vala:37
-#: src/app/ui/header-bar/popover-menu.vala:53
-msgid "Bookmarks"
-msgstr "Signets"
-
-#: src/app/states/title-logic.vala:44
-#: src/app/ui/header-bar/popover-menu.vala:59
-msgid "History"
-msgstr "Historique"
 
 #: src/app/utils/language-formater.vala:45
 msgid "Unspecified language"
@@ -412,17 +479,9 @@ msgstr "Imprimer"
 msgid "Main page"
 msgstr "Page d'accueil"
 
-#: src/app/ui/header-bar/popover-menu.vala:45
-msgid "Random page"
-msgstr "Page au hasard"
-
 #: src/app/ui/header-bar/popover-menu.vala:72
 msgid "New window"
 msgstr "Nouvelle fenêtre"
-
-#: src/app/ui/header-bar/popover-menu.vala:83
-msgid "Keyboard shortcuts"
-msgstr "Raccourcis clavier"
 
 #: src/app/ui/header-bar/popover-menu.vala:89
 msgid "About"

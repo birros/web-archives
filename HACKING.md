@@ -126,6 +126,10 @@ flatpak run com.github.birros.WebArchives
 - Reduce state dependencies between views.
 - Add a custom ContextMenu to WebView to manage the opening of a link in a new
   tab or window.
+- On the home screen, specify when a more recent version of an archive is
+  available (example: by adding a blue dot).
+- Also indicate when an archive could not be opened (example: by adding a red
+  dot).
 
 ---
 

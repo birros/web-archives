@@ -74,7 +74,7 @@ But may be carried on other platforms in the future.
 
 ## Installation
 
-If you are lucky, to install this application with [Flatpak], you just have
+If you are lucky, to install this application with [Flatpak], you just have to
 click on this link: [WebArchives].
 
 Otherwise, you have to run this command line:

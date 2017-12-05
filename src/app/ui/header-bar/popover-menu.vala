@@ -19,6 +19,7 @@ public class WebArchives.HeaderBarPopover : Gtk.Popover {
 
         zoom_box = new ZoomBox ();
         zoom_box.margin_bottom = 10;
+        zoom_box.homogeneous = true;
         box_archive.add (zoom_box);
 
         Gtk.ModelButton search_in_button = new Gtk.ModelButton ();

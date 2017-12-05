@@ -74,9 +74,15 @@ But may be carried on other platforms in the future.
 
 ## Installation
 
-Requires to be built directly from sources for now.
+If you are lucky, to install this application with [Flatpak], you just have
+click on this link: [WebArchives].
 
-See [HACKING.md] for instructions.
+Otherwise, you have to run this command line:
+```
+flatpak install https://flathub.org/repo/appstream/com.github.birros.WebArchives.flatpakref
+```
+
+For installation from sources, see [HACKING.md].
 
 ## Alternatives
 
@@ -96,5 +102,7 @@ See: [HACKING.md].
 [Wikipedia]: https://en.wikipedia.org/wiki/Wikipedia
 [Wikisource]: https://en.wikipedia.org/wiki/Wikisource
 [ZIM]: https://en.wikipedia.org/wiki/ZIM_(file_format)
+[Flatpak]: https://flatpak.org/
+[WebArchives]: https://flathub.org/repo/appstream/com.github.birros.WebArchives.flatpakref
 [Kiwix]: http://www.kiwix.org/
 [HACKING.md]: HACKING.md

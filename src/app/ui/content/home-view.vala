@@ -387,9 +387,45 @@ public class WebArchives.HomeView : Gtk.Overlay {
             context.route_state.route = RouteState.Route.DETAILS;
         });
         row.download.connect (() => {
-            string metalink_url = archive.url.replace ("http://", "https://");
-            ArchiveDownloader.download (metalink_url);
+            ask_for_downloading (archive);
         });
         return row;
+    }
+
+    private void ask_for_downloading (ArchiveItem archive) {
+        Gtk.Window win = (Gtk.Window) this.get_toplevel ();
+        string espaced_title = Markup.escape_text (archive.title);
+
+        Gtk.MessageDialog message_dialog = new Gtk.MessageDialog (
+            win,
+            Gtk.DialogFlags.MODAL,
+            Gtk.MessageType.QUESTION,
+            Gtk.ButtonsType.OK_CANCEL,
+            """<span font_weight="bold" size="large">%s</span>""",
+            _("Are you sure to download %s ?").printf (espaced_title)
+        );
+        message_dialog.use_markup = true;
+        message_dialog.secondary_text =
+            _("This will open a link in your web browser.");
+
+        Gtk.Widget ok_button =
+            message_dialog.get_widget_for_response (Gtk.ResponseType.OK);
+        ok_button.get_style_context().add_class ("suggested-action");
+
+        message_dialog.response.connect ((response_type) => {
+            switch (response_type) {
+                case Gtk.ResponseType.OK:
+                {
+                    string metalink_url = archive.url.replace (
+                        "http://", "https://"
+                    );
+                    ArchiveDownloader.download (metalink_url);
+                    break;
+                }
+            }
+            message_dialog.close ();
+        });
+
+        message_dialog.show ();
     }
 }

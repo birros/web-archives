@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-03 11:07+0100\n"
+"POT-Creation-Date: 2017-12-06 14:38+0100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
@@ -57,13 +57,13 @@ msgstr "Chercher dans la page"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:24
 #: src/app/states/title-logic.vala:44
-#: src/app/ui/header-bar/popover-menu.vala:59
+#: src/app/ui/header-bar/popover-menu.vala:60
 msgid "History"
 msgstr "Historique"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:25
 #: src/app/states/title-logic.vala:37
-#: src/app/ui/header-bar/popover-menu.vala:53
+#: src/app/ui/header-bar/popover-menu.vala:54
 msgid "Bookmarks"
 msgstr "Signets"
 
@@ -72,7 +72,7 @@ msgid "Search a page"
 msgstr "Chercher une page"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:27
-#: src/app/ui/header-bar/popover-menu.vala:83
+#: src/app/ui/header-bar/popover-menu.vala:84
 msgid "Keyboard shortcuts"
 msgstr "Raccourcis clavier"
 
@@ -85,7 +85,7 @@ msgid "Multi-tabs"
 msgstr "Multi-onglets"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:30
-#: src/app/ui/header-bar/popover-menu.vala:45
+#: src/app/ui/header-bar/popover-menu.vala:46
 msgid "Random page"
 msgstr "Page au hasard"
 
@@ -463,31 +463,39 @@ msgstr "Téléchargement"
 msgid "No archive available for download."
 msgstr "Aucune archive disponible en téléchargement."
 
+#: src/app/ui/content/home-view.vala:405
+msgid "Are you sure to download %s ?"
+msgstr "Êtes-vous sûr de vouloir télécharger %s ?"
+
+#: src/app/ui/content/home-view.vala:409
+msgid "This will open a link in your web browser."
+msgstr "Ceci ouvrira un lien dans votre navigateur web."
+
 #: src/app/ui/gtk/notebook/notebook-popup-menu.vala:13
 msgid "Detach to a new window"
 msgstr "Déplacer dans une nouvelle fenêtre"
 
-#: src/app/ui/header-bar/popover-menu.vala:25
+#: src/app/ui/header-bar/popover-menu.vala:26
 msgid "Search in..."
 msgstr "Rechercher dans la page..."
 
-#: src/app/ui/header-bar/popover-menu.vala:31
+#: src/app/ui/header-bar/popover-menu.vala:32
 msgid "Print"
 msgstr "Imprimer"
 
-#: src/app/ui/header-bar/popover-menu.vala:39
+#: src/app/ui/header-bar/popover-menu.vala:40
 msgid "Main page"
 msgstr "Page d'accueil"
 
-#: src/app/ui/header-bar/popover-menu.vala:72
+#: src/app/ui/header-bar/popover-menu.vala:73
 msgid "New window"
 msgstr "Nouvelle fenêtre"
 
-#: src/app/ui/header-bar/popover-menu.vala:89
+#: src/app/ui/header-bar/popover-menu.vala:90
 msgid "About"
 msgstr "À propos"
 
-#: src/app/ui/header-bar/popover-menu.vala:95
+#: src/app/ui/header-bar/popover-menu.vala:96
 msgid "Quit"
 msgstr "Quitter"
 

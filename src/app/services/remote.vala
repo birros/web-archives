@@ -22,24 +22,8 @@ public class WebArchives.Remote : Object {
         FileDownloader library_downloader = new FileDownloader ();
         library_downloader.download_file (LIBRARY_URL, library_path);
         library_downloader.complete.connect (() => {
-            info ("COMPLETE");
-            if (library_downloader.checked) {
-                info ("CHECKED");
-                parse_library ();
-                update_timestamp ();
-            } else {
-                info ("NOT CHECKED");
-            }
-        });
-        library_downloader.canceled.connect (() => {
-            info ("CANCELED");
-            if (library_downloader.cached) {
-                info ("CACHED");
-                parse_library ();
-                update_timestamp ();
-            } else {
-                info ("NOT CACHED");
-            }
+            parse_library ();
+            update_timestamp ();
         });
         library_downloader.notify["progress"].connect (() => {
             progress = library_downloader.progress;

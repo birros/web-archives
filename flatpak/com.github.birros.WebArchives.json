@@ -12,7 +12,9 @@
         "--socket=pulseaudio",
         "--talk-name=org.freedesktop.Tracker1",
         "--filesystem=home",
-        "--share=network"
+        "--share=network",
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*"
     ],
     "build-options" : {
         "cflags": "-O2 -g",

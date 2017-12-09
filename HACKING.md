@@ -140,3 +140,7 @@ flatpak run com.github.birros.WebArchives
 - https://gitlab.gnome.org/GNOME
 - https://github.com/phastmike/vala-design-patterns-for-humans
 - https://github.com/rschroll/webkitdom
+- http://wiki.kiwix.org/wiki/Help
+- http://www.openzim.org/wiki/Special:AllPages
+- http://www.openzim.org/wiki/Javascript_API
+- http://mirrorbrain.org/

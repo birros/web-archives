@@ -51,6 +51,17 @@
     <update_contact>birros@protonmail.com</update_contact>
     <translation type="gettext">web-archives</translation>
     <releases>
+        <release version="0.0.3" date="2017-12-10">
+            <description>
+                <p>
+                    This new release of WebArchives contains some bug fixes and
+                    new features.
+                </p>
+                <ul>
+                    <li>Modify the download message and add torrent support</li>
+                </ul>
+            </description>
+        </release>
         <release version="0.0.2" date="2017-12-6">
             <description>
                 <p>

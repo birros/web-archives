@@ -76,13 +76,14 @@ public class WebArchives.FileDownloader : Object {
         try {
             FileInputStream inputstream = file.read ();
             DataInputStream dis = new DataInputStream (inputstream);
-            string line;
 
-            while ((line = yield dis.read_line_async ()) != null) {
-                current_length += line.length + 1;
+            uint8[] buffer = new uint8[100];
+            ssize_t size;
+            while ((size = yield dis.read_async (buffer)) > 0) {
+                current_length += size;
 
                 try {
-                    dos.put_string (line + "\n");
+                    dos.write (buffer[0:size]);
                 } catch (Error e) {
                     warning (e.message);
                 }

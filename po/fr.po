@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-06 14:38+0100\n"
+"POT-Creation-Date: 2017-12-10 17:06+0100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
@@ -426,50 +426,58 @@ msgstr "il y a %llum"
 msgid "%llus ago"
 msgstr "il y a %llus"
 
-#: src/app/ui/content/home-view.vala:23
+#: src/app/ui/content/home-view.vala:25
 msgid "Cannot open the archive file"
 msgstr "Impossible d'ouvrir l'archive"
 
 #. RECENTS
-#: src/app/ui/content/home-view.vala:56
+#: src/app/ui/content/home-view.vala:58
 msgid "Recents"
 msgstr "Récents"
 
-#: src/app/ui/content/home-view.vala:82
+#: src/app/ui/content/home-view.vala:84
 msgid "No archive recently opened."
 msgstr "Aucune archive récemment ouverte."
 
-#: src/app/ui/content/home-view.vala:104
+#: src/app/ui/content/home-view.vala:106
 msgid "Local"
 msgstr ""
 
-#: src/app/ui/content/home-view.vala:122 src/app/ui/content/home-view.vala:198
+#: src/app/ui/content/home-view.vala:124 src/app/ui/content/home-view.vala:200
 msgid "Refresh"
 msgstr "Actualiser"
 
-#: src/app/ui/content/home-view.vala:140
+#: src/app/ui/content/home-view.vala:142
 msgid "No archive automaticly detected on your system."
 msgstr "Aucune archive automatiquement détectée sur votre système."
 
-#: src/app/ui/content/home-view.vala:162
+#: src/app/ui/content/home-view.vala:164
 msgid "Remote"
 msgstr "Distant"
 
-#: src/app/ui/content/home-view.vala:193
+#: src/app/ui/content/home-view.vala:195
 msgid "Downloading"
 msgstr "Téléchargement"
 
-#: src/app/ui/content/home-view.vala:216
+#: src/app/ui/content/home-view.vala:218
 msgid "No archive available for download."
 msgstr "Aucune archive disponible en téléchargement."
 
-#: src/app/ui/content/home-view.vala:405
-msgid "Are you sure to download %s ?"
-msgstr "Êtes-vous sûr de vouloir télécharger %s ?"
+#: src/app/ui/content/home-view.vala:407
+msgid "How would you like to download %s ?"
+msgstr "Comment souhaitez-vous télécharger %s ?"
 
-#: src/app/ui/content/home-view.vala:409
-msgid "This will open a link in your web browser."
-msgstr "Ceci ouvrira un lien dans votre navigateur web."
+#: src/app/ui/content/home-view.vala:411
+msgid "This will open a third-party application to download the archive."
+msgstr "Ceci ouvrira une application tierce pour télécharger l'archive."
+
+#: src/app/ui/content/home-view.vala:413
+msgid "From a server"
+msgstr "Depuis un serveur"
+
+#: src/app/ui/content/home-view.vala:414
+msgid "Peer-to-peer network"
+msgstr "Réseau pair à pair"
 
 #: src/app/ui/gtk/notebook/notebook-popup-menu.vala:13
 msgid "Detach to a new window"

@@ -7,6 +7,8 @@ public class WebArchives.HomeView : Gtk.Overlay {
     private ArchiveModel remote_model;
     private ArchiveModel local_model;
     private ulong remote_model_callback;
+    private const int DIRECT_DOWNLOAD = 14;
+    private const int TORRENT_DOWNLOAD = 15;
 
     public HomeView (Context context) {
         this.context = context;
@@ -400,26 +402,34 @@ public class WebArchives.HomeView : Gtk.Overlay {
             win,
             Gtk.DialogFlags.MODAL,
             Gtk.MessageType.QUESTION,
-            Gtk.ButtonsType.OK_CANCEL,
+            Gtk.ButtonsType.CANCEL,
             """<span font_weight="bold" size="large">%s</span>""",
-            _("Are you sure to download %s ?").printf (espaced_title)
+            _("How would you like to download %s ?").printf (espaced_title)
         );
         message_dialog.use_markup = true;
         message_dialog.secondary_text =
-            _("This will open a link in your web browser.");
+        _("This will open a third-party application to download the archive.");
 
-        Gtk.Widget ok_button =
-            message_dialog.get_widget_for_response (Gtk.ResponseType.OK);
-        ok_button.get_style_context().add_class ("suggested-action");
+        message_dialog.add_button (_("From a server"), DIRECT_DOWNLOAD);
+        message_dialog.add_button (_("Peer-to-peer network"), TORRENT_DOWNLOAD);
+        Gtk.Widget torrent_button =
+            message_dialog.get_widget_for_response (TORRENT_DOWNLOAD);
+        torrent_button.get_style_context().add_class ("suggested-action");
 
         message_dialog.response.connect ((response_type) => {
             switch (response_type) {
-                case Gtk.ResponseType.OK:
+                case DIRECT_DOWNLOAD:
                 {
-                    string metalink_url = archive.url.replace (
-                        "http://", "https://"
+                    ArchiveDownloader.download (
+                        archive.url, ArchiveDownloader.Type.DIRECT
                     );
-                    ArchiveDownloader.download (metalink_url);
+                    break;
+                }
+                case TORRENT_DOWNLOAD:
+                {
+                    ArchiveDownloader.download (
+                        archive.url, ArchiveDownloader.Type.TORRENT
+                    );
                     break;
                 }
             }

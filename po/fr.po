@@ -12,20 +12,20 @@ msgstr "Archives Web"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:8
 msgid "A web archives viewer"
-msgstr "Un visioneur d'archives web"
+msgstr "Un visionneur d'archives web"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:10
 msgid ""
 "A web archives viewer offering the ability to browse offline millions of "
 "articles from large community projects such as Wikipedia or Wikisource."
 msgstr ""
-"Un visioneur d'archives Web offrant la possibilité de parcourir hors ligne "
+"Un visionneur d'archives web qui offre la possibilité de parcourir hors-ligne "
 "des millions d'articles provenant de grands projets communautaires tels que "
 "Wikipédia ou Wikisource."
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:15
 msgid "Features:"
-msgstr "Fonctionnalités:"
+msgstr "Fonctionnalités :"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:17
 msgid "List recently opened web archives"
@@ -91,7 +91,7 @@ msgstr "Page au hasard"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:31
 msgid "Sandboxed pages (Pages are isolated from the web)"
-msgstr "Pages en bac à sable (les pages sont isolées du web)"
+msgstr "Pages en bac à sable (les pages sont isolées du Web)"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:32
 msgid "Ask for confirmation when opening an external link"
@@ -99,7 +99,7 @@ msgstr "Demander confirmation lors de l'ouverture d'un lien externe"
 
 #: data/desktop/com.github.birros.WebArchives.desktop.in:4
 msgid "Read Web archives offline"
-msgstr "Visioner des archives web hors ligne"
+msgstr "Visionner des archives web hors-ligne"
 
 #: data/desktop/com.github.birros.WebArchives.desktop.in:5
 msgid "archive;web;offline;"
@@ -177,7 +177,7 @@ msgstr "Ouvrir un onglet"
 #: src/app/resources/gtk/help-overlay.ui:101
 msgctxt "shortcut window"
 msgid "Navigation"
-msgstr ""
+msgstr "Navigation"
 
 #: src/app/resources/gtk/help-overlay.ui:105
 msgctxt "shortcut window"
@@ -192,7 +192,7 @@ msgstr "Aller en avant"
 #: src/app/resources/gtk/help-overlay.ui:121
 msgctxt "shortcut window"
 msgid "Archive"
-msgstr ""
+msgstr "Archive"
 
 #: src/app/resources/gtk/help-overlay.ui:125
 msgctxt "shortcut window"
@@ -222,7 +222,7 @@ msgstr "Afficher l'historique"
 #: src/app/resources/gtk/help-overlay.ui:162
 msgctxt "shortcut window"
 msgid "Page"
-msgstr ""
+msgstr "Page"
 
 #: src/app/resources/gtk/help-overlay.ui:166
 msgctxt "shortcut window"
@@ -232,7 +232,7 @@ msgstr "Chercher dans la page"
 #: src/app/resources/gtk/help-overlay.ui:173
 msgctxt "shortcut window"
 msgid "Toggle bookmark for current page"
-msgstr "Commuter le signet pour la page actuelle"
+msgstr "Remplacer le signet pour la page actuelle"
 
 #: src/app/resources/gtk/help-overlay.ui:180
 msgctxt "shortcut window"
@@ -257,7 +257,7 @@ msgstr "Correspondance précédente"
 #: src/app/resources/gtk/help-overlay.ui:209
 msgctxt "shortcut window"
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: src/app/resources/gtk/help-overlay.ui:213
 msgctxt "shortcut window"
@@ -272,7 +272,7 @@ msgstr "Zoom arrière"
 #: src/app/resources/gtk/help-overlay.ui:227
 msgctxt "shortcut window"
 msgid "Reset zoom"
-msgstr "Remettre à zéro le zoom"
+msgstr "Remettre le zoom à zéro"
 
 #: src/app/application.vala:8
 msgid "Print version number"
@@ -300,7 +300,7 @@ msgstr "Index texte intégral"
 
 #: src/app/ui/content/search-view.vala:31
 msgid "No recent searches."
-msgstr "Aucune recherches récentes."
+msgstr "Aucune recherche récente."
 
 #: src/app/ui/content/search-view.vala:45
 msgid "No results."
@@ -320,7 +320,7 @@ msgstr "Retirer"
 
 #: src/app/ui/content/details-view.vala:83
 msgid "Favicon"
-msgstr ""
+msgstr "favicône"
 
 #: src/app/ui/content/details-view.vala:84
 msgid "Title"
@@ -332,7 +332,7 @@ msgstr "Chemin d'accès"
 
 #: src/app/ui/content/details-view.vala:86
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 #: src/app/ui/content/details-view.vala:87
 msgid "Lang"
@@ -348,11 +348,11 @@ msgstr "Nom"
 
 #: src/app/ui/content/details-view.vala:91
 msgid "Id"
-msgstr ""
+msgstr "Id"
 
 #: src/app/ui/content/details-view.vala:92
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: src/app/ui/content/details-view.vala:93
 msgid "Article count"
@@ -433,7 +433,7 @@ msgstr "Impossible d'ouvrir l'archive"
 #. RECENTS
 #: src/app/ui/content/home-view.vala:58
 msgid "Recents"
-msgstr "Récents"
+msgstr "Récentes"
 
 #: src/app/ui/content/home-view.vala:84
 msgid "No archive recently opened."
@@ -441,7 +441,7 @@ msgstr "Aucune archive récemment ouverte."
 
 #: src/app/ui/content/home-view.vala:106
 msgid "Local"
-msgstr ""
+msgstr "Locales"
 
 #: src/app/ui/content/home-view.vala:124 src/app/ui/content/home-view.vala:200
 msgid "Refresh"
@@ -485,7 +485,7 @@ msgstr "Déplacer dans une nouvelle fenêtre"
 
 #: src/app/ui/header-bar/popover-menu.vala:26
 msgid "Search in..."
-msgstr "Rechercher dans la page..."
+msgstr "Rechercher dans la page…"
 
 #: src/app/ui/header-bar/popover-menu.vala:32
 msgid "Print"
@@ -513,11 +513,11 @@ msgstr "Mode nuit"
 
 #: src/app/ui/window.vala:306
 msgid "A Web archives viewer."
-msgstr "Un visioneur d'archives web."
+msgstr "Un visionneur d'archives web."
 
 #: src/app/ui/window.vala:307
 msgid "Copyright © 2017-2017 - Birros"
-msgstr ""
+msgstr "Copyright © 2017-2017 - Birros"
 
 #: src/app/ui/window.vala:387
 msgid "Please choose a file"
@@ -525,4 +525,4 @@ msgstr "Veuillez choisir un fichier"
 
 #: src/app/ui/window.vala:457
 msgid "Are you sure to open external link ?"
-msgstr "Êtes-vous sûr d'ouvrir le lien externe ?"
+msgstr "Voulez-vous vraiment ouvrir le lien externe ?"

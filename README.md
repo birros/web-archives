@@ -5,9 +5,9 @@ articles from large community projects such as [Wikipedia] or [Wikisource].
 
 ## Goals / Reasons
 
-* **Availability:** offline, anytime, anywhere.
-* **Confidentiality:** no need to trust network's protocols or server's policy.
-* **Shareability:** disseminate knowledge.
+* __Availability:__ offline, anytime, anywhere.
+* __Confidentiality:__ no need to trust network's protocols or server's policy.
+* __Shareability:__ disseminate knowledge.
 
 ## Disclaimer
 
@@ -66,43 +66,81 @@ Also, it only allows reading [ZIM] files for the moment.
 - [ ] Save images, video, audio on right click.
 - [ ] Gallery of the media present on a page (Useful to browse images).
 
-## Targeted platform
-
-Priority given to GNU/Linux systems, especially the GNOME desktop environment.
-
-But may be carried on other platforms in the future.
-
 ## Installation
 
-If you are lucky, to install this application with [Flatpak], you just have to
-click on this link: [WebArchives].
+WebArchives was developed and tested under [GNU/Linux], with [GNOME] in sight.
+However, it can be used under other desktop environments.
 
-Otherwise, you have to run this command line:
-```
-flatpak install https://flathub.org/repo/appstream/com.github.birros.WebArchives.flatpakref
-```
+No method is provided to install this application on other platforms, such as
+__Windows__ or __macOS__. This is a desktop application so it's not compatible
+with mobile platforms such as __Android__ or __iOS__.
 
-For installation from sources, see [HACKING.md].
+### WebArchives in Flatpak format
+
+[Flatpak] installation is required : [Getting Flatpak].
+
+Then add the [Flathub] repository and install WebArchives from a [terminal] :
+
+    flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+    flatpak install flathub com.github.birros.WebArchives
+
+If this is your first Flatpak, restarting your session is necessary to make the
+application appear in your launcher. It can also be executed from a terminal :
+
+    flatpak run com.github.birros.WebArchives
+
+Some __problems__ may occur when running the application, especially if your
+desktop environment does not use [GTK+], such as __[Kde]__.
+
+The installation of __two additional services__ is then required on the system
+side to solve these problems, requiring the execution of one of these commands
+depending on your distribution :
+
+__Debian & Ubuntu__ :
+
+    apt install tracker gvfs-backends
+
+__Fedora__ :
+
+    dnf install tracker gvfs
+
+### Other installation methods
+
+The implementation of a common installation method for existing distributions
+is in preparation, with __Debian__ and __Ubuntu__ as priorities.
 
 ## Alternatives
 
-This software is directly inspired by [Kiwix] applications.
-
-It also relies on several libraries and content developed or packaged by them.
-
-The applications they have developed are also free software, don't hesitate to
-use them.
+This application is directly inspired by the [Kiwix] application. In this way
+WebArchives as well as Kiwix can read the Web archives in [ZIM format]. Kiwix is
+available for __Windows__, __GNU/Linux__, __iOS__ and __Android__.
 
 ## For contributions and technical documentation
 
-See: [HACKING.md].
+See : [HACKING.md].
 
-<!-- Links references -->
+## Useful links
+
+- [Flatpakref of WebArchives (external application)]
+- [Kiwix website]
+- [List of applications hosted on Flathub]
+
+<!-- External links and references -->
 
 [Wikipedia]: https://en.wikipedia.org/wiki/Wikipedia
 [Wikisource]: https://en.wikipedia.org/wiki/Wikisource
 [ZIM]: https://en.wikipedia.org/wiki/ZIM_(file_format)
-[Flatpak]: https://flatpak.org/
-[WebArchives]: https://flathub.org/repo/appstream/com.github.birros.WebArchives.flatpakref
-[Kiwix]: http://www.kiwix.org/
+[GNU/Linux]: https://en.wikipedia.org/wiki/Linux
+[GNOME]: https://en.wikipedia.org/wiki/GNOME
+[Flatpak]: https://en.wikipedia.org/wiki/Flatpak
+[Getting Flatpak]: https://flatpak.org/getting.html
+[Flathub]: https://flathub.org/
+[terminal]: https://en.wikipedia.org/wiki/Terminal_emulator
+[GTK+]: https://en.wikipedia.org/wiki/GTK+
+[KDE]: https://en.wikipedia.org/wiki/KDE
+[Kiwix]: https://en.wikipedia.org/wiki/Kiwix
+[ZIM format]: https://en.wikipedia.org/wiki/ZIM_(file_format)
 [HACKING.md]: HACKING.md
+[Flatpakref of WebArchives (external application)]: https://flathub.org/repo/appstream/com.github.birros.WebArchives.flatpakref
+[Kiwix website]: https://www.kiwix.org/
+[List of applications hosted on Flathub]: https://flathub.org/apps.html

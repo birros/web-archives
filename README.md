@@ -27,44 +27,44 @@ Also, it only allows reading [ZIM] files for the moment.
 
 ## Features
 
-- [X] List recently opened web archives.
-- [X] List available local web archives.
-- [X] List of web archives available to download.
-- [X] Print a page.
-- [X] Night mode (Basic support).
-- [X] Zoom controls.
-- [X] Search in page.
-- [X] History.
-- [X] Bookmarks.
-- [X] Search a page.
-- [X] Keyboard shortcuts.
-- [X] Multi-windows.
-- [X] Multi-tabs.
-- [X] Random page.
-- [X] Sandboxed pages (Pages are isolated from the web).
-- [X] Ask for confirmation when opening an external link.
-- [ ] Fullscreen mode.
-- [ ] Table of contents.
-- [ ] Responsive (Mobile ready).
-- [ ] Global search (Search through all archives available on device).
-- [ ] Search provider (Depends on previous feature).
+- [x] List recently opened web archives
+- [x] List available local web archives
+- [x] List of web archives available to download
+- [x] Print a page
+- [x] Night mode (Basic support)
+- [x] Zoom controls
+- [x] Search in page
+- [x] History
+- [x] Bookmarks
+- [x] Search a page
+- [x] Keyboard shortcuts
+- [x] Multi-windows
+- [x] Multi-tabs
+- [x] Random page
+- [x] Sandboxed pages (Pages are isolated from the web)
+- [x] Ask for confirmation when opening an external link
+- [ ] Fullscreen mode
+- [ ] Table of contents
+- [ ] Responsive (Mobile ready)
+- [ ] Global search (Search through all archives available on device)
+- [ ] Search provider (Depends on previous feature)
 - [ ] Inter web archives linking (Links from A pointing to B, can be directly
-      opened in the corresponding archive).
+  opened in the corresponding archive)
 
 ## Enhancements (Unconfirmed)
 
-- [ ] Immersive mode (See what is done on Android).
-- [ ] External links handling (Open Wikipedia link from GNOME Maps for example).
-- [ ] Hint mode (Open links quickly using keyboard).
-- [ ] Nearby pages (Pages referencing nearby points of interest).
-- [ ] Link preview popup (Preview the targeted page on mouseover or tap).
-- [ ] Speech synthesis.
-- [ ] Stream a local archive to nearby app instances (Useful in a classroom).
-- [ ] Show a list of archives where the subject of the page can also be found.
-- [ ] Option to block javascript.
-- [ ] Options to control save strategy for items such as searches or history.
-- [ ] Save images, video, audio on right click.
-- [ ] Gallery of the media present on a page (Useful to browse images).
+- [ ] Immersive mode (See what is done on Android)
+- [ ] External links handling (Open Wikipedia link from GNOME Maps for example)
+- [ ] Hint mode (Open links quickly using keyboard)
+- [ ] Nearby pages (Pages referencing nearby points of interest)
+- [ ] Link preview popup (Preview the targeted page on mouseover or tap)
+- [ ] Speech synthesis
+- [ ] Stream a local archive to nearby app instances (Useful in a classroom)
+- [ ] Show a list of archives where the subject of the page can also be found
+- [ ] Option to block javascript
+- [ ] Options to control save strategy for items such as searches or history
+- [ ] Save images, video, audio on right click
+- [ ] Gallery of the media present on a page (Useful to browse images)
 
 ## Installation
 

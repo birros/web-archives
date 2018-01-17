@@ -5,9 +5,9 @@ articles from large community projects such as [Wikipedia] or [Wikisource].
 
 ## Goals / Reasons
 
-* __Availability:__ offline, anytime, anywhere.
-* __Confidentiality:__ no need to trust network's protocols or server's policy.
-* __Shareability:__ disseminate knowledge.
+* __Availability__ : offline, anytime, anywhere
+* __Confidentiality__ : no need to trust network's protocols or server's policy
+* __Shareability__ : disseminate knowledge
 
 ## Disclaimer
 

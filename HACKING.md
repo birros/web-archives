@@ -119,6 +119,16 @@ flatpak run com.github.birros.WebArchives
 
 ## Todo
 
+- __CRITICAL__ : Handle the absence of system services such as Tracker or GVFS's
+http backend :
+  1. use D-Bus to test whether the service is available or not
+  2. on the application's homepage, use a banner to indicate the absence of
+  services
+  3. display instructions in a modal window, depending on the system used, to
+  install them
+- Remove dependency on libkiwix
+- Propose ZIM format recognition for GNU/Linux distributions (mimetype)
+- Refactoring the settings : maximize, window size, night mode
 - Write help manual.
 - Use thread and async.
 - Separate the ZIM file format code from the rest of the code, as a plugin.
@@ -130,6 +140,9 @@ flatpak run com.github.birros.WebArchives
   available (example: by adding a blue dot).
 - Also indicate when an archive could not be opened (example: by adding a red
   dot).
+- Progress bar for the WebView
+- Manage download from the pages
+- Use ORM for model and sqlite management
 
 ---
 

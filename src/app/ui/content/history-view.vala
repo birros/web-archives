@@ -15,8 +15,8 @@ public class WebArchives.HistoryView : Gtk.Box {
         scrolled_window.add (max_width_bin);
 
         list_box = new Gtk.ListBox ();
-        list_box.margin_right = 6;
-        list_box.margin_left = 6;
+        list_box.margin_end = 6;
+        list_box.margin_start = 6;
         list_box.margin_bottom = 6;
         list_box.get_style_context ().add_class ("history");
         list_box.selection_mode = Gtk.SelectionMode.NONE;

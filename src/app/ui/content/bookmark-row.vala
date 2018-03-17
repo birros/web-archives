@@ -6,8 +6,8 @@ public class WebArchives.BookmarkRow : Gtk.ListBoxRow {
         this.item = item;
 
         Gtk.Box box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        box.margin_left = 6;
-        box.margin_right = 6;
+        box.margin_start = 6;
+        box.margin_end = 6;
         add (box);
 
         Gtk.Label label = new Gtk.Label (item.title);

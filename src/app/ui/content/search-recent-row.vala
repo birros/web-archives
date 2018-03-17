@@ -18,7 +18,7 @@ public class WebArchives.SearchRecentRow : Gtk.ListBoxRow {
         Gtk.Button button = new Gtk.Button.from_icon_name (
             "edit-delete-symbolic"
         );
-        button.margin_right = 6;
+        button.margin_end = 6;
         button.get_style_context().add_class ("image-button");
         button.get_style_context().add_class ("sidebar-button");
         button.clicked.connect (() => {remove_clicked ();});

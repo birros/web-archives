@@ -38,8 +38,8 @@ public class WebArchives.HomeView : Gtk.Overlay {
         MaxWidthBin max_width_bin = new MaxWidthBin (500);
         max_width_bin.margin_top = 6;
         max_width_bin.margin_bottom = 6;
-        max_width_bin.margin_left = 6;
-        max_width_bin.margin_right = 6;
+        max_width_bin.margin_start = 6;
+        max_width_bin.margin_end = 6;
         scrolled_window.add (max_width_bin);
 
         Gtk.Box box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);

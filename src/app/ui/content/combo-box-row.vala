@@ -10,9 +10,9 @@ public class WebArchives.ComboBoxRow : Gtk.ListBoxRow {
 
         Gtk.Label label = new Gtk.Label (language);
         label.margin_top = 6;
-        label.margin_right = 6;
+        label.margin_end = 6;
         label.margin_bottom = 6;
-        label.margin_left = 6;
+        label.margin_start = 6;
         label.xalign = 0;
         label.ellipsize = Pango.EllipsizeMode.END;
         add (label);

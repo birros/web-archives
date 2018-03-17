@@ -30,9 +30,9 @@ public class WebArchives.ComboBoxText : Gtk.ToggleButton {
 
         Gtk.Box box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
         box.margin_top = 6;
-        box.margin_right = 6;
+        box.margin_end = 6;
         box.margin_bottom = 6;
-        box.margin_left = 6;
+        box.margin_start = 6;
         popover.add (box);
 
         Gtk.SearchEntry search_entry = new Gtk.SearchEntry ();

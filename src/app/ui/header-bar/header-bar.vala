@@ -57,7 +57,7 @@ public class WebArchives.HeaderBar : Gtk.HeaderBar {
         right_stack = new Gtk.Stack ();
         right_stack.transition_type = Gtk.StackTransitionType.CROSSFADE;
         right_stack.set_homogeneous (false);
-        right_stack.margin_right = 6;
+        right_stack.margin_end = 6;
         right_box.add (right_stack);
 
         // web box

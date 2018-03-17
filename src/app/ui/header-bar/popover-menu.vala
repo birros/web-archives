@@ -24,13 +24,13 @@ public class WebArchives.HeaderBarPopover : Gtk.Popover {
 
         Gtk.ModelButton search_in_button = new Gtk.ModelButton ();
         search_in_button.label = _("Search in...");
-        search_in_button.xalign = 0;
+        (search_in_button.get_child () as Gtk.Label).xalign = 0;
         search_in_button.clicked.connect (on_search_in);
         box_archive.add (search_in_button);
 
         Gtk.ModelButton print_button = new Gtk.ModelButton ();
         print_button.label = _("Print");
-        print_button.xalign = 0;
+        (print_button.get_child () as Gtk.Label).xalign = 0;
         print_button.clicked.connect (on_print);
         box_archive.add (print_button);
 
@@ -38,13 +38,13 @@ public class WebArchives.HeaderBarPopover : Gtk.Popover {
 
         Gtk.ModelButton main_page_button = new Gtk.ModelButton ();
         main_page_button.label = _("Main page");
-        main_page_button.xalign = 0;
+        (main_page_button.get_child () as Gtk.Label).xalign = 0;
         main_page_button.clicked.connect (on_main_page);
         box_archive.add (main_page_button);
 
         Gtk.ModelButton random_button = new Gtk.ModelButton ();
         random_button.label = _("Random page");
-        random_button.xalign = 0;
+        (random_button.get_child () as Gtk.Label).xalign = 0;
         random_button.clicked.connect (on_random);
         box_archive.add (random_button);
 
@@ -52,13 +52,13 @@ public class WebArchives.HeaderBarPopover : Gtk.Popover {
 
         Gtk.ModelButton bookmark_button = new Gtk.ModelButton ();
         bookmark_button.label = _("Bookmarks");
-        bookmark_button.xalign = 0;
+        (bookmark_button.get_child () as Gtk.Label).xalign = 0;
         bookmark_button.clicked.connect (on_bookmark);
         box_archive.add (bookmark_button);
 
         Gtk.ModelButton history_button = new Gtk.ModelButton ();
         history_button.label = _("History");
-        history_button.xalign = 0;
+        (history_button.get_child () as Gtk.Label).xalign = 0;
         history_button.clicked.connect (on_history);
         box_archive.add (history_button);
 
@@ -71,7 +71,7 @@ public class WebArchives.HeaderBarPopover : Gtk.Popover {
 
         Gtk.ModelButton button = new Gtk.ModelButton ();
         button.label = _("New window");
-        button.xalign = 0;
+        (button.get_child () as Gtk.Label).xalign = 0;
         button.clicked.connect (on_new_window);
         box_app.add (button);
 
@@ -82,19 +82,19 @@ public class WebArchives.HeaderBarPopover : Gtk.Popover {
 
         Gtk.ModelButton shortcuts_button = new Gtk.ModelButton ();
         shortcuts_button.label = _("Keyboard shortcuts");
-        shortcuts_button.xalign = 0;
+        (shortcuts_button.get_child () as Gtk.Label).xalign = 0;
         shortcuts_button.action_name = "win.show-help-overlay";
         box_app.add (shortcuts_button);
 
         Gtk.ModelButton about_button = new Gtk.ModelButton ();
         about_button.label = _("About");
-        about_button.xalign = 0;
+        (about_button.get_child () as Gtk.Label).xalign = 0;
         about_button.clicked.connect (on_about);
         box_app.add (about_button);
 
         Gtk.ModelButton quit_button = new Gtk.ModelButton ();
         quit_button.label = _("Quit");
-        quit_button.xalign = 0;
+        (quit_button.get_child () as Gtk.Label).xalign = 0;
         quit_button.action_name = "app.quit";
         box_app.add (quit_button);
 

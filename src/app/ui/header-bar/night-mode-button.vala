@@ -5,12 +5,13 @@ public class WebArchives.NightModeButton : Gtk.Bin {
 
     public NightModeButton () {
         button = new Gtk.ModelButton ();
-        button.xalign = 0;
         button.label = _("Night mode");
+        (button.get_child () as Gtk.Label).xalign = 0;
         button.role = Gtk.ButtonRole.CHECK;
         button.clicked.connect (() => {
             on_clicked ();
         });
+
         add (button);
     }
 

@@ -1,7 +1,7 @@
 {
     "id": "com.github.birros.WebArchives",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
+    "runtime-version": "3.28",
     "sdk": "org.gnome.Sdk",
     "command": "web-archives",
     "finish-args": [
@@ -123,8 +123,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/kiwix/kiwix-lib/archive/1.0.1.tar.gz",
-                    "sha256": "a7973f741e9ac70ce0bb430c46833584e2c4c261eb15549d077a3b3349cbbac2"
+                    "url": "https://github.com/kiwix/kiwix-lib/archive/1.0.2.tar.gz",
+                    "sha256": "b9f839217e84bbf098e20b00a3635d4c883c8e4bc874fe8721a1d02504fb2678"
                 }
             ]
         },
@@ -207,8 +207,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnome.org/pub/GNOME/sources/tracker/2.0/tracker-2.0.1.tar.xz",
-                    "sha256": "ac5c9f4dbb0741af5877ae2818d8c053aa9a431477a924a17976bb7e44411e47"
+                    "url": "https://ftp.gnome.org/pub/GNOME/sources/tracker/2.0/tracker-2.0.3.tar.xz",
+                    "sha256": "5a2fb274c128ec67a920944937b5147ceaf5db16fef6691ea22c4cb841e20580"
                 }
             ]
         },
@@ -230,8 +230,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://http.debian.net/debian/pool/main/libg/libgee-0.8/libgee-0.8_0.20.0.orig.tar.xz",
-                    "sha256": "21308ba3ed77646dda2e724c0e8d5a2f8d101fb05e078975a532d7887223c2bb"
+                    "url": "http://snapshot.debian.org/archive/debian/20180312T232337Z/pool/main/libg/libgee-0.8/libgee-0.8_0.20.1.orig.tar.xz",
+                    "sha256": "bb2802d29a518e8c6d2992884691f06ccfcc25792a5686178575c7111fea4630"
                 }
             ]
         },
@@ -253,7 +253,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://http.debian.net/debian/pool/main/libi/libisocodes/libisocodes_1.2.2.orig.tar.xz",
+                    "url": "http://snapshot.debian.org/archive/debian/20150603T050256Z/pool/main/libi/libisocodes/libisocodes_1.2.2.orig.tar.xz",
                     "sha256": "4cdf2c02486bb44902d95e2b86356ef348c65b5edff75925d6878fe5e5f038de"
                 }
             ]

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Web archives
+Name=WebArchives
 Comment=Read Web archives offline
 Keywords=archive;web;offline;
 Exec=web-archives

@@ -14,7 +14,7 @@ public class WebArchives.TitleLogic : Object {
         switch (context.route_state.route) {
             case RouteState.Route.HOME:
             {
-                context.title_state.title = _("Web archives");
+                context.title_state.title = _("WebArchives");
                 context.title_state.subtitle = "";
                 break;
             }

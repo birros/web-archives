@@ -4,7 +4,7 @@
     <id>com.github.birros.WebArchives.desktop</id>
     <metadata_license>CC0</metadata_license>
     <project_license>GPL-3.0+</project_license>
-    <name>Web archives</name>
+    <name>WebArchives</name>
     <summary>A web archives viewer</summary>
     <description>
         <p>

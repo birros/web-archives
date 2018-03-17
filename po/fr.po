@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-10 17:06+0100\n"
+"POT-Creation-Date: 2018-03-17 13:37+0100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
 #: data/desktop/com.github.birros.WebArchives.desktop.in:3
 #: src/app/states/title-logic.vala:17 src/app/ui/window.vala:305
-msgid "Web archives"
-msgstr "Archives Web"
+msgid "WebArchives"
+msgstr "WebArchives"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:8
 msgid "A web archives viewer"
@@ -19,9 +19,9 @@ msgid ""
 "A web archives viewer offering the ability to browse offline millions of "
 "articles from large community projects such as Wikipedia or Wikisource."
 msgstr ""
-"Un visionneur d'archives web qui offre la possibilité de parcourir hors-ligne "
-"des millions d'articles provenant de grands projets communautaires tels que "
-"Wikipédia ou Wikisource."
+"Un visionneur d'archives web qui offre la possibilité de parcourir hors-"
+"ligne des millions d'articles provenant de grands projets communautaires "
+"tels que Wikipédia ou Wikisource."
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:15
 msgid "Features:"
@@ -278,7 +278,7 @@ msgstr "Remettre le zoom à zéro"
 msgid "Print version number"
 msgstr "Afficher le numéro de version"
 
-#: src/app/states/title-logic.vala:23 src/app/ui/content/archive-row.vala:122
+#: src/app/states/title-logic.vala:23 src/app/ui/content/archive-row.vala:121
 msgid "Details"
 msgstr "Détails"
 
@@ -314,7 +314,7 @@ msgstr "Pas d'historique de navigation."
 msgid "%e %b %y"
 msgstr ""
 
-#: src/app/ui/content/archive-row.vala:131
+#: src/app/ui/content/archive-row.vala:130
 msgid "Remove"
 msgstr "Retirer"
 
@@ -464,6 +464,7 @@ msgid "No archive available for download."
 msgstr "Aucune archive disponible en téléchargement."
 
 #: src/app/ui/content/home-view.vala:407
+#, c-format
 msgid "How would you like to download %s ?"
 msgstr "Comment souhaitez-vous télécharger %s ?"
 
@@ -507,7 +508,7 @@ msgstr "À propos"
 msgid "Quit"
 msgstr "Quitter"
 
-#: src/app/ui/header-bar/night-mode-button.vala:9
+#: src/app/ui/header-bar/night-mode-button.vala:8
 msgid "Night mode"
 msgstr "Mode nuit"
 

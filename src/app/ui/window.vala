@@ -302,7 +302,7 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
         string [] authors = { "Birros <birros@protonmail.com>" };
         Gtk.show_about_dialog (
             this,
-            program_name: _("Web archives"),
+            program_name: _("WebArchives"),
             comments: _("A Web archives viewer."),
             copyright: _("Copyright © 2017-2017 - Birros"),
             version: WebArchives.Config.VERSION,

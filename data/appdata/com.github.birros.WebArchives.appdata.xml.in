@@ -51,6 +51,17 @@
     <update_contact>birros@protonmail.com</update_contact>
     <translation type="gettext">web-archives</translation>
     <releases>
+        <release version="0.0.5" date="2018-05-02">
+            <description>
+                <p>
+                    This new release of WebArchives contains some bug fixes and
+                    new features.
+                </p>
+                <ul>
+                    <li>Fix that only the icon's shadow is visible</li>
+                </ul>
+            </description>
+        </release>
         <release version="0.0.4" date="2018-03-17">
             <description>
                 <p>

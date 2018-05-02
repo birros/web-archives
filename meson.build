@@ -1,5 +1,5 @@
 project('web-archives', ['vala', 'c'],
-    version : '0.0.4',
+    version : '0.0.5',
     license : 'GPL3+'
 )
 

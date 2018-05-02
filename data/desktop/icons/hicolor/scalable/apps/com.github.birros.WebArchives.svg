@@ -15,7 +15,7 @@
    viewBox="0 0 128.05833 128.05834"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="com.github.birros.WebArchives.svg">
   <defs
      id="defs2">
@@ -304,6 +304,38 @@
          result="composite2"
          id="feComposite1212" />
     </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter4708">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood4698" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite4700" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="1"
+         result="blur"
+         id="feGaussianBlur4702" />
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offset"
+         id="feOffset4704" />
+      <feComposite
+         in="offset"
+         in2="offset"
+         operator="atop"
+         result="composite2"
+         id="feComposite4706" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -312,11 +344,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49858088"
-     inkscape:cx="358.13458"
-     inkscape:cy="159.79126"
+     inkscape:zoom="0.99716176"
+     inkscape:cx="242.80725"
+     inkscape:cy="227.98481"
      inkscape:document-units="mm"
-     inkscape:current-layer="g4377"
+     inkscape:current-layer="g4389"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:snap-global="false"
@@ -351,11 +383,25 @@
     <g
        id="g4389"
        transform="translate(94.837223,-6.6195555)"
-       style="filter:url(#filter990)">
+       style="display:inline"
+       inkscape:label="icon">
+      <g
+         transform="matrix(1.3106702,0,0,0.99652926,-115.02585,-42.382782)"
+         id="g4308-3"
+         style="display:inline;filter:url(#filter4708)"
+         inkscape:label="shadow">
+        <path
+           style="fill:#3465a4;fill-opacity:1;stroke:none;stroke-width:0.26481378"
+           d="m 30.718966,57.733116 h 58.130001 c -0.112202,0 17.809123,23.315677 17.809123,23.315677 v 76.322117 c 0,6.78075 -4.10321,12.23962 -9.200012,12.23962 H 30.718966 c -5.096805,0 -9.200009,-5.45887 -9.200009,-12.23962 V 69.97274 c 0,-6.780752 4.103204,-12.239624 9.200009,-12.239624 z"
+           id="rect4302-6"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sccssssss" />
+      </g>
       <g
          transform="matrix(1.3106702,0,0,0.99652926,-115.02585,-42.382782)"
          id="g4308"
-         style="">
+         style="display:inline"
+         inkscape:label="background">
         <path
            style="fill:#3465a4;fill-opacity:1;stroke:none;stroke-width:0.26481378"
            d="m 30.718966,57.733116 h 58.130001 c -0.112202,0 17.809123,23.315677 17.809123,23.315677 v 76.322117 c 0,6.78075 -4.10321,12.23962 -9.200012,12.23962 H 30.718966 c -5.096805,0 -9.200009,-5.45887 -9.200009,-12.23962 V 69.97274 c 0,-6.780752 4.103204,-12.239624 9.200009,-12.239624 z"
@@ -366,27 +412,28 @@
       <g
          transform="matrix(1.3458116,0,0,1.3458116,-128.28675,-13.569888)"
          id="g4377"
-         style="">
+         style="display:inline"
+         inkscape:label="web icon">
         <circle
-           style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3.36199999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
+           style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3.36199999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="path4314"
            cx="71.489983"
            cy="64.31176"
            r="21.337549" />
         <ellipse
-           style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3.32918835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
+           style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3.32918835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="path4314-3"
            cx="71.421661"
            cy="64.321899"
            rx="12.150039"
            ry="21.288015" />
         <path
-           style="fill:none;stroke:#ffffff;stroke-width:3.36229992;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
+           style="fill:none;stroke:#ffffff;stroke-width:3.36229992;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="M 71.667171,42.715669 V 85.479476"
            id="path4333"
            inkscape:connector-curvature="0" />
         <path
-           style="fill:none;stroke:#ffffff;stroke-width:3.36230016;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
+           style="fill:none;stroke:#ffffff;stroke-width:3.36230016;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="M 92.762703,64.237778 H 49.998893"
            id="path4333-6"
            inkscape:connector-curvature="0" />
@@ -403,17 +450,14 @@
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cc" />
       </g>
-      <g
-         style="display:inline;"
-         transform="matrix(1.3106702,0,0,0.99652926,-100.71104,-31.228602)"
-         id="g4308-3" />
       <path
-         style="display:inline;opacity:1;fill:url(#linearGradient881);fill-opacity:1;stroke:none;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter1214)"
+         style="display:inline;opacity:1;fill:url(#linearGradient881);fill-opacity:1;stroke:none;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 0,0 88.290273,87.973857 0.01587,-43.920715 C 87.050573,17.158401 67.144224,0.39537638 44.101499,0.05454992 Z"
          id="path956-3"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccccc"
-         transform="matrix(-0.26458333,0,0,-0.26458333,24.77623,38.384811)" />
+         transform="matrix(-0.26458333,0,0,-0.26458333,24.77623,38.384811)"
+         inkscape:label="corner" />
     </g>
   </g>
 </svg>

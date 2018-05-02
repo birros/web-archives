@@ -55,26 +55,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/openzim/libzim/archive/3.2.0.tar.gz",
-                    "sha256": "9b39a21b62b88b60fdb2f59870ed611c175b9b20c8cd7e51ed01589bf055c8af"
-                },
-                {
-                    "type": "shell",
-                    "commands": [
-                        "mkdir -p subprojects/packagecache"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "url": "https://github.com/google/googletest/archive/release-1.8.0.zip",
-                    "sha256": "f3ed3b58511efd272eb074a3a6d6fb79d7c2e6a0e374323d1e6bcbcc1ef141bf",
-                    "dest-filename": "subprojects/packagecache/gtest-1.8.0.zip"
-                },
-                {
-                    "type": "file",
-                    "url": "https://wrapdb.mesonbuild.com/v1/projects/gtest/1.8.0/4/get_zip",
-                    "sha256": "0b90fe055acbdb002a37dfb035184b306008b763931158497ef5dbaa8c7925af",
-                    "dest-filename": "subprojects/packagecache/gtest-1.8.0-4-wrap.zip"
+                    "url": "https://github.com/openzim/libzim/archive/3.3.0.tar.gz",
+                    "sha256": "043b21f39e856694492248f0bc1db037d2860360a2fe68bb2793140b216934d7"
                 }
             ]
         },
@@ -95,8 +77,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/zeux/pugixml/releases/download/v1.8.1/pugixml-1.8.1.tar.gz",
-                    "sha256": "00d974a1308e85ca0677a981adc1b2855cb060923181053fb0abf4e2f37b8f39"
+                    "url": "https://github.com/zeux/pugixml/releases/download/v1.9/pugixml-1.9.tar.gz",
+                    "sha256": "d156d35b83f680e40fd6412c4455fdd03544339779134617b9b28d19e11fdba6"
                 },
                 {
                     "type": "shell",

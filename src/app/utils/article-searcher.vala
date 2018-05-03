@@ -1,11 +1,12 @@
 public class WebArchives.ArticleSearcher : Object {
     private const uint SEARCH_LIMIT = 100;
-    private Kiwix.Reader reader;
+    private WebArchives.ZimReader reader;
 
     public ArticleSearcher (ArchiveItem archive) {
         reader = null;
         try {
-            reader = new Kiwix.Reader (archive.path);
+            Zim.File zim = new Zim.File (archive.path);
+            reader = new WebArchives.ZimReader (zim);
         } catch (Error e) {
             warning (e.message);
         }

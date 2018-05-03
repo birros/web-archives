@@ -2,7 +2,8 @@ public class WebArchives.ArchiveUtils : Object {
     public static string get_random_page_url (ArchiveItem archive) {
         string url = "";
         try {
-            Kiwix.Reader reader = new Kiwix.Reader (archive.path);
+            Zim.File zim = new Zim.File (archive.path);
+            WebArchives.ZimReader reader = new WebArchives.ZimReader (zim);
             url = reader.get_random_page_url ();
             /*
              * Fix missing slash.
@@ -18,7 +19,8 @@ public class WebArchives.ArchiveUtils : Object {
 
     public static ArchiveItem? archive_from_file (string path) {
         try {
-            Kiwix.Reader reader = new Kiwix.Reader (path);
+            Zim.File zim = new Zim.File (path);
+            WebArchives.ZimReader reader = new WebArchives.ZimReader (zim);
 
             string uuid = reader.get_id ();
 

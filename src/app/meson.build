@@ -97,6 +97,7 @@ web_archives_sources = [
     'utils/archive-utils.vala',
     'utils/article-searcher.vala',
     'utils/css-loader.vala',
+    'utils/zim-reader.vala',
     'persistence/persistence.vala',
     'persistence/database.vala',
     'persistence/archive-database.vala',
@@ -121,7 +122,6 @@ executable(
     c_args: ['-DGETTEXT_PACKAGE='+conf.get('GETTEXT_PACKAGE')],
     dependencies: [
         gtk_dep,
-        kiwix_dep,
         zim_dep,
         sqlite_dep,
         webkit_dep,

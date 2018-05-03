@@ -121,11 +121,6 @@ http backend :
   services
   3. display instructions in a modal window, depending on the system used, to
   install them
-- The dependency to libkiwix is necessary for the moment in order to avoid
-rewriting a search method because the one provided by libzim depends on the
-existence of an index for full text searching thus preventing searching within
-zim files not incorporating this index. If one day libzim implements this
-feature the removal of libkiwix dependency will be allowed
 - Propose ZIM format recognition for GNU/Linux distributions (mimetype)
 - Refactoring the settings : maximize, window size, night mode
 - Write help manual

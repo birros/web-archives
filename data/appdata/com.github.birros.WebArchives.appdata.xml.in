@@ -51,6 +51,17 @@
     <update_contact>birros@protonmail.com</update_contact>
     <translation type="gettext">web-archives</translation>
     <releases>
+        <release version="0.0.6" date="2018-05-03">
+            <description>
+                <p>
+                    This new release of WebArchives contains some bug fixes and
+                    new features.
+                </p>
+                <ul>
+                    <li>Use a reimplementation of Kiwix.Reader to drop kiwix dependency (internal)</li>
+                </ul>
+            </description>
+        </release>
         <release version="0.0.5" date="2018-05-02">
             <description>
                 <p>

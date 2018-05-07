@@ -98,7 +98,7 @@ Add flathub repo and install required runtimes :
 Then build it from sources :
 
     git clone https://github.com/birros/web-archives
-    flatpak-builder --repo=repo web-archives-builddir web-archives/flatpak/com.github.birros.WebArchives.json
+    flatpak-builder --repo=repo web-archives-builddir web-archives/flatpak/com.github.birros.WebArchives.yml
     flatpak build-update-repo repo
 
 And finally install it locally :

@@ -44,8 +44,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/openzim/libzim/archive/3.3.0.tar.gz
-        sha256: 043b21f39e856694492248f0bc1db037d2860360a2fe68bb2793140b216934d7
+        url: https://github.com/openzim/libzim/archive/4.0.0.tar.gz
+        sha256: e195d30ba1b55dd2b6529fdd84fcbed6ec35ed4ddc957ad7725edabd20c3126c
 
   #
   # require
@@ -95,8 +95,8 @@ modules:
       - /share/vala
     sources:
       - type: archive
-        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.0/tracker-2.0.3.tar.xz
-        sha256: 5a2fb274c128ec67a920944937b5147ceaf5db16fef6691ea22c4cb841e20580
+        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.0/tracker-2.0.4.tar.xz
+        sha256: ce2f0db52666592d313a04ce14663110eafa8ab08dc213b53e790281362dccd5
 
   - name: libgee
     build-options:

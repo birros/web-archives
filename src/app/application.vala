@@ -16,10 +16,25 @@ public class WebArchives.Application : Gtk.Application {
     public Application () {
         GLib.Object (
             application_id: "com.github.birros.WebArchives",
-            flags: ApplicationFlags.FLAGS_NONE
+            flags: ApplicationFlags.HANDLES_OPEN
         );
 
         add_main_option_entries (option_entries);
+    }
+
+    protected override void open (File[] files, string hint) {
+        foreach (File file in files) {
+            Context window_context = new Context.fork (
+                context, Context.Layer.APP
+            );
+
+            Window window = new Window (this, window_context, null, null, file);
+            /**
+             * FIXME: better support of window size, maximize saving and
+             * restoring.
+             */
+            window.maximize ();
+        }
     }
 
     protected override int handle_local_options (VariantDict options) {

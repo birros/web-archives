@@ -11,3 +11,7 @@ iconsdir = join_paths(get_option('datadir'), 'icons/hicolor')
 foreach size: ['scalable']
 	install_subdir('icons/hicolor/' + size, install_dir: iconsdir)
 endforeach
+
+install_data('com.github.birros.WebArchives-mime.xml',
+    install_dir: join_paths(datadir, 'mime/packages')
+)

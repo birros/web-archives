@@ -45,7 +45,8 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
         Gtk.Application application,
         Context         context,
         Gtk.Widget?     label = null,
-        Gtk.Widget?     page = null
+        Gtk.Widget?     page = null,
+        File?           file = null
     ) {
         GLib.Object (
             application: application
@@ -65,7 +66,7 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
         notebook.create_window.connect (on_notebook_create_window);
         add (notebook);
 
-        add_tab (label, page);
+        add_tab (label, page, file);
 
         add_action_entries (action_entries, this);
         application.set_accels_for_action ("win.new-tab", {"<Primary>t"});
@@ -314,7 +315,11 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
         );
     }
 
-    private void add_tab (Gtk.Widget? label = null, Gtk.Widget? page = null) {
+    private void add_tab (
+        Gtk.Widget? label = null,
+        Gtk.Widget? page = null,
+        File?       file = null
+    ) {
         Gtk.Widget label_new;
         Gtk.Widget page_new;
 
@@ -339,6 +344,41 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
             );
             label_new = new NotebookTabLabelWithState (tab_context);
             page_new = new Content (tab_context);
+
+            if (file != null && file.query_exists ()) {
+                string filename = file.get_path ();
+                ArchiveItem archive = null;
+                archive = context.archive_store.get_by_scope_and_path (
+                    "RECENTS", filename
+                );
+                if (archive == null) {
+                    archive = context.archive_store.get_by_scope_and_path (
+                        "LOCAL", filename
+                    );
+                }
+                if (archive == null) {
+                    archive = ArchiveUtils.archive_from_file (filename);
+                }
+
+                if (archive != null) {
+                    switch (archive.scope) {
+                        case "LOCAL":
+                            ArchiveItem archive_copy =
+                                new ArchiveItem.copy (archive);
+                            archive = archive_copy;
+                            archive.scope = "RECENTS";
+                            tab_context.archive_store.add (archive);
+                            break;
+                        case "":
+                            archive.scope = "RECENTS";
+                            tab_context.archive_store.add (archive);
+                            break;
+                    }
+                    archive.update_timestamp ();
+                    tab_context.archive_state.archive = archive;
+                    tab_context.route_state.route = RouteState.Route.WEB;
+                }
+            }
         }
 
         notebook.append_page (page_new, label_new);

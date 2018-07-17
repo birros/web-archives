@@ -8,3 +8,4 @@ Terminal=false
 Type=Application
 Icon=com.github.birros.WebArchives
 Categories=GTK;GNOME;Utility;Archiving;
+MimeType=application/vnd.github.birros.web-archives.zim;

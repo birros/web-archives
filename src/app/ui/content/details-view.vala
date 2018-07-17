@@ -11,7 +11,8 @@ public class WebArchives.DetailsView : Gtk.Box {
         );
         add (scrolled_window);
 
-        MaxWidthBin max_width_bin = new MaxWidthBin (500);
+        Hdy.Column max_width_bin = new Hdy.Column ();
+        max_width_bin.set_maximum_width (500);
         scrolled_window.add (max_width_bin);
 
         box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);

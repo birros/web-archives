@@ -111,7 +111,6 @@ web_archives_sources = [
     'ui/gtk/notebook/notebook.vala',
     'ui/gtk/notebook/notebook-tab-label.vala',
     'ui/gtk/notebook/notebook-popup-menu.vala',
-    'ui/gtk/max-width-bin/max-width-bin.vala',
     'ui/gtk/file-chooser-native.vala',
     resources
 ]
@@ -119,7 +118,10 @@ web_archives_sources = [
 executable(
     'web-archives',
     [config_file, web_archives_sources],
-    c_args: ['-DGETTEXT_PACKAGE='+conf.get('GETTEXT_PACKAGE')],
+    c_args: [
+        '-DGETTEXT_PACKAGE='+conf.get('GETTEXT_PACKAGE'),
+        '-DHANDY_USE_UNSTABLE_API=true'
+    ],
     dependencies: [
         gtk_dep,
         zim_dep,
@@ -128,7 +130,8 @@ executable(
         soup_dep,
         tracker_dep,
         xml_dep,
-        isocodes_dep
+        isocodes_dep,
+        handy_dep
     ],
     install: true
 )

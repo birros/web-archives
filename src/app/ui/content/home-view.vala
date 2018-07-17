@@ -18,7 +18,8 @@ public class WebArchives.HomeView : Gtk.Overlay {
         revealer.valign = Gtk.Align.START;
         add_overlay (revealer);
 
-        MaxWidthBin notification_bar_max = new MaxWidthBin (500);
+        Hdy.Column notification_bar_max = new Hdy.Column ();
+        notification_bar_max.set_maximum_width (500);
         revealer.add (notification_bar_max);
 
         NotificationBar notification_bar = new NotificationBar (
@@ -35,7 +36,8 @@ public class WebArchives.HomeView : Gtk.Overlay {
         );
         add (scrolled_window);
 
-        MaxWidthBin max_width_bin = new MaxWidthBin (500);
+        Hdy.Column max_width_bin = new Hdy.Column ();
+        max_width_bin.set_maximum_width (500);
         max_width_bin.margin_top = 6;
         max_width_bin.margin_bottom = 6;
         max_width_bin.margin_start = 6;

@@ -139,6 +139,20 @@ modules:
         url: http://snapshot.debian.org/archive/debian/20150603T050256Z/pool/main/libi/libisocodes/libisocodes_1.2.2.orig.tar.xz
         sha256: 4cdf2c02486bb44902d95e2b86356ef348c65b5edff75925d6878fe5e5f038de
 
+  - name: libhandy
+    buildsystem: meson
+    builddir: true
+    cleanup:
+      - /bin
+      - /include
+      - /lib/girepository-1.0
+      - /lib/pkgconfig
+      - /share
+    sources:
+      - type: archive
+        url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.1/libhandy-v0.0.1.tar.gz
+        sha256: 7bf2fb189c3a138908e0a7e0366b7289bcc976db5becb12331c73c29f43a87c3
+
   #
   # require
   #   libzim-glib, tracker, libisocodes

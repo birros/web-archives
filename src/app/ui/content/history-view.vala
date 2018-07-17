@@ -11,7 +11,8 @@ public class WebArchives.HistoryView : Gtk.Box {
         );
         add (scrolled_window);
 
-        MaxWidthBin max_width_bin = new MaxWidthBin (500);
+        Hdy.Column max_width_bin = new Hdy.Column ();
+        max_width_bin.set_maximum_width (500);
         scrolled_window.add (max_width_bin);
 
         list_box = new Gtk.ListBox ();

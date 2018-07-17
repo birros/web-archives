@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 13:37+0100\n"
+"POT-Creation-Date: 2018-07-17 18:31+0200\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
@@ -298,19 +298,19 @@ msgstr "Pas de vidéos"
 msgid "Full text index"
 msgstr "Index texte intégral"
 
-#: src/app/ui/content/search-view.vala:31
+#: src/app/ui/content/search-view.vala:32
 msgid "No recent searches."
 msgstr "Aucune recherche récente."
 
-#: src/app/ui/content/search-view.vala:45
+#: src/app/ui/content/search-view.vala:46
 msgid "No results."
 msgstr "Pas de résultats."
 
-#: src/app/ui/content/history-view.vala:27
+#: src/app/ui/content/history-view.vala:28
 msgid "No browsing history."
 msgstr "Pas d'historique de navigation."
 
-#: src/app/ui/content/history-view.vala:76
+#: src/app/ui/content/history-view.vala:77
 msgid "%e %b %y"
 msgstr ""
 
@@ -318,67 +318,67 @@ msgstr ""
 msgid "Remove"
 msgstr "Retirer"
 
-#: src/app/ui/content/details-view.vala:83
+#: src/app/ui/content/details-view.vala:112
 msgid "Favicon"
-msgstr "favicône"
+msgstr "Favicône"
 
-#: src/app/ui/content/details-view.vala:84
+#: src/app/ui/content/details-view.vala:113
 msgid "Title"
 msgstr "Titre"
 
-#: src/app/ui/content/details-view.vala:85
-msgid "Path"
-msgstr "Chemin d'accès"
+#: src/app/ui/content/details-view.vala:115
+msgid "Location"
+msgstr "Emplacement"
 
-#: src/app/ui/content/details-view.vala:86
+#: src/app/ui/content/details-view.vala:117
 msgid "Date"
 msgstr "Date"
 
-#: src/app/ui/content/details-view.vala:87
+#: src/app/ui/content/details-view.vala:118
 msgid "Lang"
 msgstr "Langue"
 
-#: src/app/ui/content/details-view.vala:89
+#: src/app/ui/content/details-view.vala:120
 msgid "Size"
 msgstr "Taille"
 
-#: src/app/ui/content/details-view.vala:90
+#: src/app/ui/content/details-view.vala:121
 msgid "Name"
 msgstr "Nom"
 
-#: src/app/ui/content/details-view.vala:91
+#: src/app/ui/content/details-view.vala:122
 msgid "Id"
 msgstr "Id"
 
-#: src/app/ui/content/details-view.vala:92
+#: src/app/ui/content/details-view.vala:123
 msgid "Description"
 msgstr "Description"
 
-#: src/app/ui/content/details-view.vala:93
+#: src/app/ui/content/details-view.vala:124
 msgid "Article count"
 msgstr "Nombre d'articles"
 
-#: src/app/ui/content/details-view.vala:94
+#: src/app/ui/content/details-view.vala:125
 msgid "Media count"
 msgstr "Nombre de médias"
 
-#: src/app/ui/content/details-view.vala:95
+#: src/app/ui/content/details-view.vala:126
 msgid "Creator"
 msgstr "Créateur"
 
-#: src/app/ui/content/details-view.vala:96
+#: src/app/ui/content/details-view.vala:127
 msgid "Publisher"
 msgstr "Éditeur"
 
-#: src/app/ui/content/details-view.vala:100
+#: src/app/ui/content/details-view.vala:131
 msgid "Tags"
 msgstr "Étiquettes"
 
-#: src/app/ui/content/details-view.vala:102
+#: src/app/ui/content/details-view.vala:133
 msgid "Url"
 msgstr ""
 
-#: src/app/ui/content/bookmark-view.vala:22
+#: src/app/ui/content/bookmark-view.vala:23
 msgid "No bookmarks saved."
 msgstr "Pas de signets sauvegardés."
 
@@ -426,57 +426,57 @@ msgstr "il y a %llum"
 msgid "%llus ago"
 msgstr "il y a %llus"
 
-#: src/app/ui/content/home-view.vala:25
+#: src/app/ui/content/home-view.vala:26
 msgid "Cannot open the archive file"
 msgstr "Impossible d'ouvrir l'archive"
 
 #. RECENTS
-#: src/app/ui/content/home-view.vala:58
+#: src/app/ui/content/home-view.vala:60
 msgid "Recents"
 msgstr "Récentes"
 
-#: src/app/ui/content/home-view.vala:84
+#: src/app/ui/content/home-view.vala:86
 msgid "No archive recently opened."
 msgstr "Aucune archive récemment ouverte."
 
-#: src/app/ui/content/home-view.vala:106
+#: src/app/ui/content/home-view.vala:108
 msgid "Local"
 msgstr "Locales"
 
-#: src/app/ui/content/home-view.vala:124 src/app/ui/content/home-view.vala:200
+#: src/app/ui/content/home-view.vala:126 src/app/ui/content/home-view.vala:202
 msgid "Refresh"
 msgstr "Actualiser"
 
-#: src/app/ui/content/home-view.vala:142
+#: src/app/ui/content/home-view.vala:144
 msgid "No archive automaticly detected on your system."
 msgstr "Aucune archive automatiquement détectée sur votre système."
 
-#: src/app/ui/content/home-view.vala:164
+#: src/app/ui/content/home-view.vala:166
 msgid "Remote"
 msgstr "Distant"
 
-#: src/app/ui/content/home-view.vala:195
+#: src/app/ui/content/home-view.vala:197
 msgid "Downloading"
 msgstr "Téléchargement"
 
-#: src/app/ui/content/home-view.vala:218
+#: src/app/ui/content/home-view.vala:220
 msgid "No archive available for download."
 msgstr "Aucune archive disponible en téléchargement."
 
-#: src/app/ui/content/home-view.vala:407
+#: src/app/ui/content/home-view.vala:409
 #, c-format
 msgid "How would you like to download %s ?"
 msgstr "Comment souhaitez-vous télécharger %s ?"
 
-#: src/app/ui/content/home-view.vala:411
+#: src/app/ui/content/home-view.vala:413
 msgid "This will open a third-party application to download the archive."
 msgstr "Ceci ouvrira une application tierce pour télécharger l'archive."
 
-#: src/app/ui/content/home-view.vala:413
+#: src/app/ui/content/home-view.vala:415
 msgid "From a server"
 msgstr "Depuis un serveur"
 
-#: src/app/ui/content/home-view.vala:414
+#: src/app/ui/content/home-view.vala:416
 msgid "Peer-to-peer network"
 msgstr "Réseau pair à pair"
 

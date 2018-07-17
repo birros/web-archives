@@ -37,6 +37,25 @@ public class WebArchives.DetailsView : Gtk.Box {
         subbox.add (title_value);
     }
 
+    private void show_link (string label, string link, string content) {
+        Gtk.Box subbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        box.add (subbox);
+
+        Gtk.Label label_widget = create_label (label);
+        subbox.add (label_widget);
+
+        Gtk.Label title_value = new Gtk.Label (
+            "<a href=\"" + link + "\">" + content + "</a>"
+        );
+        title_value.use_markup = true;
+        title_value.wrap = true;
+        title_value.wrap_mode = Pango.WrapMode.CHAR;
+        title_value.selectable = true;
+        title_value.halign = Gtk.Align.START;
+        title_value.get_style_context().add_class ("dim-label");
+        subbox.add (title_value);
+    }
+
     private void show_image (string label, string image_path) {
         Gtk.Box subbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         box.add (subbox);
@@ -81,9 +100,20 @@ public class WebArchives.DetailsView : Gtk.Box {
 
         box.forall ((element) => box.remove (element));
 
+        string folder_uri = "";
+        string folder_path = "";
+        if (archive.path != "") {
+            File archive_file = File.new_for_path (archive.path);
+            File parent = archive_file.get_parent ();
+            folder_uri = parent.get_uri ();
+            folder_path = parent.get_path ();
+        }
+
         show_image (_("Favicon"), archive.favicon);
         show_text (_("Title"), archive.title);
-        show_text (_("Path"), archive.path);
+        if (folder_uri != "" && folder_path != "") {
+            show_link (_("Location"), folder_uri, folder_path);
+        }
         show_text (_("Date"), archive.date);
         show_text (_("Lang"), archive.lang);
         string size = format_size (archive.size * 1000);

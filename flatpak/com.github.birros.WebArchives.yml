@@ -9,11 +9,18 @@ finish-args:
   - --share=ipc
   - --device=dri
   - --socket=pulseaudio
-  - --talk-name=org.freedesktop.Tracker1
+  # Used to list automatically indexed local files
   - --filesystem=home
+  - --talk-name=org.freedesktop.Tracker1
+  # Used to access gvfs's http backend to download files
   - --share=network
   - --talk-name=org.gtk.vfs
   - --talk-name=org.gtk.vfs.*
+  # Dconf access
+  - --filesystem=xdg-run/dconf
+  - --filesystem=~/.config/dconf:ro
+  - --talk-name=ca.desrt.dconf
+  - --env=DCONF_USER_CONFIG_DIR=.config/dconf
 build-options:
   cflags: -O2 -g
   cxxflags: -O2 -g

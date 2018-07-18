@@ -30,6 +30,7 @@
             <li>Random page</li>
             <li>Sandboxed pages (Pages are isolated from the web)</li>
             <li>Ask for confirmation when opening an external link</li>
+            <li>Handle the opening of zim files from external applications (Nautilus...)</li>
         </ul>
     </description>
     <screenshots>
@@ -51,6 +52,20 @@
     <update_contact>birros@protonmail.com</update_contact>
     <translation type="gettext">web-archives</translation>
     <releases>
+        <release version="0.1.0" date="2018-07-18">
+            <description>
+                <p>
+                    This new release of WebArchives contains some bug fixes and
+                    new features.
+                </p>
+                <ul>
+                    <li>Handle the opening of zim files from external applications (Nautilus...)</li>
+                    <li>Show details in a dialog window instead of the main window</li>
+                    <li>Refactoring of the presentation of archive's details</li>
+                    <li>Replace custom Gtk widget MaxWidthBin by Column widget from libhandy (internal)</li>
+                </ul>
+            </description>
+        </release>
         <release version="0.0.6" date="2018-05-03">
             <description>
                 <p>

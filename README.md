@@ -43,6 +43,7 @@ Also, it only allows reading [ZIM] files for the moment.
 - [x] Random page
 - [x] Sandboxed pages (Pages are isolated from the web)
 - [x] Ask for confirmation when opening an external link
+- [x] Handle the opening of zim files from external applications (Nautilus...)
 - [ ] Fullscreen mode
 - [ ] Table of contents
 - [ ] Responsive (Mobile ready)

@@ -401,7 +401,7 @@ public class WebArchives.HomeView : Gtk.Overlay {
         details_dialog.modal = true;
         details_dialog.set_transient_for (win);
         details_dialog.default_width = 600;
-        details_dialog.default_height = 510;
+        details_dialog.default_height = 530;
         details_dialog.show_all ();
     }
 

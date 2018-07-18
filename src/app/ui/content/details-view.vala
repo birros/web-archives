@@ -1,6 +1,6 @@
 public class WebArchives.DetailsView : Gtk.Box {
     private Context context;
-    private Gtk.Box box;
+    private Gtk.Grid grid;
 
     public DetailsView (Context context) {
         this.context = context;
@@ -15,53 +15,53 @@ public class WebArchives.DetailsView : Gtk.Box {
         max_width_bin.set_maximum_width (500);
         scrolled_window.add (max_width_bin);
 
-        box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
-        box.margin = 6;
-        max_width_bin.add (box);
+        grid = new Gtk.Grid ();
+        grid.orientation = Gtk.Orientation.VERTICAL;
+        grid.margin_top = 12;
+        grid.margin_bottom = 12;
+        grid.column_spacing = 24;
+        grid.row_spacing = 12;
+        max_width_bin.add (grid);
 
         context.archive_state.notify["archive"].connect (on_archive);
     }
 
     private void show_text (string label, string content) {
-        Gtk.Box subbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        box.add (subbox);
-
         Gtk.Label label_widget = create_label (label);
-        subbox.add (label_widget);
+        grid.add (label_widget);
 
         Gtk.Label title_value = new Gtk.Label (content);
-        title_value.selectable = true;
-        title_value.ellipsize = Pango.EllipsizeMode.MIDDLE;
+        title_value.wrap = true;
+        title_value.wrap_mode = Pango.WrapMode.WORD_CHAR;
+        title_value.justify = Gtk.Justification.LEFT;
+        title_value.xalign = 0.0f;
         title_value.halign = Gtk.Align.START;
-        title_value.get_style_context().add_class ("dim-label");
-        subbox.add (title_value);
+        grid.attach_next_to (
+            title_value, label_widget, Gtk.PositionType.RIGHT, 2, 1
+        );
     }
 
     private void show_link (string label, string link, string content) {
-        Gtk.Box subbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        box.add (subbox);
-
         Gtk.Label label_widget = create_label (label);
-        subbox.add (label_widget);
+        grid.add (label_widget);
 
         Gtk.Label title_value = new Gtk.Label (
             "<a href=\"" + link + "\">" + content + "</a>"
         );
         title_value.use_markup = true;
         title_value.wrap = true;
-        title_value.wrap_mode = Pango.WrapMode.CHAR;
-        title_value.selectable = true;
+        title_value.wrap_mode = Pango.WrapMode.WORD_CHAR;
+        title_value.justify = Gtk.Justification.LEFT;
+        title_value.xalign = 0.0f;
         title_value.halign = Gtk.Align.START;
-        title_value.get_style_context().add_class ("dim-label");
-        subbox.add (title_value);
+        grid.attach_next_to (
+            title_value, label_widget, Gtk.PositionType.RIGHT, 2, 1
+        );
     }
 
     private void show_image (string label, string image_path) {
-        Gtk.Box subbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        box.add (subbox);
-
         Gtk.Label label_widget = create_label (label);
-        subbox.add (label_widget);
+        grid.add (label_widget);
 
         Gtk.Image image = new Gtk.Image.from_icon_name (
             "image-missing", Gtk.IconSize.DND
@@ -76,18 +76,17 @@ public class WebArchives.DetailsView : Gtk.Box {
         }
         image.halign = Gtk.Align.START;
         image.show ();
-        subbox.add (image);
+        grid.attach_next_to (image, label_widget, Gtk.PositionType.RIGHT, 2, 1);
     }
 
     private Gtk.Label create_label (string label) {
-        Pango.AttrList attr_list = new Pango.AttrList();
-        Pango.Attribute attr = Pango.attr_weight_new (Pango.Weight.BOLD);
-        attr_list.insert ((owned) attr);
-
         Gtk.Label label_widget = new Gtk.Label (label);
-        label_widget.ellipsize = Pango.EllipsizeMode.MIDDLE;
-        label_widget.halign = Gtk.Align.START;
-        label_widget.set_attributes (attr_list);
+        label_widget.wrap = true;
+        label_widget.wrap_mode = Pango.WrapMode.WORD_CHAR;
+        label_widget.justify = Gtk.Justification.RIGHT;
+        label_widget.xalign = 1.0f;
+        label_widget.halign = Gtk.Align.END;
+        label_widget.get_style_context().add_class ("dim-label");
         return label_widget;
     }
 
@@ -98,7 +97,8 @@ public class WebArchives.DetailsView : Gtk.Box {
 
         ArchiveItem archive = context.archive_state.archive;
 
-        box.forall ((element) => box.remove (element));
+        grid.forall ((element) => grid.remove (element));
+
 
         string folder_uri = "";
         string folder_path = "";
@@ -109,14 +109,20 @@ public class WebArchives.DetailsView : Gtk.Box {
             folder_path = parent.get_path ();
         }
 
+        string language = LanguageFormater.format_language (archive.lang);
+        string size = format_size (archive.size * 1000);
+
+        Array<string> tags = TagParser.parse_tags (archive.tags);
+        string tags_text = string.joinv (" ⋅ ", tags.data);
+
+
         show_image (_("Favicon"), archive.favicon);
         show_text (_("Title"), archive.title);
         if (folder_uri != "" && folder_path != "") {
             show_link (_("Location"), folder_uri, folder_path);
         }
         show_text (_("Date"), archive.date);
-        show_text (_("Lang"), archive.lang);
-        string size = format_size (archive.size * 1000);
+        show_text (_("Lang"), language);
         show_text (_("Size"), size);
         show_text (_("Name"), archive.name);
         show_text (_("Id"), archive.uuid);
@@ -125,12 +131,7 @@ public class WebArchives.DetailsView : Gtk.Box {
         show_text (_("Media count"), archive.media_count.to_string ());
         show_text (_("Creator"), archive.creator);
         show_text (_("Publisher"), archive.publisher);
-
-        Array<string> tags = TagParser.parse_tags (archive.tags);
-        string tags_text = string.joinv (" ⋅ ", tags.data);
         show_text (_("Tags"), tags_text);
-
-        show_text (_("Url"), archive.url.to_string ());
 
         show_all ();
     }

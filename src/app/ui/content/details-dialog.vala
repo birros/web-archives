@@ -1,29 +1,38 @@
-public class WebArchives.DetailsView : Gtk.Box {
-    private Context context;
+public class WebArchives.DetailsDialog : Gtk.Dialog {
     private Gtk.Grid grid;
 
-    public DetailsView (Context context) {
-        this.context = context;
-        set_homogeneous (true);
+    public DetailsDialog (ArchiveItem archive) {
+        GLib.Object (
+            use_header_bar: 1
+        );
+
+        Gtk.HeaderBar header_bar = (Gtk.HeaderBar) get_header_bar ();
+        header_bar.show_close_button = true;
+        header_bar.title = _("Details");
+        header_bar.subtitle = archive.title;
+
+        Gtk.Box content_area = get_content_area ();
+        content_area.set_homogeneous (true);
 
         Gtk.ScrolledWindow scrolled_window = new Gtk.ScrolledWindow (
             null, null
         );
-        add (scrolled_window);
+        content_area.add (scrolled_window);
 
         Hdy.Column max_width_bin = new Hdy.Column ();
-        max_width_bin.set_maximum_width (500);
+        max_width_bin.set_maximum_width (900);
         scrolled_window.add (max_width_bin);
 
         grid = new Gtk.Grid ();
         grid.orientation = Gtk.Orientation.VERTICAL;
+        grid.column_homogeneous = true;
         grid.margin_top = 12;
         grid.margin_bottom = 12;
         grid.column_spacing = 24;
         grid.row_spacing = 12;
         max_width_bin.add (grid);
 
-        context.archive_state.notify["archive"].connect (on_archive);
+        show_infos (archive);
     }
 
     private void show_text (string label, string content) {
@@ -90,16 +99,7 @@ public class WebArchives.DetailsView : Gtk.Box {
         return label_widget;
     }
 
-    private void on_archive () {
-        if (context.archive_state.archive == null) {
-            return;
-        }
-
-        ArchiveItem archive = context.archive_state.archive;
-
-        grid.forall ((element) => grid.remove (element));
-
-
+    private void show_infos (ArchiveItem archive) {
         string folder_uri = "";
         string folder_path = "";
         if (archive.path != "") {
@@ -132,7 +132,5 @@ public class WebArchives.DetailsView : Gtk.Box {
         show_text (_("Creator"), archive.creator);
         show_text (_("Publisher"), archive.publisher);
         show_text (_("Tags"), tags_text);
-
-        show_all ();
     }
 }

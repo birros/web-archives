@@ -386,14 +386,23 @@ public class WebArchives.HomeView : Gtk.Overlay {
             }
         });
         row.details.connect (() => {
-            context.archive_state.archive = archive;
             revealer.reveal_child = false;
-            context.route_state.route = RouteState.Route.DETAILS;
+            show_details (archive);
         });
         row.download.connect (() => {
             ask_for_downloading (archive);
         });
         return row;
+    }
+
+    private void show_details (ArchiveItem archive) {
+        Gtk.Window win = (Gtk.Window) this.get_toplevel ();
+        DetailsDialog details_dialog = new DetailsDialog (archive);
+        details_dialog.modal = true;
+        details_dialog.set_transient_for (win);
+        details_dialog.default_width = 600;
+        details_dialog.default_height = 510;
+        details_dialog.show_all ();
     }
 
     private void ask_for_downloading (ArchiveItem archive) {

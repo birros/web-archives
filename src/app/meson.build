@@ -33,7 +33,7 @@ web_archives_sources = [
     'ui/content/notification-bar.vala',
     'ui/content/combo-box-text.vala',
     'ui/content/combo-box-row.vala',
-    'ui/content/details-view.vala',
+    'ui/content/details-dialog.vala',
     'ui/content/web-view.vala',
     'ui/content/search-view.vala',
     'ui/content/search-result-row.vala',

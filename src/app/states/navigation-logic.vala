@@ -59,7 +59,6 @@ public class WebArchives.NavigationLogic : Object {
             case RouteState.Route.SEARCH:
             case RouteState.Route.SEARCHIN:
             case RouteState.Route.BOOKMARK:
-            case RouteState.Route.DETAILS:
             case RouteState.Route.HISTORY:
             {
                 context.route_state.route = context.route_state.last_route;

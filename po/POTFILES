@@ -8,7 +8,7 @@ src/app/utils/tag-formater.vala
 src/app/ui/content/search-view.vala
 src/app/ui/content/history-view.vala
 src/app/ui/content/archive-row.vala
-src/app/ui/content/details-view.vala
+src/app/ui/content/details-dialog.vala
 src/app/ui/content/bookmark-view.vala
 src/app/ui/content/status-label.vala
 src/app/ui/content/home-view.vala

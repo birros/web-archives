@@ -18,13 +18,6 @@ public class WebArchives.TitleLogic : Object {
                 context.title_state.subtitle = "";
                 break;
             }
-            case RouteState.Route.DETAILS:
-            {
-                context.title_state.title = _("Details");
-                context.title_state.subtitle =
-                    context.archive_state.archive.title;
-                break;
-            }
             case RouteState.Route.WEB:
             {
                 context.title_state.title = context.web_view_state.title;

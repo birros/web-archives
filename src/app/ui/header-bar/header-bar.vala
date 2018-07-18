@@ -167,7 +167,6 @@ public class WebArchives.HeaderBar : Gtk.HeaderBar {
                 context.search_in_state.focus ();
                 break;
             }
-            case RouteState.Route.DETAILS:
             case RouteState.Route.BOOKMARK:
             case RouteState.Route.HISTORY:
             {

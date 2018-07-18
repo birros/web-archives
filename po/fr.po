@@ -1,12 +1,12 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-17 18:31+0200\n"
+"POT-Creation-Date: 2018-07-18 17:11+0200\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
 #: data/desktop/com.github.birros.WebArchives.desktop.in:3
-#: src/app/states/title-logic.vala:17 src/app/ui/window.vala:305
+#: src/app/states/title-logic.vala:17 src/app/ui/window.vala:306
 msgid "WebArchives"
 msgstr "WebArchives"
 
@@ -56,13 +56,13 @@ msgid "Search in page"
 msgstr "Chercher dans la page"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:24
-#: src/app/states/title-logic.vala:44
+#: src/app/states/title-logic.vala:37
 #: src/app/ui/header-bar/popover-menu.vala:60
 msgid "History"
 msgstr "Historique"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:25
-#: src/app/states/title-logic.vala:37
+#: src/app/states/title-logic.vala:30
 #: src/app/ui/header-bar/popover-menu.vala:54
 msgid "Bookmarks"
 msgstr "Signets"
@@ -278,10 +278,6 @@ msgstr "Remettre le zoom à zéro"
 msgid "Print version number"
 msgstr "Afficher le numéro de version"
 
-#: src/app/states/title-logic.vala:23 src/app/ui/content/archive-row.vala:121
-msgid "Details"
-msgstr "Détails"
-
 #: src/app/utils/language-formater.vala:45
 msgid "Unspecified language"
 msgstr "Langue non spécifiée"
@@ -314,69 +310,70 @@ msgstr "Pas d'historique de navigation."
 msgid "%e %b %y"
 msgstr ""
 
+#: src/app/ui/content/archive-row.vala:121
+#: src/app/ui/content/details-dialog.vala:11
+msgid "Details"
+msgstr "Détails"
+
 #: src/app/ui/content/archive-row.vala:130
 msgid "Remove"
 msgstr "Retirer"
 
-#: src/app/ui/content/details-view.vala:112
+#: src/app/ui/content/details-dialog.vala:120
 msgid "Favicon"
 msgstr "Favicône"
 
-#: src/app/ui/content/details-view.vala:113
+#: src/app/ui/content/details-dialog.vala:121
 msgid "Title"
 msgstr "Titre"
 
-#: src/app/ui/content/details-view.vala:115
+#: src/app/ui/content/details-dialog.vala:123
 msgid "Location"
 msgstr "Emplacement"
 
-#: src/app/ui/content/details-view.vala:117
+#: src/app/ui/content/details-dialog.vala:125
 msgid "Date"
 msgstr "Date"
 
-#: src/app/ui/content/details-view.vala:118
+#: src/app/ui/content/details-dialog.vala:126
 msgid "Lang"
 msgstr "Langue"
 
-#: src/app/ui/content/details-view.vala:120
+#: src/app/ui/content/details-dialog.vala:127
 msgid "Size"
 msgstr "Taille"
 
-#: src/app/ui/content/details-view.vala:121
+#: src/app/ui/content/details-dialog.vala:128
 msgid "Name"
 msgstr "Nom"
 
-#: src/app/ui/content/details-view.vala:122
+#: src/app/ui/content/details-dialog.vala:129
 msgid "Id"
 msgstr "Id"
 
-#: src/app/ui/content/details-view.vala:123
+#: src/app/ui/content/details-dialog.vala:130
 msgid "Description"
 msgstr "Description"
 
-#: src/app/ui/content/details-view.vala:124
+#: src/app/ui/content/details-dialog.vala:131
 msgid "Article count"
 msgstr "Nombre d'articles"
 
-#: src/app/ui/content/details-view.vala:125
+#: src/app/ui/content/details-dialog.vala:132
 msgid "Media count"
 msgstr "Nombre de médias"
 
-#: src/app/ui/content/details-view.vala:126
+#: src/app/ui/content/details-dialog.vala:133
 msgid "Creator"
 msgstr "Créateur"
 
-#: src/app/ui/content/details-view.vala:127
+#: src/app/ui/content/details-dialog.vala:134
 msgid "Publisher"
 msgstr "Éditeur"
 
-#: src/app/ui/content/details-view.vala:131
+#: src/app/ui/content/details-dialog.vala:135
 msgid "Tags"
 msgstr "Étiquettes"
-
-#: src/app/ui/content/details-view.vala:133
-msgid "Url"
-msgstr ""
 
 #: src/app/ui/content/bookmark-view.vala:23
 msgid "No bookmarks saved."
@@ -463,20 +460,20 @@ msgstr "Téléchargement"
 msgid "No archive available for download."
 msgstr "Aucune archive disponible en téléchargement."
 
-#: src/app/ui/content/home-view.vala:409
+#: src/app/ui/content/home-view.vala:418
 #, c-format
 msgid "How would you like to download %s ?"
 msgstr "Comment souhaitez-vous télécharger %s ?"
 
-#: src/app/ui/content/home-view.vala:413
+#: src/app/ui/content/home-view.vala:422
 msgid "This will open a third-party application to download the archive."
 msgstr "Ceci ouvrira une application tierce pour télécharger l'archive."
 
-#: src/app/ui/content/home-view.vala:415
+#: src/app/ui/content/home-view.vala:424
 msgid "From a server"
 msgstr "Depuis un serveur"
 
-#: src/app/ui/content/home-view.vala:416
+#: src/app/ui/content/home-view.vala:425
 msgid "Peer-to-peer network"
 msgstr "Réseau pair à pair"
 
@@ -512,18 +509,18 @@ msgstr "Quitter"
 msgid "Night mode"
 msgstr "Mode nuit"
 
-#: src/app/ui/window.vala:306
+#: src/app/ui/window.vala:307
 msgid "A Web archives viewer."
 msgstr "Un visionneur d'archives web."
 
-#: src/app/ui/window.vala:307
+#: src/app/ui/window.vala:308
 msgid "Copyright © 2017-2017 - Birros"
 msgstr "Copyright © 2017-2017 - Birros"
 
-#: src/app/ui/window.vala:387
+#: src/app/ui/window.vala:427
 msgid "Please choose a file"
 msgstr "Veuillez choisir un fichier"
 
-#: src/app/ui/window.vala:457
+#: src/app/ui/window.vala:497
 msgid "Are you sure to open external link ?"
 msgstr "Voulez-vous vraiment ouvrir le lien externe ?"

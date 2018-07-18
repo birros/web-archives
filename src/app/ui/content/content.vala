@@ -1,7 +1,6 @@
 public class WebArchives.Content : Gtk.Stack {
     private Context context;
     private HomeView home_view;
-    private DetailsView details_view;
     private WebView web_view;
     private SearchView search_view;
     private BookmarkView bookmark_view;
@@ -13,9 +12,6 @@ public class WebArchives.Content : Gtk.Stack {
 
         home_view = new HomeView (context);
         add (home_view);
-
-        details_view = new DetailsView (context);
-        add (details_view);
 
         web_view = new WebView (context);
         add (web_view);
@@ -55,11 +51,6 @@ public class WebArchives.Content : Gtk.Stack {
             case RouteState.Route.SEARCH:
             {
                 set_visible_child (search_view);
-                break;
-            }
-            case RouteState.Route.DETAILS:
-            {
-                set_visible_child (details_view);
                 break;
             }
             case RouteState.Route.BOOKMARK:

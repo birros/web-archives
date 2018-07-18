@@ -4,7 +4,6 @@ public class WebArchives.RouteState : Object {
         WEB,
         SEARCH,
         SEARCHIN,
-        DETAILS,
         BOOKMARK,
         HISTORY
     }

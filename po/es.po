@@ -1,0 +1,534 @@
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-18 17:11+0200\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.9\n"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
+#: data/desktop/com.github.birros.WebArchives.desktop.in:3
+#: src/app/states/title-logic.vala:17 src/app/ui/window.vala:306
+msgid "WebArchives"
+msgstr "WebArchives"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:8
+msgid "A web archives viewer"
+msgstr "Un visor de archivadores web"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:10
+msgid ""
+"A web archives viewer offering the ability to browse offline millions of "
+"articles from large community projects such as Wikipedia or Wikisource."
+msgstr ""
+"Un visor de archivadores web que ofrece la posibilidad de explorar sin "
+"conexión millones de artículos provenientes de grandes proyectos "
+"comunitarios como Wikipedia o Wikisource."
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:15
+msgid "Features:"
+msgstr "Funcionalidades:"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:17
+msgid "List recently opened web archives"
+msgstr "Listado de archivadores web abiertos recientemente"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:18
+msgid "List available local web archives"
+msgstr "Listado de archivadores web locales disponibles"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:19
+msgid "List of web archives available to download"
+msgstr "Listado de archivadores web disponibles para descarga"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:20
+msgid "Print a page"
+msgstr "Imprimir páginas"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:21
+msgid "Night mode (Basic support)"
+msgstr "Modo nocturno (implementación básica)"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:22
+msgid "Zoom controls"
+msgstr "Controles de escala"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:23
+msgid "Search in page"
+msgstr "Buscar en las páginas"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:24
+#: src/app/states/title-logic.vala:37
+#: src/app/ui/header-bar/popover-menu.vala:60
+msgid "History"
+msgstr "Historial"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:25
+#: src/app/states/title-logic.vala:30
+#: src/app/ui/header-bar/popover-menu.vala:54
+msgid "Bookmarks"
+msgstr "Marcadores"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:26
+msgid "Search a page"
+msgstr "Buscar páginas"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:27
+#: src/app/ui/header-bar/popover-menu.vala:84
+msgid "Keyboard shortcuts"
+msgstr "Atajos de teclado"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:28
+msgid "Multi-windows"
+msgstr "Ventanas múltiples"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:29
+msgid "Multi-tabs"
+msgstr "Pestañas múltiples"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:30
+#: src/app/ui/header-bar/popover-menu.vala:46
+msgid "Random page"
+msgstr "Página al azar"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:31
+msgid "Sandboxed pages (Pages are isolated from the web)"
+msgstr "Páginas en entorno aislado (limitadas en acceso a la web)"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:32
+msgid "Ask for confirmation when opening an external link"
+msgstr "Solicitar confirmación antes de abrir un enlace externo"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:4
+msgid "Read Web archives offline"
+msgstr "Consultar archivadores web sin conexión"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:5
+msgid "archive;web;offline;"
+msgstr "archivador;web;sin conexión;"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:10
+msgid "com.github.birros.WebArchives"
+msgstr "com.github.birros.WebArchives"
+
+#: src/app/resources/gtk/help-overlay.ui:13
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Generales"
+
+#: src/app/resources/gtk/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "New window"
+msgstr "Ventana nueva"
+
+#: src/app/resources/gtk/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Close window or tab"
+msgstr "Cerrar la ventana o pestaña"
+
+#: src/app/resources/gtk/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Shortcuts"
+msgstr "Atajos"
+
+#: src/app/resources/gtk/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Night mode"
+msgstr "Modo nocturno"
+
+#: src/app/resources/gtk/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Quit the application"
+msgstr "Salir de la aplicación"
+
+#: src/app/resources/gtk/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "Opening"
+msgstr "Apertura"
+
+#: src/app/resources/gtk/help-overlay.ui:58
+msgctxt "shortcut window"
+msgid "Open an archive"
+msgstr "Abrir un archivador"
+
+#: src/app/resources/gtk/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Pestañas"
+
+#: src/app/resources/gtk/help-overlay.ui:71
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Pestaña nueva"
+
+#: src/app/resources/gtk/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Go to previous tab"
+msgstr "Ir a la pestaña anterior"
+
+#: src/app/resources/gtk/help-overlay.ui:85
+msgctxt "shortcut window"
+msgid "Go to next tab"
+msgstr "Ir a la pestaña siguiente"
+
+#: src/app/resources/gtk/help-overlay.ui:92
+msgctxt "shortcut window"
+msgid "Open tab"
+msgstr "Abrir una pestaña"
+
+#: src/app/resources/gtk/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navegación"
+
+#: src/app/resources/gtk/help-overlay.ui:105
+msgctxt "shortcut window"
+msgid "Go back"
+msgstr "Ir hacia atrás"
+
+#: src/app/resources/gtk/help-overlay.ui:112
+msgctxt "shortcut window"
+msgid "Go forward"
+msgstr "Ir hacia adelante"
+
+#: src/app/resources/gtk/help-overlay.ui:121
+msgctxt "shortcut window"
+msgid "Archive"
+msgstr "Archivador"
+
+#: src/app/resources/gtk/help-overlay.ui:125
+msgctxt "shortcut window"
+msgid "Main page"
+msgstr "Página principal"
+
+#: src/app/resources/gtk/help-overlay.ui:132
+msgctxt "shortcut window"
+msgid "Search a page"
+msgstr "Buscar una página"
+
+#: src/app/resources/gtk/help-overlay.ui:139
+msgctxt "shortcut window"
+msgid "Random page"
+msgstr "Página al azar"
+
+#: src/app/resources/gtk/help-overlay.ui:146
+msgctxt "shortcut window"
+msgid "Show bookmarks"
+msgstr "Mostrar los marcadores"
+
+#: src/app/resources/gtk/help-overlay.ui:153
+msgctxt "shortcut window"
+msgid "Show history"
+msgstr "Mostrar el historial"
+
+#: src/app/resources/gtk/help-overlay.ui:162
+msgctxt "shortcut window"
+msgid "Page"
+msgstr "Página"
+
+#: src/app/resources/gtk/help-overlay.ui:166
+msgctxt "shortcut window"
+msgid "Search in page"
+msgstr "Buscar en la página"
+
+#: src/app/resources/gtk/help-overlay.ui:173
+msgctxt "shortcut window"
+msgid "Toggle bookmark for current page"
+msgstr "Conmutar marcador en la página actual"
+
+#: src/app/resources/gtk/help-overlay.ui:180
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "Imprimir"
+
+#: src/app/resources/gtk/help-overlay.ui:189
+msgctxt "shortcut window"
+msgid "Search in"
+msgstr "Buscar en"
+
+#: src/app/resources/gtk/help-overlay.ui:193
+msgctxt "shortcut window"
+msgid "Next match"
+msgstr "Correspondencia siguiente"
+
+#: src/app/resources/gtk/help-overlay.ui:200
+msgctxt "shortcut window"
+msgid "Previous match"
+msgstr "Correspondencia anterior"
+
+#: src/app/resources/gtk/help-overlay.ui:209
+msgctxt "shortcut window"
+msgid "Zoom"
+msgstr "Escala"
+
+#: src/app/resources/gtk/help-overlay.ui:213
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr "Ampliar"
+
+#: src/app/resources/gtk/help-overlay.ui:220
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "Reducir"
+
+#: src/app/resources/gtk/help-overlay.ui:227
+msgctxt "shortcut window"
+msgid "Reset zoom"
+msgstr "Restablecer la escala"
+
+#: src/app/application.vala:8
+msgid "Print version number"
+msgstr "Mostrar el número de versión"
+
+#: src/app/utils/language-formater.vala:45
+msgid "Unspecified language"
+msgstr "Idioma no especificado"
+
+#: src/app/utils/tag-formater.vala:6
+msgid "No pictures"
+msgstr "No hay ninguna imagen"
+
+#: src/app/utils/tag-formater.vala:7
+msgid "No videos"
+msgstr "No hay ningún vídeo"
+
+#: src/app/utils/tag-formater.vala:8
+msgid "Full text index"
+msgstr "Índice de texto completo"
+
+#: src/app/ui/content/search-view.vala:32
+msgid "No recent searches."
+msgstr "No hay ninguna búsqueda reciente."
+
+#: src/app/ui/content/search-view.vala:46
+msgid "No results."
+msgstr "No hay resultados."
+
+#: src/app/ui/content/history-view.vala:28
+msgid "No browsing history."
+msgstr "El historial de navegación está vacío."
+
+#: src/app/ui/content/history-view.vala:77
+msgid "%e %b %y"
+msgstr "%e.%b.%y"
+
+#: src/app/ui/content/archive-row.vala:121
+#: src/app/ui/content/details-dialog.vala:11
+msgid "Details"
+msgstr "Detalles"
+
+#: src/app/ui/content/archive-row.vala:130
+msgid "Remove"
+msgstr "Quitar"
+
+#: src/app/ui/content/details-dialog.vala:120
+msgid "Favicon"
+msgstr "Favicono"
+
+#: src/app/ui/content/details-dialog.vala:121
+msgid "Title"
+msgstr "Título"
+
+#: src/app/ui/content/details-dialog.vala:123
+msgid "Location"
+msgstr "Ubicación"
+
+#: src/app/ui/content/details-dialog.vala:125
+msgid "Date"
+msgstr "Fecha"
+
+#: src/app/ui/content/details-dialog.vala:126
+msgid "Lang"
+msgstr "Idioma"
+
+#: src/app/ui/content/details-dialog.vala:127
+msgid "Size"
+msgstr "Tamaño"
+
+#: src/app/ui/content/details-dialog.vala:128
+msgid "Name"
+msgstr "Nombre"
+
+#: src/app/ui/content/details-dialog.vala:129
+msgid "Id"
+msgstr "Id."
+
+#: src/app/ui/content/details-dialog.vala:130
+msgid "Description"
+msgstr "Descripción"
+
+#: src/app/ui/content/details-dialog.vala:131
+msgid "Article count"
+msgstr "Cantidad de artículos"
+
+#: src/app/ui/content/details-dialog.vala:132
+msgid "Media count"
+msgstr "Cantidad de archivos multimedia"
+
+#: src/app/ui/content/details-dialog.vala:133
+msgid "Creator"
+msgstr "Creador"
+
+#: src/app/ui/content/details-dialog.vala:134
+msgid "Publisher"
+msgstr "Editor"
+
+#: src/app/ui/content/details-dialog.vala:135
+msgid "Tags"
+msgstr "Etiquetas"
+
+#: src/app/ui/content/bookmark-view.vala:23
+msgid "No bookmarks saved."
+msgstr "No hay ningún marcador guardado."
+
+#: src/app/ui/content/status-label.vala:29
+#, c-format
+msgid "%s: %u %%"
+msgstr "%s: %u %%"
+
+#: src/app/ui/content/status-label.vala:34
+#: src/app/ui/content/status-label.vala:47
+msgid "Never refreshed"
+msgstr "Jamás actualizado"
+
+#: src/app/ui/content/status-label.vala:39
+msgid "Last refreshed: %H:%M - %e %b %Y"
+msgstr "Última actualización: %H:%M, %e.%b.%Y"
+
+#: src/app/ui/content/status-label.vala:62
+#, c-format
+msgid "%lluY ago"
+msgstr "hace %lluA"
+
+#: src/app/ui/content/status-label.vala:64
+#, c-format
+msgid "%lluM ago"
+msgstr "hace %lluM"
+
+#: src/app/ui/content/status-label.vala:66
+#, c-format
+msgid "%lluD ago"
+msgstr "hace %lluD"
+
+#: src/app/ui/content/status-label.vala:68
+#, c-format
+msgid "%lluh ago"
+msgstr "hace %lluh"
+
+#: src/app/ui/content/status-label.vala:70
+#, c-format
+msgid "%llum ago"
+msgstr "hace %llum"
+
+#: src/app/ui/content/status-label.vala:72
+#, c-format
+msgid "%llus ago"
+msgstr "hace %llus"
+
+#: src/app/ui/content/home-view.vala:26
+msgid "Cannot open the archive file"
+msgstr "No se puede abrir el archivador"
+
+#. RECENTS
+#: src/app/ui/content/home-view.vala:60
+msgid "Recents"
+msgstr "Recientes"
+
+#: src/app/ui/content/home-view.vala:86
+msgid "No archive recently opened."
+msgstr "No se ha abierto ningún archivador recientemente."
+
+#: src/app/ui/content/home-view.vala:108
+msgid "Local"
+msgstr "Locales"
+
+#: src/app/ui/content/home-view.vala:126 src/app/ui/content/home-view.vala:202
+msgid "Refresh"
+msgstr "Actualizar"
+
+#: src/app/ui/content/home-view.vala:144
+msgid "No archive automaticly detected on your system."
+msgstr "No se detectó ningún archivador automáticamente en el sistema."
+
+#: src/app/ui/content/home-view.vala:166
+msgid "Remote"
+msgstr "Remoto"
+
+#: src/app/ui/content/home-view.vala:197
+msgid "Downloading"
+msgstr "Descargando"
+
+#: src/app/ui/content/home-view.vala:220
+msgid "No archive available for download."
+msgstr "No hay ningún archivador descargable disponible."
+
+#: src/app/ui/content/home-view.vala:418
+#, c-format
+msgid "How would you like to download %s ?"
+msgstr "¿Cómo quiere descargarse «%s»?"
+
+#: src/app/ui/content/home-view.vala:422
+msgid "This will open a third-party application to download the archive."
+msgstr "Esto abrirá una aplicación externa para descargar el archivador."
+
+#: src/app/ui/content/home-view.vala:424
+msgid "From a server"
+msgstr "Desde un servidor"
+
+#: src/app/ui/content/home-view.vala:425
+msgid "Peer-to-peer network"
+msgstr "Red punto a punto"
+
+#: src/app/ui/gtk/notebook/notebook-popup-menu.vala:13
+msgid "Detach to a new window"
+msgstr "Separar en una ventana nueva"
+
+#: src/app/ui/header-bar/popover-menu.vala:26
+msgid "Search in..."
+msgstr "Buscar en…"
+
+#: src/app/ui/header-bar/popover-menu.vala:32
+msgid "Print"
+msgstr "Imprimir"
+
+#: src/app/ui/header-bar/popover-menu.vala:40
+msgid "Main page"
+msgstr "Página principal"
+
+#: src/app/ui/header-bar/popover-menu.vala:73
+msgid "New window"
+msgstr "Ventana nueva"
+
+#: src/app/ui/header-bar/popover-menu.vala:90
+msgid "About"
+msgstr "Acerca de"
+
+#: src/app/ui/header-bar/popover-menu.vala:96
+msgid "Quit"
+msgstr "Salir"
+
+#: src/app/ui/header-bar/night-mode-button.vala:8
+msgid "Night mode"
+msgstr "Modo nocturno"
+
+#: src/app/ui/window.vala:307
+msgid "A Web archives viewer."
+msgstr "Un visor de archivadores web."
+
+#: src/app/ui/window.vala:308
+msgid "Copyright © 2017-2017 - Birros"
+msgstr "Derechos de autor © 2017-2017 Birros"
+
+#: src/app/ui/window.vala:427
+msgid "Please choose a file"
+msgstr "Seleccione un archivo"
+
+#: src/app/ui/window.vala:497
+msgid "Are you sure to open external link ?"
+msgstr "¿Confirma que quiere abrir el enlace externo?"

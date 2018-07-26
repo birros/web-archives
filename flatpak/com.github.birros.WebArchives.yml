@@ -150,8 +150,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.1/libhandy-v0.0.1.tar.gz
-        sha256: 7bf2fb189c3a138908e0a7e0366b7289bcc976db5becb12331c73c29f43a87c3
+        url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.2/libhandy-v0.0.2.tar.gz
+        sha256: 7cfa36032981e4ad7bb156d14df588a784743a066f57651260072fe21317cbd3
 
   #
   # require

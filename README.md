@@ -31,7 +31,7 @@ Also, it only allows reading [ZIM] files for the moment.
 - [x] List available local web archives
 - [x] List of web archives available to download
 - [x] Print a page
-- [x] Night mode (Basic support)
+- [x] Night mode ([Darkreader])
 - [x] Zoom controls
 - [x] Search in page
 - [x] History
@@ -131,6 +131,7 @@ See : [HACKING.md].
 [Wikipedia]: https://en.wikipedia.org/wiki/Wikipedia
 [Wikisource]: https://en.wikipedia.org/wiki/Wikisource
 [ZIM]: https://en.wikipedia.org/wiki/ZIM_(file_format)
+[Darkreader]: https://github.com/darkreader/darkreader
 [GNU/Linux]: https://en.wikipedia.org/wiki/Linux
 [GNOME]: https://en.wikipedia.org/wiki/GNOME
 [Flatpak]: https://en.wikipedia.org/wiki/Flatpak

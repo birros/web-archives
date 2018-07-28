@@ -18,7 +18,7 @@
             <li>List available local web archives</li>
             <li>List of web archives available to download</li>
             <li>Print a page</li>
-            <li>Night mode (Basic support)</li>
+            <li>Night mode (Darkreader)</li>
             <li>Zoom controls</li>
             <li>Search in page</li>
             <li>History</li>
@@ -52,6 +52,18 @@
     <update_contact>birros@protonmail.com</update_contact>
     <translation type="gettext">web-archives</translation>
     <releases>
+        <release version="0.2.0" date="2018-07-28">
+            <description>
+                <p>
+                    This new release of WebArchives contains some bug fixes and
+                    new features.
+                </p>
+                <ul>
+                    <li>Improve night mode using Darkreader web extension</li>
+                    <li>Add Spanish translation</li>
+                </ul>
+            </description>
+        </release>
         <release version="0.1.0" date="2018-07-18">
             <description>
                 <p>

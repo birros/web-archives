@@ -1,0 +1,3 @@
+[submodule "subprojects/darkreader"]
+	path = subprojects/darkreader
+	url = git@github.com:birros/web-archives-darkreader.git

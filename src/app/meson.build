@@ -8,7 +8,13 @@ resources = gnome.compile_resources(
     'resources',
     'web-archives.gresource.xml',
     c_name: 'web_archives',
-    source_dir: 'src/app'
+    source_dir: [
+        'src/app',
+        join_paths(meson.build_root(), 'subprojects/darkreader')
+    ],
+    dependencies: [
+        darkreader_dep
+    ]
 )
 
 web_archives_sources = [

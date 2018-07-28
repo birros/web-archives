@@ -153,9 +153,19 @@ modules:
         url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.2/libhandy-v0.0.2.tar.gz
         sha256: 7cfa36032981e4ad7bb156d14df588a784743a066f57651260072fe21317cbd3
 
+  - name: nodejs
+    cleanup:
+      - /*
+    sources:
+      - type: archive
+        url: https://nodejs.org/dist/v8.11.3/node-v8.11.3.tar.gz
+        sha256: 0d7e795c0579226c8b197353bbb9392cae802f4fefa4787a2c0e678beaf85cce
+
   #
   # require
   #   libzim-glib, tracker, libisocodes, libhandy
+  # subprojects/darkreader require
+  #   nodejs
   #
   - name: web-archives
     buildsystem: meson
@@ -163,3 +173,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/birros/web-archives
+      #
+      # preinstall npm packages, darkreader-npm-cache.json was generated using
+      # github.com/flatpak/flatpak-builder-tools/npm from package-lock.json
+      #
+      - modules/darkreader-npm-cache.json
+      - type: shell
+        commands:
+          - cd subprojects/darkreader && npm install --offline --cache=../../npm-cache

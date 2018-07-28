@@ -40,9 +40,13 @@ class WebArchives.WebView : Gtk.Box {
     }
     document.body.scrollTop = scroll;
     """;
-    private const string NIGHT_MODE_CSS = """
+    /**
+     * The backaground-color value depends on config passed to
+     * createOrUpdateDynamicTheme in the script.
+     */
+    private const string DARKREADER_CSS = """
     html {
-        filter: invert(100%);
+        background-color: #212127;
     }
     """;
 
@@ -149,11 +153,32 @@ class WebArchives.WebView : Gtk.Box {
             return;
         }
 
-        user_content_manager.remove_all_style_sheets ();
-        string style_content = "";
+        inject_darkreader_css ();
+        inject_darkreader_js ();
 
         if (context.night_mode_state.active) {
-            style_content = NIGHT_MODE_CSS;
+            web_view.run_javascript.begin (
+                """
+                setTimeout (function() {
+                    darkreader.enable();
+                }, 1);
+                """, null
+            );
+        } else {
+            web_view.run_javascript.begin (
+                """
+                setTimeout (function() {
+                    darkreader.disable();
+                }, 1);
+                """, null
+            );
+        }
+    }
+
+    private void inject_darkreader_css () {
+        string style_content = "";
+        if (context.night_mode_state.active) {
+            style_content = DARKREADER_CSS;
         }
 
         WebKit.UserStyleSheet style = new WebKit.UserStyleSheet (
@@ -163,7 +188,43 @@ class WebArchives.WebView : Gtk.Box {
             null,
             null
         );
+        user_content_manager.remove_all_style_sheets ();
         user_content_manager.add_style_sheet (style);
+    }
+
+    private void inject_darkreader_js () {
+        string default_str = "";
+        if (context.night_mode_state.active) {
+            default_str = """
+            const darkreader_default = true;
+            """;
+        } else {
+            default_str = """
+            const darkreader_default = false;
+            """;
+        }
+
+
+        File darkreader_file = File.new_for_uri (
+            "resource:///com/github/birros/WebArchives/js/darkreader.js"
+        );
+        uint8[] darkreader_data;
+        try {
+            darkreader_file.load_contents(null, out darkreader_data, null);
+        } catch (Error e) {
+            warning (e.message);
+        }
+        string darkreader_str = (string) darkreader_data;
+
+        WebKit.UserScript script = new WebKit.UserScript (
+            default_str + darkreader_str,
+            WebKit.UserContentInjectedFrames.ALL_FRAMES,
+            WebKit.UserScriptInjectionTime.START,
+            null,
+            null
+        );
+        user_content_manager.remove_all_scripts ();
+        user_content_manager.add_script (script);
     }
 
     private void on_zoom_level () {

@@ -29,6 +29,9 @@ xml_dep = dependency('libxml-2.0')
 isocodes_dep = dependency('libisocodes')
 handy_dep = dependency('libhandy-0.0', version : '>=0.0.1')
 
+darkreader_sp = subproject('darkreader')
+darkreader_dep = darkreader_sp.get_variable('darkreader')
+
 subdir('src')
 subdir('data')
 subdir('po')

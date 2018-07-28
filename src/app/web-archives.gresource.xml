@@ -6,5 +6,7 @@
         <file>ui/content/shadow.css</file>
         <file alias="gtk/help-overlay.ui">resources/gtk/help-overlay.ui</file>
         <file compressed="true" alias="icons/scalable/actions/ephy-bookmarks-symbolic.svg">resources/icons/scalable/actions/ephy-bookmarks-symbolic.svg</file>
+        <!-- built by subprojects/darkreader -->
+        <file alias="js/darkreader.js">darkreader.js</file>
     </gresource>
 </gresources>

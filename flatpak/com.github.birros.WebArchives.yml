@@ -172,7 +172,7 @@ modules:
     builddir: true
     sources:
       - type: git
-        url: https://github.com/birros/web-archives
+        url: https://github.com/birros/web-archives.git
       #
       # preinstall npm packages, darkreader-npm-cache.json was generated using
       # github.com/flatpak/flatpak-builder-tools/npm from package-lock.json

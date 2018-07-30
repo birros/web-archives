@@ -1,12 +1,12 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-18 17:11+0200\n"
+"POT-Creation-Date: 2018-07-30 11:18+0200\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
 #: data/desktop/com.github.birros.WebArchives.desktop.in:3
-#: src/app/states/title-logic.vala:17 src/app/ui/window.vala:306
+#: src/app/states/title-logic.vala:17 src/app/ui/window.vala:312
 msgid "WebArchives"
 msgstr "WebArchives"
 
@@ -44,8 +44,8 @@ msgid "Print a page"
 msgstr "Imprimer une page"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:21
-msgid "Night mode (Basic support)"
-msgstr "Mode nuit (Support basique)"
+msgid "Night mode (Darkreader)"
+msgstr "Mode nuit (Darkreader)"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:22
 msgid "Zoom controls"
@@ -96,6 +96,13 @@ msgstr "Pages en bac à sable (les pages sont isolées du Web)"
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:32
 msgid "Ask for confirmation when opening an external link"
 msgstr "Demander confirmation lors de l'ouverture d'un lien externe"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:33
+msgid ""
+"Handle the opening of zim files from external applications (Nautilus...)"
+msgstr ""
+"Gérer l'ouverture des fichiers zim depuis une application externe "
+"(Nautilus...)"
 
 #: data/desktop/com.github.birros.WebArchives.desktop.in:4
 msgid "Read Web archives offline"
@@ -181,95 +188,100 @@ msgstr "Navigation"
 
 #: src/app/resources/gtk/help-overlay.ui:105
 msgctxt "shortcut window"
+msgid "Go home"
+msgstr "Aller à l'accueil"
+
+#: src/app/resources/gtk/help-overlay.ui:112
+msgctxt "shortcut window"
 msgid "Go back"
 msgstr "Aller en arrière"
 
-#: src/app/resources/gtk/help-overlay.ui:112
+#: src/app/resources/gtk/help-overlay.ui:119
 msgctxt "shortcut window"
 msgid "Go forward"
 msgstr "Aller en avant"
 
-#: src/app/resources/gtk/help-overlay.ui:121
+#: src/app/resources/gtk/help-overlay.ui:128
 msgctxt "shortcut window"
 msgid "Archive"
 msgstr "Archive"
 
-#: src/app/resources/gtk/help-overlay.ui:125
+#: src/app/resources/gtk/help-overlay.ui:132
 msgctxt "shortcut window"
 msgid "Main page"
 msgstr "Page d'accueil"
 
-#: src/app/resources/gtk/help-overlay.ui:132
+#: src/app/resources/gtk/help-overlay.ui:139
 msgctxt "shortcut window"
 msgid "Search a page"
 msgstr "Chercher une page"
 
-#: src/app/resources/gtk/help-overlay.ui:139
+#: src/app/resources/gtk/help-overlay.ui:146
 msgctxt "shortcut window"
 msgid "Random page"
 msgstr "Page au hasard"
 
-#: src/app/resources/gtk/help-overlay.ui:146
+#: src/app/resources/gtk/help-overlay.ui:153
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "Afficher les signets"
 
-#: src/app/resources/gtk/help-overlay.ui:153
+#: src/app/resources/gtk/help-overlay.ui:160
 msgctxt "shortcut window"
 msgid "Show history"
 msgstr "Afficher l'historique"
 
-#: src/app/resources/gtk/help-overlay.ui:162
+#: src/app/resources/gtk/help-overlay.ui:169
 msgctxt "shortcut window"
 msgid "Page"
 msgstr "Page"
 
-#: src/app/resources/gtk/help-overlay.ui:166
+#: src/app/resources/gtk/help-overlay.ui:173
 msgctxt "shortcut window"
 msgid "Search in page"
 msgstr "Chercher dans la page"
 
-#: src/app/resources/gtk/help-overlay.ui:173
+#: src/app/resources/gtk/help-overlay.ui:180
 msgctxt "shortcut window"
 msgid "Toggle bookmark for current page"
 msgstr "Remplacer le signet pour la page actuelle"
 
-#: src/app/resources/gtk/help-overlay.ui:180
+#: src/app/resources/gtk/help-overlay.ui:187
 msgctxt "shortcut window"
 msgid "Print"
 msgstr "Imprimer"
 
-#: src/app/resources/gtk/help-overlay.ui:189
+#: src/app/resources/gtk/help-overlay.ui:196
 msgctxt "shortcut window"
 msgid "Search in"
 msgstr "Rechercher dans la page"
 
-#: src/app/resources/gtk/help-overlay.ui:193
+#: src/app/resources/gtk/help-overlay.ui:200
 msgctxt "shortcut window"
 msgid "Next match"
 msgstr "Correspondance suivante"
 
-#: src/app/resources/gtk/help-overlay.ui:200
+#: src/app/resources/gtk/help-overlay.ui:207
 msgctxt "shortcut window"
 msgid "Previous match"
 msgstr "Correspondance précédente"
 
-#: src/app/resources/gtk/help-overlay.ui:209
+#: src/app/resources/gtk/help-overlay.ui:216
 msgctxt "shortcut window"
 msgid "Zoom"
 msgstr "Zoom"
 
-#: src/app/resources/gtk/help-overlay.ui:213
+#: src/app/resources/gtk/help-overlay.ui:220
 msgctxt "shortcut window"
 msgid "Zoom in"
 msgstr "Zoom avant"
 
-#: src/app/resources/gtk/help-overlay.ui:220
+#: src/app/resources/gtk/help-overlay.ui:227
 msgctxt "shortcut window"
 msgid "Zoom out"
 msgstr "Zoom arrière"
 
-#: src/app/resources/gtk/help-overlay.ui:227
+#: src/app/resources/gtk/help-overlay.ui:234
 msgctxt "shortcut window"
 msgid "Reset zoom"
 msgstr "Remettre le zoom à zéro"
@@ -319,59 +331,59 @@ msgstr "Détails"
 msgid "Remove"
 msgstr "Retirer"
 
-#: src/app/ui/content/details-dialog.vala:120
+#: src/app/ui/content/details-dialog.vala:119
 msgid "Favicon"
 msgstr "Favicône"
 
-#: src/app/ui/content/details-dialog.vala:121
+#: src/app/ui/content/details-dialog.vala:120
 msgid "Title"
 msgstr "Titre"
 
-#: src/app/ui/content/details-dialog.vala:123
+#: src/app/ui/content/details-dialog.vala:122
 msgid "Location"
 msgstr "Emplacement"
 
-#: src/app/ui/content/details-dialog.vala:125
+#: src/app/ui/content/details-dialog.vala:124
 msgid "Date"
 msgstr "Date"
 
-#: src/app/ui/content/details-dialog.vala:126
+#: src/app/ui/content/details-dialog.vala:125
 msgid "Lang"
 msgstr "Langue"
 
-#: src/app/ui/content/details-dialog.vala:127
+#: src/app/ui/content/details-dialog.vala:126
 msgid "Size"
 msgstr "Taille"
 
-#: src/app/ui/content/details-dialog.vala:128
+#: src/app/ui/content/details-dialog.vala:127
 msgid "Name"
 msgstr "Nom"
 
-#: src/app/ui/content/details-dialog.vala:129
+#: src/app/ui/content/details-dialog.vala:128
 msgid "Id"
 msgstr "Id"
 
-#: src/app/ui/content/details-dialog.vala:130
+#: src/app/ui/content/details-dialog.vala:129
 msgid "Description"
 msgstr "Description"
 
-#: src/app/ui/content/details-dialog.vala:131
+#: src/app/ui/content/details-dialog.vala:130
 msgid "Article count"
 msgstr "Nombre d'articles"
 
-#: src/app/ui/content/details-dialog.vala:132
+#: src/app/ui/content/details-dialog.vala:131
 msgid "Media count"
 msgstr "Nombre de médias"
 
-#: src/app/ui/content/details-dialog.vala:133
+#: src/app/ui/content/details-dialog.vala:132
 msgid "Creator"
 msgstr "Créateur"
 
-#: src/app/ui/content/details-dialog.vala:134
+#: src/app/ui/content/details-dialog.vala:133
 msgid "Publisher"
 msgstr "Éditeur"
 
-#: src/app/ui/content/details-dialog.vala:135
+#: src/app/ui/content/details-dialog.vala:134
 msgid "Tags"
 msgstr "Étiquettes"
 
@@ -509,18 +521,18 @@ msgstr "Quitter"
 msgid "Night mode"
 msgstr "Mode nuit"
 
-#: src/app/ui/window.vala:307
+#: src/app/ui/window.vala:313
 msgid "A Web archives viewer."
 msgstr "Un visionneur d'archives web."
 
-#: src/app/ui/window.vala:308
+#: src/app/ui/window.vala:314
 msgid "Copyright © 2017-2017 - Birros"
 msgstr "Copyright © 2017-2017 - Birros"
 
-#: src/app/ui/window.vala:427
+#: src/app/ui/window.vala:433
 msgid "Please choose a file"
 msgstr "Veuillez choisir un fichier"
 
-#: src/app/ui/window.vala:497
+#: src/app/ui/window.vala:503
 msgid "Are you sure to open external link ?"
 msgstr "Voulez-vous vraiment ouvrir le lien externe ?"

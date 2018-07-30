@@ -102,6 +102,13 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
+                <property name="title" translatable="yes" context="shortcut window">Go home</property>
+                <property name="accelerator">&lt;alt&gt;Home</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Go back</property>
                 <property name="accelerator">&lt;alt&gt;Left</property>
               </object>

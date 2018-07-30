@@ -13,6 +13,7 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
         { "tab-next",           tab_next           },
         { "tab-previous",       tab_previous       },
         { "search",             search             },
+        { "go-home",            go_home            },
         { "go-back",            go_back            },
         { "go-forward",         go_forward         },
         { "tab-one",            tab_one            },
@@ -79,6 +80,7 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
             {"<Primary>Page_Up", "<Primary>KP_9", "<Primary><shift>Tab"}
         );
         application.set_accels_for_action ("win.search", {"<Primary>l"});
+        application.set_accels_for_action ("win.go-home", {"<Alt>Home"});
         application.set_accels_for_action ("win.go-back", {"<Alt>Left"});
         application.set_accels_for_action ("win.go-forward", {"<Alt>Right"});
         application.set_accels_for_action ("win.tab-one", {"<Alt>1"});
@@ -196,6 +198,10 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
 
     private void tab_zero () {
         notebook.set_current_page (9);
+    }
+
+    private void go_home () {
+        context.navigation_state.go_home ();
     }
 
     private void go_back () {

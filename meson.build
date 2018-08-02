@@ -32,6 +32,10 @@ handy_dep = dependency('libhandy-0.0', version : '>=0.0.1')
 darkreader_sp = subproject('darkreader')
 darkreader_dep = darkreader_sp.get_variable('darkreader')
 
+meson.add_install_script (
+    join_paths('build-aux', 'post_install.py')
+)
+
 subdir('src')
 subdir('data')
 subdir('po')

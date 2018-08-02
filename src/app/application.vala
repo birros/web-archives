@@ -1,6 +1,7 @@
 public class WebArchives.Application : Gtk.Application {
     private Context context;
     private Persistence persistence;
+    private GLib.Settings settings;
     private const OptionEntry [] option_entries = {
         {
             "version", 'v', 0,
@@ -50,6 +51,9 @@ public class WebArchives.Application : Gtk.Application {
     protected override void startup () {
         base.startup ();
 
+        settings = new Settings ("com.github.birros.WebArchives");
+        settings.changed["night-mode"].connect (on_gsettings_night_mode);
+
         add_action_entries (action_entries, this);
         set_accels_for_action ("app.quit", {"<Primary>q"});
 
@@ -58,6 +62,7 @@ public class WebArchives.Application : Gtk.Application {
 
         context.tracker.refresh ();
         context.night_mode_state.notify["active"].connect (on_night_mode);
+        context.night_mode_state.active = settings.get_boolean ("night-mode");
         info ("server_url: %s\n", context.server.url);
 
         // styles
@@ -87,10 +92,14 @@ public class WebArchives.Application : Gtk.Application {
     }
 
     private void on_night_mode () {
-        Gtk.Settings settings = Gtk.Settings.get_default ();
-        settings.set_property (
-            "gtk-application-prefer-dark-theme",
-            context.night_mode_state.active
+        settings.set_boolean ("night-mode", context.night_mode_state.active);
+    }
+
+    private void on_gsettings_night_mode () {
+        bool night_mode = settings.get_boolean ("night-mode");
+        Gtk.Settings gtk_settings = Gtk.Settings.get_default ();
+        gtk_settings.set_property (
+            "gtk-application-prefer-dark-theme", night_mode
         );
     }
 

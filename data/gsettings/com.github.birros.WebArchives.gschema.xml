@@ -1,0 +1,9 @@
+<schemalist gettext-domain="web-archives">
+    <schema id="com.github.birros.WebArchives" path="/com/github/birros/WebArchives/">
+        <key name="night-mode" type="b">
+            <default>false</default>
+            <summary>Night mode</summary>
+            <description>Night mode state</description>
+        </key>
+    </schema>
+</schemalist>

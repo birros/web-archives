@@ -55,8 +55,6 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
 
         this.context = context;
 
-        set_default_size (900, 600);
-
         header_bar = new HeaderBar ();
         header_bar.set_context (context);
         set_titlebar (header_bar);

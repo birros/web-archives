@@ -13,7 +13,7 @@ public class WebArchives.Server : Soup.Server {
         try {
             listen_local (0, 0);
             uint port = get_uris().data.get_port();
-            url = @"http://localhost:$port/";
+            url = @"http://127.0.0.1:$port/";
         } catch (Error e) {
             error (e.message);
         }

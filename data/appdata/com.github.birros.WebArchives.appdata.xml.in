@@ -52,6 +52,17 @@
     <update_contact>birros@protonmail.com</update_contact>
     <translation type="gettext">web-archives</translation>
     <releases>
+        <release version="0.2.2" date="2018-08-22">
+            <description>
+                <p>
+                    This new release of WebArchives contains some bug fixes and
+                    new features.
+                </p>
+                <ul>
+                    <li>Add partial management of archives not using `A` namespace (fix)</li>
+                </ul>
+            </description>
+        </release>
         <release version="0.2.1" date="2018-08-03">
             <description>
                 <p>

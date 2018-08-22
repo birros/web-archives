@@ -35,8 +35,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://oligarchy.co.uk/xapian/1.4.6/xapian-core-1.4.6.tar.xz
-        sha256: 1e0ef1c1d3e2119874d545b7edbb60e6e17d7d18fb802eb890d9ef7bb0bbd898
+        url: https://oligarchy.co.uk/xapian/1.4.7/xapian-core-1.4.7.tar.xz
+        sha256: 13f08a0b649c7afa804fa0e85678d693fd6069dd394c9b9e7d41973d74a3b5d3
 
   #
   # require
@@ -51,8 +51,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/openzim/libzim/archive/4.0.0.tar.gz
-        sha256: e195d30ba1b55dd2b6529fdd84fcbed6ec35ed4ddc957ad7725edabd20c3126c
+        url: https://github.com/openzim/libzim/archive/4.0.2.tar.gz
+        sha256: cb9a853ecdab3c43099b1b36861ef6c9ccfab64cf12be148fe87389e92a17b47
 
   #
   # require
@@ -157,8 +157,8 @@ modules:
       - /*
     sources:
       - type: archive
-        url: https://nodejs.org/dist/v8.11.3/node-v8.11.3.tar.gz
-        sha256: 0d7e795c0579226c8b197353bbb9392cae802f4fefa4787a2c0e678beaf85cce
+        url: https://nodejs.org/dist/v8.11.4/node-v8.11.4.tar.gz
+        sha256: 459144e361d64ca7362c37cc9717c044ef909d348cb5aa3f2b62538560a6085a
 
   #
   # require

@@ -8,6 +8,6 @@ public class WebArchives.MainPageLogic : Object {
     }
 
     private void on_main_page () {
-        context.web_view_state.load_uri ("/A/");
+        context.web_view_state.load_uri ("/");
     }
 }

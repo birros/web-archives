@@ -333,7 +333,7 @@ class WebArchives.WebView : Gtk.Box {
             web_view.load_uri (
                 context.server.url +
                 context.archive_state.archive.uuid +
-                "/A/"
+                "/"
             );
             context.web_view_state.title =
                 context.archive_state.archive.title;

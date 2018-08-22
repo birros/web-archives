@@ -66,6 +66,11 @@ public class WebArchives.Server : Soup.Server {
         return count;
     }
 
+    /**
+     * FIXME: For now, url analysis and retrieval can cause bugs, since in the
+     * future articles will no longer necessarily be in the `A` namespace.
+     * See : https://github.com/openzim/libzim/issues/15
+     */
     private void default_handler (
         Soup.Server        server,
         Soup.Message       msg,
@@ -84,14 +89,27 @@ public class WebArchives.Server : Soup.Server {
         uint8[]? blob;
         string mime_type;
 
-        // check if url starts by `/<uuid>/`
+        // check if url starts by `/<uuid>/` and try to get it if it's not set
         if (
             path.length < UUID_LENGTH + 2 ||
             path[0] != '/'                ||
             path[UUID_LENGTH + 1] != '/'
         ) {
-            msg.set_status (Soup.Status.NOT_FOUND);
-            return;
+            // get referer
+            Soup.MessageHeaders headers = msg.request_headers;
+            string referer = headers.get_one ("Referer");
+
+            if (referer == null) {
+                msg.set_status (Soup.Status.NOT_FOUND);
+                return;
+            }
+            info ("Referer: %s", referer);
+
+            // get uuid in referer
+            uuid = referer.substring (url.length, UUID_LENGTH);
+
+            // rewrite path
+            path = "/" + uuid + path;
         }
 
         // check if a zim file corresponding to the uuid is opened
@@ -106,10 +124,9 @@ public class WebArchives.Server : Soup.Server {
         // get the real file path
         path = path.substring(UUID_LENGTH + 1);
 
-        // check if the path start by `/<namespace>/`
+        // check if the path start by `/<namespace>/` and and set it otherwise
         if (path.length < 3 || path[0] != '/' || path[2] != '/') {
-            msg.set_status (Soup.Status.NOT_FOUND);
-            return;
+            path = "/A" + path;
         }
 
         // get the real url of the main page
@@ -142,6 +159,9 @@ public class WebArchives.Server : Soup.Server {
         } else {
             info ("NOT_FOUND: %s", path);
             msg.set_status (Soup.Status.NOT_FOUND);
+            msg.set_response (
+                "text/html", Soup.MemoryUse.COPY, "Not Found.".data
+            );
         }
     }
 }

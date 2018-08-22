@@ -234,7 +234,7 @@ public class WebArchives.ZimReader {
 
             Suggestion suggestion = new Suggestion ();
             suggestion.title = article.get_title();
-            suggestion.url = "/A/" + article.get_url();
+            suggestion.url = "/" + article.get_url();
 
             if (suggestion.title.has_prefix (query)) {
                 bool insert = true;

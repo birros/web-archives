@@ -1,3 +1,10 @@
+private class Article {
+    public string path;
+    public string title;
+    public char? namespace;
+    public string? uuid;
+}
+
 public class WebArchives.Server : Soup.Server {
     private const uint UUID_LENGTH = 36;
     private HashTable<string, Zim.File> archives;
@@ -66,6 +73,74 @@ public class WebArchives.Server : Soup.Server {
         return count;
     }
 
+    private static string? get_referer (Soup.Message msg) {
+        Soup.MessageHeaders headers = msg.request_headers;
+        string? referer = headers.get_one ("Referer");
+        return referer;
+    }
+
+    private static bool is_uuid (string uuid) {
+        GLib.Regex exp = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
+        return exp.match (uuid);
+    }
+
+    private static Article parse_infos (
+        string server_url, string path, string? referer
+    ) {
+        Article article = new Article ();
+
+        // get uuid and path
+        if (
+            path.length >= UUID_LENGTH + 2 &&
+            path[0] == '/'                 &&
+            path[UUID_LENGTH + 1] == '/'
+        ) {
+            article.path = path.substring(UUID_LENGTH + 1);
+            string uuid = path.substring(1, UUID_LENGTH);
+            if (is_uuid (uuid)) {
+                article.uuid = uuid;
+            } else {
+                article.uuid = null;
+            }
+        } else if (
+            referer != null                                       &&
+            referer.length >= server_url.length + UUID_LENGTH + 1 &&
+            referer[server_url.length - 1] == '/'                 &&
+            referer[server_url.length + UUID_LENGTH] == '/'
+        ) {
+            article.path = path;
+            string uuid = referer.substring (server_url.length, UUID_LENGTH);
+            if (is_uuid (uuid)) {
+                article.uuid = uuid;
+            } else {
+                article.uuid = null;
+            }
+        } else {
+            article.path = path;
+            article.uuid = null;
+        }
+
+        // get namespace
+        if (
+            article.path.length >= 3 &&
+            article.path[0] == '/'   &&
+            article.path[2] == '/'
+        ) {
+            article.namespace = article.path[1];
+        } else {
+            article.namespace = null;
+        }
+
+        // get title
+        if (article.namespace != null) {
+            article.title = article.path.substring (3);
+        } else {
+            article.title = article.path.substring (1);
+        }
+
+        return article;
+    }
+
     /**
      * FIXME: For now, url analysis and retrieval can cause bugs, since in the
      * future articles will no longer necessarily be in the `A` namespace.
@@ -80,57 +155,36 @@ public class WebArchives.Server : Soup.Server {
     ) {
         string path = path_p;
         unowned Zim.File file;
-        string uuid;
         uint home_index;
         Zim.Article page;
         Zim.Article home;
         char namesp;
-        string article_url;
         uint8[]? blob;
         string mime_type;
 
-        // check if url starts by `/<uuid>/` and try to get it if it's not set
-        if (
-            path.length < UUID_LENGTH + 2 ||
-            path[0] != '/'                ||
-            path[UUID_LENGTH + 1] != '/'
-        ) {
-            // get referer
-            Soup.MessageHeaders headers = msg.request_headers;
-            string referer = headers.get_one ("Referer");
+        string? referer = get_referer (msg);
+        Article article = parse_infos (url, path, referer);
 
-            if (referer == null) {
-                msg.set_status (Soup.Status.NOT_FOUND);
-                return;
-            }
-            info ("Referer: %s", referer);
-
-            // get uuid in referer
-            uuid = referer.substring (url.length, UUID_LENGTH);
-
-            // rewrite path
-            path = "/" + uuid + path;
+        // check if uuid is set
+        if (article.uuid == null) {
+            msg.set_status (Soup.Status.NOT_FOUND);
+            return;
         }
 
         // check if a zim file corresponding to the uuid is opened
-        uuid = path.substring(1, UUID_LENGTH);
-        if (archives.contains (uuid)) {
-            file = archives.get (uuid);
+        if (archives.contains (article.uuid)) {
+            file = archives.get (article.uuid);
         } else {
             msg.set_status (Soup.Status.NOT_FOUND);
             return;
         }
 
-        // get the real file path
-        path = path.substring(UUID_LENGTH + 1);
-
-        // check if the path start by `/<namespace>/` and and set it otherwise
-        if (path.length < 3 || path[0] != '/' || path[2] != '/') {
-            path = "/A" + path;
-        }
-
-        // get the real url of the main page
-        if (path == "/A/") {
+        // get the real title if it's the the main page
+        string title;
+        if (
+            (article.title == "" || article.title == null)          &&
+            (article.namespace == 'A' || article.namespace == null)
+        ) {
             if (file.get_fileheader ().has_main_page ()) {
                 home_index = file.get_fileheader ().get_main_page ();
             } else {
@@ -138,13 +192,18 @@ public class WebArchives.Server : Soup.Server {
             }
 
             home = file.get_article_by_index (home_index);
-            path += home.get_url ();
+            title = home.get_url ();
+        } else {
+            title = article.title;
         }
 
-        // get the page correponding to the url
-        namesp = path [1];
-        article_url = path.substring (3);
-        page = file.get_article_by_namespace (namesp, article_url);
+        // get the page correponding to the namespace and the title
+        if (article.namespace == null) {
+            namesp = 'A';
+        } else {
+            namesp = article.namespace;
+        }
+        page = file.get_article_by_namespace (namesp, title);
 
         // if the page is good send the data
         if (page.good ()) {

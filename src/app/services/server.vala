@@ -3,6 +3,7 @@ private class Article {
     public string title;
     public char? namespace;
     public string? uuid;
+    public bool use_referer;
 }
 
 public class WebArchives.Server : Soup.Server {
@@ -102,6 +103,7 @@ public class WebArchives.Server : Soup.Server {
             } else {
                 article.uuid = null;
             }
+            article.use_referer = false;
         } else if (
             referer != null                                       &&
             referer.length >= server_url.length + UUID_LENGTH + 1 &&
@@ -112,12 +114,15 @@ public class WebArchives.Server : Soup.Server {
             string uuid = referer.substring (server_url.length, UUID_LENGTH);
             if (is_uuid (uuid)) {
                 article.uuid = uuid;
+                article.use_referer = true;
             } else {
                 article.uuid = null;
+                article.use_referer = false;
             }
         } else {
             article.path = path;
             article.uuid = null;
+            article.use_referer = false;
         }
 
         // get namespace
@@ -168,6 +173,13 @@ public class WebArchives.Server : Soup.Server {
         // check if uuid is set
         if (article.uuid == null) {
             msg.set_status (Soup.Status.NOT_FOUND);
+            return;
+        }
+
+        // redirects to the real article url, which includes uuid in it
+        if (article.use_referer) {
+            string article_url = "/" + article.uuid + article.path;
+            msg.set_redirect (Soup.Status.MOVED_PERMANENTLY, article_url);
             return;
         }
 

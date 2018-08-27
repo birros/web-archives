@@ -385,6 +385,11 @@ public class WebArchives.HomeView : Gtk.Overlay {
                 context.route_state.route = RouteState.Route.SEARCH;
             }
         });
+        row.history.connect (() => {
+            if (select_archive (archive)) {
+                context.route_state.route = RouteState.Route.HISTORY;
+            }
+        });
         row.details.connect (() => {
             revealer.reveal_child = false;
             show_details (archive);

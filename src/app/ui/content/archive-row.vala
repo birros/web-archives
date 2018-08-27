@@ -2,6 +2,7 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
     public ArchiveItem archive;
     public signal void search ();
     public signal void bookmark ();
+    public signal void history ();
     public signal void eject ();
     public signal void details ();
     public signal void download ();
@@ -85,6 +86,19 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
                 bookmark ();
             });
             box.add (bookmark_button);
+
+            Gtk.Button history_button =
+                new Gtk.Button.from_icon_name (
+                    "elementary-document-open-recent-symbolic"
+                );
+            history_button.tooltip_text = _("History");
+            history_button.get_style_context().add_class ("image-button");
+            history_button.get_style_context().add_class ("flat");
+            history_button.get_style_context().add_class ("circular");
+            history_button.clicked.connect (() => {
+                history ();
+            });
+            box.add (history_button);
         }
 
         if (archive.scope == "REMOTE") {

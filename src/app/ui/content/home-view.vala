@@ -66,6 +66,7 @@ public class WebArchives.HomeView : Gtk.Overlay {
         Gtk.Button recents_header_button = new Gtk.Button.from_icon_name (
             "list-add-symbolic"
         );
+        recents_header_button.tooltip_text = _("Open a web archive");
         recents_header_button.relief = Gtk.ReliefStyle.NONE;
         recents_header_button.clicked.connect (() => {
             context.add_archive_button_state.clicked ();

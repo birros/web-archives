@@ -89,7 +89,7 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
 
         if (archive.scope == "REMOTE") {
             Gtk.Button download_button =
-                new Gtk.Button.from_icon_name ("folder-download-symbolic");
+                new Gtk.Button.from_icon_name ("document-save-symbolic");
             download_button.get_style_context().add_class ("image-button");
             download_button.get_style_context().add_class ("flat");
             download_button.get_style_context().add_class ("circular");

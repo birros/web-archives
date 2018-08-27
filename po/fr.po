@@ -1,12 +1,20 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-30 11:18+0200\n"
+"POT-Creation-Date: 2018-08-27 18:28+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Birros <birros@protonmail.com>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
 #: data/desktop/com.github.birros.WebArchives.desktop.in:3
-#: src/app/states/title-logic.vala:17 src/app/ui/window.vala:312
+#: src/app/states/title-logic.vala:17 src/app/ui/window.vala:310
 msgid "WebArchives"
 msgstr "WebArchives"
 
@@ -56,13 +64,13 @@ msgid "Search in page"
 msgstr "Chercher dans la page"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:24
-#: src/app/states/title-logic.vala:37
+#: src/app/states/title-logic.vala:37 src/app/ui/content/archive-row.vala:96
 #: src/app/ui/header-bar/popover-menu.vala:60
 msgid "History"
 msgstr "Historique"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:25
-#: src/app/states/title-logic.vala:30
+#: src/app/states/title-logic.vala:30 src/app/ui/content/archive-row.vala:83
 #: src/app/ui/header-bar/popover-menu.vala:54
 msgid "Bookmarks"
 msgstr "Signets"
@@ -286,7 +294,7 @@ msgctxt "shortcut window"
 msgid "Reset zoom"
 msgstr "Remettre le zoom à zéro"
 
-#: src/app/application.vala:8
+#: src/app/application.vala:15
 msgid "Print version number"
 msgstr "Afficher le numéro de version"
 
@@ -322,12 +330,21 @@ msgstr "Pas d'historique de navigation."
 msgid "%e %b %y"
 msgstr ""
 
-#: src/app/ui/content/archive-row.vala:121
+#: src/app/ui/content/archive-row.vala:72
+#: src/app/ui/header-bar/header-bar.vala:68
+msgid "Search"
+msgstr "Rechercher"
+
+#: src/app/ui/content/archive-row.vala:109
+msgid "Download"
+msgstr "Télécharger"
+
+#: src/app/ui/content/archive-row.vala:138
 #: src/app/ui/content/details-dialog.vala:11
 msgid "Details"
 msgstr "Détails"
 
-#: src/app/ui/content/archive-row.vala:130
+#: src/app/ui/content/archive-row.vala:147
 msgid "Remove"
 msgstr "Retirer"
 
@@ -472,26 +489,50 @@ msgstr "Téléchargement"
 msgid "No archive available for download."
 msgstr "Aucune archive disponible en téléchargement."
 
-#: src/app/ui/content/home-view.vala:418
+#: src/app/ui/content/home-view.vala:423
 #, c-format
 msgid "How would you like to download %s ?"
 msgstr "Comment souhaitez-vous télécharger %s ?"
 
-#: src/app/ui/content/home-view.vala:422
+#: src/app/ui/content/home-view.vala:427
 msgid "This will open a third-party application to download the archive."
 msgstr "Ceci ouvrira une application tierce pour télécharger l'archive."
 
-#: src/app/ui/content/home-view.vala:424
+#: src/app/ui/content/home-view.vala:429
 msgid "From a server"
 msgstr "Depuis un serveur"
 
-#: src/app/ui/content/home-view.vala:425
+#: src/app/ui/content/home-view.vala:430
 msgid "Peer-to-peer network"
 msgstr "Réseau pair à pair"
 
 #: src/app/ui/gtk/notebook/notebook-popup-menu.vala:13
 msgid "Detach to a new window"
 msgstr "Déplacer dans une nouvelle fenêtre"
+
+#: src/app/ui/header-bar/bookmark-button.vala:9
+msgid "Toggle bookmark for current page"
+msgstr "Remplacer le signet pour la page actuelle"
+
+#: src/app/ui/header-bar/navigation-box.vala:14
+msgid "Go to the homepage"
+msgstr "Aller à la page d'accueil"
+
+#: src/app/ui/header-bar/navigation-box.vala:18
+msgid "Go back to the previous page"
+msgstr "Aller à la page précédente"
+
+#: src/app/ui/header-bar/navigation-box.vala:20
+msgid "Go forward to the next page"
+msgstr "Aller à la page suivante"
+
+#: src/app/ui/header-bar/new-tab-button.vala:9
+msgid "Open a new tab"
+msgstr "Ouvrir un nouvel onglet"
+
+#: src/app/ui/header-bar/night-mode-button.vala:8
+msgid "Night mode"
+msgstr "Mode nuit"
 
 #: src/app/ui/header-bar/popover-menu.vala:26
 msgid "Search in..."
@@ -517,22 +558,38 @@ msgstr "À propos"
 msgid "Quit"
 msgstr "Quitter"
 
-#: src/app/ui/header-bar/night-mode-button.vala:8
-msgid "Night mode"
-msgstr "Mode nuit"
+#: src/app/ui/header-bar/search-in-bar.vala:11
+msgid "Find previous occurrence of the search string"
+msgstr "Recherche la précédente occurrence de la chaîne"
 
-#: src/app/ui/window.vala:313
+#: src/app/ui/header-bar/search-in-bar.vala:16
+msgid "Find next occurrence of the search string"
+msgstr "Recherche la prochaine occurrence de la chaîne"
+
+#: src/app/ui/header-bar/zoom-box.vala:16
+msgid "Zoom out"
+msgstr "Zoom arrière"
+
+#: src/app/ui/header-bar/zoom-box.vala:21
+msgid "Reset zoom"
+msgstr "Remettre le zoom à zéro"
+
+#: src/app/ui/header-bar/zoom-box.vala:26
+msgid "Zoom in"
+msgstr "Zoom avant"
+
+#: src/app/ui/window.vala:311
 msgid "A Web archives viewer."
 msgstr "Un visionneur d'archives web."
 
-#: src/app/ui/window.vala:314
+#: src/app/ui/window.vala:312
 msgid "Copyright © 2017-2017 - Birros"
 msgstr "Copyright © 2017-2017 - Birros"
 
-#: src/app/ui/window.vala:433
+#: src/app/ui/window.vala:431
 msgid "Please choose a file"
 msgstr "Veuillez choisir un fichier"
 
-#: src/app/ui/window.vala:503
+#: src/app/ui/window.vala:501
 msgid "Are you sure to open external link ?"
 msgstr "Voulez-vous vraiment ouvrir le lien externe ?"

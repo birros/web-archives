@@ -13,6 +13,12 @@ src/app/ui/content/bookmark-view.vala
 src/app/ui/content/status-label.vala
 src/app/ui/content/home-view.vala
 src/app/ui/gtk/notebook/notebook-popup-menu.vala
-src/app/ui/header-bar/popover-menu.vala
+src/app/ui/header-bar/bookmark-button.vala
+src/app/ui/header-bar/header-bar.vala
+src/app/ui/header-bar/navigation-box.vala
+src/app/ui/header-bar/new-tab-button.vala
 src/app/ui/header-bar/night-mode-button.vala
+src/app/ui/header-bar/popover-menu.vala
+src/app/ui/header-bar/search-in-bar.vala
+src/app/ui/header-bar/zoom-box.vala
 src/app/ui/window.vala

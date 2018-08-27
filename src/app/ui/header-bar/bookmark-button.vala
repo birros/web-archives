@@ -6,6 +6,7 @@ public class WebArchives.BookmarkButton : Gtk.Button {
         set_image (new Gtk.Image.from_icon_name (
             "non-starred-symbolic", Gtk.IconSize.BUTTON)
         );
+        tooltip_text = _("Toggle bookmark for current page");
         clicked.connect (on_clicked);
     }
 

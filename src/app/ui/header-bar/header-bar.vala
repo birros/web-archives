@@ -65,6 +65,7 @@ public class WebArchives.HeaderBar : Gtk.HeaderBar {
         right_stack.add (web_box);
 
         search_button = new Gtk.Button.from_icon_name ("edit-find-symbolic");
+        search_button.tooltip_text = _("Search");
         search_button.clicked.connect (on_search);
         web_box.add (search_button);
 

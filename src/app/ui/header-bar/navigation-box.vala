@@ -11,10 +11,13 @@ public class WebArchives.NavigationBox : Gtk.Box {
         spacing = 6;
 
         home_button = new Gtk.Button.from_icon_name ("go-home-symbolic");
+        home_button.tooltip_text = _("Go to the homepage");
         previous_button = new Gtk.Button.from_icon_name (
             "go-previous-symbolic"
         );
+        previous_button.tooltip_text = _("Go back to the previous page");
         next_button = new Gtk.Button.from_icon_name ("go-next-symbolic");
+        next_button.tooltip_text = _("Go forward to the next page");
         Gtk.Box box = new Gtk.Box (orientation = Gtk.Orientation.HORIZONTAL, 0);
 
         box.get_style_context().add_class ("linked");

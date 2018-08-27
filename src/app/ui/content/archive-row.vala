@@ -69,6 +69,7 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
         if (archive.scope == "RECENTS" || archive.scope == "LOCAL") {
             Gtk.Button search_button =
                 new Gtk.Button.from_icon_name ("edit-find-symbolic");
+            search_button.tooltip_text = _("Search");
             search_button.get_style_context().add_class ("image-button");
             search_button.get_style_context().add_class ("flat");
             search_button.get_style_context().add_class ("circular");
@@ -79,6 +80,7 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
 
             Gtk.Button bookmark_button =
                 new Gtk.Button.from_icon_name ("ephy-bookmarks-symbolic");
+            bookmark_button.tooltip_text = _("Bookmarks");
             bookmark_button.get_style_context().add_class ("image-button");
             bookmark_button.get_style_context().add_class ("flat");
             bookmark_button.get_style_context().add_class ("circular");
@@ -104,6 +106,7 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
         if (archive.scope == "REMOTE") {
             Gtk.Button download_button =
                 new Gtk.Button.from_icon_name ("document-save-symbolic");
+            download_button.tooltip_text = _("Download");
             download_button.get_style_context().add_class ("image-button");
             download_button.get_style_context().add_class ("flat");
             download_button.get_style_context().add_class ("circular");

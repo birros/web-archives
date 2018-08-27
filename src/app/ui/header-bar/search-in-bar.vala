@@ -7,9 +7,13 @@ public class WebArchives.SearchInBar : Gtk.Box {
     public SearchInBar () {
         search_entry = new Gtk.SearchEntry ();
         Gtk.Button up_button = new Gtk.Button.from_icon_name ("go-up-symbolic");
+        up_button.tooltip_text =
+            _("Find previous occurrence of the search string");
         Gtk.Button down_button = new Gtk.Button.from_icon_name (
             "go-down-symbolic"
         );
+        down_button.tooltip_text =
+            _("Find next occurrence of the search string");
 
         search_entry.search_changed.connect (on_search_changed);
         search_entry.key_release_event.connect (on_key_release_event);

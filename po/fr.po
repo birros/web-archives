@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-27 18:28+0200\n"
+"POT-Creation-Date: 2018-08-27 18:45+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Birros <birros@protonmail.com>\n"
 "Language-Team: \n"
@@ -461,48 +461,52 @@ msgstr "Impossible d'ouvrir l'archive"
 msgid "Recents"
 msgstr "Récentes"
 
-#: src/app/ui/content/home-view.vala:86
+#: src/app/ui/content/home-view.vala:69
+msgid "Open a web archive"
+msgstr "Ouvrir une archive web"
+
+#: src/app/ui/content/home-view.vala:87
 msgid "No archive recently opened."
 msgstr "Aucune archive récemment ouverte."
 
-#: src/app/ui/content/home-view.vala:108
+#: src/app/ui/content/home-view.vala:109
 msgid "Local"
 msgstr "Locales"
 
-#: src/app/ui/content/home-view.vala:126 src/app/ui/content/home-view.vala:202
+#: src/app/ui/content/home-view.vala:127 src/app/ui/content/home-view.vala:203
 msgid "Refresh"
 msgstr "Actualiser"
 
-#: src/app/ui/content/home-view.vala:144
+#: src/app/ui/content/home-view.vala:145
 msgid "No archive automaticly detected on your system."
 msgstr "Aucune archive automatiquement détectée sur votre système."
 
-#: src/app/ui/content/home-view.vala:166
+#: src/app/ui/content/home-view.vala:167
 msgid "Remote"
 msgstr "Distant"
 
-#: src/app/ui/content/home-view.vala:197
+#: src/app/ui/content/home-view.vala:198
 msgid "Downloading"
 msgstr "Téléchargement"
 
-#: src/app/ui/content/home-view.vala:220
+#: src/app/ui/content/home-view.vala:221
 msgid "No archive available for download."
 msgstr "Aucune archive disponible en téléchargement."
 
-#: src/app/ui/content/home-view.vala:423
+#: src/app/ui/content/home-view.vala:424
 #, c-format
 msgid "How would you like to download %s ?"
 msgstr "Comment souhaitez-vous télécharger %s ?"
 
-#: src/app/ui/content/home-view.vala:427
+#: src/app/ui/content/home-view.vala:428
 msgid "This will open a third-party application to download the archive."
 msgstr "Ceci ouvrira une application tierce pour télécharger l'archive."
 
-#: src/app/ui/content/home-view.vala:429
+#: src/app/ui/content/home-view.vala:430
 msgid "From a server"
 msgstr "Depuis un serveur"
 
-#: src/app/ui/content/home-view.vala:430
+#: src/app/ui/content/home-view.vala:431
 msgid "Peer-to-peer network"
 msgstr "Réseau pair à pair"
 

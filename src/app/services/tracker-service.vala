@@ -7,6 +7,10 @@ public class WebArchives.TrackerService : Object {
     }
 
     public void refresh () {
+        new Thread<bool> ("_refresh", this._refresh);
+    }
+
+    private bool _refresh () {
         GenericSet<string> tracker_list =
             new GenericSet<string> (str_hash, str_equal);
 
@@ -52,6 +56,9 @@ public class WebArchives.TrackerService : Object {
         });
 
         update_timestamp ();
+
+        // This return is just to comply with the Thread policy
+        return true;
     }
 
     private void update_timestamp () {

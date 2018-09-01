@@ -33,7 +33,7 @@ darkreader_sp = subproject('darkreader')
 darkreader_dep = darkreader_sp.get_variable('darkreader')
 
 meson.add_install_script (
-    join_paths('build-aux', 'post_install.py')
+    join_paths('build-aux', 'meson', 'post_install.py')
 )
 
 subdir('src')

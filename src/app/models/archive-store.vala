@@ -1,7 +1,10 @@
 /**
  * FIXME: not optimized code.
+ *
+ * Note: This class is thread-safe.
  */
 public class WebArchives.ArchiveStore : Object {
+    private Mutex mutex;
     private GenericSet<ArchiveItem> store;
     private HashTable<string, HashTable<string, ArchiveItem>> index_scope_path;
     private HashTable<string, HashTable<string, ArchiveItem>> index_scope_uuid;
@@ -10,6 +13,7 @@ public class WebArchives.ArchiveStore : Object {
     public delegate void SFunc<V> (V value);
 
     public ArchiveStore () {
+        mutex = Mutex ();
         store = new GenericSet<ArchiveItem> (direct_hash, direct_equal);
         index_scope_path =
             new HashTable<string, HashTable<string, ArchiveItem>> (
@@ -43,16 +47,20 @@ public class WebArchives.ArchiveStore : Object {
                 break;
             }
         }
+        mutex.lock ();
         store.add (item);
         index (item);
+        mutex.unlock ();
         item_added (item);
         return true;
     }
 
     public bool remove (ArchiveItem item) {
         if (store.contains (item)) {
+            mutex.lock ();
             store.remove (item);
             unindex (item);
+            mutex.unlock ();
             item_removed (item);
             return true;
         }
@@ -106,11 +114,15 @@ public class WebArchives.ArchiveStore : Object {
     }
 
     public bool contains_by_scope_and_path (string scope, string path) {
+        mutex.lock ();
         HashTable<string, ArchiveItem> index_path = index_scope_path.get (
             scope
         );
+        mutex.unlock ();
         if (index_path != null) {
+            mutex.lock ();
             ArchiveItem item = index_path.get (path);
+            mutex.unlock ();
             if (item != null) {
                 return true;
             }
@@ -119,11 +131,15 @@ public class WebArchives.ArchiveStore : Object {
     }
 
     public bool contains_by_scope_and_uuid (string scope, string uuid) {
+        mutex.lock ();
         HashTable<string, ArchiveItem> index_uuid = index_scope_uuid.get (
             scope
         );
+        mutex.unlock ();
         if (index_uuid != null) {
+            mutex.lock ();
             ArchiveItem item = index_uuid.get (uuid);
+            mutex.unlock ();
             if (item != null) {
                 return true;
             }
@@ -132,11 +148,15 @@ public class WebArchives.ArchiveStore : Object {
     }
 
     public ArchiveItem? get_by_scope_and_path (string scope, string path) {
+        mutex.lock ();
         HashTable<string, ArchiveItem> index_path = index_scope_path.get (
             scope
         );
+        mutex.unlock ();
         if (index_path != null) {
+            mutex.lock ();
             ArchiveItem item = index_path.get (path);
+            mutex.unlock ();
             if (item != null) {
                 return item;
             }
@@ -145,11 +165,15 @@ public class WebArchives.ArchiveStore : Object {
     }
 
     public ArchiveItem? get_by_scope_and_uuid (string scope, string uuid) {
+        mutex.lock ();
         HashTable<string, ArchiveItem> index_uuid = index_scope_uuid.get (
             scope
         );
+        mutex.unlock ();
         if (index_uuid != null) {
+            mutex.lock ();
             ArchiveItem item = index_uuid.get (uuid);
+            mutex.unlock ();
             if (item != null) {
                 return item;
             }
@@ -158,7 +182,17 @@ public class WebArchives.ArchiveStore : Object {
     }
 
     public void @foreach (SFunc<ArchiveItem> func) {
+        // We copy the store
+        GenericSet<ArchiveItem> _store =
+            new GenericSet<ArchiveItem> (direct_hash, direct_equal);
+        mutex.lock ();
         store.foreach ((item) => {
+            _store.add (item);
+        });
+        mutex.unlock ();
+
+        // And then loop on it to prevent mutex problems
+        _store.foreach ((item) => {
             func (item);
         });
     }

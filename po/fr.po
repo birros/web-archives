@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-02 18:37+0200\n"
+"POT-Creation-Date: 2018-09-02 22:41+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Birros <birros@protonmail.com>\n"
 "Language-Team: \n"
@@ -452,7 +452,15 @@ msgstr "il y a %llum"
 msgid "%llus ago"
 msgstr "il y a %llus"
 
-#: src/app/ui/content/home-view.vala:14
+#: src/app/ui/content/home-view.vala:15
+msgid ""
+"No archive recently opened. <b>Please select an archive from the following "
+"sections or open it manually.</b>"
+msgstr ""
+"Aucune archive n'a été ouverte récemment. <b>Veuillez sélectionner une "
+"archive dans les sections suivantes ou ouvrez la manuellement.</b>"
+
+#: src/app/ui/content/home-view.vala:19
 msgid ""
 "No archive automaticly detected on your system. <b>Please download one from "
 "the following section.</b>"
@@ -460,7 +468,7 @@ msgstr ""
 "Aucune archive automatiquement détectée sur votre système. <b>Veuillez en "
 "télécharger une depuis la section suivante.</b>"
 
-#: src/app/ui/content/home-view.vala:18
+#: src/app/ui/content/home-view.vala:23
 msgid ""
 "<span weight=\"bold\" foreground=\"#f57900\">It seems Tracker is not "
 "installed on your system.</span> WebArchives can't automatically list the "
@@ -470,10 +478,10 @@ msgid ""
 "session.</b>\n"
 "\n"
 "&#8226; Debian or Ubuntu:\n"
-"   <tt>apt install tracker</tt>\n"
+"   <tt># apt install tracker</tt>\n"
 "\n"
 "&#8226; Fedora:\n"
-"   <tt>dnf install tracker</tt>"
+"   <tt># dnf install tracker</tt>"
 msgstr ""
 "<span weight=\"bold\" foreground=\"#f57900\">Il semble que Tracker n'est pas "
 "installé sur votre système.</span> WebArchives ne peut pas lister "
@@ -483,62 +491,90 @@ msgstr ""
 "puis redémarrez votre session.</b>\n"
 "\n"
 "&#8226; Debian ou Ubuntu:\n"
-"   <tt>apt install tracker</tt>\n"
+"   <tt># apt install tracker</tt>\n"
 "\n"
 "&#8226; Fedora:\n"
-"   <tt>dnf install tracker</tt>"
+"   <tt># dnf install tracker</tt>"
 
-#: src/app/ui/content/home-view.vala:42
+#: src/app/ui/content/home-view.vala:35
+msgid ""
+"No archive available for download. <b>Please refresh this list using the "
+"appropriate button.</b>"
+msgstr ""
+"Aucune archive disponible en téléchargement. <b>Veuillez rafraîchir cette "
+"liste à l'aide du bouton approprié.</b>"
+
+#: src/app/ui/content/home-view.vala:39
+msgid ""
+"<span weight=\"bold\" foreground=\"#f57900\">It seems that a GVFS component "
+"is not installed on your system.</span> WebArchives cannot list downloadable "
+"archives.\n"
+"\n"
+"<b>Please install this component using your package manager, then restart "
+"your session.</b>\n"
+"\n"
+"&#8226; Debian or Ubuntu:\n"
+"   <tt># apt install gvfs-backends</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"   <tt># dnf install gvfs</tt>"
+msgstr ""
+"<span weight=\"bold\" foreground=\"#f57900\">Il semble qu'un composant GVFS "
+"n'est pas installé sur votre système.</span> WebArchives ne peut pas lister "
+"les archives téléchargeables.\n"
+"\n"
+"<b>Veuillez installer ce composant à l'aide de votre gestionnaire de "
+"paquets, puis redémarrez votre session.</b>\n"
+"\n"
+"&#8226; Debian ou Ubuntu:\n"
+"   <tt># apt install gvfs-backends</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"   <tt># dnf install gvfs</tt>"
+
+#: src/app/ui/content/home-view.vala:63
 msgid "Cannot open the archive file"
 msgstr "Impossible d'ouvrir l'archive"
 
 #. RECENTS
-#: src/app/ui/content/home-view.vala:76
+#: src/app/ui/content/home-view.vala:97
 msgid "Recents"
 msgstr "Récentes"
 
-#: src/app/ui/content/home-view.vala:85
+#: src/app/ui/content/home-view.vala:106
 msgid "Open a web archive"
 msgstr "Ouvrir une archive web"
 
-#: src/app/ui/content/home-view.vala:103
-msgid "No archive recently opened."
-msgstr "Aucune archive récemment ouverte."
-
-#: src/app/ui/content/home-view.vala:125
+#: src/app/ui/content/home-view.vala:145
 msgid "Local"
 msgstr "Locales"
 
-#: src/app/ui/content/home-view.vala:143 src/app/ui/content/home-view.vala:229
+#: src/app/ui/content/home-view.vala:163 src/app/ui/content/home-view.vala:252
 msgid "Refresh"
 msgstr "Actualiser"
 
-#: src/app/ui/content/home-view.vala:193
+#: src/app/ui/content/home-view.vala:213
 msgid "Remote"
 msgstr "Distant"
 
-#: src/app/ui/content/home-view.vala:224
+#: src/app/ui/content/home-view.vala:247
 msgid "Downloading"
 msgstr "Téléchargement"
 
-#: src/app/ui/content/home-view.vala:247
-msgid "No archive available for download."
-msgstr "Aucune archive disponible en téléchargement."
-
-#: src/app/ui/content/home-view.vala:450
+#: src/app/ui/content/home-view.vala:483
 #, c-format
 msgid "How would you like to download %s ?"
 msgstr "Comment souhaitez-vous télécharger %s ?"
 
-#: src/app/ui/content/home-view.vala:454
+#: src/app/ui/content/home-view.vala:487
 msgid "This will open a third-party application to download the archive."
 msgstr "Ceci ouvrira une application tierce pour télécharger l'archive."
 
-#: src/app/ui/content/home-view.vala:456
+#: src/app/ui/content/home-view.vala:489
 msgid "From a server"
 msgstr "Depuis un serveur"
 
-#: src/app/ui/content/home-view.vala:457
+#: src/app/ui/content/home-view.vala:490
 msgid "Peer-to-peer network"
 msgstr "Réseau pair à pair"
 

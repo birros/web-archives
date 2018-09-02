@@ -6,9 +6,21 @@ public class WebArchives.Remote : Object {
     public int64 timestamp  {get; set;         default = 0;    }
     public bool downloading {get; private set; default = false;}
     public double progress  {get; private set; default = 0;    }
+    public bool enabled     {get; private set; default = false;}
 
     public Remote (ArchiveStore archive_store) {
         this.archive_store = archive_store;
+
+        if (
+            DBusUtils.is_name_activatable ("org.gtk.vfs.Daemon") &&
+            DBusUtils.is_gvfs_backend_supported ("http")
+        ) {
+            enabled = true;
+            info ("HTTP GVFS backend is present");
+        } else {
+            enabled = false;
+            info ("HTTP GVFS backend is not present");
+        }
 
         // build library path
         string cache_dir = Environment.get_user_cache_dir ();
@@ -19,6 +31,10 @@ public class WebArchives.Remote : Object {
     }
 
     public void refresh () {
+        if (!enabled) {
+            return;
+        }
+
         FileDownloader library_downloader = new FileDownloader ();
         library_downloader.download_file (LIBRARY_URL, library_path);
         library_downloader.complete.connect (() => {

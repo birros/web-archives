@@ -10,6 +10,11 @@ public class WebArchives.HomeView : Gtk.Overlay {
     private const int DIRECT_DOWNLOAD = 14;
     private const int TORRENT_DOWNLOAD = 15;
 
+
+    private const string RECENTS_INFO_MESSAGE = _(
+"""No archive recently opened. <b>Please select an archive from the following sections or open it manually.</b>"""
+    );
+
     private const string TRACKER_INFO_MESSAGE = _(
 """No archive automaticly detected on your system. <b>Please download one from the following section.</b>"""
     );
@@ -27,7 +32,7 @@ public class WebArchives.HomeView : Gtk.Overlay {
    );
 
     private const string REMOTE_INFO_MESSAGE = _(
-"""No archive available for download."""
+"""No archive available for download. <b>Please refresh this list using the appropriate button.</b>"""
     );
 
     private const string REMOTE_WARNING_MESSAGE = _(
@@ -115,11 +120,10 @@ public class WebArchives.HomeView : Gtk.Overlay {
         recents_list_box.set_header_func (update_header);
         recents_frame.add (recents_list_box);
 
-        Gtk.Label recents_placeholder = new Gtk.Label (
-            _("No archive recently opened.")
-        );
+        Gtk.Label recents_placeholder = new Gtk.Label (RECENTS_INFO_MESSAGE);
+        recents_placeholder.use_markup = true;
         recents_placeholder.margin = 12;
-        recents_placeholder.ellipsize = Pango.EllipsizeMode.END;
+        recents_placeholder.wrap = true;
         recents_placeholder.show_all ();
         recents_list_box.set_placeholder (recents_placeholder);
 

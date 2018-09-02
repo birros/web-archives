@@ -52,6 +52,22 @@
     <update_contact>birros@protonmail.com</update_contact>
     <translation type="gettext">web-archives</translation>
     <releases>
+        <release version="0.3.0" date="2018-09-02">
+            <description>
+                <p>
+                    This new release of WebArchives contains some bug fixes and
+                    new features.
+                </p>
+                <ul>
+                    <li>Update Recents info message</li>
+                    <li>Improve information when the HTTP GVFS backend is not installed</li>
+                    <li>Improve information when the Tracker is not installed</li>
+                    <li>Add tooltips to buttons</li>
+                    <li>Add history button on home page</li>
+                    <li>Update download icon on home page</li>
+                </ul>
+            </description>
+        </release>
         <release version="0.2.2" date="2018-08-22">
             <description>
                 <p>

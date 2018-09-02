@@ -51,8 +51,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/openzim/libzim/archive/4.0.2.tar.gz
-        sha256: cb9a853ecdab3c43099b1b36861ef6c9ccfab64cf12be148fe87389e92a17b47
+        url: https://github.com/openzim/libzim/archive/4.0.3.tar.gz
+        sha256: d246c5ed4839780215a4070e3f412bae9511a7201a881b1bfa93e3363af32017
 
   #
   # require

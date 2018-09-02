@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-27 18:45+0200\n"
+"POT-Creation-Date: 2018-09-02 18:37+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Birros <birros@protonmail.com>\n"
 "Language-Team: \n"
@@ -122,7 +122,7 @@ msgstr "archive;web;hors ligne;"
 
 #: data/desktop/com.github.birros.WebArchives.desktop.in:10
 msgid "com.github.birros.WebArchives"
-msgstr ""
+msgstr "com.github.birros.WebArchives"
 
 #: src/app/resources/gtk/help-overlay.ui:13
 msgctxt "shortcut window"
@@ -328,7 +328,7 @@ msgstr "Pas d'historique de navigation."
 
 #: src/app/ui/content/history-view.vala:77
 msgid "%e %b %y"
-msgstr ""
+msgstr "%e %b %y"
 
 #: src/app/ui/content/archive-row.vala:72
 #: src/app/ui/header-bar/header-bar.vala:68
@@ -411,7 +411,7 @@ msgstr "Pas de signets sauvegardés."
 #: src/app/ui/content/status-label.vala:29
 #, c-format
 msgid "%s: %u %%"
-msgstr ""
+msgstr "%s: %u %%"
 
 #: src/app/ui/content/status-label.vala:34
 #: src/app/ui/content/status-label.vala:47
@@ -452,61 +452,93 @@ msgstr "il y a %llum"
 msgid "%llus ago"
 msgstr "il y a %llus"
 
-#: src/app/ui/content/home-view.vala:26
+#: src/app/ui/content/home-view.vala:14
+msgid ""
+"No archive automaticly detected on your system. <b>Please download one from "
+"the following section.</b>"
+msgstr ""
+"Aucune archive automatiquement détectée sur votre système. <b>Veuillez en "
+"télécharger une depuis la section suivante.</b>"
+
+#: src/app/ui/content/home-view.vala:18
+msgid ""
+"<span weight=\"bold\" foreground=\"#f57900\">It seems Tracker is not "
+"installed on your system.</span> WebArchives can't automatically list the "
+"archives present on your disk.\n"
+"\n"
+"<b>Please install Tracker using your package manager and then restart your "
+"session.</b>\n"
+"\n"
+"&#8226; Debian or Ubuntu:\n"
+"   <tt>apt install tracker</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"   <tt>dnf install tracker</tt>"
+msgstr ""
+"<span weight=\"bold\" foreground=\"#f57900\">Il semble que Tracker n'est pas "
+"installé sur votre système.</span> WebArchives ne peut pas lister "
+"automatiquement les archives présentes sur votre disque.\n"
+"\n"
+"<b>Veuillez installer Tracker à l'aide de votre gestionnaire de paquets, "
+"puis redémarrez votre session.</b>\n"
+"\n"
+"&#8226; Debian ou Ubuntu:\n"
+"   <tt>apt install tracker</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"   <tt>dnf install tracker</tt>"
+
+#: src/app/ui/content/home-view.vala:42
 msgid "Cannot open the archive file"
 msgstr "Impossible d'ouvrir l'archive"
 
 #. RECENTS
-#: src/app/ui/content/home-view.vala:60
+#: src/app/ui/content/home-view.vala:76
 msgid "Recents"
 msgstr "Récentes"
 
-#: src/app/ui/content/home-view.vala:69
+#: src/app/ui/content/home-view.vala:85
 msgid "Open a web archive"
 msgstr "Ouvrir une archive web"
 
-#: src/app/ui/content/home-view.vala:87
+#: src/app/ui/content/home-view.vala:103
 msgid "No archive recently opened."
 msgstr "Aucune archive récemment ouverte."
 
-#: src/app/ui/content/home-view.vala:109
+#: src/app/ui/content/home-view.vala:125
 msgid "Local"
 msgstr "Locales"
 
-#: src/app/ui/content/home-view.vala:127 src/app/ui/content/home-view.vala:203
+#: src/app/ui/content/home-view.vala:143 src/app/ui/content/home-view.vala:229
 msgid "Refresh"
 msgstr "Actualiser"
 
-#: src/app/ui/content/home-view.vala:145
-msgid "No archive automaticly detected on your system."
-msgstr "Aucune archive automatiquement détectée sur votre système."
-
-#: src/app/ui/content/home-view.vala:167
+#: src/app/ui/content/home-view.vala:193
 msgid "Remote"
 msgstr "Distant"
 
-#: src/app/ui/content/home-view.vala:198
+#: src/app/ui/content/home-view.vala:224
 msgid "Downloading"
 msgstr "Téléchargement"
 
-#: src/app/ui/content/home-view.vala:221
+#: src/app/ui/content/home-view.vala:247
 msgid "No archive available for download."
 msgstr "Aucune archive disponible en téléchargement."
 
-#: src/app/ui/content/home-view.vala:424
+#: src/app/ui/content/home-view.vala:450
 #, c-format
 msgid "How would you like to download %s ?"
 msgstr "Comment souhaitez-vous télécharger %s ?"
 
-#: src/app/ui/content/home-view.vala:428
+#: src/app/ui/content/home-view.vala:454
 msgid "This will open a third-party application to download the archive."
 msgstr "Ceci ouvrira une application tierce pour télécharger l'archive."
 
-#: src/app/ui/content/home-view.vala:430
+#: src/app/ui/content/home-view.vala:456
 msgid "From a server"
 msgstr "Depuis un serveur"
 
-#: src/app/ui/content/home-view.vala:431
+#: src/app/ui/content/home-view.vala:457
 msgid "Peer-to-peer network"
 msgstr "Réseau pair à pair"
 

@@ -1,13 +1,24 @@
 public class WebArchives.TrackerService : Object {
     private ArchiveStore archive_store;
     public int64 timestamp {get; set; default = 0;}
+    public bool enabled {get; set; default = false;}
 
     public TrackerService (ArchiveStore archive_store) {
         this.archive_store = archive_store;
+
+        if (DBusUtils.is_name_activatable ("org.freedesktop.Tracker1")) {
+            enabled = true;
+            info ("Tracker is present");
+        } else {
+            enabled = false;
+            info ("Tracker is not present");
+        }
     }
 
     public void refresh () {
-        new Thread<bool> ("_refresh", this._refresh);
+        if (enabled) {
+            new Thread<bool> ("_refresh", this._refresh);
+        }
     }
 
     private bool _refresh () {

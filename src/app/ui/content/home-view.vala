@@ -10,6 +10,22 @@ public class WebArchives.HomeView : Gtk.Overlay {
     private const int DIRECT_DOWNLOAD = 14;
     private const int TORRENT_DOWNLOAD = 15;
 
+    private const string TRACKER_INFO_MESSAGE = _(
+"""No archive automaticly detected on your system. <b>Please download one from the following section.</b>"""
+    );
+
+    private const string TRACKER_WARNING_MESSAGE = _(
+"""<span weight="bold" foreground="#f57900">It seems Tracker is not installed on your system.</span> WebArchives can't automatically list the archives present on your disk.
+
+<b>Please install Tracker using your package manager and then restart your session.</b>
+
+&#8226; Debian or Ubuntu:
+   <tt>apt install tracker</tt>
+
+&#8226; Fedora:
+   <tt>dnf install tracker</tt>"""
+   );
+
     public HomeView (Context context) {
         this.context = context;
 
@@ -129,6 +145,9 @@ public class WebArchives.HomeView : Gtk.Overlay {
         local_header_button.clicked.connect (() => {
             context.tracker.refresh ();
         });
+        if (!context.tracker.enabled) {
+            local_header_button.sensitive = false;
+        }
         local_header_box.add (local_header_button);
 
         Gtk.Frame local_frame = new Gtk.Frame (null);
@@ -141,22 +160,29 @@ public class WebArchives.HomeView : Gtk.Overlay {
         local_list_box.set_header_func (update_header);
         local_frame.add (local_list_box);
 
-        Gtk.Label local_placeholder = new Gtk.Label (
-            _("No archive automaticly detected on your system.")
-        );
+        Gtk.Label local_placeholder;
+        if (context.tracker.enabled) {
+            local_placeholder = new Gtk.Label (TRACKER_INFO_MESSAGE);
+        } else {
+            local_placeholder = new Gtk.Label (TRACKER_WARNING_MESSAGE);
+            local_placeholder.selectable = true;
+        }
+        local_placeholder.use_markup = true;
         local_placeholder.margin = 12;
-        local_placeholder.ellipsize = Pango.EllipsizeMode.END;
+        local_placeholder.wrap = true;
         local_placeholder.show_all ();
         local_list_box.set_placeholder (local_placeholder);
 
-        local_model = new ArchiveModel (context.archive_store, "LOCAL");
-        local_model.set_filter_func (local_filter);
-        local_model.set_sort_func (sort_by_title);
-        local_list_box.bind_model (local_model, list_box_create_row);
-        local_model.items_changed.connect (() => {
-            remote_model.invalidate_filter ();
-            show_all ();
-        });
+        if (context.tracker.enabled) {
+            local_model = new ArchiveModel (context.archive_store, "LOCAL");
+            local_model.set_filter_func (local_filter);
+            local_model.set_sort_func (sort_by_title);
+            local_list_box.bind_model (local_model, list_box_create_row);
+            local_model.items_changed.connect (() => {
+                remote_model.invalidate_filter ();
+                show_all ();
+            });
+        }
 
         // REMOTE
         Gtk.Box remote_header_box = new Gtk.Box (

@@ -26,6 +26,11 @@ build-options:
   cxxflags: -O2 -g
 modules:
   - name: xapian-core
+    config-opts:
+      - --disable-sse
+      - --disable-backend-chert
+      - --disable-backend-inmemory
+      - --disable-documentation
     cleanup:
       - /bin
       - /include
@@ -51,8 +56,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/openzim/libzim/archive/4.0.3.tar.gz
-        sha256: d246c5ed4839780215a4070e3f412bae9511a7201a881b1bfa93e3363af32017
+        url: https://github.com/openzim/libzim/archive/4.0.4.tar.gz
+        sha256: 8f56a16d15e810150d3c3ee9acce3606f676c90b72936e11f77f2a2548cd4611
 
   #
   # require
@@ -101,8 +106,8 @@ modules:
       - /share/vala
     sources:
       - type: archive
-        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.0/tracker-2.0.4.tar.xz
-        sha256: ce2f0db52666592d313a04ce14663110eafa8ab08dc213b53e790281362dccd5
+        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.1/tracker-2.1.4.tar.xz
+        sha256: 5d3f27da49d3e8ceafd2049b0fd5c3ff3ca43cda199c792652ce5ed3e847c575
 
   - name: libgee
     build-options:
@@ -149,8 +154,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.2/libhandy-v0.0.2.tar.gz
-        sha256: 7cfa36032981e4ad7bb156d14df588a784743a066f57651260072fe21317cbd3
+        url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.3/libhandy-v0.0.3.tar.gz
+        sha256: 387bb4da0e5d15d6d83cac5276841e6eda8429548b292ea3ebf002679189c270
 
   - name: nodejs
     cleanup:

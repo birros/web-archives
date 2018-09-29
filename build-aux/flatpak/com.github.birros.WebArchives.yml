@@ -12,6 +12,7 @@ finish-args:
   # Used to list automatically indexed local files
   - --filesystem=home
   - --talk-name=org.freedesktop.Tracker1
+  - --env=TRACKER_SPARQL_BACKEND=bus
   # Used to access gvfs's http backend to download files
   - --share=network
   - --talk-name=org.gtk.vfs

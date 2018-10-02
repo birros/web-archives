@@ -1,5 +1,5 @@
 public class WebArchives.StatusLabel : Gtk.Label {
-    private int64 _timestamp;
+    private int64 _timestamp {get; set; default = 0;}
     public int64 timestamp {
         get {
             return _timestamp;
@@ -9,7 +9,6 @@ public class WebArchives.StatusLabel : Gtk.Label {
             update_label ();
             update_tooltip ();
         }
-        default = 0;
     }
 
     public bool progress_enabled {get; set; default = false;}

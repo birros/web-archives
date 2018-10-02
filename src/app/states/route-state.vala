@@ -9,7 +9,7 @@ public class WebArchives.RouteState : Object {
     }
 
     public Route last_route {get; private set;}
-    private Route _route {get; private set;}
+    private Route _route {get; private set; default = Route.HOME;}
     public Route route {
         get {
             return _route;
@@ -20,6 +20,5 @@ public class WebArchives.RouteState : Object {
                 _route = value;
             }
         }
-        default = Route.HOME;
     }
 }

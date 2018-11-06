@@ -38,8 +38,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://oligarchy.co.uk/xapian/1.4.7/xapian-core-1.4.7.tar.xz
-        sha256: 13f08a0b649c7afa804fa0e85678d693fd6069dd394c9b9e7d41973d74a3b5d3
+        url: https://oligarchy.co.uk/xapian/1.4.9/xapian-core-1.4.9.tar.xz
+        sha256: cde9c39d014f04c09b59d9c21551db9794c10617dc69ab4c9826352a533df5cc
 
   #
   # require
@@ -104,8 +104,8 @@ modules:
       - /share/vala
     sources:
       - type: archive
-        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.1/tracker-2.1.4.tar.xz
-        sha256: 5d3f27da49d3e8ceafd2049b0fd5c3ff3ca43cda199c792652ce5ed3e847c575
+        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.1/tracker-2.1.6.tar.xz
+        sha256: 982bd0abe62a2a7e72c7f7efb7935dd33e1860265e3c7ceb90ef5150f0557f90
 
   - name: libgee
     build-options:
@@ -167,8 +167,8 @@ modules:
       - /*
     sources:
       - type: archive
-        url: https://nodejs.org/dist/v8.11.4/node-v8.11.4.tar.gz
-        sha256: 459144e361d64ca7362c37cc9717c044ef909d348cb5aa3f2b62538560a6085a
+        url: https://nodejs.org/dist/v8.12.0/node-v8.12.0.tar.gz
+        sha256: b4797843136edd9195c28221a1680ae52c29d867fc5fc1c99f7d6e2f2126a67b
 
   #
   # require
@@ -190,3 +190,10 @@ modules:
       - type: shell
         commands:
           - cd subprojects/darkreader && npm install --offline --cache=../../npm-cache
+      #
+      # prevent 'npm install' from being launched when compiling darkreader, to
+      # avoid the 'cb() never called!' error
+      #
+      - type: shell
+        commands:
+          - sed -i "s/find_program('npm')/find_program('true')/g" subprojects/darkreader/meson.build

@@ -1,4 +1,6 @@
 public class WebArchives.WebViewState : Object {
+    private GLib.Settings settings;
+
     public string title        {get; set; default = null; }
     public string url          {get; set; default = "";   }
     public bool can_go_back    {get; set; default = false;}
@@ -16,4 +18,15 @@ public class WebArchives.WebViewState : Object {
     public signal void zoom_out ();
     public signal void zoom_in ();
     public signal void zoom_reset ();
+
+    public WebViewState() {
+        this.settings = new Settings ("com.github.birros.WebArchives");
+
+        this.notify["zoom-level"].connect (this.on_zoom_level);
+        this.zoom_level = this.settings.get_double ("zoom-level");
+    }
+
+    private void on_zoom_level () {
+        this.settings.set_double ("zoom-level", this.zoom_level);
+    }
 }

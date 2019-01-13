@@ -15,5 +15,10 @@
             <summary>Window size</summary>
             <description>Window size (width and height).</description>
         </key>
+        <key name="zoom-level" type="d">
+            <default>1.0</default>
+            <summary>Last zoom level</summary>
+            <description>Last zoom level state.</description>
+        </key>
     </schema>
 </schemalist>

@@ -293,6 +293,7 @@ class WebArchives.WebView : Gtk.Box {
 
         web_view.load_changed.connect (on_load_changed);
         web_view.decide_policy.connect (on_decide_policy);
+        web_view.zoom_level = context.web_view_state.zoom_level;
         web_view.notify["zoom-level"].connect (on_zoom_level);
         on_zoom_level ();
         add (web_view);

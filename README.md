@@ -122,9 +122,9 @@ See : [HACKING.md].
 
 ## Useful links
 
-- [Flatpakref of WebArchives (external application)]
+- [WebArchives on Flathub]
+- [Kiwix on Flathub]
 - [Kiwix website]
-- [List of applications hosted on Flathub]
 
 <!-- External links and references -->
 
@@ -143,6 +143,6 @@ See : [HACKING.md].
 [Kiwix]: https://en.wikipedia.org/wiki/Kiwix
 [ZIM format]: https://en.wikipedia.org/wiki/ZIM_(file_format)
 [HACKING.md]: HACKING.md
-[Flatpakref of WebArchives (external application)]: https://flathub.org/repo/appstream/com.github.birros.WebArchives.flatpakref
+[WebArchives on Flathub]: https://flathub.org/apps/details/com.github.birros.WebArchives
+[Kiwix on Flathub]: https://flathub.org/apps/details/org.kiwix.desktop
 [Kiwix website]: https://www.kiwix.org/
-[List of applications hosted on Flathub]: https://flathub.org/apps.html

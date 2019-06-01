@@ -1,6 +1,6 @@
 id: com.github.birros.WebArchives
 runtime: org.gnome.Platform
-runtime-version: '3.30'
+runtime-version: '3.32'
 sdk: org.gnome.Sdk
 command: web-archives
 finish-args:
@@ -23,6 +23,14 @@ finish-args:
   - --talk-name=ca.desrt.dconf
   - --env=DCONF_USER_CONFIG_DIR=.config/dconf
 modules:
+  - name: nodejs
+    cleanup:
+      - /*
+    sources:
+      - type: archive
+        url: https://nodejs.org/dist/v10.16.0/node-v10.16.0.tar.gz
+        sha256: d00f1ffdb0a7413eaaf3afc393fb652ea713db135dcd3ccf6809370a07395713
+
   - name: xapian-core
     config-opts:
       - --disable-sse
@@ -162,14 +170,6 @@ modules:
         url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.3/libhandy-v0.0.3.tar.gz
         sha256: 387bb4da0e5d15d6d83cac5276841e6eda8429548b292ea3ebf002679189c270
 
-  - name: nodejs
-    cleanup:
-      - /*
-    sources:
-      - type: archive
-        url: https://nodejs.org/dist/v8.12.0/node-v8.12.0.tar.gz
-        sha256: b4797843136edd9195c28221a1680ae52c29d867fc5fc1c99f7d6e2f2126a67b
-
   #
   # require
   #   libzim-glib, tracker, libisocodes, libhandy
@@ -183,13 +183,14 @@ modules:
       - type: git
         url: https://github.com/birros/web-archives.git
       #
-      # preinstall npm packages, darkreader-npm-cache.json was generated using
-      # github.com/flatpak/flatpak-builder-tools/npm from package-lock.json
+      # preinstall npm packages, generated-sources.*.json was generated using
+      # github.com/flatpak/flatpak-builder-tools/node from package-lock.json
       #
-      - modules/darkreader-npm-cache.json
+      - modules/generated-sources.0.json
+      - generated-sources.1.json
       - type: shell
         commands:
-          - cd subprojects/darkreader && npm install --offline --cache=../../npm-cache
+          - cd subprojects/darkreader && npm ci --cache=../../flatpak-node/npm-cache
       #
       # prevent 'npm install' from being launched when compiling darkreader, to
       # avoid the 'cb() never called!' error

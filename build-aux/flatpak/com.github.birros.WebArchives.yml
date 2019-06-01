@@ -2,6 +2,8 @@ id: com.github.birros.WebArchives
 runtime: org.gnome.Platform
 runtime-version: '3.32'
 sdk: org.gnome.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.node10
 command: web-archives
 finish-args:
   - --socket=wayland
@@ -26,10 +28,9 @@ modules:
   - name: nodejs
     cleanup:
       - /*
-    sources:
-      - type: archive
-        url: https://nodejs.org/dist/v10.16.0/node-v10.16.0.tar.gz
-        sha256: d00f1ffdb0a7413eaaf3afc393fb652ea713db135dcd3ccf6809370a07395713
+    buildsystem: simple
+    build-commands:
+      - '/usr/lib/sdk/node10/install.sh'
 
   - name: xapian-core
     config-opts:
@@ -179,6 +180,10 @@ modules:
   - name: web-archives
     buildsystem: meson
     builddir: true
+    build-options:
+      append-path: /usr/lib/sdk/node10/bin
+      env:
+        npm_config_nodedir: /usr/lib/sdk/node10
     sources:
       - type: git
         url: https://github.com/birros/web-archives.git

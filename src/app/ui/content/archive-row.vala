@@ -54,7 +54,10 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
         subtitle_infos.append_val (size);
 
         Array<string> tags = TagParser.parse_tags (archive.tags);
-        subtitle_infos.append_vals (tags.data, tags.length);
+        for (int i = 0; i < tags.length; i++) {
+            string tag = tags.index (i);
+            subtitle_infos.append_val (tag);
+        }
 
         string subtitle_text = string.joinv (" ⋅ ", subtitle_infos.data);
 

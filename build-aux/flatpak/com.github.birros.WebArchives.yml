@@ -47,8 +47,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://oligarchy.co.uk/xapian/1.4.9/xapian-core-1.4.9.tar.xz
-        sha256: cde9c39d014f04c09b59d9c21551db9794c10617dc69ab4c9826352a533df5cc
+        url: https://oligarchy.co.uk/xapian/1.4.11/xapian-core-1.4.11.tar.xz
+        sha256: 9f16b2f3e2351a24034d7636f73566ab74c3f0729e9e0492934e956b25c5bc07
 
   #
   # require
@@ -63,8 +63,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/openzim/libzim/archive/4.0.4.tar.gz
-        sha256: 8f56a16d15e810150d3c3ee9acce3606f676c90b72936e11f77f2a2548cd4611
+        url: https://github.com/openzim/libzim/archive/5.0.0.tar.gz
+        sha256: dbec0a36155315037a6496a9be5c7ede17171fcde47063c97ce937057b437fdb
 
   #
   # require
@@ -84,17 +84,10 @@ modules:
         sha256: 89cbc55254d90c70de2de8ee7f2b4aff97f582ae7f495ddfee518ef136de9357
 
   - name: tracker
-    config-opts:
-      - --disable-miner-apps
-      - --disable-static
-      - --disable-tracker-extract
-      - --disable-tracker-needle
-      - --disable-tracker-preferences
-      - --disable-artwork
-      - --disable-tracker-writeback
-      - --disable-miner-user-guides
-      - --with-bash-completion-dir=no
+    buildsystem: meson
+    builddir: true
     cleanup:
+      - /bin
       - /etc
       - /include
       - /lib/libtracker-control*
@@ -105,6 +98,7 @@ modules:
       - /lib/pkgconfig
       - /lib/systemd
       - /libexec
+      - /share/bash-completion
       - /share/dbus-1
       - /share/gir-1.0
       - /share/gtk-doc
@@ -113,8 +107,8 @@ modules:
       - /share/vala
     sources:
       - type: archive
-        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.1/tracker-2.1.6.tar.xz
-        sha256: 982bd0abe62a2a7e72c7f7efb7935dd33e1860265e3c7ceb90ef5150f0557f90
+        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.2/tracker-2.2.2.tar.xz
+        sha256: c6a73462f9aa9c32efa139003d2abd2ac5f70f8af6ce744729954975a661e2e6
 
   - name: libgee
     build-options:
@@ -168,8 +162,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.3/libhandy-v0.0.3.tar.gz
-        sha256: 387bb4da0e5d15d6d83cac5276841e6eda8429548b292ea3ebf002679189c270
+        url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.9/libhandy-v0.0.9.tar.gz
+        sha256: a9f3c06eaa482efabc1d00dd2df65dc7d41253a71c0cb0402328a831a4f398a3
 
   #
   # require

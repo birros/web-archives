@@ -25,13 +25,6 @@ finish-args:
   - --talk-name=ca.desrt.dconf
   - --env=DCONF_USER_CONFIG_DIR=.config/dconf
 modules:
-  - name: nodejs
-    cleanup:
-      - /*
-    buildsystem: simple
-    build-commands:
-      - '/usr/lib/sdk/node10/install.sh'
-
   - name: xapian-core
     config-opts:
       - --disable-sse

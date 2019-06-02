@@ -35,16 +35,16 @@
     </description>
     <screenshots>
         <screenshot type="default">
-            <image width="850" height="500">https://raw.githubusercontent.com/birros/web-archives/master/data/appdata/screenshots/home.png</image>
+            <image width="800" height="450">https://raw.githubusercontent.com/birros/web-archives/master/data/appdata/screenshots/home.png</image>
         </screenshot>
         <screenshot>
-            <image width="850" height="500">https://raw.githubusercontent.com/birros/web-archives/master/data/appdata/screenshots/web-wikipedia.png</image>
+            <image width="800" height="450">https://raw.githubusercontent.com/birros/web-archives/master/data/appdata/screenshots/web-wikipedia.png</image>
         </screenshot>
         <screenshot>
-            <image width="850" height="500">https://raw.githubusercontent.com/birros/web-archives/master/data/appdata/screenshots/search.png</image>
+            <image width="800" height="450">https://raw.githubusercontent.com/birros/web-archives/master/data/appdata/screenshots/search.png</image>
         </screenshot>
         <screenshot>
-            <image width="850" height="500">https://raw.githubusercontent.com/birros/web-archives/master/data/appdata/screenshots/web-earth.png</image>
+            <image width="800" height="450">https://raw.githubusercontent.com/birros/web-archives/master/data/appdata/screenshots/web-earth.png</image>
         </screenshot>
     </screenshots>
     <content_rating type="oars-1.1">

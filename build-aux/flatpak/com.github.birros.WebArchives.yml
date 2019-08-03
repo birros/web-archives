@@ -40,8 +40,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://oligarchy.co.uk/xapian/1.4.11/xapian-core-1.4.11.tar.xz
-        sha256: 9f16b2f3e2351a24034d7636f73566ab74c3f0729e9e0492934e956b25c5bc07
+        url: https://oligarchy.co.uk/xapian/1.4.12/xapian-core-1.4.12.tar.xz
+        sha256: 4f8a36da831712db41d38a039fefb5251869761a58be28ba802994bb930fac7c
 
   #
   # require
@@ -56,8 +56,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/openzim/libzim/archive/5.0.0.tar.gz
-        sha256: dbec0a36155315037a6496a9be5c7ede17171fcde47063c97ce937057b437fdb
+        url: https://github.com/openzim/libzim/archive/5.0.1.tar.gz
+        sha256: b567fd90be772a47dfc9120f95344f46441f5fa5f8780e44726903b14e27a894
 
   #
   # require
@@ -155,8 +155,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.9/libhandy-v0.0.9.tar.gz
-        sha256: a9f3c06eaa482efabc1d00dd2df65dc7d41253a71c0cb0402328a831a4f398a3
+        url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.10/libhandy-v0.0.10.tar.gz
+        sha256: 9f4528c07bdb9796300ff0efb165cdc48cfcd7f28952c9d776de15b735844981
 
   #
   # require

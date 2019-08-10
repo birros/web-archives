@@ -279,9 +279,14 @@ public class WebArchives.ZimReader {
 
     private string getMetatag (string name) {
         Zim.Article article = zim_file.get_article_by_namespace ('M', name);
-        uint8[] data = article.get_data ();
-        var builder = new StringBuilder ();
-        builder.append_len ((string)data, data.length);
-        return builder.str;
+
+        if (article.good()) {
+            uint8[] data = article.get_data ();
+            var builder = new StringBuilder ();
+            builder.append_len ((string)data, data.length);
+            return builder.str;
+        }
+
+        return "";
     }
 }

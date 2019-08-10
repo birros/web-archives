@@ -18,12 +18,21 @@ public class WebArchives.Server : Soup.Server {
 
         add_handler (null, default_handler);
 
+        // Try to setup the server listener on ipv4 then ipv6, otherwise failing
         try {
-            listen_local (0, 0);
-            uint port = get_uris().data.get_port();
-            url = @"http://127.0.0.1:$port/";
+            listen_local (0, Soup.ServerListenOptions.IPV4_ONLY);
+            url = get_uris().data.to_string(false);
         } catch (Error e) {
-            error (e.message);
+            warning (e.message);
+
+            try {
+                listen_local (0, Soup.ServerListenOptions.IPV6_ONLY);
+                url = get_uris().data.to_string(false);
+            } catch(Error e2) {
+                warning (e.message);
+
+                error ("Unable to setup internal server");
+            }
         }
     }
 

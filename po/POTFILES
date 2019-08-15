@@ -12,6 +12,7 @@ src/app/ui/content/details-dialog.vala
 src/app/ui/content/bookmark-view.vala
 src/app/ui/content/status-label.vala
 src/app/ui/content/home-view.vala
+src/app/ui/content/web-view.vala
 src/app/ui/gtk/notebook/notebook-popup-menu.vala
 src/app/ui/header-bar/bookmark-button.vala
 src/app/ui/header-bar/header-bar.vala

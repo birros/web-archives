@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-27 18:45+0200\n"
+"POT-Creation-Date: 2019-08-15 15:53+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Birros <birros@protonmail.com>\n"
 "Language-Team: \n"
@@ -13,16 +13,17 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:8
 #: data/desktop/com.github.birros.WebArchives.desktop.in:3
 #: src/app/states/title-logic.vala:17 src/app/ui/window.vala:310
 msgid "WebArchives"
 msgstr "WebArchives"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:8
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:9
 msgid "A web archives viewer"
 msgstr "Un visor de archivadores web"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:10
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:12
 msgid ""
 "A web archives viewer offering the ability to browse offline millions of "
 "articles from large community projects such as Wikipedia or Wikisource."
@@ -31,81 +32,82 @@ msgstr ""
 "conexión millones de artículos provenientes de grandes proyectos "
 "comunitarios como Wikipedia o Wikisource."
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:15
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:17
 msgid "Features:"
 msgstr "Funcionalidades:"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:17
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:19
 msgid "List recently opened web archives"
 msgstr "Listado de archivadores web abiertos recientemente"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:18
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:20
 msgid "List available local web archives"
 msgstr "Listado de archivadores web locales disponibles"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:19
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:21
 msgid "List of web archives available to download"
 msgstr "Listado de archivadores web disponibles para descarga"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:20
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:22
 msgid "Print a page"
 msgstr "Imprimir páginas"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:21
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:23
 msgid "Night mode (Darkreader)"
 msgstr "Modo nocturno (Darkreader)"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:22
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:24
 msgid "Zoom controls"
 msgstr "Controles de escala"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:23
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:25
 msgid "Search in page"
 msgstr "Buscar en las páginas"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:24
-#: src/app/states/title-logic.vala:37 src/app/ui/content/archive-row.vala:96
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:26
+#: src/app/states/title-logic.vala:37 src/app/ui/content/archive-row.vala:99
 #: src/app/ui/header-bar/popover-menu.vala:60
 msgid "History"
 msgstr "Historial"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:25
-#: src/app/states/title-logic.vala:30 src/app/ui/content/archive-row.vala:83
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:27
+#: src/app/states/title-logic.vala:30 src/app/ui/content/archive-row.vala:86
 #: src/app/ui/header-bar/popover-menu.vala:54
 msgid "Bookmarks"
 msgstr "Marcadores"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:26
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:28
 msgid "Search a page"
 msgstr "Buscar páginas"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:27
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:29
 #: src/app/ui/header-bar/popover-menu.vala:84
 msgid "Keyboard shortcuts"
 msgstr "Atajos de teclado"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:28
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:30
 msgid "Multi-windows"
 msgstr "Ventanas múltiples"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:29
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:31
 msgid "Multi-tabs"
 msgstr "Pestañas múltiples"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:30
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:32
 #: src/app/ui/header-bar/popover-menu.vala:46
 msgid "Random page"
 msgstr "Página al azar"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:31
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:33
 msgid "Sandboxed pages (Pages are isolated from the web)"
 msgstr "Páginas en entorno aislado (limitadas en acceso a la web)"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:32
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:34
 msgid "Ask for confirmation when opening an external link"
 msgstr "Solicitar confirmación antes de abrir un enlace externo"
 
-#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:33
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:35
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:182
 msgid ""
 "Handle the opening of zim files from external applications (Nautilus...)"
 msgstr ""
@@ -330,21 +332,21 @@ msgstr "El historial de navegación está vacío."
 msgid "%e %b %y"
 msgstr "%e.%b.%y"
 
-#: src/app/ui/content/archive-row.vala:72
+#: src/app/ui/content/archive-row.vala:75
 #: src/app/ui/header-bar/header-bar.vala:68
 msgid "Search"
 msgstr "Buscar"
 
-#: src/app/ui/content/archive-row.vala:109
+#: src/app/ui/content/archive-row.vala:112
 msgid "Download"
 msgstr "Descargar"
 
-#: src/app/ui/content/archive-row.vala:138
+#: src/app/ui/content/archive-row.vala:141
 #: src/app/ui/content/details-dialog.vala:11
 msgid "Details"
 msgstr "Detalles"
 
-#: src/app/ui/content/archive-row.vala:147
+#: src/app/ui/content/archive-row.vala:150
 msgid "Remove"
 msgstr "Quitar"
 
@@ -408,107 +410,155 @@ msgstr "Etiquetas"
 msgid "No bookmarks saved."
 msgstr "No hay ningún marcador guardado."
 
-#: src/app/ui/content/status-label.vala:29
+#: src/app/ui/content/status-label.vala:28
 #, c-format
 msgid "%s: %u %%"
 msgstr "%s: %u %%"
 
-#: src/app/ui/content/status-label.vala:34
-#: src/app/ui/content/status-label.vala:47
+#: src/app/ui/content/status-label.vala:33
+#: src/app/ui/content/status-label.vala:46
 msgid "Never refreshed"
 msgstr "Jamás actualizado"
 
-#: src/app/ui/content/status-label.vala:39
+#: src/app/ui/content/status-label.vala:38
 msgid "Last refreshed: %H:%M - %e %b %Y"
 msgstr "Última actualización: %H:%M, %e.%b.%Y"
 
-#: src/app/ui/content/status-label.vala:62
+#: src/app/ui/content/status-label.vala:61
 #, c-format
 msgid "%lluY ago"
 msgstr "hace %lluA"
 
-#: src/app/ui/content/status-label.vala:64
+#: src/app/ui/content/status-label.vala:63
 #, c-format
 msgid "%lluM ago"
 msgstr "hace %lluM"
 
-#: src/app/ui/content/status-label.vala:66
+#: src/app/ui/content/status-label.vala:65
 #, c-format
 msgid "%lluD ago"
 msgstr "hace %lluD"
 
-#: src/app/ui/content/status-label.vala:68
+#: src/app/ui/content/status-label.vala:67
 #, c-format
 msgid "%lluh ago"
 msgstr "hace %lluh"
 
-#: src/app/ui/content/status-label.vala:70
+#: src/app/ui/content/status-label.vala:69
 #, c-format
 msgid "%llum ago"
 msgstr "hace %llum"
 
-#: src/app/ui/content/status-label.vala:72
+#: src/app/ui/content/status-label.vala:71
 #, c-format
 msgid "%llus ago"
 msgstr "hace %llus"
 
-#: src/app/ui/content/home-view.vala:26
+#: src/app/ui/content/home-view.vala:15
+msgid ""
+"No archive recently opened. <b>Please select an archive from the following "
+"sections or open it manually.</b>"
+msgstr ""
+"No se ha abierto ningún archivador recientemente. <b>Por favor, seleccione un "
+"archivo de las siguientes secciones o ábralo manualmente.</b>"
+
+#: src/app/ui/content/home-view.vala:19
+#, fuzzy
+msgid ""
+"No archive automaticly detected on your system. <b>Please download one from "
+"the following section.</b>"
+msgstr "No se detectó ningún archivador automáticamente en el sistema."
+
+#: src/app/ui/content/home-view.vala:23
+msgid ""
+"<span weight=\"bold\" foreground=\"#f57900\">It seems Tracker is not "
+"installed on your system.</span> WebArchives can't automatically list the "
+"archives present on your disk.\n"
+"\n"
+"<b>Please install Tracker using your package manager and then restart your "
+"session.</b>\n"
+"\n"
+"&#8226; Debian or Ubuntu:\n"
+"   <tt># apt install tracker</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"   <tt># dnf install tracker</tt>"
+msgstr ""
+
+#: src/app/ui/content/home-view.vala:35
+msgid ""
+"No archive available for download. <b>Please refresh this list using the "
+"appropriate button.</b>"
+msgstr ""
+"No hay ningún archivador descargable disponible. <b>Por favor, actualice esta "
+"lista usando el botón apropiado.</b>"
+
+#: src/app/ui/content/home-view.vala:39
+msgid ""
+"<span weight=\"bold\" foreground=\"#f57900\">It seems that a GVFS component "
+"is not installed on your system.</span> WebArchives cannot list downloadable "
+"archives.\n"
+"\n"
+"<b>Please install this component using your package manager, then restart "
+"your session.</b>\n"
+"\n"
+"&#8226; Debian or Ubuntu:\n"
+"   <tt># apt install gvfs-backends</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"   <tt># dnf install gvfs</tt>"
+msgstr ""
+
+#: src/app/ui/content/home-view.vala:63
 msgid "Cannot open the archive file"
 msgstr "No se puede abrir el archivador"
 
 #. RECENTS
-#: src/app/ui/content/home-view.vala:60
+#: src/app/ui/content/home-view.vala:97
 msgid "Recents"
 msgstr "Recientes"
 
-#: src/app/ui/content/home-view.vala:69
+#: src/app/ui/content/home-view.vala:106
 msgid "Open a web archive"
 msgstr "Abrir un archivo web"
 
-#: src/app/ui/content/home-view.vala:87
-msgid "No archive recently opened."
-msgstr "No se ha abierto ningún archivador recientemente."
-
-#: src/app/ui/content/home-view.vala:109
+#: src/app/ui/content/home-view.vala:145
 msgid "Local"
 msgstr "Locales"
 
-#: src/app/ui/content/home-view.vala:127 src/app/ui/content/home-view.vala:203
+#: src/app/ui/content/home-view.vala:163 src/app/ui/content/home-view.vala:252
 msgid "Refresh"
 msgstr "Actualizar"
 
-#: src/app/ui/content/home-view.vala:145
-msgid "No archive automaticly detected on your system."
-msgstr "No se detectó ningún archivador automáticamente en el sistema."
-
-#: src/app/ui/content/home-view.vala:167
+#: src/app/ui/content/home-view.vala:213
 msgid "Remote"
 msgstr "Remoto"
 
-#: src/app/ui/content/home-view.vala:198
+#: src/app/ui/content/home-view.vala:247
 msgid "Downloading"
 msgstr "Descargando"
 
-#: src/app/ui/content/home-view.vala:221
-msgid "No archive available for download."
-msgstr "No hay ningún archivador descargable disponible."
-
-#: src/app/ui/content/home-view.vala:424
+#: src/app/ui/content/home-view.vala:483
 #, c-format
 msgid "How would you like to download %s ?"
 msgstr "¿Cómo quiere descargarse «%s»?"
 
-#: src/app/ui/content/home-view.vala:428
+#: src/app/ui/content/home-view.vala:487
 msgid "This will open a third-party application to download the archive."
 msgstr "Esto abrirá una aplicación externa para descargar el archivador."
 
-#: src/app/ui/content/home-view.vala:430
+#: src/app/ui/content/home-view.vala:489
 msgid "From a server"
 msgstr "Desde un servidor"
 
-#: src/app/ui/content/home-view.vala:431
+#: src/app/ui/content/home-view.vala:490
 msgid "Peer-to-peer network"
 msgstr "Red punto a punto"
+
+#: src/app/ui/content/web-view.vala:370
+#, c-format
+msgid "File downloaded: %s"
+msgstr "Archivo descargado: %s"
 
 #: src/app/ui/gtk/notebook/notebook-popup-menu.vala:13
 msgid "Detach to a new window"

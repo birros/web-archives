@@ -288,6 +288,7 @@ class WebArchives.WebView : Gtk.Box {
         web_view_context.initialize_web_extensions.connect (
             on_initialize_web_extensions
         );
+        web_view_context.download_started.connect(on_download_started);
 
         web_view_context.set_cache_model (WebKit.CacheModel.DOCUMENT_BROWSER);
 
@@ -342,6 +343,43 @@ class WebArchives.WebView : Gtk.Box {
         }
     }
 
+    private void on_download_started(WebKit.Download download) {
+        download.decide_destination.connect ((suggested_filename) => {
+            return on_decide_destination(suggested_filename, download);
+        });
+        download.finished.connect (() => {
+            message ("==DOWNLOAD FINISHED==");
+            File file = File.new_for_uri(download.destination);
+            string filename = file.get_basename();
+            message (filename);
+        });
+    }
+
+    private bool on_decide_destination (
+        string          suggested_filename,
+        WebKit.Download download
+    ) {
+        string download_dir = Environment.get_user_special_dir(
+            UserDirectory.DOWNLOAD
+        );
+
+        int count = 0;
+        File download_file = null;
+        do {
+            string filename = PathUtils.build_destination(
+                suggested_filename, count
+            );
+            string path = Path.build_filename (download_dir, filename);
+            download_file = File.new_for_path (path);
+            count++;
+        } while(download_file.query_exists ());
+
+        string destination = download_file.get_uri();
+        download.set_destination(destination);
+
+        return false;
+    }
+
     private void on_load_changed (WebKit.LoadEvent load_event) {
         switch (load_event) {
             case WebKit.LoadEvent.FINISHED:
@@ -384,6 +422,12 @@ class WebArchives.WebView : Gtk.Box {
             case WebKit.PolicyDecisionType.RESPONSE:
             {
                 info ("policy decision response");
+                WebKit.ResponsePolicyDecision response_decision =
+                    (WebKit.ResponsePolicyDecision) decision;
+
+                if (!response_decision.is_mime_type_supported ()) {
+                    decision.download();
+                }
                 break;
             }
             default:

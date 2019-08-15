@@ -102,6 +102,7 @@ web_archives_sources = [
     'utils/tag-parser.vala',
     'utils/archive-utils.vala',
     'utils/dbus-utils.vala',
+    'utils/path-utils.vala',
     'utils/article-searcher.vala',
     'utils/css-loader.vala',
     'utils/zim-reader.vala',

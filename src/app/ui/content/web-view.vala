@@ -1,5 +1,7 @@
-class WebArchives.WebView : Gtk.Box {
+class WebArchives.WebView : Gtk.Overlay {
     private Context context;
+    private Gtk.Revealer revealer;
+    private NotificationBar notification_bar;
     private WebKit.WebView web_view;
     private ArchiveItem archive;
     private WebKit.UserContentManager user_content_manager;
@@ -53,10 +55,24 @@ class WebArchives.WebView : Gtk.Box {
     public WebView (Context context) {
         this.context = context;
 
-        homogeneous = true;
+        // notification_bar
+        revealer = new Gtk.Revealer ();
+        revealer.valign = Gtk.Align.START;
+        add_overlay (revealer);
+
+        Hdy.Column notification_bar_max = new Hdy.Column ();
+        notification_bar_max.set_maximum_width (500);
+        revealer.add (notification_bar_max);
+
+        notification_bar = new NotificationBar ("");
+        notification_bar.close.connect (() => {
+            revealer.reveal_child = false;
+        });
+        notification_bar_max.add (notification_bar);
 
         show_all ();
-
+        
+        // ...
         context.archive_state.notify["archive"].connect (on_archive);
 
         context.web_view_state.go_home.connect (on_go_home);
@@ -348,10 +364,12 @@ class WebArchives.WebView : Gtk.Box {
             return on_decide_destination(suggested_filename, download);
         });
         download.finished.connect (() => {
-            message ("==DOWNLOAD FINISHED==");
             File file = File.new_for_uri(download.destination);
             string filename = file.get_basename();
-            message (filename);
+
+            string text = _("File downloaded: %s").printf (filename);
+            notification_bar.set_text(text);
+            revealer.reveal_child = true;
         });
     }
 

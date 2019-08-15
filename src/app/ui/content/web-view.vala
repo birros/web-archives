@@ -407,6 +407,7 @@ class WebArchives.WebView : Gtk.Overlay {
                     context.archive_state.archive.uuid.length
                 );
 
+                revealer.reveal_child = false;
                 on_night_mode ();
                 context.web_view_state.title = web_view.title;
                 context.web_view_state.url = url;

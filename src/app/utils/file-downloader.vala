@@ -64,8 +64,8 @@ public class WebArchives.FileDownloader : Object {
                 "standard::size,time::modified", 0
             );
             header_size = info.get_size ();
-            TimeVal modification_time = info.get_modification_time ();
-            header_modified = modification_time.tv_sec;
+            DateTime modification_time = info.get_modification_date_time ();
+            header_modified = modification_time.to_unix ();
         } catch (Error e) {
             warning (e.message);
             error = true;
@@ -149,8 +149,8 @@ public class WebArchives.FileDownloader : Object {
                 FileInfo info = file.query_info (
                     "time::modified", 0, null
                 );
-                TimeVal temp_time = info.get_modification_time ();
-                long timestamp = temp_time.tv_sec;
+                DateTime temp_time = info.get_modification_date_time ();
+                uint64 timestamp = temp_time.to_unix ();
                 return timestamp;
             } catch (Error e) {
                 warning (e.message);

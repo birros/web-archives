@@ -19,11 +19,8 @@ finish-args:
   - --share=network
   - --talk-name=org.gtk.vfs
   - --talk-name=org.gtk.vfs.*
-  # Dconf access
-  - --filesystem=xdg-run/dconf
-  - --filesystem=~/.config/dconf:ro
-  - --talk-name=ca.desrt.dconf
-  - --env=DCONF_USER_CONFIG_DIR=.config/dconf
+  # Dconf migration (TODO: to remove around 2020)
+  - --metadata=X-DConf=migrate-path=/com/github/birros/WebArchives/
 modules:
   - name: xapian-core
     config-opts:

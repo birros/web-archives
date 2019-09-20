@@ -47,14 +47,16 @@ modules:
   - name: libzim
     buildsystem: meson
     builddir: true
+    config-opts:
+      - --wrap-mode=nodownload
     cleanup:
       - /bin
       - /include
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/openzim/libzim/archive/5.0.1.tar.gz
-        sha256: b567fd90be772a47dfc9120f95344f46441f5fa5f8780e44726903b14e27a894
+        url: https://github.com/openzim/libzim/archive/6.0.1.tar.gz
+        sha256: 3e710de412e5a60ab07ef72dfae243147747ff531acc5cbed2cba7064bd0733b
 
   #
   # require

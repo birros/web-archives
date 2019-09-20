@@ -100,8 +100,8 @@ modules:
       - /share/vala
     sources:
       - type: archive
-        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.2/tracker-2.2.2.tar.xz
-        sha256: c6a73462f9aa9c32efa139003d2abd2ac5f70f8af6ce744729954975a661e2e6
+        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.3/tracker-2.3.0.tar.xz
+        sha256: 2c04534da83419b0bc65216e367da51a420f52bb8449f4cc4542c651e5c6bf7b
 
   - name: libgee
     build-options:

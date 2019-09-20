@@ -26,6 +26,7 @@ modules:
     config-opts:
       - --disable-sse
       - --disable-backend-chert
+      - --disable-backend-remote
       - --disable-backend-inmemory
       - --disable-documentation
     cleanup:

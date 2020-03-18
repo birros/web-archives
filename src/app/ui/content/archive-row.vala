@@ -139,7 +139,10 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
 
         Gtk.ModelButton details_button = new Gtk.ModelButton ();
         details_button.label = _("Details");
-        (details_button.get_child () as Gtk.Label).xalign = 0;
+        Gtk.Label details_label = details_button.get_child() as Gtk.Label;
+        if (details_label != null) {
+            details_label.xalign = 0;
+        }
         popover_box.add (details_button);
         details_button.clicked.connect (() => {
             details ();
@@ -148,7 +151,10 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
         if (archive.scope == "RECENTS") {
             Gtk.ModelButton remove_button = new Gtk.ModelButton ();
             remove_button.label = _("Remove");
-            (remove_button.get_child () as Gtk.Label).xalign = 0;
+            Gtk.Label remove_label = remove_button.get_child() as Gtk.Label;
+            if (remove_label != null) {
+                remove_label.xalign = 0;
+            }
             popover_box.add (remove_button);
             remove_button.clicked.connect (() => {
                 eject ();

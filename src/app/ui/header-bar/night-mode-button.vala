@@ -6,7 +6,10 @@ public class WebArchives.NightModeButton : Gtk.Bin {
     public NightModeButton () {
         button = new Gtk.ModelButton ();
         button.label = _("Night mode");
-        (button.get_child () as Gtk.Label).xalign = 0;
+        Gtk.Label label = button.get_child() as Gtk.Label;
+        if (label != null) {
+            label.xalign = 0;
+        }
         button.role = Gtk.ButtonRole.CHECK;
         button.clicked.connect (() => {
             on_clicked ();

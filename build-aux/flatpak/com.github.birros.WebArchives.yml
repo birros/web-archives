@@ -1,9 +1,9 @@
 id: com.github.birros.WebArchives
 runtime: org.gnome.Platform
-runtime-version: '3.34'
+runtime-version: '3.36'
 sdk: org.gnome.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node10
+  - org.freedesktop.Sdk.Extension.node12
 command: web-archives
 finish-args:
   - --socket=wayland
@@ -38,8 +38,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://oligarchy.co.uk/xapian/1.4.12/xapian-core-1.4.12.tar.xz
-        sha256: 4f8a36da831712db41d38a039fefb5251869761a58be28ba802994bb930fac7c
+        url: https://oligarchy.co.uk/xapian/1.4.15/xapian-core-1.4.15.tar.xz
+        sha256: b168e95918a01e014fb6a6cbce26e535f80da4d4791bfa5a0e0051fcb6f950ea
 
   #
   # require
@@ -56,8 +56,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/openzim/libzim/archive/6.0.1.tar.gz
-        sha256: 3e710de412e5a60ab07ef72dfae243147747ff531acc5cbed2cba7064bd0733b
+        url: https://github.com/openzim/libzim/archive/6.0.2.tar.gz
+        sha256: 993b6885b18e54b3df1493895e61f05e525d846f17d0d3cea57fb74f6415b457
 
   #
   # require
@@ -100,8 +100,8 @@ modules:
       - /share/vala
     sources:
       - type: archive
-        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.3/tracker-2.3.0.tar.xz
-        sha256: 2c04534da83419b0bc65216e367da51a420f52bb8449f4cc4542c651e5c6bf7b
+        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.3/tracker-2.3.4.tar.xz
+        sha256: 577952244ab977c78b0b88e2f63c4197eaba16e4d66bff692b7f58993e06516d
 
   - name: libgee
     build-options:
@@ -116,8 +116,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: http://snapshot.debian.org/archive/debian/20190814T034625Z/pool/main/libg/libgee-0.8/libgee-0.8_0.20.2.orig.tar.xz
-        sha256: 9e035c4b755f46bfae70ba81cdcf8328b03f554373cec8c816e8b5680f85353c
+        url: http://snapshot.debian.org/archive/debian/20200218T211248Z/pool/main/libg/libgee-0.8/libgee-0.8_0.20.3.orig.tar.xz
+        sha256: d0b5edefc88cbca5f1709d19fa62aef490922c6577a14ac4e7b085507911a5de
       #
       # Following fixes pkg-config error
       #
@@ -155,8 +155,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.11/libhandy-v0.0.11.tar.gz
-        sha256: c7e7b51203d9221c50b1a38ba81e0aefb5ab906c55e85b6ca2d0501e907e077d
+        url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.13/libhandy-v0.0.13.tar.gz
+        sha256: 138bec94e66d15a7a19350b65845d4529bcd969ea913ab3eb438f56fe47d5d37
 
   #
   # require
@@ -168,9 +168,9 @@ modules:
     buildsystem: meson
     builddir: true
     build-options:
-      append-path: /usr/lib/sdk/node10/bin
+      append-path: /usr/lib/sdk/node12/bin
       env:
-        npm_config_nodedir: /usr/lib/sdk/node10
+        npm_config_nodedir: /usr/lib/sdk/node12
     sources:
       - type: git
         url: https://github.com/birros/web-archives.git

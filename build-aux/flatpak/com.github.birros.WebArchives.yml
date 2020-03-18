@@ -182,7 +182,7 @@ modules:
       - generated-sources.1.json
       - type: shell
         commands:
-          - cd subprojects/darkreader && npm ci --cache=../../flatpak-node/npm-cache
+          - cd subprojects/darkreader && npm install --cache=../../flatpak-node/npm-cache --offline --no-optional
       #
       # prevent 'npm install' from being launched when compiling darkreader, to
       # avoid the 'cb() never called!' error

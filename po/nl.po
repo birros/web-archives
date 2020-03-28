@@ -1,0 +1,647 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-27 22:00+\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Timnot\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:8
+#: data/desktop/com.github.birros.WebArchives.desktop.in:3
+#: src/app/states/title-logic.vala:17 src/app/ui/window.vala:310
+msgid "WebArchives"
+msgstr "WebArchief"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:9
+msgid "A web archives viewer"
+msgstr "Een webarchiefviewer"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:12
+msgid ""
+"A web archives viewer offering the ability to browse offline millions of "
+"articles from large community projects such as Wikipedia or Wikisource."
+msgstr ""
+"Een webarchiefviewer die de mogelijkheid biedt om miljoenen offline te bladeren"
+"artikelen van grote gemeenschapsprojecten zoals Wikipedia of Wikisource. "
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:17
+msgid "Features:"
+msgstr "Kenmerken:"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:19
+msgid "List recently opened web archives"
+msgstr "Lijst met onlangs geopende webarchieven"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:20
+msgid "List available local web archives"
+msgstr "Lijst van beschikbare lokale webarchieven"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:21
+msgid "List of web archives available to download"
+msgstr "Lijst met webarchieven die kunnen worden gedownload"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:22
+msgid "Print a page"
+msgstr "Druk een pagina af"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:23
+msgid "Night mode (Darkreader)"
+msgstr "Night mode (Darkreader)"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:24
+msgid "Zoom controls"
+msgstr "Zoomregelaars"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:25
+msgid "Search in page"
+msgstr "Zoek op pagina"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:26
+#: src/app/states/title-logic.vala:37 src/app/ui/content/archive-row.vala:99
+#: src/app/ui/header-bar/popover-menu.vala:60
+msgid "History"
+msgstr "Geschiedenis"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:27
+#: src/app/states/title-logic.vala:30 src/app/ui/content/archive-row.vala:86
+#: src/app/ui/header-bar/popover-menu.vala:54
+msgid "Bookmarks"
+msgstr "Bladwijzers"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:28
+msgid "Search a page"
+msgstr "Zoek een pagina"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:29
+#: src/app/ui/header-bar/popover-menu.vala:84
+msgid "Keyboard shortcuts"
+msgstr "Toetsenbord sneltoetsen"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:30
+msgid "Multi-windows"
+msgstr "Multi-tabs"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:31
+msgid "Multi-tabs"
+msgstr "Meerdere tabbladen"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:32
+#: src/app/ui/header-bar/popover-menu.vala:46
+msgid "Random page"
+msgstr "Willekeurige pagina"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:33
+msgid "Sandboxed pages (Pages are isolated from the web)"
+msgstr "Sandbox-pagina's (pagina's zijn geïsoleerd van internet)"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:34
+msgid "Ask for confirmation when opening an external link"
+msgstr "Vraag om bevestiging bij het openen van een externe link"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:35
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:182
+msgid ""
+"Handle the opening of zim files from external applications (Nautilus...)"
+msgstr ""
+"Behandel het openen van zim-bestanden van externe applicaties (Nautilus...)"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:4
+msgid "Read Web archives offline"
+msgstr "Lees webarchieven offline"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:5
+msgid "archive;web;offline;"
+msgstr "archief; web; offline;"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:10
+msgid "com.github.birros.WebArchives"
+msgstr "com.github.birros.WebArchives"
+
+#: src/app/resources/gtk/help-overlay.ui:13
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Algemeen"
+
+#: src/app/resources/gtk/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "New window"
+msgstr "Nieuw raam"
+
+#: src/app/resources/gtk/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Close window or tab"
+msgstr "Venster of tabblad sluiten"
+
+#: src/app/resources/gtk/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Shortcuts"
+msgstr "Snelkoppelingen"
+
+#: src/app/resources/gtk/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Night mode"
+msgstr "Nachtstand"
+
+#: src/app/resources/gtk/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Quit the application"
+msgstr "Sluit de applicatie af"
+
+#: src/app/resources/gtk/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "Opening"
+msgstr "Opening"
+
+#: src/app/resources/gtk/help-overlay.ui:58
+msgctxt "shortcut window"
+msgid "Open an archive"
+msgstr "Open een archief"
+
+#: src/app/resources/gtk/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Tabbladen"
+
+#: src/app/resources/gtk/help-overlay.ui:71
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Nieuw tabblad"
+
+#: src/app/resources/gtk/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Go to previous tab"
+msgstr "Ga naar het vorige tabblad"
+
+#: src/app/resources/gtk/help-overlay.ui:85
+msgctxt "shortcut window"
+msgid "Go to next tab"
+msgstr "Ga naar het volgende tabblad"
+
+#: src/app/resources/gtk/help-overlay.ui:92
+msgctxt "shortcut window"
+msgid "Open tab"
+msgstr "Tabblad openen"
+
+#: src/app/resources/gtk/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigatie"
+
+#: src/app/resources/gtk/help-overlay.ui:105
+msgctxt "shortcut window"
+msgid "Go home"
+msgstr "Ga naar huis"
+
+#: src/app/resources/gtk/help-overlay.ui:112
+msgctxt "shortcut window"
+msgid "Go back"
+msgstr "Ga terug"
+
+#: src/app/resources/gtk/help-overlay.ui:119
+msgctxt "shortcut window"
+msgid "Go forward"
+msgstr "Ga vooruit"
+
+#: src/app/resources/gtk/help-overlay.ui:128
+msgctxt "shortcut window"
+msgid "Archive"
+msgstr "Archief"
+
+#: src/app/resources/gtk/help-overlay.ui:132
+msgctxt "shortcut window"
+msgid "Main page"
+msgstr "Hoofdpagina"
+
+#: src/app/resources/gtk/help-overlay.ui:139
+msgctxt "shortcut window"
+msgid "Search a page"
+msgstr "Zoek een pagina"
+
+#: src/app/resources/gtk/help-overlay.ui:146
+msgctxt "shortcut window"
+msgid "Random page"
+msgstr "Willekeurige pagina"
+
+#: src/app/resources/gtk/help-overlay.ui:153
+msgctxt "shortcut window"
+msgid "Show bookmarks"
+msgstr "Bladwijzers weergeven"
+
+#: src/app/resources/gtk/help-overlay.ui:160
+msgctxt "shortcut window"
+msgid "Show history"
+msgstr "Toon geschiedenis"
+
+#: src/app/resources/gtk/help-overlay.ui:169
+msgctxt "shortcut window"
+msgid "Page"
+msgstr "Bladzijde"
+
+#: src/app/resources/gtk/help-overlay.ui:173
+msgctxt "shortcut window"
+msgid "Search in page"
+msgstr "Zoek op pagina"
+
+#: src/app/resources/gtk/help-overlay.ui:180
+msgctxt "shortcut window"
+msgid "Toggle bookmark for current page"
+msgstr "Schakel bladwijzer voor huidige pagina in"
+
+#: src/app/resources/gtk/help-overlay.ui:187
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "Afdrukken"
+
+#: src/app/resources/gtk/help-overlay.ui:196
+msgctxt "shortcut window"
+msgid "Search in"
+msgstr "Zoek in"
+
+#: src/app/resources/gtk/help-overlay.ui:200
+msgctxt "shortcut window"
+msgid "Next match"
+msgstr "Volgende wedstrijd"
+
+#: src/app/resources/gtk/help-overlay.ui:207
+msgctxt "shortcut window"
+msgid "Previous match"
+msgstr "Vorige wedstrijd"
+
+#: src/app/resources/gtk/help-overlay.ui:216
+msgctxt "shortcut window"
+msgid "Zoom"
+msgstr "Zoom"
+
+#: src/app/resources/gtk/help-overlay.ui:220
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr "In zoomen"
+
+#: src/app/resources/gtk/help-overlay.ui:227
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "Uitzoomen"
+
+#: src/app/resources/gtk/help-overlay.ui:234
+msgctxt "shortcut window"
+msgid "Reset zoom"
+msgstr "Zoom resetten"
+
+#: src/app/application.vala:15
+msgid "Print version number"
+msgstr "Versienummer afdrukken"
+
+#: src/app/utils/language-formater.vala:45
+msgid "Unspecified language"
+msgstr "Niet-gespecificeerde taal"
+
+#: src/app/utils/tag-formater.vala:6
+msgid "No pictures"
+msgstr "Geen foto's"
+
+#: src/app/utils/tag-formater.vala:7
+msgid "No videos"
+msgstr "Geen video's"
+
+#: src/app/utils/tag-formater.vala:8
+msgid "Full text index"
+msgstr "Volledige tekstindex"
+
+#: src/app/ui/content/search-view.vala:32
+msgid "No recent searches."
+msgstr "Geen recente zoekopdrachten."
+
+#: src/app/ui/content/search-view.vala:46
+msgid "No results."
+msgstr "Geen resultaten."
+
+#: src/app/ui/content/history-view.vala:28
+msgid "No browsing history."
+msgstr "Geen browsegeschiedenis"
+
+#: src/app/ui/content/history-view.vala:77
+msgid "%e %b %y"
+msgstr "%e.%b.%y"
+
+#: src/app/ui/content/archive-row.vala:75
+#: src/app/ui/header-bar/header-bar.vala:68
+msgid "Search"
+msgstr "Zoeken"
+
+#: src/app/ui/content/archive-row.vala:112
+msgid "Download"
+msgstr "Downloaden"
+
+#: src/app/ui/content/archive-row.vala:141
+#: src/app/ui/content/details-dialog.vala:11
+msgid "Details"
+msgstr "Details"
+
+#: src/app/ui/content/archive-row.vala:150
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: src/app/ui/content/details-dialog.vala:119
+msgid "Favicon"
+msgstr "Favicon"
+
+#: src/app/ui/content/details-dialog.vala:120
+msgid "Title"
+msgstr "Titel"
+
+#: src/app/ui/content/details-dialog.vala:122
+msgid "Location"
+msgstr "Plaats"
+
+#: src/app/ui/content/details-dialog.vala:124
+msgid "Date"
+msgstr "Datum"
+
+#: src/app/ui/content/details-dialog.vala:125
+msgid "Lang"
+msgstr "Taal"
+
+#: src/app/ui/content/details-dialog.vala:126
+msgid "Size"
+msgstr "Grootte"
+
+#: src/app/ui/content/details-dialog.vala:127
+msgid "Name"
+msgstr "Naam"
+
+#: src/app/ui/content/details-dialog.vala:128
+msgid "Id"
+msgstr "Id."
+
+#: src/app/ui/content/details-dialog.vala:129
+msgid "Description"
+msgstr "Beschrijving"
+
+#: src/app/ui/content/details-dialog.vala:130
+msgid "Article count"
+msgstr "Aantal artikelen"
+
+#: src/app/ui/content/details-dialog.vala:131
+msgid "Media count"
+msgstr "Aantal media"
+
+#: src/app/ui/content/details-dialog.vala:132
+msgid "Creator"
+msgstr "Makelaar"
+
+#: src/app/ui/content/details-dialog.vala:133
+msgid "Publisher"
+msgstr "Uitgeverij"
+
+#: src/app/ui/content/details-dialog.vala:134
+msgid "Tags"
+msgstr "Tags"
+
+#: src/app/ui/content/bookmark-view.vala:23
+msgid "No bookmarks saved."
+msgstr "Geen bladwijzers opgeslagen."
+
+#: src/app/ui/content/status-label.vala:28
+#, c-format
+msgid "%s: %u %%"
+msgstr "%s: %u %%"
+
+#: src/app/ui/content/status-label.vala:33
+#: src/app/ui/content/status-label.vala:46
+msgid "Never refreshed"
+msgstr "Nooit opgefrist"
+
+#: src/app/ui/content/status-label.vala:38
+msgid "Last refreshed: %H:%M - %e %b %Y"
+msgstr "Laatst vernieuwd: %H:%M, %e.%b.%Y"
+
+#: src/app/ui/content/status-label.vala:61
+#, c-format
+msgid "%lluY ago" 
+msgstr "%lluA geleden"
+
+#: src/app/ui/content/status-label.vala:63
+#, c-format
+msgid "%lluM ago"
+msgstr "%lluM geleden"
+
+#: src/app/ui/content/status-label.vala:65
+#, c-format
+msgid "%lluD ago"
+msgstr "%lluD geleden"
+
+#: src/app/ui/content/status-label.vala:67
+#, c-format
+msgid "%lluh ago"
+msgstr "%lluD geleden"
+
+#: src/app/ui/content/status-label.vala:69
+#, c-format
+msgid "%llum ago"
+msgstr "%lluD geleden"
+
+#: src/app/ui/content/status-label.vala:71
+#, c-format
+msgid "%llus ago"
+msgstr "%lluD geleden"
+
+#: src/app/ui/content/home-view.vala:15
+msgid ""
+"No archive recently opened. <b>Please select an archive from the following "
+"sections or open it manually.</b>"
+msgstr ""
+"Geen recent geopend archief. <b>Selecteer een archief uit de volgende "
+"secties of open het handmatig.</b>"
+
+#: src/app/ui/content/home-view.vala:19
+#, fuzzy
+msgid ""
+"No archive automaticly detected on your system. <b>Please download one from "
+"the following section.</b>"
+msgstr "Er werd niet automatisch een archiefkast op het systeem gedetecteerd."
+
+#: src/app/ui/content/home-view.vala:23
+msgid ""
+"<span weight=\"bold\" foreground=\"#f57900\">It seems Tracker is not "
+"installed on your system.</span> WebArchives can't automatically list the "
+"archives present on your disk.\n"
+"\n"
+"<b>Please install Tracker using your package manager and then restart your "
+"session.</b>\n"
+"\n"
+"&#8226; Debian or Ubuntu:\n"
+"   <tt># apt install tracker</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"   <tt># dnf install tracker</tt>"
+msgstr ""
+
+#: src/app/ui/content/home-view.vala:35
+msgid ""
+"No archive available for download. <b>Please refresh this list using the "
+"appropriate button.</b>"
+msgstr ""
+"Geen archief beschikbaar om te downloaden. <b>Vernieuw deze lijst met de "
+"juiste knop.</b>"
+
+#: src/app/ui/content/home-view.vala:39
+msgid ""
+"<span weight=\"bold\" foreground=\"#f57900\">It seems that a GVFS component "
+"is not installed on your system.</span> WebArchives cannot list downloadable "
+"archives.\n"
+"\n"
+"<b>Please install this component using your package manager, then restart "
+"your session.</b>\n"
+"\n"
+"&#8226; Debian or Ubuntu:\n"
+"   <tt># apt install gvfs-backends</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"   <tt># dnf install gvfs</tt>"
+msgstr ""
+
+#: src/app/ui/content/home-view.vala:63
+msgid "Cannot open the archive file"
+msgstr "Kan het archiefbestand niet openen"
+
+#. RECENTS
+#: src/app/ui/content/home-view.vala:97
+msgid "Recents"
+msgstr "Recent"
+
+#: src/app/ui/content/home-view.vala:106
+msgid "Open a web archive"
+msgstr "Open een webarchief"
+
+#: src/app/ui/content/home-view.vala:145
+msgid "Local"
+msgstr "Lokaal"
+
+#: src/app/ui/content/home-view.vala:163 src/app/ui/content/home-view.vala:252
+msgid "Refresh"
+msgstr "Vernieuwen"
+
+#: src/app/ui/content/home-view.vala:213
+msgid "Remote"
+msgstr "Afgelegen"
+
+#: src/app/ui/content/home-view.vala:247
+msgid "Downloading"
+msgstr "Downloaden"
+
+#: src/app/ui/content/home-view.vala:483
+#, c-format
+msgid "How would you like to download %s ?"
+msgstr "Hoe wil je downloaden «%s»?"
+
+#: src/app/ui/content/home-view.vala:487
+msgid "This will open a third-party application to download the archive."
+msgstr "Hierdoor wordt een applicatie van derden geopend om het archief te downloaden."
+
+#: src/app/ui/content/home-view.vala:489
+msgid "From a server"
+msgstr "Van een server"
+
+#: src/app/ui/content/home-view.vala:490
+msgid "Peer-to-peer network"
+msgstr "Peer-to-peer netwerk"
+
+#: src/app/ui/content/web-view.vala:370
+#, c-format
+msgid "File downloaded: %s"
+msgstr "Bestand gedownload: %s"
+
+#: src/app/ui/gtk/notebook/notebook-popup-menu.vala:13
+msgid "Detach to a new window"
+msgstr "Maak los naar een nieuw venster"
+
+#: src/app/ui/header-bar/bookmark-button.vala:9
+msgid "Toggle bookmark for current page"
+msgstr "Schakel bladwijzer voor huidige pagina in"
+
+#: src/app/ui/header-bar/navigation-box.vala:14
+msgid "Go to the homepage"
+msgstr "Ga naar de homepage"
+
+#: src/app/ui/header-bar/navigation-box.vala:18
+msgid "Go back to the previous page"
+msgstr "ga terug naar de vorige pagina"
+
+#: src/app/ui/header-bar/navigation-box.vala:20
+msgid "Go forward to the next page"
+msgstr "Ga door naar de volgende pagina"
+
+#: src/app/ui/header-bar/new-tab-button.vala:9
+msgid "Open a new tab"
+msgstr "Open een nieuw tabblad"
+
+#: src/app/ui/header-bar/night-mode-button.vala:8
+msgid "Night mode"
+msgstr "Nachtstand"
+
+#: src/app/ui/header-bar/popover-menu.vala:26
+msgid "Search in..."
+msgstr "Zoek in…"
+
+#: src/app/ui/header-bar/popover-menu.vala:32
+msgid "Print"
+msgstr "Afdrukken"
+
+#: src/app/ui/header-bar/popover-menu.vala:40
+msgid "Main page"
+msgstr "Hoofdpagina"
+
+#: src/app/ui/header-bar/popover-menu.vala:73
+msgid "New window"
+msgstr "Nieuw venster"
+
+#: src/app/ui/header-bar/popover-menu.vala:90
+msgid "About"
+msgstr "Over"
+
+#: src/app/ui/header-bar/popover-menu.vala:96
+msgid "Quit"
+msgstr "Sluit"
+
+#: src/app/ui/header-bar/search-in-bar.vala:11
+msgid "Find previous occurrence of the search string"
+msgstr "Zoek het vorige exemplaar van de zoekreeks"
+
+#: src/app/ui/header-bar/search-in-bar.vala:16
+msgid "Find next occurrence of the search string"
+msgstr "Zoek het volgende exemplaar van de zoekreeks"
+
+#: src/app/ui/header-bar/zoom-box.vala:16
+msgid "Zoom out"
+msgstr "Uitzoomen"
+
+#: src/app/ui/header-bar/zoom-box.vala:21
+msgid "Reset zoom"
+msgstr "Zoom resetten"
+
+#: src/app/ui/header-bar/zoom-box.vala:26
+msgid "Zoom in"
+msgstr "In zoomen"
+
+#: src/app/ui/window.vala:311
+msgid "A Web archives viewer."
+msgstr "Een webarchiefviewer."
+
+#: src/app/ui/window.vala:312
+msgid "Copyright © 2017-2017 - Birros"
+msgstr "auteursrechten © 2017-2017 Birros"
+
+#: src/app/ui/window.vala:431
+msgid "Please choose a file"
+msgstr "Kies een bestand"
+
+#: src/app/ui/window.vala:501
+msgid "Are you sure to open external link ?"
+msgstr "Weet je zeker dat je een externe link wilt openen?"

@@ -4,8 +4,10 @@ public class WebArchives.TagFormater : Object {
     private static void init_data () {
         data = new HashTable<string, string> (str_hash, str_equal);
         data.insert ("nopic", _("No pictures"));
+        data.insert ("_pictures:no", _("No pictures"));
         data.insert ("novid", _("No videos"));
-        data.insert ("ftindex", _("Full text index"));
+        data.insert ("_videos:no", _("No videos"));
+        data.insert ("_ftindex", _("Full text index"));
     }
 
     public static string format_tag (string input) {

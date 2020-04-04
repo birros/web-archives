@@ -131,6 +131,8 @@ public class WebArchives.DetailsDialog : Gtk.Dialog {
         show_text (_("Media count"), archive.media_count.to_string ());
         show_text (_("Creator"), archive.creator);
         show_text (_("Publisher"), archive.publisher);
-        show_text (_("Tags"), tags_text);
+        if (tags.length > 0) {
+            show_text (_("Tags"), tags_text);
+        }
     }
 }

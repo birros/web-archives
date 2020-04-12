@@ -17,7 +17,7 @@ msgstr ""
 #: data/desktop/com.github.birros.WebArchives.desktop.in:3
 #: src/app/states/title-logic.vala:17 src/app/ui/window.vala:310
 msgid "WebArchives"
-msgstr "WebArchief"
+msgstr "WebArchives"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:9
 msgid "A web archives viewer"
@@ -57,7 +57,7 @@ msgstr "Night mode (Darkreader)"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:24
 msgid "Zoom controls"
-msgstr "Zoomregelaars"
+msgstr "Zoom controller"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:25
 msgid "Search in page"
@@ -110,7 +110,7 @@ msgstr "Vraag om bevestiging bij het openen van een externe link"
 msgid ""
 "Handle the opening of zim files from external applications (Nautilus...)"
 msgstr ""
-"Behandel het openen van zim-bestanden van externe applicaties (Nautilus...)"
+"Behandel het openen van zim-bestanden van externe application's (Nautilus...)"
 
 #: data/desktop/com.github.birros.WebArchives.desktop.in:4
 msgid "Read Web archives offline"
@@ -132,7 +132,7 @@ msgstr "Algemeen"
 #: src/app/resources/gtk/help-overlay.ui:17
 msgctxt "shortcut window"
 msgid "New window"
-msgstr "Nieuw raam"
+msgstr "Nieuw Venster"
 
 #: src/app/resources/gtk/help-overlay.ui:24
 msgctxt "shortcut window"
@@ -197,7 +197,7 @@ msgstr "Navigatie"
 #: src/app/resources/gtk/help-overlay.ui:105
 msgctxt "shortcut window"
 msgid "Go home"
-msgstr "Ga naar huis"
+msgstr "Startpagina" 
 
 #: src/app/resources/gtk/help-overlay.ui:112
 msgctxt "shortcut window"
@@ -267,12 +267,12 @@ msgstr "Zoek in"
 #: src/app/resources/gtk/help-overlay.ui:200
 msgctxt "shortcut window"
 msgid "Next match"
-msgstr "Volgende wedstrijd"
+msgstr "Volgende ronde"
 
 #: src/app/resources/gtk/help-overlay.ui:207
 msgctxt "shortcut window"
 msgid "Previous match"
-msgstr "Vorige wedstrijd"
+msgstr "Vorige ronde"
 
 #: src/app/resources/gtk/help-overlay.ui:216
 msgctxt "shortcut window"
@@ -416,7 +416,7 @@ msgstr "%s: %u %%"
 #: src/app/ui/content/status-label.vala:33
 #: src/app/ui/content/status-label.vala:46
 msgid "Never refreshed"
-msgstr "Nooit opgefrist"
+msgstr "Nooit vernieuwd"
 
 #: src/app/ui/content/status-label.vala:38
 msgid "Last refreshed: %H:%M - %e %b %Y"
@@ -440,17 +440,17 @@ msgstr "%lluD geleden"
 #: src/app/ui/content/status-label.vala:67
 #, c-format
 msgid "%lluh ago"
-msgstr "%lluD geleden"
+msgstr "%lluh geleden"
 
 #: src/app/ui/content/status-label.vala:69
 #, c-format
 msgid "%llum ago"
-msgstr "%lluD geleden"
+msgstr "%llum geleden"
 
 #: src/app/ui/content/status-label.vala:71
 #, c-format
 msgid "%llus ago"
-msgstr "%lluD geleden"
+msgstr "%llus geleden"
 
 #: src/app/ui/content/home-view.vala:15
 msgid ""
@@ -465,7 +465,8 @@ msgstr ""
 msgid ""
 "No archive automaticly detected on your system. <b>Please download one from "
 "the following section.</b>"
-msgstr "Er werd niet automatisch een archiefkast op het systeem gedetecteerd."
+msgstr "Geen archief automatisch gedetecteerd op uw systeem. <b>Download er één van "
+"de volgende sectie.</b> "
 
 #: src/app/ui/content/home-view.vala:23
 msgid ""
@@ -643,5 +644,5 @@ msgid "Please choose a file"
 msgstr "Kies een bestand"
 
 #: src/app/ui/window.vala:501
-msgid "Are you sure to open external link ?"
+msgid "Are you sure to open external link?"
 msgstr "Weet je zeker dat je een externe link wilt openen?"

@@ -461,7 +461,6 @@ msgstr ""
 "secties of open het handmatig.</b>"
 
 #: src/app/ui/content/home-view.vala:19
-#, fuzzy
 msgid ""
 "No archive automaticly detected on your system. <b>Please download one from "
 "the following section.</b>"

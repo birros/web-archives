@@ -27,7 +27,7 @@ webkit_web_extension_dep = dependency('webkit2gtk-web-extension-4.0')
 tracker_dep = dependency('tracker-sparql-2.0')
 xml_dep = dependency('libxml-2.0')
 isocodes_dep = dependency('libisocodes')
-handy_dep = dependency('libhandy-0.0', version : '>=0.0.1')
+handy_dep = dependency('libhandy-1', version : '>=1.0.0')
 
 darkreader_sp = subproject('darkreader')
 darkreader_dep = darkreader_sp.get_variable('darkreader')

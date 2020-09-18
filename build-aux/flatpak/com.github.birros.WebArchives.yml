@@ -1,6 +1,6 @@
 id: com.github.birros.WebArchives
 runtime: org.gnome.Platform
-runtime-version: '3.36'
+runtime-version: '3.38'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node12
@@ -38,12 +38,25 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://oligarchy.co.uk/xapian/1.4.15/xapian-core-1.4.15.tar.xz
-        sha256: b168e95918a01e014fb6a6cbce26e535f80da4d4791bfa5a0e0051fcb6f950ea
+        url: https://oligarchy.co.uk/xapian/1.4.17/xapian-core-1.4.17.tar.xz
+        sha256: b5eb8556dea1b0cad4167a66223522e66d670ec1eba16c7fdc844ed6b652572e
+
+  - name: zstd
+    buildsystem: meson
+    builddir: true
+    subdir: build/meson
+    config-opts:
+      - -Dbin_programs=false
+      - -Dbin_contrib=false
+    sources:
+      - type: archive
+        url: https://github.com/facebook/zstd/releases/download/v1.4.5/zstd-1.4.5.tar.gz
+        sha256: 98e91c7c6bf162bf90e4e70fdbc41a8188b9fa8de5ad840c401198014406ce9e
 
   #
   # require
   #   xapian-core
+  #   zstd
   #
   - name: libzim
     buildsystem: meson
@@ -56,8 +69,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/openzim/libzim/archive/6.0.2.tar.gz
-        sha256: 993b6885b18e54b3df1493895e61f05e525d846f17d0d3cea57fb74f6415b457
+        url: https://github.com/openzim/libzim/archive/6.2.2.tar.gz
+        sha256: 6619035d35c9ba057c80be5758fa86922802c74aca40e5fffd40b77f0f263af2
 
   #
   # require
@@ -100,8 +113,8 @@ modules:
       - /share/vala
     sources:
       - type: archive
-        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.3/tracker-2.3.4.tar.xz
-        sha256: 577952244ab977c78b0b88e2f63c4197eaba16e4d66bff692b7f58993e06516d
+        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.3/tracker-2.3.6.tar.xz
+        sha256: bd1eb4122135296fa7b57b1c3fa0ed602cf7d06c0b8e534d0bd17ff5f97feef2
 
   - name: libgee
     build-options:
@@ -155,8 +168,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.13/libhandy-v0.0.13.tar.gz
-        sha256: 138bec94e66d15a7a19350b65845d4529bcd969ea913ab3eb438f56fe47d5d37
+        url: https://gitlab.gnome.org/GNOME/libhandy/-/archive/1.0.0/libhandy-1.0.0.tar.gz
+        sha256: dc1fff98cbc72a492d1adb489ee1b00e43ab4ac14c983c855ef3df435bbbda27
 
   #
   # require

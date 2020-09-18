@@ -9,8 +9,8 @@ public class WebArchives.BookmarkView : Gtk.Box {
         Gtk.ScrolledWindow scrolled_window = new Gtk.ScrolledWindow (null, null);
         add (scrolled_window);
 
-        Hdy.Column max_width_bin = new Hdy.Column ();
-        max_width_bin.set_maximum_width (500);
+        Hdy.Clamp max_width_bin = new Hdy.Clamp ();
+        max_width_bin.set_maximum_size (500);
         scrolled_window.add (max_width_bin);
 
         list_box = new Gtk.ListBox ();

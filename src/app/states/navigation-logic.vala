@@ -37,6 +37,13 @@ public class WebArchives.NavigationLogic : Object {
                 }
                 break;
             }
+            case RouteState.Route.SEARCHIN:
+            case RouteState.Route.HISTORY:
+            case RouteState.Route.BOOKMARK:
+            case RouteState.Route.SEARCH:
+            {
+                break;
+            }
         }
     }
 
@@ -64,6 +71,10 @@ public class WebArchives.NavigationLogic : Object {
                 context.route_state.route = context.route_state.last_route;
                 break;
             }
+            case RouteState.Route.HOME:
+            {
+                break;
+            }
         }
     }
 
@@ -79,6 +90,13 @@ public class WebArchives.NavigationLogic : Object {
             case RouteState.Route.WEB:
             {
                 context.web_view_state.go_forward ();
+                break;
+            }
+            case RouteState.Route.SEARCHIN:
+            case RouteState.Route.HISTORY:
+            case RouteState.Route.BOOKMARK:
+            case RouteState.Route.SEARCH:
+            {
                 break;
             }
         }

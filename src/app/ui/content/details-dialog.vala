@@ -19,8 +19,8 @@ public class WebArchives.DetailsDialog : Gtk.Dialog {
         );
         content_area.add (scrolled_window);
 
-        Hdy.Column max_width_bin = new Hdy.Column ();
-        max_width_bin.set_maximum_width (900);
+        Hdy.Clamp max_width_bin = new Hdy.Clamp ();
+        max_width_bin.set_maximum_size (900);
         scrolled_window.add (max_width_bin);
 
         grid = new Gtk.Grid ();

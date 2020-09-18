@@ -60,8 +60,8 @@ class WebArchives.WebView : Gtk.Overlay {
         revealer.valign = Gtk.Align.START;
         add_overlay (revealer);
 
-        Hdy.Column notification_bar_max = new Hdy.Column ();
-        notification_bar_max.set_maximum_width (500);
+        Hdy.Clamp notification_bar_max = new Hdy.Clamp ();
+        notification_bar_max.set_maximum_size (500);
         revealer.add (notification_bar_max);
 
         notification_bar = new NotificationBar ("");
@@ -415,6 +415,12 @@ class WebArchives.WebView : Gtk.Overlay {
                     web_view.can_go_back ();
                 context.web_view_state.can_go_forward =
                     web_view.can_go_forward ();
+                break;
+            }
+            case WebKit.LoadEvent.COMMITTED:
+            case WebKit.LoadEvent.STARTED:
+            case WebKit.LoadEvent.REDIRECTED:
+            {
                 break;
             }
         }

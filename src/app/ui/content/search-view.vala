@@ -14,8 +14,8 @@ public class WebArchives.SearchView : Gtk.Box {
         );
         add (scrolled_window);
 
-        Hdy.Column max_width_bin = new Hdy.Column ();
-        max_width_bin.set_maximum_width (500);
+        Hdy.Clamp max_width_bin = new Hdy.Clamp ();
+        max_width_bin.set_maximum_size (500);
         scrolled_window.add (max_width_bin);
 
         stack = new Gtk.Stack ();

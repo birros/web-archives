@@ -39,6 +39,11 @@ public class WebArchives.TitleLogic : Object {
                     context.archive_state.archive.title;
                 break;
             }
+            case RouteState.Route.SEARCHIN:
+            case RouteState.Route.SEARCH:
+            {
+                break;
+            }
         }
     }
 }

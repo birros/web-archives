@@ -63,6 +63,10 @@ public class WebArchives.Content : Gtk.Stack {
                 set_visible_child (history_view);
                 break;
             }
+            case RouteState.Route.SEARCHIN:
+            {
+                break;
+            }
         }
     }
 

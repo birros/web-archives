@@ -93,17 +93,17 @@ application appear in your launcher. It can also be executed from a terminal :
 Some __problems__ may occur when running the application, especially if your
 desktop environment does not use [GTK+], such as __[Kde]__.
 
-The installation of __two additional services__ is then required on the system
+The installation of __tracker service__ is then required on the system
 side to solve these problems, requiring the execution of one of these commands
 depending on your distribution :
 
 __Debian & Ubuntu__ :
 
-    apt install tracker gvfs-backends
+    apt install tracker
 
 __Fedora__ :
 
-    dnf install tracker gvfs
+    dnf install tracker
 
 ### Other installation methods
 

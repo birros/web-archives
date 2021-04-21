@@ -6,7 +6,9 @@ public class WebArchives.TrackerService : Object {
     public TrackerService (ArchiveStore archive_store) {
         this.archive_store = archive_store;
 
-        if (DBusUtils.is_name_activatable ("org.freedesktop.Tracker1")) {
+        if (DBusUtils.is_name_activatable (
+            "org.freedesktop.Tracker3.Miner.Files"
+        )) {
             enabled = true;
             info ("Tracker is present");
         } else {
@@ -28,7 +30,11 @@ public class WebArchives.TrackerService : Object {
         // build tracker list
         try {
             Tracker.Sparql.Connection connection =
-                Tracker.Sparql.Connection.@get ();
+                Tracker.Sparql.Connection.bus_new(
+                    "org.freedesktop.Tracker3.Miner.Files",
+                    null,
+                    null
+                );
             Tracker.Sparql.Cursor cursor = connection.query (
                 """
                 SELECT nie:url(?f)

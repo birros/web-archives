@@ -13,14 +13,9 @@ finish-args:
   - --socket=pulseaudio
   # Used to list automatically indexed local files
   - --filesystem=home
-  - --talk-name=org.freedesktop.Tracker1
-  - --env=TRACKER_SPARQL_BACKEND=bus
-  # Used to access gvfs's http backend to download files
+  - --talk-name=org.freedesktop.Tracker3.Miner.Files
+  # Used to download files
   - --share=network
-  - --talk-name=org.gtk.vfs
-  - --talk-name=org.gtk.vfs.*
-  # Dconf migration (TODO: to remove around 2020)
-  - --metadata=X-DConf=migrate-path=/com/github/birros/WebArchives/
 modules:
   - name: xapian-core
     config-opts:
@@ -89,33 +84,6 @@ modules:
         url: https://github.com/birros/libzim-glib/archive/v3.2.0.tar.gz
         sha256: 89cbc55254d90c70de2de8ee7f2b4aff97f582ae7f495ddfee518ef136de9357
 
-  - name: tracker
-    buildsystem: meson
-    builddir: true
-    cleanup:
-      - /bin
-      - /etc
-      - /include
-      - /lib/libtracker-control*
-      - /lib/libtracker-mine*
-      - /lib/*.la
-      - /lib/tracker-2.0/*.la
-      - /lib/girepository-1.0
-      - /lib/pkgconfig
-      - /lib/systemd
-      - /libexec
-      - /share/bash-completion
-      - /share/dbus-1
-      - /share/gir-1.0
-      - /share/gtk-doc
-      - /share/man
-      - /share/runtime
-      - /share/vala
-    sources:
-      - type: archive
-        url: https://ftp.gnome.org/pub/GNOME/sources/tracker/2.3/tracker-2.3.6.tar.xz
-        sha256: bd1eb4122135296fa7b57b1c3fa0ed602cf7d06c0b8e534d0bd17ff5f97feef2
-
   - name: libgee
     build-options:
       env:
@@ -173,7 +141,7 @@ modules:
 
   #
   # require
-  #   libzim-glib, tracker, libisocodes, libhandy
+  #   libzim-glib, libisocodes, libhandy
   # subprojects/darkreader require
   #   nodejs
   #

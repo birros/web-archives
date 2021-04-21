@@ -1,6 +1,3 @@
-/**
- * Requires access to gvfs.
- */
 public class WebArchives.FileDownloader : Object {
     public double progress {get; private set; default = 0;}
     public signal void complete ();
@@ -8,6 +5,8 @@ public class WebArchives.FileDownloader : Object {
 
     private uint64 header_size;
     private uint64 header_modified;
+
+    private uint64 local_modified;
 
     private uint64 current_length;
     private bool error;
@@ -27,76 +26,84 @@ public class WebArchives.FileDownloader : Object {
 
         create_dir (filepath);
         delete_file (filepath + ".part");
+        local_modified = get_file_timestamp (filepath);
 
-        File file = File.new_for_uri (source);
-        get_infos.begin (file, () => {
+        var session = new Soup.Session ();
+        var message = new Soup.Message ("GET", source);
+
+        message.got_headers.connect((message) => {
+            if (message.status_code != 200) {
+                return;
+            }
+
+            // header_size
+            header_size = message.response_headers.get_content_length();
+
+            // header_modified
+            var last_modified = message.response_headers.get_one("Last-Modified");
+            DateTime modification_time = parse_modification_date_time(last_modified);
+            header_modified = modification_time.to_unix ();
+
+            // debug
             info ("header_size : %llu", header_size);
             info ("header_modified : %llu", header_modified);
-
-            uint64 local_modified = get_file_timestamp (filepath);
             info ("local_modified : %llu", local_modified);
 
-            if (
-                !error &&
-                (header_modified == 0 || header_modified > local_modified)
-            ) {
-                delete_file (filepath);
-                DataOutputStream dos = create_part_file (filepath);
+            // stop if no header_modified or if local is more recent than remote
+            if (header_modified == 0 || local_modified > header_modified) {
+                session.abort();
+                canceled();
+            }
+        });
 
-                get_file.begin (file, dos, () => {
-                    if (!error) {
-                        rename_part_file (filepath);
-                        complete ();
-                    } else {
-                        delete_file (filepath + ".part");
-                        canceled ();
-                    }
-                });
-            } else {
+        message.got_chunk.connect((message, buf) => {
+            // progress
+            current_length += buf.length;
+            if (header_size > 0) {
+                progress = (double) (current_length / (double) header_size);
+            }
+        });
+
+        session.queue_message (message, (sess, msg) => {
+            // cancel if not ok
+            if (msg.status_code != 200) {
+                canceled();
+                return;
+            }
+
+            try {
+                // delete previous file
+                delete_file (filepath);
+
+                // write data
+                DataOutputStream dos = create_part_file (filepath);
+                dos.write (msg.response_body.data);
+                dos.flush ();
+
+                // rename file & complete
+                rename_part_file (filepath);
+                complete ();
+            } catch (Error e) {
+                warning (e.message);
                 canceled ();
             }
         });
     }
 
-    private async void get_infos (File file) {
-        try {
-            FileInfo info = yield file.query_info_async (
-                "standard::size,time::modified", 0
-            );
-            header_size = info.get_size ();
-            DateTime modification_time = info.get_modification_date_time ();
-            header_modified = modification_time.to_unix ();
-        } catch (Error e) {
-            warning (e.message);
-            error = true;
-        }
-    }
-
-    private async void get_file (File file, DataOutputStream dos) {
-        try {
-            FileInputStream inputstream = file.read ();
-            DataInputStream dis = new DataInputStream (inputstream);
-
-            uint8[] buffer = new uint8[100];
-            ssize_t size;
-            while ((size = yield dis.read_async (buffer)) > 0) {
-                current_length += size;
-
-                try {
-                    dos.write (buffer[0:size]);
-                } catch (Error e) {
-                    warning (e.message);
-                }
-
-                if (header_size > 0) {
-                    progress = (double) (current_length / (double) header_size);
+    private DateTime parse_modification_date_time (string? last_modified_full) {
+        if (last_modified_full != null) {
+            var parts = last_modified_full.split(", ");
+            if (parts.length > 1) {
+                var last_modified = parts[1];
+                var time = Time();
+                var res = time.strptime(last_modified, "%d %b %Y %H:%M:%S GMT");
+                if (res != null) {
+                    var last_modified_iso = time.format("%Y-%m-%dT%H:%M:%SZ");
+                    return new DateTime.from_iso8601 (last_modified_iso, null);
                 }
             }
-            dos.flush ();
-        } catch (Error e) {
-            warning (e.message);
-            error = true;
         }
+        return new DateTime.now_utc();
     }
 
     private static void rename_part_file (string filepath) {

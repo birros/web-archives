@@ -38,24 +38,4 @@ public class WebArchives.DBusUtils : Object {
         }
         return false;
     }
-
-    public static bool is_gvfs_backend_supported (string protocol) {
-        try {
-            MountTracker interface = Bus.get_proxy_sync (
-                BusType.SESSION, "org.gtk.vfs.Daemon",
-                "/org/gtk/vfs/mounttracker"
-            );
-
-            string[] types = interface.list_mount_types ();
-
-            if (array_contains (types, protocol)) {
-                return true;
-            } else {
-                return false;
-            }
-        } catch (Error e) {
-            warning (e.message);
-        }
-        return false;
-    }
 }

@@ -35,18 +35,6 @@ public class WebArchives.HomeView : Gtk.Overlay {
 """No archive available for download. <b>Please refresh this list using the appropriate button.</b>"""
     );
 
-    private const string REMOTE_WARNING_MESSAGE = _(
-"""<span weight="bold" foreground="#f57900">It seems that a GVFS component is not installed on your system.</span> WebArchives cannot list downloadable archives.
-
-<b>Please install this component using your package manager, then restart your session.</b>
-
-&#8226; Debian or Ubuntu:
-   <tt># apt install gvfs-backends</tt>
-
-&#8226; Fedora:
-   <tt># dnf install gvfs</tt>"""
-    );
-
     public HomeView (Context context) {
         this.context = context;
 
@@ -225,9 +213,6 @@ public class WebArchives.HomeView : Gtk.Overlay {
         remote_header_comboboxtext.changed.connect (() => {
 	        language_changed ();
         });
-        if (!context.remote.enabled) {
-            remote_header_comboboxtext.sensitive = false;
-        }
         remote_header_box.add (remote_header_comboboxtext);
 
         StatusLabel remote_last_refreshed = new StatusLabel ();
@@ -254,9 +239,6 @@ public class WebArchives.HomeView : Gtk.Overlay {
         remote_header_button.clicked.connect (() => {
             context.remote.refresh ();
         });
-        if (!context.remote.enabled) {
-            remote_header_button.sensitive = false;
-        }
         remote_header_box.add (remote_header_button);
 
         Gtk.Frame remote_frame = new Gtk.Frame (null);
@@ -270,12 +252,7 @@ public class WebArchives.HomeView : Gtk.Overlay {
         remote_frame.add (remote_list_box);
 
         Gtk.Label remote_placeholder;
-        if (context.remote.enabled) {
-            remote_placeholder = new Gtk.Label (REMOTE_INFO_MESSAGE);
-        } else {
-            remote_placeholder = new Gtk.Label (REMOTE_WARNING_MESSAGE);
-            remote_placeholder.selectable = true;
-        }
+        remote_placeholder = new Gtk.Label (REMOTE_INFO_MESSAGE);
         remote_placeholder.use_markup = true;
         remote_placeholder.margin = 12;
         remote_placeholder.wrap = true;
@@ -293,9 +270,7 @@ public class WebArchives.HomeView : Gtk.Overlay {
         }
 
         remote_model = null;
-        if (context.remote.enabled) {
-            language_changed ();
-        }
+        language_changed ();
 
         show_all ();
     }

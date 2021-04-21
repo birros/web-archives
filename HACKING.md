@@ -114,13 +114,6 @@ You can run it directly using the app launcher or using this command :
 
 ## Todo
 
-- __CRITICAL__ : Handle the absence of system services such as Tracker or GVFS's
-http backend :
-  1. use D-Bus to test whether the service is available or not
-  2. on the application's homepage, use a banner to indicate the absence of
-  services
-  3. display instructions in a modal window, depending on the system used, to
-  install them
 - Propose ZIM format recognition for GNU/Linux distributions (mimetype)
 - Refactoring the settings : maximize, window size, night mode
 - Write help manual

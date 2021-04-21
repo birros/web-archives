@@ -491,22 +491,6 @@ msgstr ""
 "Geen archief beschikbaar om te downloaden. <b>Vernieuw deze lijst met de "
 "juiste knop.</b>"
 
-#: src/app/ui/content/home-view.vala:39
-msgid ""
-"<span weight=\"bold\" foreground=\"#f57900\">It seems that a GVFS component "
-"is not installed on your system.</span> WebArchives cannot list downloadable "
-"archives.\n"
-"\n"
-"<b>Please install this component using your package manager, then restart "
-"your session.</b>\n"
-"\n"
-"&#8226; Debian or Ubuntu:\n"
-"   <tt># apt install gvfs-backends</tt>\n"
-"\n"
-"&#8226; Fedora:\n"
-"   <tt># dnf install gvfs</tt>"
-msgstr ""
-
 #: src/app/ui/content/home-view.vala:63
 msgid "Cannot open the archive file"
 msgstr "Kan het archiefbestand niet openen"

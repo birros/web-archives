@@ -1,9 +1,9 @@
 id: com.github.birros.WebArchives
 runtime: org.gnome.Platform
-runtime-version: '3.38'
+runtime-version: '40'
 sdk: org.gnome.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node12
+  - org.freedesktop.Sdk.Extension.node14
 command: web-archives
 finish-args:
   - --socket=wayland
@@ -33,8 +33,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://oligarchy.co.uk/xapian/1.4.17/xapian-core-1.4.17.tar.xz
-        sha256: b5eb8556dea1b0cad4167a66223522e66d670ec1eba16c7fdc844ed6b652572e
+        url: https://oligarchy.co.uk/xapian/1.4.18/xapian-core-1.4.18.tar.xz
+        sha256: 196ddbb4ad10450100f0991a599e4ed944cbad92e4a6fe813be6dce160244b77
 
   - name: zstd
     buildsystem: meson
@@ -45,8 +45,8 @@ modules:
       - -Dbin_contrib=false
     sources:
       - type: archive
-        url: https://github.com/facebook/zstd/releases/download/v1.4.5/zstd-1.4.5.tar.gz
-        sha256: 98e91c7c6bf162bf90e4e70fdbc41a8188b9fa8de5ad840c401198014406ce9e
+        url: https://github.com/facebook/zstd/releases/download/v1.4.8/zstd-1.4.8.tar.gz
+        sha256: 32478297ca1500211008d596276f5367c54198495cf677e9439f4791a4c69f24
 
   #
   # require
@@ -64,8 +64,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/openzim/libzim/archive/6.2.2.tar.gz
-        sha256: 6619035d35c9ba057c80be5758fa86922802c74aca40e5fffd40b77f0f263af2
+        url: https://github.com/openzim/libzim/archive/6.3.0.tar.gz
+        sha256: 984d2f3881c507c9f0212dc2bc1b808d25cdeef6a62043f9211fcb78a231a986
 
   #
   # require
@@ -97,8 +97,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: http://snapshot.debian.org/archive/debian/20200218T211248Z/pool/main/libg/libgee-0.8/libgee-0.8_0.20.3.orig.tar.xz
-        sha256: d0b5edefc88cbca5f1709d19fa62aef490922c6577a14ac4e7b085507911a5de
+        url: http://snapshot.debian.org/archive/debian/20210318T211544Z/pool/main/libg/libgee-0.8/libgee-0.8_0.20.4.orig.tar.xz
+        sha256: 524c1bf390f9cdda4fbd9a47b269980dc64ab5280f0801b53bc69d782c72de0e
       #
       # Following fixes pkg-config error
       #
@@ -122,8 +122,8 @@ modules:
       - /share/vala
     sources:
       - type: archive
-        url: http://snapshot.debian.org/archive/debian/20150603T050256Z/pool/main/libi/libisocodes/libisocodes_1.2.2.orig.tar.xz
-        sha256: 4cdf2c02486bb44902d95e2b86356ef348c65b5edff75925d6878fe5e5f038de
+        url: http://snapshot.debian.org/archive/debian/20210127T030125Z/pool/main/libi/libisocodes/libisocodes_1.2.3.orig.tar.xz
+        sha256: 69b63b692838ecc939076d1dc14ff4f72a4e012de8fa852f3b07d20847ed2145
 
   - name: libhandy
     buildsystem: meson
@@ -136,8 +136,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://gitlab.gnome.org/GNOME/libhandy/-/archive/1.0.0/libhandy-1.0.0.tar.gz
-        sha256: dc1fff98cbc72a492d1adb489ee1b00e43ab4ac14c983c855ef3df435bbbda27
+        url: https://gitlab.gnome.org/GNOME/libhandy/-/archive/1.2.1/libhandy-1.2.1.tar.gz
+        sha256: 90cee074048310926a1c66278fa10043a220953cc6be03f9f5eb756b6bcd1043
 
   #
   # require
@@ -149,9 +149,9 @@ modules:
     buildsystem: meson
     builddir: true
     build-options:
-      append-path: /usr/lib/sdk/node12/bin
+      append-path: /usr/lib/sdk/node14/bin
       env:
-        npm_config_nodedir: /usr/lib/sdk/node12
+        npm_config_nodedir: /usr/lib/sdk/node14
     sources:
       - type: git
         url: https://github.com/birros/web-archives.git
@@ -159,8 +159,7 @@ modules:
       # preinstall npm packages, generated-sources.*.json was generated using
       # github.com/flatpak/flatpak-builder-tools/node from package-lock.json
       #
-      - modules/generated-sources.0.json
-      - generated-sources.1.json
+      - modules/generated-sources.json
       - type: shell
         commands:
           - cd subprojects/darkreader && npm install --cache=../../flatpak-node/npm-cache --offline --no-optional

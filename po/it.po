@@ -1,0 +1,644 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-15 15:53+0200\n"
+"PO-Revision-Date: 2021-04-25 13:53+0100\n\n"
+"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
+"Language-Team: Italian\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:8
+#: data/desktop/com.github.birros.WebArchives.desktop.in:3
+#: src/app/states/title-logic.vala:17 src/app/ui/window.vala:310
+msgid "WebArchives"
+msgstr "WebArchives"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:9
+msgid "A web archives viewer"
+msgstr "Un visualizzatore di archivi web"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:12
+msgid ""
+"A web archives viewer offering the ability to browse offline millions of "
+"articles from large community projects such as Wikipedia or Wikisource."
+msgstr ""
+"Un visualizzatore di archivi web che offre la possibilità di sfogliare offline milioni di "
+"articoli da grandi progetti di comunità come Wikipedia o Wikisource."
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:17
+msgid "Features:"
+msgstr "Funzionalità:"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:19
+msgid "List recently opened web archives"
+msgstr "Elenca gli archivi web aperti di recente"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:20
+msgid "List available local web archives"
+msgstr "Elenca gli archivi web locali disponibili"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:21
+msgid "List of web archives available to download"
+msgstr "Elenco degli archivi web disponibili per il download"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:22
+msgid "Print a page"
+msgstr "Stampa una pagina"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:23
+msgid "Night mode (Darkreader)"
+msgstr "Modalità notturna (Darkreader)"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:24
+msgid "Zoom controls"
+msgstr "Controlli dello Zoom"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:25
+msgid "Search in page"
+msgstr "Cerca nella pagina"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:26
+#: src/app/states/title-logic.vala:37 src/app/ui/content/archive-row.vala:99
+#: src/app/ui/header-bar/popover-menu.vala:60
+msgid "History"
+msgstr "Cronologia"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:27
+#: src/app/states/title-logic.vala:30 src/app/ui/content/archive-row.vala:86
+#: src/app/ui/header-bar/popover-menu.vala:54
+msgid "Bookmarks"
+msgstr "Segnalibri"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:28
+msgid "Search a page"
+msgstr "Cerca una pagina"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:29
+#: src/app/ui/header-bar/popover-menu.vala:84
+msgid "Keyboard shortcuts"
+msgstr "Tasti rapidi"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:30
+msgid "Multi-windows"
+msgstr "Finestre multiple"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:31
+msgid "Multi-tabs"
+msgstr "Schede multiple"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:32
+#: src/app/ui/header-bar/popover-menu.vala:46
+msgid "Random page"
+msgstr "Pagina casuale"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:33
+msgid "Sandboxed pages (Pages are isolated from the web)"
+msgstr "Pagine di ambiente isolate (accesso limitato al Web)"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:34
+msgid "Ask for confirmation when opening an external link"
+msgstr "Richiedi conferma prima di aprire un link esterno"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:35
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:182
+msgid ""
+"Handle the opening of zim files from external applications (Nautilus...)"
+msgstr ""
+"Gestisci l'apertura di file zim da applicazioni esterne (Nautilus...)"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:4
+msgid "Read Web archives offline"
+msgstr "Interroga offline gli archivi web"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:5
+msgid "archive;web;offline;"
+msgstr "schedario,web,offline;"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:10
+msgid "com.github.birros.WebArchives"
+msgstr "com.github.birros.WebArchives"
+
+#: src/app/resources/gtk/help-overlay.ui:13
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Generale"
+
+#: src/app/resources/gtk/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "New window"
+msgstr "Nuova finestra"
+
+#: src/app/resources/gtk/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Close window or tab"
+msgstr "Chiudi la finestra o scheda"
+
+#: src/app/resources/gtk/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Shortcuts"
+msgstr "Scorciatoie"
+
+#: src/app/resources/gtk/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Night mode"
+msgstr "Modalità scuro"
+
+#: src/app/resources/gtk/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Quit the application"
+msgstr "Esci dall'applicazione"
+
+#: src/app/resources/gtk/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "Opening"
+msgstr "Apertura"
+
+#: src/app/resources/gtk/help-overlay.ui:58
+msgctxt "shortcut window"
+msgid "Open an archive"
+msgstr "Apri uno schedario"
+
+#: src/app/resources/gtk/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Schede"
+
+#: src/app/resources/gtk/help-overlay.ui:71
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Nuova scheda"
+
+#: src/app/resources/gtk/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Go to previous tab"
+msgstr "Vai alla scheda precedente"
+
+#: src/app/resources/gtk/help-overlay.ui:85
+msgctxt "shortcut window"
+msgid "Go to next tab"
+msgstr "Vai alla scheda successiva"
+
+#: src/app/resources/gtk/help-overlay.ui:92
+msgctxt "shortcut window"
+msgid "Open tab"
+msgstr "Apri scheda"
+
+#: src/app/resources/gtk/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigazione"
+
+#: src/app/resources/gtk/help-overlay.ui:105
+msgctxt "shortcut window"
+msgid "Go home"
+msgstr "Vai alla pagina principale"
+
+#: src/app/resources/gtk/help-overlay.ui:112
+msgctxt "shortcut window"
+msgid "Go back"
+msgstr "Torna indietro"
+
+#: src/app/resources/gtk/help-overlay.ui:119
+msgctxt "shortcut window"
+msgid "Go forward"
+msgstr "Vai avanti"
+
+#: src/app/resources/gtk/help-overlay.ui:128
+msgctxt "shortcut window"
+msgid "Archive"
+msgstr "Schedario"
+
+#: src/app/resources/gtk/help-overlay.ui:132
+msgctxt "shortcut window"
+msgid "Main page"
+msgstr "Pagina principale"
+
+#: src/app/resources/gtk/help-overlay.ui:139
+msgctxt "shortcut window"
+msgid "Search a page"
+msgstr "Cerca una pagina"
+
+#: src/app/resources/gtk/help-overlay.ui:146
+msgctxt "shortcut window"
+msgid "Random page"
+msgstr "Pagina casuale"
+
+#: src/app/resources/gtk/help-overlay.ui:153
+msgctxt "shortcut window"
+msgid "Show bookmarks"
+msgstr "Mostra segnalibri"
+
+#: src/app/resources/gtk/help-overlay.ui:160
+msgctxt "shortcut window"
+msgid "Show history"
+msgstr "Mostra cronologia"
+
+#: src/app/resources/gtk/help-overlay.ui:169
+msgctxt "shortcut window"
+msgid "Page"
+msgstr "Pagina"
+
+#: src/app/resources/gtk/help-overlay.ui:173
+msgctxt "shortcut window"
+msgid "Search in page"
+msgstr "Cerca nella pagina"
+
+#: src/app/resources/gtk/help-overlay.ui:180
+msgctxt "shortcut window"
+msgid "Toggle bookmark for current page"
+msgstr "Attiva segnalibro per la pagina corrente"
+
+#: src/app/resources/gtk/help-overlay.ui:187
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "Stampa"
+
+#: src/app/resources/gtk/help-overlay.ui:196
+msgctxt "shortcut window"
+msgid "Search in"
+msgstr "Cerca in"
+
+#: src/app/resources/gtk/help-overlay.ui:200
+msgctxt "shortcut window"
+msgid "Next match"
+msgstr "Prossima corrispondenza"
+
+#: src/app/resources/gtk/help-overlay.ui:207
+msgctxt "shortcut window"
+msgid "Previous match"
+msgstr "Precedente corrispondenza"
+
+#: src/app/resources/gtk/help-overlay.ui:216
+msgctxt "shortcut window"
+msgid "Zoom"
+msgstr "Zoom"
+
+#: src/app/resources/gtk/help-overlay.ui:220
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr "Zoom avanti"
+
+#: src/app/resources/gtk/help-overlay.ui:227
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "Zoom indietro"
+
+#: src/app/resources/gtk/help-overlay.ui:234
+msgctxt "shortcut window"
+msgid "Reset zoom"
+msgstr "Reimposta scala"
+
+#: src/app/application.vala:15
+msgid "Print version number"
+msgstr "Stampa il numero di versione"
+
+#: src/app/utils/language-formater.vala:45
+msgid "Unspecified language"
+msgstr "Lingua non specificata"
+
+#: src/app/utils/tag-formater.vala:6
+msgid "No pictures"
+msgstr "Nessuna immagine"
+
+#: src/app/utils/tag-formater.vala:7
+msgid "No videos"
+msgstr "Nessun video"
+
+#: src/app/utils/tag-formater.vala:8
+msgid "Full text index"
+msgstr "Indice del testo completo"
+
+#: src/app/ui/content/search-view.vala:32
+msgid "No recent searches."
+msgstr "Nessuna ricerca recente."
+
+#: src/app/ui/content/search-view.vala:46
+msgid "No results."
+msgstr "Nessun risultato."
+
+#: src/app/ui/content/history-view.vala:28
+msgid "No browsing history."
+msgstr "Nessuna cronologia di navigazione."
+
+#: src/app/ui/content/history-view.vala:77
+msgid "%e %b %y"
+msgstr "%e.%b.%y"
+
+#: src/app/ui/content/archive-row.vala:75
+#: src/app/ui/header-bar/header-bar.vala:68
+msgid "Search"
+msgstr "Cerca"
+
+#: src/app/ui/content/archive-row.vala:112
+msgid "Download"
+msgstr "Scarica"
+
+#: src/app/ui/content/archive-row.vala:141
+#: src/app/ui/content/details-dialog.vala:11
+msgid "Details"
+msgstr "Dettagli"
+
+#: src/app/ui/content/archive-row.vala:150
+msgid "Remove"
+msgstr "Rimuovi"
+
+#: src/app/ui/content/details-dialog.vala:119
+msgid "Favicon"
+msgstr "Iconafav"
+
+#: src/app/ui/content/details-dialog.vala:120
+msgid "Title"
+msgstr "Títolo"
+
+#: src/app/ui/content/details-dialog.vala:122
+msgid "Location"
+msgstr "Posizione"
+
+#: src/app/ui/content/details-dialog.vala:124
+msgid "Date"
+msgstr "Data"
+
+#: src/app/ui/content/details-dialog.vala:125
+msgid "Lang"
+msgstr "Lingua"
+
+#: src/app/ui/content/details-dialog.vala:126
+msgid "Size"
+msgstr "Dimensione"
+
+#: src/app/ui/content/details-dialog.vala:127
+msgid "Name"
+msgstr "Nome"
+
+#: src/app/ui/content/details-dialog.vala:128
+msgid "Id"
+msgstr "Id"
+
+#: src/app/ui/content/details-dialog.vala:129
+msgid "Description"
+msgstr "Descrizione"
+
+#: src/app/ui/content/details-dialog.vala:130
+msgid "Article count"
+msgstr "Numero di articoli"
+
+#: src/app/ui/content/details-dialog.vala:131
+msgid "Media count"
+msgstr "Numero di file multimediali"
+
+#: src/app/ui/content/details-dialog.vala:132
+msgid "Creator"
+msgstr "Creatore"
+
+#: src/app/ui/content/details-dialog.vala:133
+msgid "Publisher"
+msgstr "Editore"
+
+#: src/app/ui/content/details-dialog.vala:134
+msgid "Tags"
+msgstr "Tag"
+
+#: src/app/ui/content/bookmark-view.vala:23
+msgid "No bookmarks saved."
+msgstr "Nessun segnalibro salvato."
+
+#: src/app/ui/content/status-label.vala:28
+#, c-format
+msgid "%s: %u %%"
+msgstr "%s: %u %%"
+
+#: src/app/ui/content/status-label.vala:33
+#: src/app/ui/content/status-label.vala:46
+msgid "Never refreshed"
+msgstr "Mai aggiornato"
+
+#: src/app/ui/content/status-label.vala:38
+msgid "Last refreshed: %H:%M - %e %b %Y"
+msgstr "Ultimo aggiornamento: %H:%M, %e.%b.%Y"
+
+#: src/app/ui/content/status-label.vala:61
+#, c-format
+msgid "%lluY ago"
+msgstr "fa %lluA"
+
+#: src/app/ui/content/status-label.vala:63
+#, c-format
+msgid "%lluM ago"
+msgstr "fa %lluM"
+
+#: src/app/ui/content/status-label.vala:65
+#, c-format
+msgid "%lluD ago"
+msgstr "fa %lluD"
+
+#: src/app/ui/content/status-label.vala:67
+#, c-format
+msgid "%lluh ago"
+msgstr "fa %lluh"
+
+#: src/app/ui/content/status-label.vala:69
+#, c-format
+msgid "%llum ago"
+msgstr "fa %llum"
+
+#: src/app/ui/content/status-label.vala:71
+#, c-format
+msgid "%llus ago"
+msgstr "fa %llus"
+
+#: src/app/ui/content/home-view.vala:15
+msgid ""
+"No archive recently opened. <b>Please select an archive from the following "
+"sections or open it manually.</b>"
+msgstr ""
+"Nessun archivio aperto di recente. <b>Seleziona un archivio dalle seguenti "
+"sezioni o aprilo manualmente.</b>"
+
+#: src/app/ui/content/home-view.vala:19
+msgid ""
+"No archive automaticly detected on your system. <b>Please download one from "
+"the following section.</b>"
+msgstr ""
+"Nessun archivio rilevato automaticamente sul tuo sistema. <b>Scaricalo dalla "
+"sezione seguente.</b>"
+
+#: src/app/ui/content/home-view.vala:23
+msgid ""
+"<span weight=\"bold\" foreground=\"#f57900\">It seems Tracker is not "
+"installed on your system.</span> WebArchives can't automatically list the "
+"archives present on your disk.\n"
+"\n"
+"<b>Please install Tracker using your package manager and then restart your "
+"session.</b>\n"
+"\n"
+"&#8226; Debian or Ubuntu:\n"
+"   <tt># apt install tracker</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"   <tt># dnf install tracker</tt>"
+msgstr ""
+"<span weight =\"bold\"foreground =\"#f57900\"> Sembra che Tracker non lo sia "
+"installato sul tuo sistema.</span>WebArchives non può elencare automaticamente "
+"archivi presenti sul disco.\n"
+"\n"
+"<b>Installa Tracker utilizzando il tuo gestore di pacchetti, quindi riavvia la "
+"sessione.</b>\n"
+"\n"
+"& # 8226; Debian o Ubuntu:\n"
+"     <tt># apt install tracker</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"<tt># dnf install tracker</tt>"
+
+#: src/app/ui/content/home-view.vala:35
+msgid ""
+"No archive available for download. <b>Please refresh this list using the "
+"appropriate button.</b>"
+msgstr ""
+"Nessun archivio disponibile per il download. <b>Aggiorna questo elenco utilizzando il "
+"pulsante appropriato.</b>"
+
+#: src/app/ui/content/home-view.vala:63
+msgid "Cannot open the archive file"
+msgstr "No se puede abrir el archivador"
+
+#. RECENTS
+#: src/app/ui/content/home-view.vala:97
+msgid "Recents"
+msgstr "Recenti"
+
+#: src/app/ui/content/home-view.vala:106
+msgid "Open a web archive"
+msgstr "APRI un archivio web"
+
+#: src/app/ui/content/home-view.vala:145
+msgid "Local"
+msgstr "Locale"
+
+#: src/app/ui/content/home-view.vala:163 src/app/ui/content/home-view.vala:252
+msgid "Refresh"
+msgstr "Aggiorna"
+
+#: src/app/ui/content/home-view.vala:213
+msgid "Remote"
+msgstr "Remoto"
+
+#: src/app/ui/content/home-view.vala:247
+msgid "Downloading"
+msgstr "Download in corso"
+
+#: src/app/ui/content/home-view.vala:483
+#, c-format
+msgid "How would you like to download %s ?"
+msgstr "Come vorresti scaricare %s ?"
+
+#: src/app/ui/content/home-view.vala:487
+msgid "This will open a third-party application to download the archive."
+msgstr "Questo aprirà un'applicazione di terze parti per scaricare l'archivio."
+
+#: src/app/ui/content/home-view.vala:489
+msgid "From a server"
+msgstr "Da un server"
+
+#: src/app/ui/content/home-view.vala:490
+msgid "Peer-to-peer network"
+msgstr "Rete peer-to-peer"
+
+#: src/app/ui/content/web-view.vala:370
+#, c-format
+msgid "File downloaded: %s"
+msgstr "File scaricato: %s"
+
+#: src/app/ui/gtk/notebook/notebook-popup-menu.vala:13
+msgid "Detach to a new window"
+msgstr "Separa in una nuova finestra"
+
+#: src/app/ui/header-bar/bookmark-button.vala:9
+msgid "Toggle bookmark for current page"
+msgstr "Attiva o disattiva il segnalibro nella pagina corrente"
+
+#: src/app/ui/header-bar/navigation-box.vala:14
+msgid "Go to the homepage"
+msgstr "Vai alla pagina principale"
+
+#: src/app/ui/header-bar/navigation-box.vala:18
+msgid "Go back to the previous page"
+msgstr "Vai alla pagina precedente"
+
+#: src/app/ui/header-bar/navigation-box.vala:20
+msgid "Go forward to the next page"
+msgstr "Vai alla pagina successiva"
+
+#: src/app/ui/header-bar/new-tab-button.vala:9
+msgid "Open a new tab"
+msgstr "Apri una nuova scheda"
+
+#: src/app/ui/header-bar/night-mode-button.vala:8
+msgid "Night mode"
+msgstr "Modalità notturna"
+
+#: src/app/ui/header-bar/popover-menu.vala:26
+msgid "Search in..."
+msgstr "Cerca nel..."
+
+#: src/app/ui/header-bar/popover-menu.vala:32
+msgid "Print"
+msgstr "Stampa"
+
+#: src/app/ui/header-bar/popover-menu.vala:40
+msgid "Main page"
+msgstr "Pagina principale"
+
+#: src/app/ui/header-bar/popover-menu.vala:73
+msgid "New window"
+msgstr "Nuova finestra"
+
+#: src/app/ui/header-bar/popover-menu.vala:90
+msgid "About"
+msgstr "Informazioni"
+
+#: src/app/ui/header-bar/popover-menu.vala:96
+msgid "Quit"
+msgstr "Esci"
+
+#: src/app/ui/header-bar/search-in-bar.vala:11
+msgid "Find previous occurrence of the search string"
+msgstr "Trova l'occorrenza precedente della stringa di ricerca"
+
+#: src/app/ui/header-bar/search-in-bar.vala:16
+msgid "Find next occurrence of the search string"
+msgstr "Trova l'occorrenza successiva della stringa di ricerca"
+
+#: src/app/ui/header-bar/zoom-box.vala:16
+msgid "Zoom out"
+msgstr "Zoom indietro"
+
+#: src/app/ui/header-bar/zoom-box.vala:21
+msgid "Reset zoom"
+msgstr "Reimposta scala"
+
+#: src/app/ui/header-bar/zoom-box.vala:26
+msgid "Zoom in"
+msgstr "Zoom avanti"
+
+#: src/app/ui/window.vala:311
+msgid "A Web archives viewer."
+msgstr "Un visualizzatore di archivi web."
+
+#: src/app/ui/window.vala:312
+msgid "Copyright © 2017-2017 - Birros"
+msgstr "Copyright © 2017-2017 - Birros"
+
+#: src/app/ui/window.vala:431
+msgid "Please choose a file"
+msgstr "Scegli un file"
+
+#: src/app/ui/window.vala:501
+msgid "Are you sure to open external link ?"
+msgstr "Sei sicuro di aprire il link esterno ?"

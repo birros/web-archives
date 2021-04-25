@@ -110,7 +110,7 @@ msgstr "Richiedi conferma prima di aprire un link esterno"
 msgid ""
 "Handle the opening of zim files from external applications (Nautilus...)"
 msgstr ""
-"Gestisci l'apertura di file zim da applicazioni esterne "(Nautilus...)"
+"Gestisci l'apertura di file zim da applicazioni esterne (Nautilus...)"
 
 #: data/desktop/com.github.birros.WebArchives.desktop.in:4
 msgid "Read Web archives offline"
@@ -466,7 +466,7 @@ msgid ""
 "the following section.</b>"
 msgstr ""
 "Nessun archivio rilevato automaticamente sul tuo sistema. <b>Scaricalo dalla "
-"sezione seguente.</b>
+"sezione seguente.</b>"
 
 #: src/app/ui/content/home-view.vala:23
 msgid ""

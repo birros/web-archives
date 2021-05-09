@@ -1,0 +1,644 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-15 15:53+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Umut <u2slmz@pm.me>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:8
+#: data/desktop/com.github.birros.WebArchives.desktop.in:3
+#: src/app/states/title-logic.vala:17 src/app/ui/window.vala:310
+msgid "WebArchives"
+msgstr "WebArşiv"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:9
+msgid "A web archives viewer"
+msgstr "Bir web arşivi görüntüleyici"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:12
+msgid ""
+"A web archives viewer offering the ability to browse offline millions of "
+"articles from large community projects such as Wikipedia or Wikisource."
+msgstr ""
+"Wikipedia veya WikiSource gibi ana topluluk projelerinden çevrimdışı "
+"milyonlarca makaleye göz atma fırsatı sunan bir web arşivi görüntüleyici."
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:17
+msgid "Features:"
+msgstr "Özellikler:"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:19
+msgid "List recently opened web archives"
+msgstr "Son dönemlerde açılan web arşiv listesi"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:20
+msgid "List available local web archives"
+msgstr "Uygun yerel web arşivlerini listele"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:21
+msgid "List of web archives available to download"
+msgstr "İndirmek için uygun web arşiv listesi"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:22
+msgid "Print a page"
+msgstr "Sayfayı yazdır"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:23
+msgid "Night mode (Darkreader)"
+msgstr "Gece Modu (GeceOkuyucu)"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:24
+msgid "Zoom controls"
+msgstr "Yakınlaştırma denetimleri"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:25
+msgid "Search in page"
+msgstr "Sayfa da Ara"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:26
+#: src/app/states/title-logic.vala:37 src/app/ui/content/archive-row.vala:99
+#: src/app/ui/header-bar/popover-menu.vala:60
+msgid "History"
+msgstr "Tarih"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:27
+#: src/app/states/title-logic.vala:30 src/app/ui/content/archive-row.vala:86
+#: src/app/ui/header-bar/popover-menu.vala:54
+msgid "Bookmarks"
+msgstr "Yerimleri"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:28
+msgid "Search a page"
+msgstr "Sayfa ara"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:29
+#: src/app/ui/header-bar/popover-menu.vala:84
+msgid "Keyboard shortcuts"
+msgstr "Klavye kısayolları"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:30
+msgid "Multi-windows"
+msgstr "Çoklu-pencereler"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:31
+msgid "Multi-tabs"
+msgstr "Çoklu-sekmeler"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:32
+#: src/app/ui/header-bar/popover-menu.vala:46
+msgid "Random page"
+msgstr "Rastgele sayfa"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:33
+msgid "Sandboxed pages (Pages are isolated from the web)"
+msgstr "Korumalı sayfalar (Sayfalar web'den izole edilir)"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:34
+msgid "Ask for confirmation when opening an external link"
+msgstr "Harici bir bağlantı açarken onay isteyin"
+
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:35
+#: data/appdata/com.github.birros.WebArchives.appdata.xml.in:182
+msgid ""
+"Handle the opening of zim files from external applications (Nautilus...)"
+msgstr ""
+"Harici uygulamalardan zim dosyalarının açılmasını sağlayın (Nautilus...)"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:4
+msgid "Read Web archives offline"
+msgstr "Web arşivlerini çevrimdışı oku"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:5
+msgid "archive;web;offline;"
+msgstr "arşiv;web;çevrimdışı;"
+
+#: data/desktop/com.github.birros.WebArchives.desktop.in:10
+msgid "com.github.birros.WebArchives"
+msgstr "com.github.birros.WebArşiv"
+
+#: src/app/resources/gtk/help-overlay.ui:13
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Genel"
+
+#: src/app/resources/gtk/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "New window"
+msgstr "Yeni pencere"
+
+#: src/app/resources/gtk/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Close window or tab"
+msgstr "Pencee veya sekmeyi kapatın"
+
+#: src/app/resources/gtk/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Shortcuts"
+msgstr "Kısayol"
+
+#: src/app/resources/gtk/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Night mode"
+msgstr "Gece modu"
+
+#: src/app/resources/gtk/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Quit the application"
+msgstr "Uygulamadan çık"
+
+#: src/app/resources/gtk/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "Opening"
+msgstr "Aç"
+
+#: src/app/resources/gtk/help-overlay.ui:58
+msgctxt "shortcut window"
+msgid "Open an archive"
+msgstr "Bir arşivi aç"
+
+#: src/app/resources/gtk/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Sekmler"
+
+#: src/app/resources/gtk/help-overlay.ui:71
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Yeni sekme"
+
+#: src/app/resources/gtk/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Go to previous tab"
+msgstr "Önceki sekmeye git"
+
+#: src/app/resources/gtk/help-overlay.ui:85
+msgctxt "shortcut window"
+msgid "Go to next tab"
+msgstr "Sonraki sekmeye git"
+
+#: src/app/resources/gtk/help-overlay.ui:92
+msgctxt "shortcut window"
+msgid "Open tab"
+msgstr "Sekme aç"
+
+#: src/app/resources/gtk/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Seyrüsefer"
+
+#: src/app/resources/gtk/help-overlay.ui:105
+msgctxt "shortcut window"
+msgid "Go home"
+msgstr "Eve git"
+
+#: src/app/resources/gtk/help-overlay.ui:112
+msgctxt "shortcut window"
+msgid "Go back"
+msgstr "Geri git"
+
+#: src/app/resources/gtk/help-overlay.ui:119
+msgctxt "shortcut window"
+msgid "Go forward"
+msgstr "İlerle"
+
+#: src/app/resources/gtk/help-overlay.ui:128
+msgctxt "shortcut window"
+msgid "Archive"
+msgstr "Arşiv"
+
+#: src/app/resources/gtk/help-overlay.ui:132
+msgctxt "shortcut window"
+msgid "Main page"
+msgstr "Anasayfa"
+
+#: src/app/resources/gtk/help-overlay.ui:139
+msgctxt "shortcut window"
+msgid "Search a page"
+msgstr "Sayfa ara"
+
+#: src/app/resources/gtk/help-overlay.ui:146
+msgctxt "shortcut window"
+msgid "Random page"
+msgstr "Rastgele sayfa"
+
+#: src/app/resources/gtk/help-overlay.ui:153
+msgctxt "shortcut window"
+msgid "Show bookmarks"
+msgstr "Yerimlerini göste"
+
+#: src/app/resources/gtk/help-overlay.ui:160
+msgctxt "shortcut window"
+msgid "Show history"
+msgstr "Geçimişi göster"
+
+#: src/app/resources/gtk/help-overlay.ui:169
+msgctxt "shortcut window"
+msgid "Page"
+msgstr "Sayfa"
+
+#: src/app/resources/gtk/help-overlay.ui:173
+msgctxt "shortcut window"
+msgid "Search in page"
+msgstr "Sayfa da Ara"
+
+#: src/app/resources/gtk/help-overlay.ui:180
+msgctxt "shortcut window"
+msgid "Toggle bookmark for current page"
+msgstr "Geçerli sayfa için yer imini değiştir"
+
+#: src/app/resources/gtk/help-overlay.ui:187
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "Yazdır"
+
+#: src/app/resources/gtk/help-overlay.ui:196
+msgctxt "shortcut window"
+msgid "Search in"
+msgstr "İçinde ara"
+
+#: src/app/resources/gtk/help-overlay.ui:200
+msgctxt "shortcut window"
+msgid "Next match"
+msgstr "Sonraki eşleşme"
+
+#: src/app/resources/gtk/help-overlay.ui:207
+msgctxt "shortcut window"
+msgid "Previous match"
+msgstr "Önceki eşleşme"
+
+#: src/app/resources/gtk/help-overlay.ui:216
+msgctxt "shortcut window"
+msgid "Zoom"
+msgstr "Yakınlaştır"
+
+#: src/app/resources/gtk/help-overlay.ui:220
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr "Yakınlaştırma"
+
+#: src/app/resources/gtk/help-overlay.ui:227
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "Uzaklaştırma"
+
+#: src/app/resources/gtk/help-overlay.ui:234
+msgctxt "shortcut window"
+msgid "Reset zoom"
+msgstr "Yakınlaştırmayı sıfırla"
+
+#: src/app/application.vala:15
+msgid "Print version number"
+msgstr "Sürüm numarasını yazdır"
+
+#: src/app/utils/language-formater.vala:45
+msgid "Unspecified language"
+msgstr "Dil Belirtilmemiş"
+
+#: src/app/utils/tag-formater.vala:6
+msgid "No pictures"
+msgstr "Resim yok"
+
+#: src/app/utils/tag-formater.vala:7
+msgid "No videos"
+msgstr "Video yok"
+
+#: src/app/utils/tag-formater.vala:8
+msgid "Full text index"
+msgstr "Tam metin dizini"
+
+#: src/app/ui/content/search-view.vala:32
+msgid "No recent searches."
+msgstr "Son aramalar yok."
+
+#: src/app/ui/content/search-view.vala:46
+msgid "No results."
+msgstr "Sonuçlar bulunamadı."
+
+#: src/app/ui/content/history-view.vala:28
+msgid "No browsing history."
+msgstr "Tarama geçmişi bulunamadı."
+
+#: src/app/ui/content/history-view.vala:77
+msgid "%e %b %y"
+msgstr "%e %b %y"
+
+#: src/app/ui/content/archive-row.vala:75
+#: src/app/ui/header-bar/header-bar.vala:68
+msgid "Search"
+msgstr "Ara"
+
+#: src/app/ui/content/archive-row.vala:112
+msgid "Download"
+msgstr "İndir"
+
+#: src/app/ui/content/archive-row.vala:141
+#: src/app/ui/content/details-dialog.vala:11
+msgid "Details"
+msgstr "Detaylar"
+
+#: src/app/ui/content/archive-row.vala:150
+msgid "Remove"
+msgstr "Kaldır"
+
+#: src/app/ui/content/details-dialog.vala:119
+msgid "Favicon"
+msgstr "İkon"
+
+#: src/app/ui/content/details-dialog.vala:120
+msgid "Title"
+msgstr "Başlık"
+
+#: src/app/ui/content/details-dialog.vala:122
+msgid "Location"
+msgstr "Konum"
+
+#: src/app/ui/content/details-dialog.vala:124
+msgid "Date"
+msgstr "Tarih"
+
+#: src/app/ui/content/details-dialog.vala:125
+msgid "Lang"
+msgstr "Lisan"
+
+#: src/app/ui/content/details-dialog.vala:126
+msgid "Size"
+msgstr "Boyut"
+
+#: src/app/ui/content/details-dialog.vala:127
+msgid "Name"
+msgstr "Ad"
+
+#: src/app/ui/content/details-dialog.vala:128
+msgid "Id"
+msgstr "No"
+
+#: src/app/ui/content/details-dialog.vala:129
+msgid "Description"
+msgstr "Açıklama"
+
+#: src/app/ui/content/details-dialog.vala:130
+msgid "Article count"
+msgstr "Makale sayısı"
+
+#: src/app/ui/content/details-dialog.vala:131
+msgid "Media count"
+msgstr "Medya sayısı"
+
+#: src/app/ui/content/details-dialog.vala:132
+msgid "Creator"
+msgstr "Yaratıcı"
+
+#: src/app/ui/content/details-dialog.vala:133
+msgid "Publisher"
+msgstr "Editör"
+
+#: src/app/ui/content/details-dialog.vala:134
+msgid "Tags"
+msgstr "Etiketler"
+
+#: src/app/ui/content/bookmark-view.vala:23
+msgid "No bookmarks saved."
+msgstr "Kaydedilen yerimleri bulunamadı."
+
+#: src/app/ui/content/status-label.vala:28
+#, c-format
+msgid "%s: %u %%"
+msgstr "%s: %u %%"
+
+#: src/app/ui/content/status-label.vala:33
+#: src/app/ui/content/status-label.vala:46
+msgid "Never refreshed"
+msgstr "Hiç Yenilenmemiş"
+
+#: src/app/ui/content/status-label.vala:38
+msgid "Last refreshed: %H:%M - %e %b %Y"
+msgstr "Son yenilenme: %H:%M - %e %b %Y"
+
+#: src/app/ui/content/status-label.vala:61
+#, c-format
+msgid "%lluY ago"
+msgstr "%lluY evvel"
+
+#: src/app/ui/content/status-label.vala:63
+#, c-format
+msgid "%lluM ago"
+msgstr "%lluM evvel"
+
+#: src/app/ui/content/status-label.vala:65
+#, c-format
+msgid "%lluD ago"
+msgstr "%lluD evvel"
+
+#: src/app/ui/content/status-label.vala:67
+#, c-format
+msgid "%lluh ago"
+msgstr "%lluh evvel"
+
+#: src/app/ui/content/status-label.vala:69
+#, c-format
+msgid "%llum ago"
+msgstr "%llum evvel"
+
+#: src/app/ui/content/status-label.vala:71
+#, c-format
+msgid "%llus ago"
+msgstr "%llus evvel"
+
+#: src/app/ui/content/home-view.vala:15
+msgid ""
+"No archive recently opened. <b>Please select an archive from the following "
+"sections or open it manually.</b>"
+msgstr ""
+"Son vakitlerde arşiv yok. <b>Lütfen aşağıdaki bölümlerde bir arşiv seçin "
+"veya manuel olarak açın.</b>"
+
+#: src/app/ui/content/home-view.vala:19
+msgid ""
+"No archive automaticly detected on your system. <b>Please download one from "
+"the following section.</b>"
+msgstr ""
+"Sisteminizde otomatik olarak arşiv algılanmadı. <b>Lütfen bir sonraki "
+"bölümden bir tane indirin.</b>"
+
+#: src/app/ui/content/home-view.vala:23
+msgid ""
+"<span weight=\"bold\" foreground=\"#f57900\">It seems Tracker is not "
+"installed on your system.</span> WebArchives can't automatically list the "
+"archives present on your disk.\n"
+"\n"
+"<b>Please install Tracker using your package manager and then restart your "
+"session.</b>\n"
+"\n"
+"&#8226; Debian or Ubuntu:\n"
+"   <tt># apt install tracker</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"   <tt># dnf install tracker</tt>"
+msgstr ""
+"<span weight=\"bold\" foreground=\"#f57900\">İzleyici sisteminizde yüklü "
+"değil gibi görünüyor.</span> WebArşiv, diskinizde bulunan arşivleri otomatik "
+"olarak listeleyemez.\n"
+"\n"
+"<b>Lütfen paket yöneticinizi kullanarak İzleyici'yi yükleyin ve oturumunuzu "
+"yeniden başlatın.</b>\n"
+"\n"
+"&#8226; Debian veya Ubuntu:\n"
+"   <tt># apt kurulum izleyicisi</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"   <tt># dnf kurulum izleyicisi</tt>"
+
+#: src/app/ui/content/home-view.vala:35
+msgid ""
+"No archive available for download. <b>Please refresh this list using the "
+"appropriate button.</b>"
+msgstr ""
+"İndirmek için mevcut arşiv bulunamadı . <b>Lütfen uygun tuşu kullanarak bu "
+"listeyi yenileyin.</b>"
+
+#: src/app/ui/content/home-view.vala:63
+msgid "Cannot open the archive file"
+msgstr "Arşiv dosyasını açamıyor"
+
+#. RECENTS
+#: src/app/ui/content/home-view.vala:97
+msgid "Recents"
+msgstr "Son"
+
+#: src/app/ui/content/home-view.vala:106
+msgid "Open a web archive"
+msgstr "Bir web arşivi açın"
+
+#: src/app/ui/content/home-view.vala:145
+msgid "Local"
+msgstr "Konum"
+
+#: src/app/ui/content/home-view.vala:163 src/app/ui/content/home-view.vala:252
+msgid "Refresh"
+msgstr "Yenile"
+
+#: src/app/ui/content/home-view.vala:213
+msgid "Remote"
+msgstr "Uzak"
+
+#: src/app/ui/content/home-view.vala:247
+msgid "Downloading"
+msgstr "Yükleme"
+
+#: src/app/ui/content/home-view.vala:483
+#, c-format
+msgid "How would you like to download %s ?"
+msgstr "Nasıl indirmek istersin %s ?"
+
+#: src/app/ui/content/home-view.vala:487
+msgid "This will open a third-party application to download the archive."
+msgstr "Bu, arşivi indirmek için üçüncü taraf bir uygulamayı açacaktır."
+
+#: src/app/ui/content/home-view.vala:489
+msgid "From a server"
+msgstr "Bir sunucudan"
+
+#: src/app/ui/content/home-view.vala:490
+msgid "Peer-to-peer network"
+msgstr "Eşler-arası ağ"
+
+#: src/app/ui/content/web-view.vala:370
+#, c-format
+msgid "File downloaded: %s"
+msgstr "İndirilen dosya: %s"
+
+#: src/app/ui/gtk/notebook/notebook-popup-menu.vala:13
+msgid "Detach to a new window"
+msgstr "Yeni bir pencereye ayır"
+
+#: src/app/ui/header-bar/bookmark-button.vala:9
+msgid "Toggle bookmark for current page"
+msgstr "Geçerli sayfa için yeriminlerini değiştir"
+
+#: src/app/ui/header-bar/navigation-box.vala:14
+msgid "Go to the homepage"
+msgstr "Ana sayfaya git"
+
+#: src/app/ui/header-bar/navigation-box.vala:18
+msgid "Go back to the previous page"
+msgstr "Önceki sayfaya geri dön"
+
+#: src/app/ui/header-bar/navigation-box.vala:20
+msgid "Go forward to the next page"
+msgstr "Bir sonraki sayfaya git"
+
+#: src/app/ui/header-bar/new-tab-button.vala:9
+msgid "Open a new tab"
+msgstr "Yeni bir sekme aç"
+
+#: src/app/ui/header-bar/night-mode-button.vala:8
+msgid "Night mode"
+msgstr "Gece modu"
+
+#: src/app/ui/header-bar/popover-menu.vala:26
+msgid "Search in..."
+msgstr "Arama..."
+
+#: src/app/ui/header-bar/popover-menu.vala:32
+msgid "Print"
+msgstr "Yazdır"
+
+#: src/app/ui/header-bar/popover-menu.vala:40
+msgid "Main page"
+msgstr "Ana sayfa"
+
+#: src/app/ui/header-bar/popover-menu.vala:73
+msgid "New window"
+msgstr "Yeni pencere"
+
+#: src/app/ui/header-bar/popover-menu.vala:90
+msgid "About"
+msgstr "Hakkında"
+
+#: src/app/ui/header-bar/popover-menu.vala:96
+msgid "Quit"
+msgstr "Çık"
+
+#: src/app/ui/header-bar/search-in-bar.vala:11
+msgid "Find previous occurrence of the search string"
+msgstr "Arama dizesinin önceki oluşumunu bul"
+
+#: src/app/ui/header-bar/search-in-bar.vala:16
+msgid "Find next occurrence of the search string"
+msgstr "Arama dizesinin bir sonraki oluşumunu bul"
+
+#: src/app/ui/header-bar/zoom-box.vala:16
+msgid "Zoom out"
+msgstr "Uzaklaştır"
+
+#: src/app/ui/header-bar/zoom-box.vala:21
+msgid "Reset zoom"
+msgstr "Yakınlaştırmayı sıfırla"
+
+#: src/app/ui/header-bar/zoom-box.vala:26
+msgid "Zoom in"
+msgstr "Yakınlaştır"
+
+#: src/app/ui/window.vala:311
+msgid "A Web archives viewer."
+msgstr "Bir Web arşiv görüntüleyici."
+
+#: src/app/ui/window.vala:312
+msgid "Copyright © 2017-2017 - Birros"
+msgstr "Telif Hakkı © 2017-2017 - Birros"
+
+#: src/app/ui/window.vala:431
+msgid "Please choose a file"
+msgstr "Lütfen bir dosya seçin"
+
+#: src/app/ui/window.vala:501
+msgid "Are you sure to open external link ?"
+msgstr "Harici bağlantı açtığınızdan emin misiniz ?"

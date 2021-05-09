@@ -110,6 +110,17 @@
     <update_contact>birros@protonmail.com</update_contact>
     <translation type="gettext">web-archives</translation>
     <releases>
+        <release version="0.4.2" date="2021-05-09">
+            <description>
+                <p>
+                    This new release of WebArchives contains some bug fixes and
+                    new features.
+                </p>
+                <ul>
+                    <li>Add Turkish translation</li>
+                </ul>
+            </description>
+        </release>
         <release version="0.4.1" date="2021-04-25">
             <description>
                 <p>

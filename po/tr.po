@@ -167,7 +167,7 @@ msgstr "Bir arşivi aç"
 #: src/app/resources/gtk/help-overlay.ui:67
 msgctxt "shortcut window"
 msgid "Tabs"
-msgstr "Sekmler"
+msgstr "Sekmeler"
 
 #: src/app/resources/gtk/help-overlay.ui:71
 msgctxt "shortcut window"
@@ -232,12 +232,12 @@ msgstr "Rastgele sayfa"
 #: src/app/resources/gtk/help-overlay.ui:153
 msgctxt "shortcut window"
 msgid "Show bookmarks"
-msgstr "Yerimlerini göste"
+msgstr "Yerimlerini göster"
 
 #: src/app/resources/gtk/help-overlay.ui:160
 msgctxt "shortcut window"
 msgid "Show history"
-msgstr "Geçimişi göster"
+msgstr "Geçmişi göster"
 
 #: src/app/resources/gtk/help-overlay.ui:169
 msgctxt "shortcut window"
@@ -252,7 +252,7 @@ msgstr "Sayfa da Ara"
 #: src/app/resources/gtk/help-overlay.ui:180
 msgctxt "shortcut window"
 msgid "Toggle bookmark for current page"
-msgstr "Geçerli sayfa için yer imini değiştir"
+msgstr "Geçerli sayfa için yerimini değiştir"
 
 #: src/app/resources/gtk/help-overlay.ui:187
 msgctxt "shortcut window"

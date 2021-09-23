@@ -24,14 +24,14 @@ public class WebArchives.ArchiveItem : Object {
     /**
      * We can modify scope only if it's empty.
      */
-    private string _scope {get; private set; default = "";}
+    private string p_scope {get; private set; default = "";}
     public string scope {
         get {
-            return _scope;
+            return p_scope;
         }
         set {
-            if (_scope == "") {
-                _scope = value;
+            if (p_scope == "") {
+                p_scope = value;
             } else {
                 warning ("Trying to modify scope property");
             }

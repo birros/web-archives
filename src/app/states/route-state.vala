@@ -9,15 +9,15 @@ public class WebArchives.RouteState : Object {
     }
 
     public Route last_route {get; private set;}
-    private Route _route {get; private set; default = Route.HOME;}
+    private Route p_route {get; private set; default = Route.HOME;}
     public Route route {
         get {
-            return _route;
+            return p_route;
         }
         set {
-            if (_route != value) {
-                last_route = _route;
-                _route = value;
+            if (p_route != value) {
+                last_route = p_route;
+                p_route = value;
             }
         }
     }

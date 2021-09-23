@@ -1,11 +1,11 @@
 public class WebArchives.StatusLabel : Gtk.Label {
-    private int64 _timestamp {get; set; default = 0;}
+    private int64 p_timestamp {get; set; default = 0;}
     public int64 timestamp {
         get {
-            return _timestamp;
+            return p_timestamp;
         }
         set {
-            _timestamp = value;
+            p_timestamp = value;
             update_label ();
             update_tooltip ();
         }

@@ -1,35 +1,38 @@
+# Heimen Stoffels <vistausss@fastmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-27 22:00+\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Timnot\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2022-09-18 19:43+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: Dutch\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:7
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:8
 #: data/desktop/com.github.birros.WebArchives.desktop.in:3
 #: src/app/states/title-logic.vala:17 src/app/ui/window.vala:310
 msgid "WebArchives"
-msgstr "WebArchives"
+msgstr "Webarchieven"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:9
 msgid "A web archives viewer"
-msgstr "Een webarchiefviewer"
+msgstr "Een webarchief-weergavetoepassing"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:12
 msgid ""
 "A web archives viewer offering the ability to browse offline millions of "
 "articles from large community projects such as Wikipedia or Wikisource."
 msgstr ""
-"Een webarchiefviewer die de mogelijkheid biedt om miljoenen offline te bladeren"
-"artikelen van grote gemeenschapsprojecten zoals Wikipedia of Wikisource. "
+"Een webarchief-weergavetoepassing die de mogelijkheid biedt om miljoenen "
+"artikelen van grote gemeenschapsprojecten als Wikipedia of Wikisource offline "
+"te bekijken."
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:17
 msgid "Features:"
@@ -41,7 +44,7 @@ msgstr "Lijst met onlangs geopende webarchieven"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:20
 msgid "List available local web archives"
-msgstr "Lijst van beschikbare lokale webarchieven"
+msgstr "Lijst met beschikbare lokale webarchieven"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:21
 msgid "List of web archives available to download"
@@ -53,15 +56,15 @@ msgstr "Druk een pagina af"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:23
 msgid "Night mode (Darkreader)"
-msgstr "Night mode (Darkreader)"
+msgstr "Donker thema (Darkreader)"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:24
 msgid "Zoom controls"
-msgstr "Zoom controller"
+msgstr "Zoomregeling"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:25
 msgid "Search in page"
-msgstr "Zoek op pagina"
+msgstr "Zoeken op pagina"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:26
 #: src/app/states/title-logic.vala:37 src/app/ui/content/archive-row.vala:99
@@ -77,16 +80,16 @@ msgstr "Bladwijzers"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:28
 msgid "Search a page"
-msgstr "Zoek een pagina"
+msgstr "Zoeken naar pagina"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:29
 #: src/app/ui/header-bar/popover-menu.vala:84
 msgid "Keyboard shortcuts"
-msgstr "Toetsenbord sneltoetsen"
+msgstr "Sneltoetsen"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:30
 msgid "Multi-windows"
-msgstr "Multi-tabs"
+msgstr "Meerdere vensters"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:31
 msgid "Multi-tabs"
@@ -99,18 +102,18 @@ msgstr "Willekeurige pagina"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:33
 msgid "Sandboxed pages (Pages are isolated from the web)"
-msgstr "Sandbox-pagina's (pagina's zijn geïsoleerd van internet)"
+msgstr "Sandboxpagina's (pagina's die zijn geïsoleerd van het internet)"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:34
 msgid "Ask for confirmation when opening an external link"
-msgstr "Vraag om bevestiging bij het openen van een externe link"
+msgstr "Openen van externe links bevestigen"
 
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:35
 #: data/appdata/com.github.birros.WebArchives.appdata.xml.in:182
-msgid ""
-"Handle the opening of zim files from external applications (Nautilus...)"
+msgid "Handle the opening of zim files from external applications (Nautilus...)"
 msgstr ""
-"Behandel het openen van zim-bestanden van externe application's (Nautilus...)"
+"Behandel het openen van zim-bestanden uit externe toepassingen (bijv. "
+"Nautilus)"
 
 #: data/desktop/com.github.birros.WebArchives.desktop.in:4
 msgid "Read Web archives offline"
@@ -132,32 +135,32 @@ msgstr "Algemeen"
 #: src/app/resources/gtk/help-overlay.ui:17
 msgctxt "shortcut window"
 msgid "New window"
-msgstr "Nieuw Venster"
+msgstr "Nieuw venster"
 
 #: src/app/resources/gtk/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Close window or tab"
-msgstr "Venster of tabblad sluiten"
+msgstr "Sluit het venster of tabblad"
 
 #: src/app/resources/gtk/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Shortcuts"
-msgstr "Snelkoppelingen"
+msgstr "Sneltoetsen"
 
 #: src/app/resources/gtk/help-overlay.ui:38
 msgctxt "shortcut window"
 msgid "Night mode"
-msgstr "Nachtstand"
+msgstr "Donker thema"
 
 #: src/app/resources/gtk/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Quit the application"
-msgstr "Sluit de applicatie af"
+msgstr "Sluit de toepassing af"
 
 #: src/app/resources/gtk/help-overlay.ui:54
 msgctxt "shortcut window"
 msgid "Opening"
-msgstr "Opening"
+msgstr "Openen"
 
 #: src/app/resources/gtk/help-overlay.ui:58
 msgctxt "shortcut window"
@@ -187,7 +190,7 @@ msgstr "Ga naar het volgende tabblad"
 #: src/app/resources/gtk/help-overlay.ui:92
 msgctxt "shortcut window"
 msgid "Open tab"
-msgstr "Tabblad openen"
+msgstr "Open een tabblad"
 
 #: src/app/resources/gtk/help-overlay.ui:101
 msgctxt "shortcut window"
@@ -197,7 +200,7 @@ msgstr "Navigatie"
 #: src/app/resources/gtk/help-overlay.ui:105
 msgctxt "shortcut window"
 msgid "Go home"
-msgstr "Startpagina" 
+msgstr "Startpagina"
 
 #: src/app/resources/gtk/help-overlay.ui:112
 msgctxt "shortcut window"
@@ -222,7 +225,7 @@ msgstr "Hoofdpagina"
 #: src/app/resources/gtk/help-overlay.ui:139
 msgctxt "shortcut window"
 msgid "Search a page"
-msgstr "Zoek een pagina"
+msgstr "Zoek naar een pagina"
 
 #: src/app/resources/gtk/help-overlay.ui:146
 msgctxt "shortcut window"
@@ -232,17 +235,17 @@ msgstr "Willekeurige pagina"
 #: src/app/resources/gtk/help-overlay.ui:153
 msgctxt "shortcut window"
 msgid "Show bookmarks"
-msgstr "Bladwijzers weergeven"
+msgstr "Toon alle bladwijzers"
 
 #: src/app/resources/gtk/help-overlay.ui:160
 msgctxt "shortcut window"
 msgid "Show history"
-msgstr "Toon geschiedenis"
+msgstr "Toon de geschiedenis"
 
 #: src/app/resources/gtk/help-overlay.ui:169
 msgctxt "shortcut window"
 msgid "Page"
-msgstr "Bladzijde"
+msgstr "Pagina"
 
 #: src/app/resources/gtk/help-overlay.ui:173
 msgctxt "shortcut window"
@@ -252,7 +255,7 @@ msgstr "Zoek op pagina"
 #: src/app/resources/gtk/help-overlay.ui:180
 msgctxt "shortcut window"
 msgid "Toggle bookmark for current page"
-msgstr "Schakel bladwijzer voor huidige pagina in"
+msgstr "Bladwijzer voor huidige pagina aan/uit"
 
 #: src/app/resources/gtk/help-overlay.ui:187
 msgctxt "shortcut window"
@@ -267,12 +270,12 @@ msgstr "Zoek in"
 #: src/app/resources/gtk/help-overlay.ui:200
 msgctxt "shortcut window"
 msgid "Next match"
-msgstr "Volgende ronde"
+msgstr "Volgende overeenkomst"
 
 #: src/app/resources/gtk/help-overlay.ui:207
 msgctxt "shortcut window"
 msgid "Previous match"
-msgstr "Vorige ronde"
+msgstr "Vorige overeenkomst"
 
 #: src/app/resources/gtk/help-overlay.ui:216
 msgctxt "shortcut window"
@@ -282,33 +285,33 @@ msgstr "Zoom"
 #: src/app/resources/gtk/help-overlay.ui:220
 msgctxt "shortcut window"
 msgid "Zoom in"
-msgstr "In zoomen"
+msgstr "Zoom in"
 
 #: src/app/resources/gtk/help-overlay.ui:227
 msgctxt "shortcut window"
 msgid "Zoom out"
-msgstr "Uitzoomen"
+msgstr "Zoom uit"
 
 #: src/app/resources/gtk/help-overlay.ui:234
 msgctxt "shortcut window"
 msgid "Reset zoom"
-msgstr "Zoom resetten"
+msgstr "Oorspronkelijk zoomniveau"
 
 #: src/app/application.vala:15
 msgid "Print version number"
-msgstr "Versienummer afdrukken"
+msgstr "Toon het versienummer"
 
 #: src/app/utils/language-formater.vala:45
 msgid "Unspecified language"
-msgstr "Niet-gespecificeerde taal"
+msgstr "Niet-opgegeven taal"
 
 #: src/app/utils/tag-formater.vala:6
 msgid "No pictures"
-msgstr "Geen foto's"
+msgstr "Er zijn geen foto's"
 
 #: src/app/utils/tag-formater.vala:7
 msgid "No videos"
-msgstr "Geen video's"
+msgstr "Er zijn geen video's"
 
 #: src/app/utils/tag-formater.vala:8
 msgid "Full text index"
@@ -316,15 +319,15 @@ msgstr "Volledige tekstindex"
 
 #: src/app/ui/content/search-view.vala:32
 msgid "No recent searches."
-msgstr "Geen recente zoekopdrachten."
+msgstr "Er zijn geen recente zoekopdrachten."
 
 #: src/app/ui/content/search-view.vala:46
 msgid "No results."
-msgstr "Geen resultaten."
+msgstr "Er zijn geen resultaten."
 
 #: src/app/ui/content/history-view.vala:28
 msgid "No browsing history."
-msgstr "Geen browsegeschiedenis"
+msgstr "Er is geen navigatiegeschiedenis."
 
 #: src/app/ui/content/history-view.vala:77
 msgid "%e %b %y"
@@ -358,7 +361,7 @@ msgstr "Titel"
 
 #: src/app/ui/content/details-dialog.vala:122
 msgid "Location"
-msgstr "Plaats"
+msgstr "Locatie"
 
 #: src/app/ui/content/details-dialog.vala:124
 msgid "Date"
@@ -394,19 +397,19 @@ msgstr "Aantal media"
 
 #: src/app/ui/content/details-dialog.vala:132
 msgid "Creator"
-msgstr "Makelaar"
+msgstr "Auteur"
 
 #: src/app/ui/content/details-dialog.vala:133
 msgid "Publisher"
-msgstr "Uitgeverij"
+msgstr "Uitgever"
 
 #: src/app/ui/content/details-dialog.vala:134
 msgid "Tags"
-msgstr "Tags"
+msgstr "Labels"
 
 #: src/app/ui/content/bookmark-view.vala:23
 msgid "No bookmarks saved."
-msgstr "Geen bladwijzers opgeslagen."
+msgstr "Er zijn geen bladwijzers opgeslagen."
 
 #: src/app/ui/content/status-label.vala:28
 #, c-format
@@ -424,23 +427,23 @@ msgstr "Laatst vernieuwd: %H:%M, %e.%b.%Y"
 
 #: src/app/ui/content/status-label.vala:61
 #, c-format
-msgid "%lluY ago" 
-msgstr "%lluA geleden"
+msgid "%lluY ago"
+msgstr "%lluj geleden"
 
 #: src/app/ui/content/status-label.vala:63
 #, c-format
 msgid "%lluM ago"
-msgstr "%lluM geleden"
+msgstr "%llum geleden"
 
 #: src/app/ui/content/status-label.vala:65
 #, c-format
 msgid "%lluD ago"
-msgstr "%lluD geleden"
+msgstr "%llud geleden"
 
 #: src/app/ui/content/status-label.vala:67
 #, c-format
 msgid "%lluh ago"
-msgstr "%lluh geleden"
+msgstr "%lluu geleden"
 
 #: src/app/ui/content/status-label.vala:69
 #, c-format
@@ -457,15 +460,16 @@ msgid ""
 "No archive recently opened. <b>Please select an archive from the following "
 "sections or open it manually.</b>"
 msgstr ""
-"Geen recent geopend archief. <b>Selecteer een archief uit de volgende "
-"secties of open het handmatig.</b>"
+"Er is geen onlangs geopend archief. <b>Kies een archief uit de volgende "
+"secties of open handmatig een archief.</b>"
 
 #: src/app/ui/content/home-view.vala:19
 msgid ""
 "No archive automaticly detected on your system. <b>Please download one from "
 "the following section.</b>"
-msgstr "Geen archief automatisch gedetecteerd op uw systeem. <b>Download er één van "
-"de volgende sectie.</b> "
+msgstr ""
+"Er is geen archief aangetroffen op uw systeem. <b>Download een archief in de "
+"volgende sectie.</b>"
 
 #: src/app/ui/content/home-view.vala:23
 msgid ""
@@ -482,23 +486,34 @@ msgid ""
 "&#8226; Fedora:\n"
 "   <tt># dnf install tracker</tt>"
 msgstr ""
+"<span weight=\"bold\" foreground=\"#f57900\">Tracker is niet aangetroffen op "
+"uw systeem.</span> WebArchives kan hierdoor geen automatische lijst met "
+"archieven op uw systeem samenstellen.\n"
+"\n"
+"<b>Installeer Tracker met behulp van uw pakketbeheerder en meld u af en weer "
+"aan.</b>\n"
+"\n"
+"&#8226; Debian/Ubuntu:\n"
+"   <tt># apt install tracker</tt>\n"
+"\n"
+"&#8226; Fedora:\n"
+"   <tt># dnf install tracker</tt>"
 
 #: src/app/ui/content/home-view.vala:35
 msgid ""
 "No archive available for download. <b>Please refresh this list using the "
 "appropriate button.</b>"
 msgstr ""
-"Geen archief beschikbaar om te downloaden. <b>Vernieuw deze lijst met de "
-"juiste knop.</b>"
+"Er is geen archief beschikbaar. <b>Vernieuw de lijst met de juiste knop.</b>"
 
 #: src/app/ui/content/home-view.vala:63
 msgid "Cannot open the archive file"
-msgstr "Kan het archiefbestand niet openen"
+msgstr "Het archiefbestand kan niet worden geopend"
 
 #. RECENTS
 #: src/app/ui/content/home-view.vala:97
 msgid "Recents"
-msgstr "Recent"
+msgstr "Onlangs geopend"
 
 #: src/app/ui/content/home-view.vala:106
 msgid "Open a web archive"
@@ -514,20 +529,20 @@ msgstr "Vernieuwen"
 
 #: src/app/ui/content/home-view.vala:213
 msgid "Remote"
-msgstr "Afgelegen"
+msgstr "Extern"
 
 #: src/app/ui/content/home-view.vala:247
 msgid "Downloading"
-msgstr "Downloaden"
+msgstr "Bezig met downloaden…"
 
 #: src/app/ui/content/home-view.vala:483
 #, c-format
 msgid "How would you like to download %s ?"
-msgstr "Hoe wil je downloaden «%s»?"
+msgstr "Hoe wilt u «%s» downloaden?"
 
 #: src/app/ui/content/home-view.vala:487
 msgid "This will open a third-party application to download the archive."
-msgstr "Hierdoor wordt een applicatie van derden geopend om het archief te downloaden."
+msgstr "Er wordt een externe toepassing geopend om het archief te downloaden."
 
 #: src/app/ui/content/home-view.vala:489
 msgid "From a server"
@@ -535,44 +550,44 @@ msgstr "Van een server"
 
 #: src/app/ui/content/home-view.vala:490
 msgid "Peer-to-peer network"
-msgstr "Peer-to-peer netwerk"
+msgstr "Peer-to-peernetwerk"
 
 #: src/app/ui/content/web-view.vala:370
 #, c-format
 msgid "File downloaded: %s"
-msgstr "Bestand gedownload: %s"
+msgstr "Het bestand is gedownload: %s"
 
 #: src/app/ui/gtk/notebook/notebook-popup-menu.vala:13
 msgid "Detach to a new window"
-msgstr "Maak los naar een nieuw venster"
+msgstr "Openen in nieuw venster"
 
 #: src/app/ui/header-bar/bookmark-button.vala:9
 msgid "Toggle bookmark for current page"
-msgstr "Schakel bladwijzer voor huidige pagina in"
+msgstr "Bladwijzer voor huidige pagina aan/uit"
 
 #: src/app/ui/header-bar/navigation-box.vala:14
 msgid "Go to the homepage"
-msgstr "Ga naar de homepage"
+msgstr "Ga naar de startpagina"
 
 #: src/app/ui/header-bar/navigation-box.vala:18
 msgid "Go back to the previous page"
-msgstr "ga terug naar de vorige pagina"
+msgstr "Ga naar de vorige pagina"
 
 #: src/app/ui/header-bar/navigation-box.vala:20
 msgid "Go forward to the next page"
-msgstr "Ga door naar de volgende pagina"
+msgstr "Ga naar de volgende pagina"
 
 #: src/app/ui/header-bar/new-tab-button.vala:9
 msgid "Open a new tab"
-msgstr "Open een nieuw tabblad"
+msgstr "Nieuw tabblad openen"
 
 #: src/app/ui/header-bar/night-mode-button.vala:8
 msgid "Night mode"
-msgstr "Nachtstand"
+msgstr "Donker thema"
 
 #: src/app/ui/header-bar/popover-menu.vala:26
 msgid "Search in..."
-msgstr "Zoek in…"
+msgstr "Zoeken in…"
 
 #: src/app/ui/header-bar/popover-menu.vala:32
 msgid "Print"
@@ -592,15 +607,15 @@ msgstr "Over"
 
 #: src/app/ui/header-bar/popover-menu.vala:96
 msgid "Quit"
-msgstr "Sluit"
+msgstr "Afsluiten"
 
 #: src/app/ui/header-bar/search-in-bar.vala:11
 msgid "Find previous occurrence of the search string"
-msgstr "Zoek het vorige exemplaar van de zoekreeks"
+msgstr "Zoeken naar vorige overeenkomst"
 
 #: src/app/ui/header-bar/search-in-bar.vala:16
 msgid "Find next occurrence of the search string"
-msgstr "Zoek het volgende exemplaar van de zoekreeks"
+msgstr "Zoeken naar volgende overeenkomst"
 
 #: src/app/ui/header-bar/zoom-box.vala:16
 msgid "Zoom out"
@@ -608,19 +623,19 @@ msgstr "Uitzoomen"
 
 #: src/app/ui/header-bar/zoom-box.vala:21
 msgid "Reset zoom"
-msgstr "Zoom resetten"
+msgstr "Oorspronkelijk zoomniveau"
 
 #: src/app/ui/header-bar/zoom-box.vala:26
 msgid "Zoom in"
-msgstr "In zoomen"
+msgstr "Inzoomen"
 
 #: src/app/ui/window.vala:311
 msgid "A Web archives viewer."
-msgstr "Een webarchiefviewer."
+msgstr "Een webarchief-weergavetoepassing."
 
 #: src/app/ui/window.vala:312
 msgid "Copyright © 2017-2017 - Birros"
-msgstr "auteursrechten © 2017-2017 Birros"
+msgstr "Auteursrecht © 2017-2017 - Birros"
 
 #: src/app/ui/window.vala:431
 msgid "Please choose a file"
@@ -628,4 +643,4 @@ msgstr "Kies een bestand"
 
 #: src/app/ui/window.vala:501
 msgid "Are you sure to open external link?"
-msgstr "Weet je zeker dat je een externe link wilt openen?"
+msgstr "Weet u zeker dat u deze externe link wilt openen?"

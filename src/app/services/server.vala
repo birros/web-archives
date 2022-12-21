@@ -21,13 +21,13 @@ public class WebArchives.Server : Soup.Server {
         // Try to setup the server listener on ipv4 then ipv6, otherwise failing
         try {
             listen_local (0, Soup.ServerListenOptions.IPV4_ONLY);
-            url = get_uris().data.to_string(false);
+            url = get_uris().data.to_string();
         } catch (Error e) {
             warning (e.message);
 
             try {
                 listen_local (0, Soup.ServerListenOptions.IPV6_ONLY);
-                url = get_uris().data.to_string(false);
+                url = get_uris().data.to_string();
             } catch(Error e2) {
                 warning (e.message);
 
@@ -83,8 +83,8 @@ public class WebArchives.Server : Soup.Server {
         return count;
     }
 
-    private static string? get_referer (Soup.Message msg) {
-        Soup.MessageHeaders headers = msg.request_headers;
+    private static string? get_referer (Soup.ServerMessage msg) {
+        Soup.MessageHeaders headers = msg.get_request_headers();
         string? referer = headers.get_one ("Referer");
         return referer;
     }
@@ -162,10 +162,9 @@ public class WebArchives.Server : Soup.Server {
      */
     private void default_handler (
         Soup.Server        server,
-        Soup.Message       msg,
+        Soup.ServerMessage msg,
         string             path_p,
-        GLib.HashTable?    query,
-        Soup.ClientContext client
+        GLib.HashTable?    query
     ) {
         string path = path_p;
         unowned Zim.File file;
@@ -181,7 +180,7 @@ public class WebArchives.Server : Soup.Server {
 
         // check if uuid is set
         if (article.uuid == null) {
-            msg.set_status (Soup.Status.NOT_FOUND);
+            msg.set_status (Soup.Status.NOT_FOUND, null);
             return;
         }
 
@@ -196,7 +195,7 @@ public class WebArchives.Server : Soup.Server {
         if (archives.contains (article.uuid)) {
             file = archives.get (article.uuid);
         } else {
-            msg.set_status (Soup.Status.NOT_FOUND);
+            msg.set_status (Soup.Status.NOT_FOUND, null);
             return;
         }
 
@@ -235,10 +234,10 @@ public class WebArchives.Server : Soup.Server {
             mime_type = page.get_mime_type();
 
             msg.set_response (mime_type, Soup.MemoryUse.COPY, blob);
-            msg.set_status (Soup.Status.OK);
+            msg.set_status (Soup.Status.OK, null);
         } else {
             info ("NOT_FOUND: %s", path);
-            msg.set_status (Soup.Status.NOT_FOUND);
+            msg.set_status (Soup.Status.NOT_FOUND, null);
             msg.set_response (
                 "text/html", Soup.MemoryUse.COPY, "Not Found.".data
             );

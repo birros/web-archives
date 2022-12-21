@@ -56,28 +56,25 @@ public class WebArchives.FileDownloader : Object {
             }
         });
 
-        message.got_chunk.connect((message, buf) => {
-            // progress
-            current_length += buf.length;
-            if (header_size > 0) {
-                progress = (double) (current_length / (double) header_size);
-            }
-        });
-
-        session.queue_message (message, (sess, msg) => {
-            // cancel if not ok
-            if (msg.status_code != 200) {
-                canceled();
-                return;
-            }
-
+        // FIXME: progress code removed due to `got_chunk` depreciation
+        
+        // send message asynchronously
+        session.send_async.begin (message, 0, null, (obj, res) => {
             try {
+                InputStream? stream = session.send_async.end (res);
+
+                // cancel if stream is null
+                if (stream == null) {
+                    canceled();
+                    return;
+                }
+
                 // delete previous file
                 delete_file (filepath);
 
                 // write data
                 DataOutputStream dos = create_part_file (filepath);
-                dos.write (msg.response_body.data);
+                dos.splice (stream, GLib.OutputStreamSpliceFlags.CLOSE_SOURCE);
                 dos.flush ();
 
                 // rename file & complete

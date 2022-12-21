@@ -88,9 +88,9 @@ $ flatpak install com.github.birros.WebArchives
 $ git clone --recurse-submodules https://github.com/birros/web-archives.git \
     && cd web-archives
 $ flatpak install -y \
-    org.gnome.Platform//42 \
-    org.gnome.Sdk//42 \
-    org.freedesktop.Sdk.Extension.node16//21.08
+    org.gnome.Platform//43 \
+    org.gnome.Sdk//43 \
+    org.freedesktop.Sdk.Extension.node16//22.08
 $ flatpak-builder \
     --ccache \
     --force-clean \

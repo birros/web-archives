@@ -1,4 +1,4 @@
-i18n.merge_file('desktop-file',
+i18n.merge_file(
     input: 'com.github.birros.WebArchives.desktop.in',
     output: 'com.github.birros.WebArchives.desktop',
     install: true,

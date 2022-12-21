@@ -1,4 +1,4 @@
-i18n.merge_file('appdata-file',
+i18n.merge_file(
     input: 'com.github.birros.WebArchives.appdata.xml.in',
     output: 'com.github.birros.WebArchives.appdata.xml',
     install: true,

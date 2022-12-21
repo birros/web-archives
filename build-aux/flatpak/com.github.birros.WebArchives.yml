@@ -1,6 +1,6 @@
 id: com.github.birros.WebArchives
 runtime: org.gnome.Platform
-runtime-version: '41'
+runtime-version: '42'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node16
@@ -153,8 +153,8 @@ modules:
       env:
         npm_config_nodedir: /usr/lib/sdk/node16
     sources:
-      - type: git
-        url: https://github.com/birros/web-archives.git
+      - type: dir
+        path: ../..
       #
       # preinstall npm packages, generated-sources.*.json was generated using
       # github.com/flatpak/flatpak-builder-tools/node from package-lock.json

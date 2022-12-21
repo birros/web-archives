@@ -1,1 +1,4 @@
 po/web-archives.pot
+.flatpak-builder
+builddir
+repo

@@ -5,9 +5,9 @@ articles from large community projects such as [Wikipedia] or [Wikisource].
 
 ## Goals / Reasons
 
-* __Availability__ : offline, anytime, anywhere
-* __Confidentiality__ : no need to trust network's protocols or server's policy
-* __Shareability__ : disseminate knowledge
+* **Availability** : offline, anytime, anywhere
+* **Confidentiality** : no need to trust network's protocols or server's policy
+* **Shareability** : disseminate knowledge
 
 ## Disclaimer
 
@@ -73,52 +73,64 @@ WebArchives was developed and tested under [GNU/Linux], with [GNOME] in sight.
 However, it can be used under other desktop environments.
 
 No method is provided to install this application on other platforms, such as
-__Windows__ or __macOS__. This is a desktop application so it's not compatible
-with mobile platforms such as __Android__ or __iOS__.
+**Windows** or **macOS**. This is a desktop application so it's not compatible
+with mobile platforms such as **Android** or **iOS**.
 
-### WebArchives in Flatpak format
+### From Flathub
 
-[Flatpak] installation is required : [Getting Flatpak].
+```shell
+$ flatpak install com.github.birros.WebArchives
+```
 
-Then add the [Flathub] repository and install WebArchives from a [terminal] :
+### From sources
 
-    flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
-    flatpak install flathub com.github.birros.WebArchives
+```shell
+$ git clone --recurse-submodules https://github.com/birros/web-archives.git \
+    && cd web-archives
+$ flatpak install -y \
+    org.gnome.Platform//42 \
+    org.gnome.Sdk//42 \
+    org.freedesktop.Sdk.Extension.node16//21.08
+$ flatpak-builder \
+    --ccache \
+    --force-clean \
+    --repo=repo \
+    builddir build-aux/flatpak/com.github.birros.WebArchives.yml
+$ flatpak remote-add --no-gpg-verify webarchives-repo repo
+$ flatpak install -y webarchives-repo com.github.birros.WebArchives
+```
 
-If this is your first Flatpak, restarting your session is necessary to make the
-application appear in your launcher. It can also be executed from a terminal :
+### Tracker
 
-    flatpak run com.github.birros.WebArchives
+Some **problems** may occur when running the application, especially if your
+desktop environment does not use [GTK+], such as **[Kde]**.
 
-Some __problems__ may occur when running the application, especially if your
-desktop environment does not use [GTK+], such as __[Kde]__.
-
-The installation of __tracker service__ is then required on the system
+The installation of **tracker service** is then required on the system
 side to solve these problems, requiring the execution of one of these commands
 depending on your distribution :
 
-__Debian & Ubuntu__ :
+**Debian & Ubuntu**:
 
-    apt install tracker
+```shell
+$ apt install tracker
+```
 
-__Fedora__ :
+**Fedora**:
 
-    dnf install tracker
+```shell
+$ dnf install tracker
+```
 
 ### Other installation methods
 
 The implementation of a common installation method for existing distributions
-is in preparation, with __Debian__ and __Ubuntu__ as priorities.
+is in preparation, with **Debian** and **Ubuntu** as priorities.
 
 ## Alternatives
 
 This application is directly inspired by the [Kiwix] application. In this way
 WebArchives as well as Kiwix can read the Web archives in [ZIM format]. Kiwix is
-available for __Windows__, __GNU/Linux__, __iOS__ and __Android__.
-
-## For contributions and technical documentation
-
-See : [HACKING.md].
+available for **Windows**, **GNU/Linux**, **iOS** and **Android**.
 
 ## Useful links
 
@@ -134,8 +146,6 @@ See : [HACKING.md].
 [Darkreader]: https://github.com/darkreader/darkreader
 [GNU/Linux]: https://en.wikipedia.org/wiki/Linux
 [GNOME]: https://en.wikipedia.org/wiki/GNOME
-[Flatpak]: https://en.wikipedia.org/wiki/Flatpak
-[Getting Flatpak]: https://flatpak.org/getting.html
 [Flathub]: https://flathub.org/
 [terminal]: https://en.wikipedia.org/wiki/Terminal_emulator
 [GTK+]: https://en.wikipedia.org/wiki/GTK+

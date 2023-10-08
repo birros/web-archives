@@ -19,7 +19,7 @@ conf.set_quoted('LOCALEDIR', localedir)
 conf.set_quoted('WEB_EXTENSIONS_DIRECTORY', webextensionsdir)
 
 gtk_dep = dependency('gtk+-3.0')
-zim_dep = dependency('zim-glib-3.0', version : '>=3.2.0')
+zim_dep = dependency('zim-glib-3.0', version : '>=3.2.0')    
 sqlite_dep = dependency('sqlite3')
 webkit_dep = dependency('webkit2gtk-4.1')
 soup_dep = dependency('libsoup-3.0')

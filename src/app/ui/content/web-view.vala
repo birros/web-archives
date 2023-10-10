@@ -135,29 +135,29 @@ class WebArchives.WebView : Gtk.Overlay {
         switch (key) {
             case SearchInState.Key.UP:
             {
-                web_view.run_javascript.begin (
-                    JAVASCRIPT.printf ("up"), null
+                web_view.evaluate_javascript.begin (
+                    JAVASCRIPT.printf ("up"), -1, null, null, null
                 );
                 break;
             }
             case SearchInState.Key.DOWN:
             {
-                web_view.run_javascript.begin (
-                    JAVASCRIPT.printf ("down"), null
+                web_view.evaluate_javascript.begin (
+                    JAVASCRIPT.printf ("down"), -1, null, null, null
                 );
                 break;
             }
             case SearchInState.Key.PAGE_UP:
             {
-                web_view.run_javascript.begin (
-                    JAVASCRIPT.printf ("page-up"), null
+                web_view.evaluate_javascript.begin (
+                    JAVASCRIPT.printf ("page-up"), -1, null, null, null
                 );
                 break;
             }
             case SearchInState.Key.PAGE_DOWN:
             {
-                web_view.run_javascript.begin (
-                    JAVASCRIPT.printf ("page-down"), null
+                web_view.evaluate_javascript.begin (
+                    JAVASCRIPT.printf ("page-down"), -1, null, null, null
                 );
                 break;
             }
@@ -173,20 +173,20 @@ class WebArchives.WebView : Gtk.Overlay {
         inject_darkreader_js ();
 
         if (context.night_mode_state.active) {
-            web_view.run_javascript.begin (
+            web_view.evaluate_javascript.begin (
                 """
                 setTimeout (function() {
                     darkreader.enable();
                 }, 1);
-                """, null
+                """, -1, null, null, null
             );
         } else {
-            web_view.run_javascript.begin (
+            web_view.evaluate_javascript.begin (
                 """
                 setTimeout (function() {
                     darkreader.disable();
                 }, 1);
-                """, null
+                """, -1, null, null, null
             );
         }
     }

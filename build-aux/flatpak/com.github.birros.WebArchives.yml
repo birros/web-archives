@@ -2,8 +2,6 @@ app-id: com.github.birros.WebArchives
 runtime: org.gnome.Platform
 runtime-version: '43'
 sdk: org.gnome.Sdk
-sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node16
 command: web-archives
 finish-args:
   - --socket=wayland
@@ -142,31 +140,19 @@ modules:
   #
   # require
   #   libzim-glib, libisocodes, libhandy
-  # subprojects/darkreader require
-  #   nodejs
   #
   - name: web-archives
     buildsystem: meson
     builddir: true
-    build-options:
-      append-path: /usr/lib/sdk/node16/bin
-      env:
-        npm_config_nodedir: /usr/lib/sdk/node16
     sources:
       - type: dir
         path: ../..
-      #
-      # preinstall npm packages, generated-sources.*.json was generated using
-      # github.com/flatpak/flatpak-builder-tools/node from package-lock.json
-      #
-      - modules/generated-sources.json
       - type: shell
         commands:
-          - cd subprojects/darkreader && npm install --cache=../../flatpak-node/npm-cache --offline --no-optional
-      #
-      # prevent 'npm install' from being launched when compiling darkreader, to
-      # avoid the 'cb() never called!' error
-      #
-      - type: shell
-        commands:
-          - sed -i "s/find_program('npm')/find_program('true')/g" subprojects/darkreader/meson.build
+          - rm -f build-aux/darkreader/*.js
+      - type: file
+        # path: ../../build-aux/darkreader/web-archives-darkreader_v0.0.1.js
+        url: https://github.com/birros/web-archives-darkreader/releases/download/v0.0.1/web-archives-darkreader_v0.0.1.js
+        sha256: 8ee840aacd9e09864a7ab2e75f736f696dcd4b4b8e86a07ba727ff3d10ef32a1
+        dest: build-aux/darkreader
+        dest-filename: web-archives-darkreader_v0.0.1.js

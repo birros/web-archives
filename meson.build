@@ -29,8 +29,15 @@ xml_dep = dependency('libxml-2.0')
 isocodes_dep = dependency('libisocodes')
 handy_dep = dependency('libhandy-1', version : '>=1.0.0')
 
-darkreader_sp = subproject('darkreader')
-darkreader_dep = darkreader_sp.get_variable('darkreader')
+darkreader_command = run_command('make', '-C', 'build-aux/darkreader', check: true)
+darkreader_output = darkreader_command.stdout().strip()
+darkreader_error = darkreader_command.stderr().strip()
+if (darkreader_output != '')
+    message(darkreader_output)
+endif
+if (darkreader_error != '')
+    message(darkreader_error)
+endif
 
 meson.add_install_script (
     join_paths('build-aux', 'meson', 'post_install.py')

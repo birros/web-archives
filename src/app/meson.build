@@ -10,10 +10,7 @@ resources = gnome.compile_resources(
     c_name: 'web_archives',
     source_dir: [
         'src/app',
-        join_paths(meson.build_root(), 'subprojects/darkreader')
-    ],
-    dependencies: [
-        darkreader_dep
+        '../../build-aux/darkreader'
     ]
 )
 

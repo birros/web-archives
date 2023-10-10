@@ -7,7 +7,7 @@
         <file alias="gtk/help-overlay.ui">resources/gtk/help-overlay.ui</file>
         <file compressed="true" alias="icons/scalable/actions/ephy-bookmarks-symbolic.svg">resources/icons/scalable/actions/ephy-bookmarks-symbolic.svg</file>
         <file compressed="true" alias="icons/scalable/actions/elementary-document-open-recent-symbolic.svg">resources/icons/scalable/actions/elementary-document-open-recent-symbolic.svg</file>
-        <!-- built by subprojects/darkreader -->
-        <file alias="js/darkreader.js">darkreader.js</file>
+        <!-- see build-aux/darkreader -->
+        <file alias="js/darkreader.js">web-archives-darkreader.js</file>
     </gresource>
 </gresources>

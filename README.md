@@ -85,16 +85,15 @@ $ flatpak install com.github.birros.WebArchives
 ### From sources
 
 ```shell
-$ git clone --recurse-submodules https://github.com/birros/web-archives.git \
+$ git clone https://github.com/birros/web-archives.git \
     && cd web-archives
 $ flatpak install -y \
     org.gnome.Platform//43 \
     org.gnome.Sdk//43 \
-    org.flatpak.Builder \
-    org.freedesktop.Sdk.Extension.node16//22.08
+    org.flatpak.Builder
 $ flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
     --exceptions \
-    build-aux/flatpak/com.github.birros.WebArchives.yml
+    manifest build-aux/flatpak/com.github.birros.WebArchives.yml
 $ flatpak-builder \
     --ccache \
     --force-clean \

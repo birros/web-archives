@@ -6,21 +6,18 @@
  *  https://github.com/kiwix/kiwix-lib/blob/e9ab074b5d73ecbaa37eb140fb753d34896e5d3a/src/reader.cpp
  */
 
-private class Suggestion {
+public class Suggestion {
     public string title;
-    public string url;
+    public string path;
 }
 
 public class WebArchives.ZimReader {
-    private Zim.File zim_file;
-    private List<Suggestion> suggestions;
-    private uint suggestions_offset;
+    private Zim.Archive archive;
+    private Zim.SuggestionSearcher suggestion_searcher;
 
-    public ZimReader (Zim.File zim_file) {
-        this.zim_file = zim_file;
-
-        suggestions = new List<Suggestion> ();
-        suggestions_offset = 0;
+    public ZimReader (Zim.Archive archive) {
+        this.archive = archive;
+        this.suggestion_searcher = new Zim.SuggestionSearcher (archive);
     }
 
     public string get_title () {
@@ -56,38 +53,28 @@ public class WebArchives.ZimReader {
     }
 
     public ulong get_file_size () {
-        ulong size = zim_file.get_filesize ();
+        ulong size = archive.get_filesize ();
         return size / 1024;
     }
 
     public string get_id () {
-        Zim.Fileheader fileheader = zim_file.get_fileheader ();
-        string uuid = fileheader.get_uuid ();
+        string uuid = archive.get_uuid ();
         return uuid;
     }
 
     public string get_random_page_url () {
-        uint articles_namespace_begin_offset =
-            zim_file.get_namespace_begin_offset ('A');
-        uint articles_namespace_count = zim_file.get_namespace_count ('A');
-
-        int random_number = Random.int_range(0, (int) articles_namespace_count);
-        uint idx = articles_namespace_begin_offset + random_number;
-
-        Zim.Article article = zim_file.get_article_by_index (idx);
-        string url = "A/" + article.get_url ();
-
-        return url;
+        try {
+            Zim.Entry entry = archive.get_random_entry ();
+            string url = entry.get_path ();
+            return url;
+        } catch (Error err) {
+            warning(err.message);
+            return "C/";
+        }
     }
 
     public uint get_article_count () {
-        HashTable<string, uint> table = parseCounterMetadata ();
-
-        uint count = table.get ("text/html");
-        if (count == 0) {
-            count = zim_file.get_namespace_count ('A');
-        }
-
+        uint count = archive.get_article_count();
         return count;
     }
 
@@ -100,163 +87,55 @@ public class WebArchives.ZimReader {
             count += table.get (type);
         }
 
-        if (count == 0) {
-            count = zim_file.get_namespace_count ('I');
-        }
         return count;
     }
 
     public uint get_global_count () {
-        uint global_count = zim_file.get_count_articles ();
+        uint global_count = archive.get_all_entry_count ();
         return global_count;
     }
 
     public bool get_faveicon (out uint8[] data, out string mimetype) {
-        uint8[] foo = {};
-        data = foo;
-        mimetype = "";
+        try {
+            Zim.Item item = archive.get_illustration_item (48);
 
-        string [] paths = {
-            "-/favicon.png", "I/favicon.png", "I/favicon", "-/favicon"
-        };
-        foreach (unowned string path in paths) {
-            string [] infos = path.split ("/");
-            char namesp = infos[0][0];
-            string url = infos[1];
+            data = item.get_data();
+            mimetype = item.get_mimetype();
 
-            Zim.Article article = zim_file.get_article_by_namespace (
-                namesp, url
-            );
-            if (article.good ()) {
-                data = article.get_data ();
-                mimetype = article.get_mime_type ();
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    public bool get_next_suggestion (
-        out string suggestion_title,
-        out string suggestion_url
-    ) {
-        if (this.suggestions_offset != this.suggestions.length()) {
-            Suggestion suggestion = this.suggestions.nth_data (
-              this.suggestions_offset
-            );
-            suggestion_title = suggestion.title;
-            suggestion_url = suggestion.url;
-            this.suggestions_offset++;
             return true;
-        } else {
-            suggestion_title = "";
-            suggestion_url = "";
+        } catch (Error err) {
+            warning(err.message);
+
+            data = {};
+            mimetype = "";
+
             return false;
         }
     }
 
-    public void search_suggestions_smart (string query, uint limit) {
-        this.suggestions = new List<Suggestion> ();
-        this.suggestions_offset = 0;
+    public List<Suggestion> search_suggestions (string query, uint limit) {
+        List<Suggestion> suggestions = new List<Suggestion> ();
 
-        Zim.Search search = new Zim.Search (zim_file);
-        search.set_query (query);
-        search.set_range (0, limit);
-        search.set_suggestion_mode (true);
+        Zim.SuggestionSearch suggestion_search = suggestion_searcher.suggest (query);
+        Zim.SuggestionResultIterator results_iterator = suggestion_search.get_results (0, (int) limit);
 
-        uint matches_estimated = search.get_matches_estimated ();
+        do {
+            try {
+                Zim.Entry entry = results_iterator.get_entry ();
 
-        if (matches_estimated > 0) {
-            Zim.SearchIterator search_iterator = search.begin ();
-            do {
                 Suggestion suggestion = new Suggestion ();
-                suggestion.title = search_iterator.get_title();
-                suggestion.url = "/" + search_iterator.get_url();
-                this.suggestions.append (suggestion);
-            } while (search_iterator.next());
-        } else {
-            string[] variants = get_title_variants (query);
-            foreach (string variant in variants) {
-                search_suggestions (variant, limit);
+                suggestion.title = entry.get_title();
+                suggestion.path = "/" + entry.get_path();
+                suggestions.append (suggestion);
+            } catch (Error err) {
+                continue;
             }
-        }
-    }
+        } while (results_iterator.next());
 
-    private string[] get_title_variants (string title) {
-        string[] variants = {};
-        variants += title;
-        variants += change_case (title, true, false); //first letter upper case
-        variants += change_case (title, false, false); //first letter lower case
-        variants += change_case (title, true, true); //title case
-        return variants;
-    }
+        // If the `SuggestionSearcher` doesn't work, perhaps iterate on the
+        // article titles
 
-    private string change_case (string title, bool upper, bool title_case) {
-        bool next = true;
-
-        StringBuilder result = new StringBuilder ();
-        unichar c;
-
-        for (int i = 0; title.get_next_char (ref i, out c);) {
-            if (next) {
-                if (upper || title_case) {
-                    result.append_unichar (c.totitle ());
-                } else {
-                    result.append_unichar (c.tolower ());
-                }
-                next = false;
-            } else {
-                if (title_case) {
-                    result.append_unichar (c.tolower ());
-                    next = c.isspace () || c.iscntrl ();
-                } else {
-                    result.append_unichar (c);
-                }
-            }
-        }
-
-        return result.str;
-    }
-
-    private void search_suggestions (string query, uint limit) {
-        if (this.suggestions.length () > limit) {
-            return;
-        }
-
-        if (query.length == 0) {
-            return;
-        }
-
-        Zim.FileIterator file_iterator = zim_file.find_by_title ('A', query);
-        while (true) {
-            Zim.Article article = file_iterator.get_article();
-
-            Suggestion suggestion = new Suggestion ();
-            suggestion.title = article.get_title();
-            suggestion.url = "/" + article.get_url();
-
-            if (suggestion.title.has_prefix (query)) {
-                bool insert = true;
-                this.suggestions.foreach ((item) => {
-                    if (item.url == suggestion.url) {
-                        insert = false;
-                        return;
-                    }
-                });
-                if (insert) {
-                    this.suggestions.append (suggestion);
-                }
-            }
-
-            if (!(
-                  file_iterator.next() &&
-                  this.suggestions.length () < limit &&
-                  suggestion.title.has_prefix (query)
-                )) {
-                break;
-            }
-        }
+        return suggestions;
     }
 
     private HashTable<string, uint> parseCounterMetadata () {
@@ -278,15 +157,12 @@ public class WebArchives.ZimReader {
     }
 
     private string getMetatag (string name) {
-        Zim.Article article = zim_file.get_article_by_namespace ('M', name);
-
-        if (article.good()) {
-            uint8[] data = article.get_data ();
-            var builder = new StringBuilder ();
-            builder.append_len ((string)data, data.length);
-            return builder.str;
+        try {
+            string metadata = archive.get_metadata (name);
+            return metadata;
+        } catch (Error err) {
+            warning(err.message);
+            return "";
         }
-
-        return "";
     }
 }

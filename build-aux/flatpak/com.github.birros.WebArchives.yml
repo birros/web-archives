@@ -62,8 +62,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/openzim/libzim/archive/6.2.2.tar.gz
-        sha256: 6619035d35c9ba057c80be5758fa86922802c74aca40e5fffd40b77f0f263af2
+        url: https://github.com/openzim/libzim/archive/7.2.2.tar.gz
+        sha256: 42f7f19ca50b2185fe91ea91bd676976b7e282ca31c1a70f409d2689788ee59b
 
   #
   # require
@@ -79,8 +79,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://github.com/birros/libzim-glib/archive/v3.2.0.tar.gz
-        sha256: 89cbc55254d90c70de2de8ee7f2b4aff97f582ae7f495ddfee518ef136de9357
+        url: https://github.com/birros/libzim-glib/archive/v4.0.0.tar.gz
+        sha256: f5699b35fa4fce9acedb10a518b487c6b7b0050daf25ba661c0a5d9b817de7e5
 
   - name: libgee
     build-options:

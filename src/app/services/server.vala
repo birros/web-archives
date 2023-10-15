@@ -8,12 +8,12 @@ private class Article {
 
 public class WebArchives.Server : Soup.Server {
     private const uint UUID_LENGTH = 36;
-    private HashTable<string, Zim.File> archives;
+    private HashTable<string, Zim.Archive> archives;
     private HashTable<string, uint> counts;
     public string url { get; private set; }
 
     public Server () {
-        archives = new HashTable<string, Zim.File> (str_hash, str_equal);
+        archives = new HashTable<string, Zim.Archive> (str_hash, str_equal);
         counts = new HashTable<string, uint> (str_hash, str_equal);
 
         add_handler (null, default_handler);
@@ -39,7 +39,7 @@ public class WebArchives.Server : Soup.Server {
     public void add_archive (ArchiveItem archive) {
         if (!archives.contains (archive.uuid)) {
             try {
-                Zim.File file = new Zim.File (archive.path);
+                Zim.Archive file = new Zim.Archive (archive.path);
                 archives.insert (archive.uuid, file);
                 add_count (archive);
                 info ("add archive: %s", archive.uuid);
@@ -163,18 +163,9 @@ public class WebArchives.Server : Soup.Server {
     private void default_handler (
         Soup.Server        server,
         Soup.ServerMessage msg,
-        string             path_p,
+        string             path,
         GLib.HashTable?    query
     ) {
-        string path = path_p;
-        unowned Zim.File file;
-        uint home_index;
-        Zim.Article page;
-        Zim.Article home;
-        char namesp;
-        uint8[]? blob;
-        string mime_type;
-
         string? referer = get_referer (msg);
         Article article = parse_infos (url, path, referer);
 
@@ -191,51 +182,61 @@ public class WebArchives.Server : Soup.Server {
             return;
         }
 
-        // check if a zim file corresponding to the uuid is opened
+        // check if a zim archive corresponding to the uuid is opened
+        unowned Zim.Archive archive;
         if (archives.contains (article.uuid)) {
-            file = archives.get (article.uuid);
+            archive = archives.get (article.uuid);
         } else {
             msg.set_status (Soup.Status.NOT_FOUND, null);
             return;
         }
 
-        // get the real title if it's the the main page
-        string title;
+        // get the real path if it's the the main page
+        string r_path;
         if (
             (article.title == "" || article.title == null)          &&
-            (article.namespace == 'A' || article.namespace == null)
+            (article.namespace == 'C' || article.namespace == null)
         ) {
-            if (file.get_fileheader ().has_main_page ()) {
-                home_index = file.get_fileheader ().get_main_page ();
+            Zim.Entry home = null;
+
+            if (archive.has_main_entry ()) {
+                try {
+                    home = archive.get_main_entry ();
+                } catch (Error err) {
+                    warning(err.message + ": get_main_entry");
+                }
+            }
+
+            if (home == null) {
+                try {
+                    home = archive.get_random_entry ();
+                } catch (Error err) {
+                    warning(err.message + ": get_random_entry");
+                }
+            }
+
+            if (home != null) {
+                r_path = home.get_path ();
             } else {
-                home_index = file.get_namespace_begin_offset ('A');
+                r_path = "C/";
             }
-
-            home = file.get_article_by_index (home_index);
-            title = home.get_url ();
         } else {
-            title = article.title;
+            r_path = article.title;
         }
 
-        // get the page correponding to the namespace and the title
-        if (article.namespace == null) {
-            namesp = 'A';
-        } else {
-            namesp = article.namespace;
-        }
-        page = file.get_article_by_namespace (namesp, title);
+        try {
+            Zim.Entry page = archive.get_entry_by_path (r_path);
 
-        // if the page is good send the data
-        if (page.good ()) {
-            if (page.is_redirect ()) {
-                page = page.get_redirect_article ();
-            }
-            blob = page.get_data();
-            mime_type = page.get_mime_type();
+            // if the page is good send the data
+            Zim.Item item = page.get_item(true);
+            uint8[]? blob = item.get_data();
+            string mime_type = item.get_mimetype();
 
             msg.set_response (mime_type, Soup.MemoryUse.COPY, blob);
             msg.set_status (Soup.Status.OK, null);
-        } else {
+        } catch (Error err) {
+            warning(err.message + ": " + r_path);
+
             info ("NOT_FOUND: %s", path);
             msg.set_status (Soup.Status.NOT_FOUND, null);
             msg.set_response (

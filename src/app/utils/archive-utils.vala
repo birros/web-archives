@@ -1,26 +1,27 @@
 public class WebArchives.ArchiveUtils : Object {
     public static string get_random_page_url (ArchiveItem archive) {
-        string url = "";
         try {
-            Zim.File zim = new Zim.File (archive.path);
+            Zim.Archive zim = new Zim.Archive (archive.path);
             WebArchives.ZimReader reader = new WebArchives.ZimReader (zim);
-            url = reader.get_random_page_url ();
+            string url = reader.get_random_page_url ();
             /*
              * Fix missing slash.
              */
             if (url.length > 0 && url[0] != '/') {
                 url = "/" + url;
             }
-        } catch (Error e) {
-            warning (e.message);
+    
+            return url;
+        } catch (Error err) {
+            warning(err.message);
+            return "C/";
         }
-        return url;
     }
 
     public static ArchiveItem? archive_from_file (string path) {
         try {
-            Zim.File zim = new Zim.File (path);
-            WebArchives.ZimReader reader = new WebArchives.ZimReader (zim);
+            Zim.Archive zim_archive = new Zim.Archive (path);
+            WebArchives.ZimReader reader = new WebArchives.ZimReader (zim_archive);
 
             string uuid = reader.get_id ();
 

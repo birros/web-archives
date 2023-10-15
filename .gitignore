@@ -1,4 +1,6 @@
-po/web-archives.pot
-.flatpak-builder
-builddir
-repo
+/po/web-archives.pot
+/.flatpak-builddir
+/.flatpak-builder
+/.flatpak-repo
+/app
+/build

@@ -85,8 +85,6 @@ $ flatpak install com.github.birros.WebArchives
 ### From sources
 
 ```shell
-$ git clone https://github.com/birros/web-archives.git \
-    && cd web-archives
 $ flatpak install -y \
     org.gnome.Platform//44 \
     org.gnome.Sdk//44 \
@@ -97,10 +95,33 @@ $ flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
 $ flatpak-builder \
     --ccache \
     --force-clean \
-    --repo=repo \
-    builddir build-aux/flatpak/com.github.birros.WebArchives.yml
-$ flatpak remote-add --no-gpg-verify webarchives-repo repo
+    --repo=.flatpak-repo \
+    .flatpak-builddir build-aux/flatpak/com.github.birros.WebArchives.yml
+$ flatpak remote-add --no-gpg-verify webarchives-repo .flatpak-repo
 $ flatpak install -y webarchives-repo com.github.birros.WebArchives
+```
+
+### Dev
+
+```shell
+$ flatpak-builder \
+    --ccache \
+    --force-clean \
+    --stop-at=web-archives \
+    .flatpak-builddir build-aux/flatpak/com.github.birros.WebArchives.yml
+$ flatpak-builder \
+    --run \
+    .flatpak-builddir \
+    build-aux/flatpak/com.github.birros.WebArchives.yml \
+    bash
+
+$ meson setup --libdir=lib --prefix=$(pwd)/app build
+$ meson compile -C build
+$ meson install -C build
+
+$ export LC_ALL=fr_FR.UTF-8
+$ export GSETTINGS_SCHEMA_DIR=$(pwd)/app/share/glib-2.0/schemas
+$ ./app/bin/web-archives
 ```
 
 ### Tracker

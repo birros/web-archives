@@ -86,8 +86,8 @@ $ flatpak install com.github.birros.WebArchives
 
 ```shell
 $ flatpak install -y \
-    org.gnome.Platform//44 \
-    org.gnome.Sdk//44 \
+    org.gnome.Platform//45 \
+    org.gnome.Sdk//45 \
     org.flatpak.Builder
 $ flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
     --exceptions \

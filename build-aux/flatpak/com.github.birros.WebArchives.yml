@@ -1,6 +1,6 @@
 app-id: com.github.birros.WebArchives
 runtime: org.gnome.Platform
-runtime-version: '44'
+runtime-version: '45'
 sdk: org.gnome.Sdk
 command: web-archives
 finish-args:

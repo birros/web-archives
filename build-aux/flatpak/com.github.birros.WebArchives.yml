@@ -31,8 +31,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://oligarchy.co.uk/xapian/1.4.18/xapian-core-1.4.18.tar.xz
-        sha256: 196ddbb4ad10450100f0991a599e4ed944cbad92e4a6fe813be6dce160244b77
+        url: https://oligarchy.co.uk/xapian/1.4.23/xapian-core-1.4.23.tar.xz
+        sha256: 30d3518172084f310dab86d262b512718a7f9a13635aaa1a188e61dc26b2288c
 
   - name: zstd
     buildsystem: meson
@@ -43,8 +43,8 @@ modules:
       - -Dbin_contrib=false
     sources:
       - type: archive
-        url: https://github.com/facebook/zstd/releases/download/v1.4.8/zstd-1.4.8.tar.gz
-        sha256: 32478297ca1500211008d596276f5367c54198495cf677e9439f4791a4c69f24
+        url: https://github.com/facebook/zstd/releases/download/v1.5.5/zstd-1.5.5.tar.gz
+        sha256: 9c4396cc829cfae319a6e2615202e82aad41372073482fce286fac78646d3ee4
 
   #
   # require
@@ -62,8 +62,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/openzim/libzim/archive/7.2.2.tar.gz
-        sha256: 42f7f19ca50b2185fe91ea91bd676976b7e282ca31c1a70f409d2689788ee59b
+        url: https://github.com/openzim/libzim/archive/8.2.1.tar.gz
+        sha256: b8296644b04b02c04d2ff1458fed829df39b54e8fd1bcd23c10440e160819f13
 
   #
   # require
@@ -95,8 +95,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: http://snapshot.debian.org/archive/debian/20210318T211544Z/pool/main/libg/libgee-0.8/libgee-0.8_0.20.4.orig.tar.xz
-        sha256: 524c1bf390f9cdda4fbd9a47b269980dc64ab5280f0801b53bc69d782c72de0e
+        url: https://snapshot.debian.org/archive/debian/20220920T060228Z/pool/main/libg/libgee-0.8/libgee-0.8_0.20.6.orig.tar.xz
+        sha256: 1bf834f5e10d60cc6124d74ed3c1dd38da646787fbf7872220b8b4068e476d4d
       #
       # Following fixes pkg-config error
       #
@@ -120,8 +120,8 @@ modules:
       - /share/vala
     sources:
       - type: archive
-        url: http://snapshot.debian.org/archive/debian/20210127T030125Z/pool/main/libi/libisocodes/libisocodes_1.2.3.orig.tar.xz
-        sha256: 69b63b692838ecc939076d1dc14ff4f72a4e012de8fa852f3b07d20847ed2145
+        url: https://snapshot.debian.org/archive/debian/20210826T205630Z/pool/main/libi/libisocodes/libisocodes_1.2.4.orig.tar.xz
+        sha256: 314623aac6e995f76ab8a3b26dee7d4505f924ff0a85264f060082b6c2435c79
 
   - name: libhandy
     buildsystem: meson
@@ -134,8 +134,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://gitlab.gnome.org/GNOME/libhandy/-/archive/1.2.1/libhandy-1.2.1.tar.gz
-        sha256: 90cee074048310926a1c66278fa10043a220953cc6be03f9f5eb756b6bcd1043
+        url: https://gitlab.gnome.org/GNOME/libhandy/-/archive/1.8.2/libhandy-1.8.2.tar.gz
+        sha256: 2c551aae128dff918b84943a93a58bc9be84f42a709b9e43c8d074538e68c10e
 
   #
   # require

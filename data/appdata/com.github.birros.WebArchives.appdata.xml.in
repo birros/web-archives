@@ -110,6 +110,17 @@
     <update_contact>birros@protonmail.com</update_contact>
     <translation type="gettext">web-archives</translation>
     <releases>
+        <release version="0.5.0" date="2023-10-15">
+            <description>
+                <p>
+                    This new release of WebArchives contains some bug fixes and
+                    new features.
+                </p>
+                <ul>
+                    <li>Migrate to libzim 7.0.0 and higher</li>
+                </ul>
+            </description>
+        </release>
         <release version="0.4.2" date="2021-05-09">
             <description>
                 <p>

@@ -1,6 +1,6 @@
 app-id: com.github.birros.WebArchives
 runtime: org.gnome.Platform
-runtime-version: '45'
+runtime-version: '48'
 sdk: org.gnome.Sdk
 command: web-archives
 finish-args:
@@ -31,8 +31,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://oligarchy.co.uk/xapian/1.4.23/xapian-core-1.4.23.tar.xz
-        sha256: 30d3518172084f310dab86d262b512718a7f9a13635aaa1a188e61dc26b2288c
+        url: https://oligarchy.co.uk/xapian/1.4.27/xapian-core-1.4.27.tar.xz
+        sha256: bcbc99cfbf16080119c2571fc296794f539bd542ca3926f17c2999600830ab61
 
   - name: zstd
     buildsystem: meson
@@ -43,8 +43,8 @@ modules:
       - -Dbin_contrib=false
     sources:
       - type: archive
-        url: https://github.com/facebook/zstd/releases/download/v1.5.5/zstd-1.5.5.tar.gz
-        sha256: 9c4396cc829cfae319a6e2615202e82aad41372073482fce286fac78646d3ee4
+        url: https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz
+        sha256: eb33e51f49a15e023950cd7825ca74a4a2b43db8354825ac24fc1b7ee09e6fa3
 
   #
   # require
@@ -56,14 +56,17 @@ modules:
     builddir: true
     config-opts:
       - --wrap-mode=nodownload
+      - -Dtest_data_dir=none
+      - -Dexamples=false
     cleanup:
       - /bin
       - /include
       - /lib/pkgconfig
     sources:
-      - type: archive
-        url: https://github.com/openzim/libzim/archive/8.2.1.tar.gz
-        sha256: b8296644b04b02c04d2ff1458fed829df39b54e8fd1bcd23c10440e160819f13
+      - type: git
+        url: https://github.com/openzim/libzim.git
+        tag: 9.2.3
+        commit: 398a3c25059ee0ec7e2987d6af336d67dd681ba1
 
   #
   # require
@@ -84,9 +87,7 @@ modules:
 
   - name: libgee
     build-options:
-      env:
-        PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR: /app/share/gir-1.0
-        PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_TYPELIBDIR: /app/lib/girepository-1.0
+      cflags: -Wno-error=incompatible-pointer-types
     cleanup:
       - /include
       - /lib/girepository-1.0
@@ -95,15 +96,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://snapshot.debian.org/archive/debian/20220920T060228Z/pool/main/libg/libgee-0.8/libgee-0.8_0.20.6.orig.tar.xz
+        url: https://download.gnome.org/sources/libgee/0.20/libgee-0.20.6.tar.xz
         sha256: 1bf834f5e10d60cc6124d74ed3c1dd38da646787fbf7872220b8b4068e476d4d
-      #
-      # Following fixes pkg-config error
-      #
-      - type: shell
-        commands:
-          - sed -i 's/`$PKG_CONFIG --variable=girdir gobject-introspection-1.0`/\/app\/share\/gir-1.0/g' configure
-          - sed -i 's/"$($PKG_CONFIG --variable=typelibdir gobject-introspection-1.0)"/\/app\/lib\/girepository-1.0/g' configure
 
   #
   # require
@@ -120,8 +114,8 @@ modules:
       - /share/vala
     sources:
       - type: archive
-        url: https://snapshot.debian.org/archive/debian/20210826T205630Z/pool/main/libi/libisocodes/libisocodes_1.2.4.orig.tar.xz
-        sha256: 314623aac6e995f76ab8a3b26dee7d4505f924ff0a85264f060082b6c2435c79
+        url: https://github.com/toddy15/libisocodes/archive/refs/tags/v1.2.5.tar.gz
+        sha256: cbf299de4a6ebf9e0f0cab437c1d2844c603fa479a56dbb83cee3b6684f5dc53
 
   - name: libhandy
     buildsystem: meson
@@ -134,8 +128,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://gitlab.gnome.org/GNOME/libhandy/-/archive/1.8.2/libhandy-1.8.2.tar.gz
-        sha256: 2c551aae128dff918b84943a93a58bc9be84f42a709b9e43c8d074538e68c10e
+        url: https://gitlab.gnome.org/GNOME/libhandy/-/archive/1.8.3/libhandy-1.8.3.tar.gz
+        sha256: 7e7670f5d0a6d0adc24b888da44dab938a6f52472b8944d6dd4e31b6d3569a5f
 
   #
   # require

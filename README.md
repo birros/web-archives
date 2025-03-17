@@ -92,11 +92,17 @@ $ flatpak install -y \
 $ flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
     --exceptions \
     manifest build-aux/flatpak/com.github.birros.WebArchives.yml
+$ flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
+    --exceptions \
+    appstream data/appdata/com.github.birros.WebArchives.appdata.xml.in
 $ flatpak-builder \
     --ccache \
     --force-clean \
     --repo=.flatpak-repo \
     .flatpak-builddir build-aux/flatpak/com.github.birros.WebArchives.yml
+$ flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
+    --exceptions \
+    repo .flatpak-repo
 $ flatpak remote-add --no-gpg-verify webarchives-repo .flatpak-repo
 $ flatpak install -y webarchives-repo com.github.birros.WebArchives
 ```

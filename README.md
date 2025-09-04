@@ -95,7 +95,7 @@ $ flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
 $ flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
     --exceptions \
     appstream data/appdata/com.github.birros.WebArchives.appdata.xml.in
-$ flatpak-builder \
+$ flatpak run --command=flatpak-builder org.flatpak.Builder \
     --ccache \
     --force-clean \
     --repo=.flatpak-repo \

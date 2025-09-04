@@ -217,6 +217,11 @@ public class WebArchives.Server : Soup.Server {
 
             if (home != null) {
                 r_path = home.get_path ();
+
+                if (r_path == "mainPage") {
+                    Zim.Item item = home.get_item(true);
+                    r_path = item.get_path();
+                }
             } else {
                 r_path = "C/";
             }

@@ -1,6 +1,6 @@
 app-id: com.github.birros.WebArchives
 runtime: org.gnome.Platform
-runtime-version: '48'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: web-archives
 finish-args:
@@ -31,8 +31,8 @@ modules:
       - /share
     sources:
       - type: archive
-        url: https://oligarchy.co.uk/xapian/1.4.27/xapian-core-1.4.27.tar.xz
-        sha256: bcbc99cfbf16080119c2571fc296794f539bd542ca3926f17c2999600830ab61
+        url: https://oligarchy.co.uk/xapian/1.4.29/xapian-core-1.4.29.tar.xz
+        sha256: c55c9bc8613ad3ec2c218eafca088c218ab7cddcba7ef08f3af0e542f4e521bc
 
   - name: zstd
     buildsystem: meson
@@ -54,6 +54,9 @@ modules:
   - name: libzim
     buildsystem: meson
     builddir: true
+    build-options:
+      env:
+        LDFLAGS: -licuuc
     config-opts:
       - --wrap-mode=nodownload
       - -Dtest_data_dir=none
@@ -65,8 +68,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/openzim/libzim.git
-        tag: 9.2.3
-        commit: 398a3c25059ee0ec7e2987d6af336d67dd681ba1
+        tag: 9.3.0
+        commit: f421088da622c3a1e0fc6a6ced737b10d4fa5502
 
   #
   # require

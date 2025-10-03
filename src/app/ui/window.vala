@@ -59,10 +59,12 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
         header_bar.set_context (context);
         set_titlebar (header_bar);
 
-        notebook = new Notebook ();
+        notebook = new Notebook ().get_notebook ();
         notebook.switch_page.connect (on_notebook_switch_page);
         notebook.page_removed.connect (on_notebook_page_removed);
         notebook.create_window.connect (on_notebook_create_window);
+
+        set_child (notebook);
 
         add_tab (label, page, file);
 

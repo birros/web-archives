@@ -1,5 +1,7 @@
-public class WebArchives.Content : Gtk.Stack {
+public class WebArchives.Content : Adw.Bin {
     private Context context;
+    private Gtk.Stack stack;
+
     private HomeView home_view;
     private WebView web_view;
     private SearchView search_view;
@@ -8,23 +10,33 @@ public class WebArchives.Content : Gtk.Stack {
 
     public Content (Context context) {
         this.context = context;
-        transition_type = Gtk.StackTransitionType.CROSSFADE;
 
+        stack = new Gtk.Stack () {
+            transition_type = Gtk.StackTransitionType.CROSSFADE,
+            hexpand = true,
+            vexpand = true
+        };
+
+        // Add child views
         home_view = new HomeView (context);
-        add_child (home_view);
+        stack.add_child (home_view);
 
         web_view = new WebView (context);
-        add_child (web_view);
+        stack.add_child (web_view);
 
         search_view = new SearchView (context);
-        add_child (search_view);
+        stack.add_child (search_view);
 
         bookmark_view = new BookmarkView (context);
-        add_child (bookmark_view);
+        stack.add_child (bookmark_view);
 
         history_view = new HistoryView (context);
-        add_child (history_view);
+        stack.add_child (history_view);
 
+        // Put stack inside the bin
+        set_child (stack);
+
+        // Route handling
         context.route_state.notify["route"].connect (on_route);
     }
 
@@ -38,39 +50,13 @@ public class WebArchives.Content : Gtk.Stack {
 
     private void on_route () {
         switch (context.route_state.route) {
-            case RouteState.Route.HOME:
-            {
-                set_visible_child (home_view);
-                break;
-            }
-            case RouteState.Route.WEB:
-            {
-                set_visible_child (web_view);
-                break;
-            }
-            case RouteState.Route.SEARCH:
-            {
-                set_visible_child (search_view);
-                break;
-            }
-            case RouteState.Route.BOOKMARK:
-            {
-                set_visible_child (bookmark_view);
-                break;
-            }
-            case RouteState.Route.HISTORY:
-            {
-                set_visible_child (history_view);
-                break;
-            }
-            case RouteState.Route.SEARCHIN:
-            {
-                break;
-            }
+            case RouteState.Route.HOME:     stack.set_visible_child (home_view); break;
+            case RouteState.Route.WEB:      stack.set_visible_child (web_view); break;
+            case RouteState.Route.SEARCH:   stack.set_visible_child (search_view); break;
+            case RouteState.Route.BOOKMARK: stack.set_visible_child (bookmark_view); break;
+            case RouteState.Route.HISTORY:  stack.set_visible_child (history_view); break;
+            case RouteState.Route.SEARCHIN: break;
         }
     }
-
-    ~Content () {
-        info ("destroy");
-    }
 }
+

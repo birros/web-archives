@@ -1,15 +1,25 @@
-public class WebArchives.SearchBar : Gtk.SearchEntry {
+public class WebArchives.SearchBar : Adw.Bin {
     private Context context;
     private ulong key_up_callback;
     private ulong text_callback;
 
+    private Gtk.SearchEntry entry;
+
     public SearchBar () {
-        set_max_width_chars (57);
-        search_changed.connect (on_search_changed);
+        entry = new Gtk.SearchEntry () {
+            max_width_chars = 57
+        };
+
+        entry.search_changed.connect (on_search_changed);
+
+        // Put the entry inside our widget
+        set_child (entry);
     }
 
     private void on_search_changed () {
-        context.search_state.text = get_text ();
+        if (context != null) {
+            context.search_state.text = entry.text;
+        }
     }
 
     public void set_context (Context context) {
@@ -21,11 +31,18 @@ public class WebArchives.SearchBar : Gtk.SearchEntry {
         this.context = context;
 
         key_up_callback = context.search_state.key_up.connect (() => {
-            // grab_focus_without_selecting ();
+            // entry.grab_focus_without_selecting ();
         });
+
         text_callback = context.search_state.notify["text"].connect (() => {
-            set_text (context.search_state.text);
+            entry.text = context.search_state.text;
         });
-        set_text (context.search_state.text);
+
+        entry.text = context.search_state.text;
+    }
+
+    public Gtk.SearchEntry get_entry () {
+        return entry;
     }
 }
+

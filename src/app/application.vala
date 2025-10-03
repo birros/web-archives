@@ -20,7 +20,7 @@ public class WebArchives.Application : Adw.Application {
     };
 
     public Application () {
-        GLib.Object (
+        Object (
             application_id: "com.github.birros.WebArchives",
             flags: ApplicationFlags.HANDLES_OPEN
         );
@@ -84,6 +84,8 @@ public class WebArchives.Application : Adw.Application {
         Context window_context = new Context.fork (context, Context.Layer.APP);
         Window window = new Window (this, window_context);
 
+        window.show ();
+
         add_window (window);
     }
 
@@ -103,4 +105,5 @@ public class WebArchives.Application : Adw.Application {
         base.quit ();
     }
 }
+
 

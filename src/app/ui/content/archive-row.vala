@@ -118,8 +118,7 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
         }
 
         Gtk.MenuButton more_button = new Gtk.MenuButton ();
-        Gtk.Image more_image = new Gtk.Image.from_icon_name ("view-more-symbolic");
-        more_button.set_child (more_image);
+        more_button.set_icon_name ("view-more-symbolic");
         more_button.get_style_context().add_class ("image-button");
         more_button.get_style_context().add_class ("flat");
         more_button.get_style_context().add_class ("circular");

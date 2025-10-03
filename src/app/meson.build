@@ -25,7 +25,6 @@ web_archives_sources = [
     'ui/header-bar/search-in-bar.vala',
     'ui/header-bar/bookmark-button.vala',
     'ui/header-bar/new-tab-button.vala',
-    'ui/header-bar/menu-button.vala',
     'ui/header-bar/popover-menu.vala',
     'ui/header-bar/zoom-box.vala',
     'ui/header-bar/night-mode-button.vala',

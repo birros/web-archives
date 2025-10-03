@@ -1,5 +1,6 @@
-class WebArchives.WebView : Gtk.Overlay {
+class WebArchives.WebView : Adw.Bin {
     private Context context;
+    private Gtk.Overlay overlay;
     private Gtk.Revealer revealer;
     private NotificationBar notification_bar;
     private WebKit.WebView web_view;
@@ -55,10 +56,14 @@ class WebArchives.WebView : Gtk.Overlay {
     public WebView (Context context) {
         this.context = context;
 
+
+        overlay = new Gtk.Overlay ();
+
         // notification_bar
         revealer = new Gtk.Revealer ();
         revealer.valign = Gtk.Align.START;
-        add_overlay (revealer);
+        overlay.add_overlay (revealer);
+        set_child (overlay);
 
         Adw.Clamp notification_bar_max = new Adw.Clamp ();
         notification_bar_max.set_maximum_size (500);

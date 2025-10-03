@@ -116,7 +116,6 @@ web_archives_sources = [
     'ui/gtk/notebook/notebook.vala',
     'ui/gtk/notebook/notebook-tab-label.vala',
     'ui/gtk/notebook/notebook-popup-menu.vala',
-    'ui/gtk/file-chooser-native.vala',
     resources
 ]
 
@@ -124,19 +123,18 @@ executable(
     'web-archives',
     [config_file, web_archives_sources],
     c_args: [
-        '-DGETTEXT_PACKAGE='+conf.get('GETTEXT_PACKAGE'),
-        '-DHANDY_USE_UNSTABLE_API=true'
+        '-DGETTEXT_PACKAGE='+conf.get('GETTEXT_PACKAGE')
     ],
     dependencies: [
         gtk_dep,
+        adw_dep,
         zim_dep,
         sqlite_dep,
         webkit_dep,
         soup_dep,
         tracker_dep,
         xml_dep,
-        isocodes_dep,
-        handy_dep
+        isocodes_dep
     ],
     install: true
 )

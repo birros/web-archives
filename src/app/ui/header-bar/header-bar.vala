@@ -19,35 +19,31 @@ public class WebArchives.HeaderBar : Gtk.HeaderBar {
     private ulong route_callback;
 
     public HeaderBar () {
-        this.set_show_close_button (true);
-
         // left stack
         left_stack = new Gtk.Stack ();
         left_stack.transition_type = Gtk.StackTransitionType.CROSSFADE;
-        left_stack.set_homogeneous (false);
         pack_start (left_stack);
 
         navigation_box = new NavigationBox ();
-        left_stack.add (navigation_box);
+        left_stack.add_child (navigation_box);
 
         back_button = new Gtk.Button.from_icon_name ("go-previous-symbolic");
         back_button.clicked.connect (on_back);
-        left_stack.add (back_button);
+        left_stack.add_child (back_button);
 
         // center stack
         center_stack = new Gtk.Stack ();
         center_stack.transition_type = Gtk.StackTransitionType.CROSSFADE;
-        center_stack.set_homogeneous (false);
-        set_custom_title (center_stack);
+        // set_custom_title (center_stack);
 
         title_bar = new TitleBar ();
-        center_stack.add (title_bar);
+        center_stack.add_child (title_bar);
 
         search_bar = new SearchBar ();
-        center_stack.add (search_bar);
+        center_stack.add_child (search_bar);
 
         search_in_bar = new SearchInBar ();
-        center_stack.add (search_in_bar);
+        center_stack.add_child (search_in_bar);
 
         // right_box
         Gtk.Box right_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -56,37 +52,34 @@ public class WebArchives.HeaderBar : Gtk.HeaderBar {
         // right stack
         right_stack = new Gtk.Stack ();
         right_stack.transition_type = Gtk.StackTransitionType.CROSSFADE;
-        right_stack.set_homogeneous (false);
         right_stack.margin_end = 6;
-        right_box.add (right_stack);
+        right_box.append (right_stack);
 
         // web box
         web_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        right_stack.add (web_box);
+        right_stack.add_child (web_box);
 
         search_button = new Gtk.Button.from_icon_name ("edit-find-symbolic");
         search_button.tooltip_text = _("Search");
         search_button.clicked.connect (on_search);
-        web_box.add (search_button);
+        web_box.append (search_button);
 
         bookmark_button = new BookmarkButton ();
-        web_box.add (bookmark_button);
+        web_box.append (bookmark_button);
 
         // empty
         empty = new Gtk.Label (null);
-        right_stack.add (empty);
+        right_stack.add_child (empty);
 
         // window box
         Gtk.Box window_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        right_box.add (window_box);
+        right_box.append (window_box);
 
         new_tab_button = new NewTabButton ();
-        window_box.add (new_tab_button);
+        window_box.append (new_tab_button);
 
         menu_button = new MenuButton ();
-        window_box.add (menu_button);
-
-        show_all ();
+        window_box.append (menu_button);
     }
 
     private void on_search () {
@@ -156,7 +149,7 @@ public class WebArchives.HeaderBar : Gtk.HeaderBar {
                 left_stack.set_visible_child (back_button);
                 right_stack.set_visible_child (empty);
 
-                search_bar.grab_focus_without_selecting ();
+                // search_bar.grab_focus_without_selecting ();
                 break;
             }
             case RouteState.Route.SEARCHIN:
@@ -181,9 +174,9 @@ public class WebArchives.HeaderBar : Gtk.HeaderBar {
 
     private void set_title_text () {
         if (context.route_state.route == RouteState.Route.HOME) {
-            set_title ("WebArchives");
+            // set_title ("WebArchives");
         } else {
-            set_title (context.title_state.title + " - WebArchives");
+            // set_title (context.title_state.title + " - WebArchives");
         }
     }
 }

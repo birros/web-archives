@@ -60,17 +60,16 @@ class WebArchives.WebView : Gtk.Overlay {
         revealer.valign = Gtk.Align.START;
         add_overlay (revealer);
 
-        Hdy.Clamp notification_bar_max = new Hdy.Clamp ();
+        Adw.Clamp notification_bar_max = new Adw.Clamp ();
         notification_bar_max.set_maximum_size (500);
-        revealer.add (notification_bar_max);
+        revealer.set_child (notification_bar_max);
 
         notification_bar = new NotificationBar ("");
         notification_bar.close.connect (() => {
             revealer.reveal_child = false;
         });
-        notification_bar_max.add (notification_bar);
+        notification_bar_max.set_child (notification_bar);
 
-        show_all ();
         
         // ...
         context.archive_state.notify["archive"].connect (on_archive);
@@ -92,22 +91,17 @@ class WebArchives.WebView : Gtk.Overlay {
 
         context.print_state.print.connect (on_print);
 
-        /**
-         * FIXME : A bug that occurs during the initialization of the
-         * WebExtension requires to immediately create and delete a WebView in
-         * order to fix it.
-         */
         create_web_view ();
-        remove (web_view);
-        destroy_web_view ();
     }
 
     private void on_print () {
         WebKit.PrintOperation foo = new WebKit.PrintOperation (web_view);
+
+        foo.run_dialog (null);
+        /*
         Gtk.Window win = (Gtk.Window) web_view.get_toplevel ();
         if (win.is_toplevel ()) {
-            foo.run_dialog (win);
-        }
+        }*/
     }
 
     private void on_search_in_previous () {
@@ -293,18 +287,22 @@ class WebArchives.WebView : Gtk.Overlay {
     }
 
     private void create_web_view () {
-        user_content_manager = new WebKit.UserContentManager ();
+        /* user_content_manager = new WebKit.UserContentManager ();
         web_view = new WebKit.WebView.with_user_content_manager (
             user_content_manager
-        );
+        );*/
+
+        web_view = new WebKit.WebView ();
 
         find_controller = web_view.get_find_controller ();
 
         WebKit.WebContext web_view_context = web_view.get_context ();
+        /*
         web_view_context.initialize_web_extensions.connect (
             on_initialize_web_extensions
         );
         web_view_context.download_started.connect(on_download_started);
+        */
 
         web_view_context.set_cache_model (WebKit.CacheModel.DOCUMENT_BROWSER);
 
@@ -313,9 +311,8 @@ class WebArchives.WebView : Gtk.Overlay {
         web_view.zoom_level = context.web_view_state.zoom_level;
         web_view.notify["zoom-level"].connect (on_zoom_level);
         on_zoom_level ();
-        add (web_view);
+        set_child (web_view);
 
-        show_all ();
     }
 
     ~WebView () {
@@ -337,7 +334,7 @@ class WebArchives.WebView : Gtk.Overlay {
 
     private void on_archive () {
         if (web_view != null) {
-            remove (web_view);
+            // remove (web_view);
             destroy_web_view ();
         }
         if (
@@ -502,9 +499,9 @@ class WebArchives.WebView : Gtk.Overlay {
     ) {
         info ("on_initialize_web_extensions");
         Variant prefix = new Variant.string (context.server.url);
-        web_view_context.set_web_extensions_directory (
+        /*web_view_context.set_web_extensions_directory (
             WebArchives.Config.WEB_EXTENSIONS_DIRECTORY
-        );
-        web_view_context.set_web_extensions_initialization_user_data (prefix);
+        );*/
+        // web_view_context.set_web_extensions_initialization_user_data (prefix);
     }
 }

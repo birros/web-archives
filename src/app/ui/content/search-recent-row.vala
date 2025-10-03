@@ -6,14 +6,14 @@ public class WebArchives.SearchRecentRow : Gtk.ListBoxRow {
         this.item = item;
 
         Gtk.Box box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        add (box);
+        set_child (box);
 
         Gtk.Label label = new Gtk.Label (item.text);
         label.ellipsize = Pango.EllipsizeMode.MIDDLE;
-        label.margin = 6;
+        // label.margin = 6;
         label.hexpand = true;
         label.halign = Gtk.Align.START;
-        box.add (label);
+        box.append (label);
 
         Gtk.Button button = new Gtk.Button.from_icon_name (
             "edit-delete-symbolic"
@@ -22,6 +22,6 @@ public class WebArchives.SearchRecentRow : Gtk.ListBoxRow {
         button.get_style_context().add_class ("image-button");
         button.get_style_context().add_class ("sidebar-button");
         button.clicked.connect (() => {remove_clicked ();});
-        box.add (button);
+        box.append (button);
     }
 }

@@ -18,7 +18,7 @@ public class WebArchives.TitleBar : Gtk.Box {
         subtitle_label.get_style_context().add_class ("subtitle");
         subtitle_label.set_ellipsize (Pango.EllipsizeMode.END);
 
-        add (title_label);
+        append (title_label);
     }
 
     public void set_context (Context context) {
@@ -56,8 +56,7 @@ public class WebArchives.TitleBar : Gtk.Box {
             remove (subtitle_label);
         } else {
             subtitle_label.set_text (context.title_state.subtitle);
-            add (subtitle_label);
-            show_all ();
+            append (subtitle_label);
         }
     }
 }

@@ -2,10 +2,8 @@ public class WebArchives.NewTabButton : Gtk.Button {
     private Context context;
 
     public NewTabButton () {
-        Gtk.Image new_tab_image = new Gtk.Image.from_icon_name (
-            "tab-new-symbolic", Gtk.IconSize.MENU
-        );
-        set_image (new_tab_image);
+        Gtk.Image new_tab_image = new Gtk.Image.from_icon_name ("tab-new-symbolic");
+        set_child (new_tab_image);
         tooltip_text = _("Open a new tab");
 
         clicked.connect (button_clicked_cb);

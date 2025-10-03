@@ -6,28 +6,25 @@ public class WebArchives.BookmarkView : Gtk.Box {
         this.context = context;
         homogeneous = true;
 
-        Gtk.ScrolledWindow scrolled_window = new Gtk.ScrolledWindow (null, null);
-        add (scrolled_window);
+        Gtk.ScrolledWindow scrolled_window = new Gtk.ScrolledWindow ();
+        append (scrolled_window);
 
-        Hdy.Clamp max_width_bin = new Hdy.Clamp ();
+        Adw.Clamp max_width_bin = new Adw.Clamp ();
         max_width_bin.set_maximum_size (500);
-        scrolled_window.add (max_width_bin);
+        scrolled_window.set_child (max_width_bin);
 
         list_box = new Gtk.ListBox ();
         list_box.get_style_context ().add_class ("shadow");
         list_box.selection_mode = Gtk.SelectionMode.NONE;
         list_box.row_activated.connect (on_row_activated);
         list_box.set_header_func (update_header);
-        max_width_bin.add (list_box);
+        max_width_bin.set_child (list_box);
 
         Gtk.Label placeholder = new Gtk.Label (_("No bookmarks saved."));
-        placeholder.margin = 12;
+        // placeholder.margin = 12;
         placeholder.wrap = true;
         placeholder.justify = Gtk.Justification.CENTER;
-        placeholder.show_all ();
         list_box.set_placeholder (placeholder);
-
-        show_all ();
 
         context.archive_state.notify["archive"].connect (on_archive);
     }
@@ -67,7 +64,6 @@ public class WebArchives.BookmarkView : Gtk.Box {
         BookmarkItem bookmark_item = (BookmarkItem) item;
         BookmarkRow row = new BookmarkRow (bookmark_item);
         row.remove_clicked.connect (on_remove);
-        row.show_all ();
         return row;
     }
 

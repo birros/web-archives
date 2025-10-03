@@ -6,9 +6,9 @@ public class WebArchives.SearchResultRow : Gtk.ListBoxRow {
 
         Gtk.Label label = new Gtk.Label (item.text);
         label.ellipsize = Pango.EllipsizeMode.MIDDLE;
-        label.margin = 6;
+        // label.margin = 6;
         label.hexpand = true;
         label.halign = Gtk.Align.START;
-        add (label);
+        set_child (label);
     }
 }

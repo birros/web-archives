@@ -3,9 +3,7 @@ public class WebArchives.BookmarkButton : Gtk.Button {
     private ulong callback;
 
     public BookmarkButton () {
-        set_image (new Gtk.Image.from_icon_name (
-            "non-starred-symbolic", Gtk.IconSize.BUTTON)
-        );
+        set_child (new Gtk.Image.from_icon_name ("non-starred-symbolic"));
         tooltip_text = _("Toggle bookmark for current page");
         clicked.connect (on_clicked);
     }
@@ -17,15 +15,11 @@ public class WebArchives.BookmarkButton : Gtk.Button {
     private void update_icon () {
         Gtk.Image image;
         if (context.bookmark_state.bookmarked) {
-            image = new Gtk.Image.from_icon_name (
-                "starred-symbolic", Gtk.IconSize.BUTTON
-            );
+            image = new Gtk.Image.from_icon_name ("starred-symbolic");
         } else {
-            image = new Gtk.Image.from_icon_name (
-                "non-starred-symbolic", Gtk.IconSize.BUTTON
-            );
+            image = new Gtk.Image.from_icon_name ("non-starred-symbolic");
         }
-        set_image (image);
+        set_child (image);
     }
 
     public void set_context (Context context) {

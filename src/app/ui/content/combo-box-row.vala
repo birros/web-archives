@@ -15,6 +15,6 @@ public class WebArchives.ComboBoxRow : Gtk.ListBoxRow {
         label.margin_start = 6;
         label.xalign = 0;
         label.ellipsize = Pango.EllipsizeMode.END;
-        add (label);
+        set_child (label);
     }
 }

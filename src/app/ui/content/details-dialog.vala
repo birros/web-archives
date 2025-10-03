@@ -7,21 +7,18 @@ public class WebArchives.DetailsDialog : Gtk.Dialog {
         );
 
         Gtk.HeaderBar header_bar = (Gtk.HeaderBar) get_header_bar ();
-        header_bar.show_close_button = true;
-        header_bar.title = _("Details");
-        header_bar.subtitle = archive.title;
+        // header_bar.title = _("Details");
+        // header_bar.subtitle = archive.title;
 
         Gtk.Box content_area = get_content_area ();
         content_area.set_homogeneous (true);
 
-        Gtk.ScrolledWindow scrolled_window = new Gtk.ScrolledWindow (
-            null, null
-        );
-        content_area.add (scrolled_window);
+        Gtk.ScrolledWindow scrolled_window = new Gtk.ScrolledWindow ();
+        content_area.append (scrolled_window);
 
-        Hdy.Clamp max_width_bin = new Hdy.Clamp ();
+        Adw.Clamp max_width_bin = new Adw.Clamp ();
         max_width_bin.set_maximum_size (900);
-        scrolled_window.add (max_width_bin);
+        scrolled_window.set_child (max_width_bin);
 
         grid = new Gtk.Grid ();
         grid.orientation = Gtk.Orientation.VERTICAL;
@@ -30,14 +27,14 @@ public class WebArchives.DetailsDialog : Gtk.Dialog {
         grid.margin_bottom = 12;
         grid.column_spacing = 24;
         grid.row_spacing = 12;
-        max_width_bin.add (grid);
+        max_width_bin.set_child (grid);
 
         show_infos (archive);
     }
 
     private void show_text (string label, string content) {
         Gtk.Label label_widget = create_label (label);
-        grid.add (label_widget);
+        // grid.append (label_widget); TODO
 
         Gtk.Label title_value = new Gtk.Label (content);
         title_value.wrap = true;
@@ -52,7 +49,7 @@ public class WebArchives.DetailsDialog : Gtk.Dialog {
 
     private void show_link (string label, string link, string content) {
         Gtk.Label label_widget = create_label (label);
-        grid.add (label_widget);
+        // grid.append (label_widget);
 
         Gtk.Label title_value = new Gtk.Label (
             "<a href=\"" + link + "\">" + content + "</a>"
@@ -70,11 +67,9 @@ public class WebArchives.DetailsDialog : Gtk.Dialog {
 
     private void show_image (string label, string image_path) {
         Gtk.Label label_widget = create_label (label);
-        grid.add (label_widget);
+        // grid.append (label_widget);
 
-        Gtk.Image image = new Gtk.Image.from_icon_name (
-            "image-missing", Gtk.IconSize.DND
-        );
+        Gtk.Image image = new Gtk.Image.from_icon_name ("image-missing");
         try {
             Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (
                 image_path, 48, 48, true

@@ -10,125 +10,74 @@ public class WebArchives.HeaderBarPopover : Gtk.Popover {
         position = Gtk.PositionType.BOTTOM;
 
         Gtk.Box box = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
-        box.margin = 10;
-        add (box);
+        // box.margin = 10;
+        set_child (box);
 
         // archive box
         box_archive = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        box.add (box_archive);
+        box.append (box_archive);
 
         zoom_box = new ZoomBox ();
-        zoom_box.margin_bottom = 10;
+        // zoom_box.margin_bottom = 10;
         zoom_box.homogeneous = true;
-        box_archive.add (zoom_box);
+        box_archive.append (zoom_box);
 
-        Gtk.ModelButton search_in_button = new Gtk.ModelButton ();
-        search_in_button.label = _("Search in...");
-        Gtk.Label search_label = search_in_button.get_child() as Gtk.Label;
-        if (search_label != null) {
-            search_label.xalign = 0;
-        }
+        Gtk.Button search_in_button = new Gtk.Button.with_label (_("Search in..."));
         search_in_button.clicked.connect (on_search_in);
-        box_archive.add (search_in_button);
+        box_archive.append (search_in_button);
 
-        Gtk.ModelButton print_button = new Gtk.ModelButton ();
-        print_button.label = _("Print");
-        Gtk.Label print_label = print_button.get_child() as Gtk.Label;
-        if (print_label != null) {
-            print_label.xalign = 0;
-        }
+        Gtk.Button print_button = new Gtk.Button.with_label (_("Print"));
         print_button.clicked.connect (on_print);
-        box_archive.add (print_button);
+        box_archive.append (print_button);
 
-        box_archive.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+        box_archive.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
 
-        Gtk.ModelButton main_page_button = new Gtk.ModelButton ();
-        main_page_button.label = _("Main page");
-        Gtk.Label main_label = main_page_button.get_child() as Gtk.Label;
-        if (main_label != null) {
-            main_label.xalign = 0;
-        }
+        Gtk.Button main_page_button = new Gtk.Button.with_label (_("Main page"));
         main_page_button.clicked.connect (on_main_page);
-        box_archive.add (main_page_button);
+        box_archive.append (main_page_button);
 
-        Gtk.ModelButton random_button = new Gtk.ModelButton ();
-        random_button.label = _("Random page");
-        Gtk.Label random_label = random_button.get_child() as Gtk.Label;
-        if (random_label != null) {
-            random_label.xalign = 0;
-        }
+        Gtk.Button random_button = new Gtk.Button.with_label (_("Random page"));
         random_button.clicked.connect (on_random);
-        box_archive.add (random_button);
+        box_archive.append (random_button);
 
-        box_archive.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+        box_archive.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
 
-        Gtk.ModelButton bookmark_button = new Gtk.ModelButton ();
-        bookmark_button.label = _("Bookmarks");
-        Gtk.Label bookmark_label = bookmark_button.get_child() as Gtk.Label;
-        if (bookmark_label != null) {
-            bookmark_label.xalign = 0;
-        }
+        Gtk.Button bookmark_button = new Gtk.Button.with_label (_("Bookmarks"));
         bookmark_button.clicked.connect (on_bookmark);
-        box_archive.add (bookmark_button);
+        box_archive.append (bookmark_button);
 
-        Gtk.ModelButton history_button = new Gtk.ModelButton ();
-        history_button.label = _("History");
-        Gtk.Label history_label = history_button.get_child() as Gtk.Label;
-        if (history_label != null) {
-            history_label.xalign = 0;
-        }
+        Gtk.Button history_button = new Gtk.Button.with_label (_("History"));
         history_button.clicked.connect (on_history);
-        box_archive.add (history_button);
+        box_archive.append (history_button);
 
         separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-        box.add (separator);
+        box.append (separator);
 
         // app box
         Gtk.Box box_app = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        box.add (box_app);
+        box.append (box_app);
 
-        Gtk.ModelButton button = new Gtk.ModelButton ();
-        button.label = _("New window");
-        Gtk.Label label = button.get_child() as Gtk.Label;
-        if (label != null) {
-            label.xalign = 0;
-        }
+        Gtk.Button button = new Gtk.Button.with_label (_("New window"));
         button.clicked.connect (on_new_window);
-        box_app.add (button);
+
+        box_app.append (button);
 
         night_mode_button = new NightModeButton ();
-        box_app.add (night_mode_button);
+        box_app.append (night_mode_button);
 
-        box_app.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+        box_app.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
 
-        Gtk.ModelButton shortcuts_button = new Gtk.ModelButton ();
-        shortcuts_button.label = _("Keyboard shortcuts");
-        Gtk.Label shortcuts_label = shortcuts_button.get_child() as Gtk.Label;
-        if (shortcuts_label != null) {
-            shortcuts_label.xalign = 0;
-        }
+        Gtk.Button shortcuts_button = new Gtk.Button.with_label (_("Keyboard shortcuts"));
         shortcuts_button.action_name = "win.show-help-overlay";
-        box_app.add (shortcuts_button);
+        box_app.append (shortcuts_button);
 
-        Gtk.ModelButton about_button = new Gtk.ModelButton ();
-        about_button.label = _("About");
-        Gtk.Label about_label = about_button.get_child() as Gtk.Label;
-        if (about_label != null) {
-            about_label.xalign = 0;
-        }
+        Gtk.Button about_button = new Gtk.Button.with_label (_("About"));
         about_button.clicked.connect (on_about);
-        box_app.add (about_button);
+        box_app.append (about_button);
 
-        Gtk.ModelButton quit_button = new Gtk.ModelButton ();
-        quit_button.label = _("Quit");
-        Gtk.Label quit_label = quit_button.get_child() as Gtk.Label;
-        if (quit_label != null) {
-            quit_label.xalign = 0;
-        }
+        Gtk.Button quit_button = new Gtk.Button.with_label (_("Quit"));
         quit_button.action_name = "app.quit";
-        box_app.add (quit_button);
-
-        box.show_all ();
+        box_app.append (quit_button);
     }
 
     private void on_main_page () {
@@ -196,3 +145,4 @@ public class WebArchives.HeaderBarPopover : Gtk.Popover {
         night_mode_button.set_context (context);
     }
 }
+

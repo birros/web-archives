@@ -43,9 +43,9 @@ public class WebArchives.HomeView : Gtk.Overlay {
         revealer.valign = Gtk.Align.START;
         add_overlay (revealer);
 
-        Hdy.Clamp notification_bar_max = new Hdy.Clamp ();
+        Adw.Clamp notification_bar_max = new Adw.Clamp ();
         notification_bar_max.set_maximum_size (500);
-        revealer.add (notification_bar_max);
+        revealer.set_child (notification_bar_max);
 
         NotificationBar notification_bar = new NotificationBar (
             _("Cannot open the archive file")
@@ -53,29 +53,27 @@ public class WebArchives.HomeView : Gtk.Overlay {
         notification_bar.close.connect (() => {
             revealer.reveal_child = false;
         });
-        notification_bar_max.add (notification_bar);
+        notification_bar_max.set_child (notification_bar);
 
         // archives
-        Gtk.ScrolledWindow scrolled_window = new Gtk.ScrolledWindow (
-            null, null
-        );
-        add (scrolled_window);
+        Gtk.ScrolledWindow scrolled_window = new Gtk.ScrolledWindow ();
+        set_child (scrolled_window);
 
-        Hdy.Clamp max_width_bin = new Hdy.Clamp ();
+        Adw.Clamp max_width_bin = new Adw.Clamp ();
         max_width_bin.set_maximum_size (500);
-        max_width_bin.margin_top = 6;
-        max_width_bin.margin_bottom = 6;
-        max_width_bin.margin_start = 6;
-        max_width_bin.margin_end = 6;
-        scrolled_window.add (max_width_bin);
+        // max_width_bin.margin_top = 6;
+        // max_width_bin.margin_bottom = 6;
+        // max_width_bin.margin_start = 6;
+        // max_width_bin.margin_end = 6;
+        scrolled_window.set_child (max_width_bin);
 
         Gtk.Box box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-        max_width_bin.add (box);
+        max_width_bin.set_child (box);
 
         Gtk.Box recents_header_box = new Gtk.Box (
             Gtk.Orientation.HORIZONTAL, 6
         );
-        box.add (recents_header_box);
+        box.append (recents_header_box);
 
         Pango.AttrList attr_list = new Pango.AttrList ();
         Pango.Attribute attr = Pango.attr_weight_new (Pango.Weight.BOLD);
@@ -86,33 +84,30 @@ public class WebArchives.HomeView : Gtk.Overlay {
         recents_header_label.set_attributes (attr_list);
         recents_header_label.hexpand = true;
         recents_header_label.xalign = 0;
-        recents_header_box.add (recents_header_label);
+        recents_header_box.append (recents_header_label);
 
         Gtk.Button recents_header_button = new Gtk.Button.from_icon_name (
             "list-add-symbolic"
         );
         recents_header_button.tooltip_text = _("Open a web archive");
-        recents_header_button.relief = Gtk.ReliefStyle.NONE;
         recents_header_button.clicked.connect (() => {
             context.add_archive_button_state.clicked ();
         });
-        recents_header_box.add (recents_header_button);
+        recents_header_box.append (recents_header_button);
 
         Gtk.Frame recents_frame = new Gtk.Frame (null);
-        recents_frame.shadow_type = Gtk.ShadowType.IN;
-        box.add (recents_frame);
+        box.append (recents_frame);
 
         Gtk.ListBox recents_list_box = new Gtk.ListBox ();
         recents_list_box.set_selection_mode (Gtk.SelectionMode.NONE);
         recents_list_box.row_activated.connect (on_row_activated);
         recents_list_box.set_header_func (update_header);
-        recents_frame.add (recents_list_box);
+        recents_frame.set_child (recents_list_box);
 
         Gtk.Label recents_placeholder = new Gtk.Label (RECENTS_INFO_MESSAGE);
         recents_placeholder.use_markup = true;
-        recents_placeholder.margin = 12;
+        // recents_placeholder.margin = 12;
         recents_placeholder.wrap = true;
-        recents_placeholder.show_all ();
         recents_list_box.set_placeholder (recents_placeholder);
 
         ArchiveModel recents_model = new ArchiveModel (
@@ -123,23 +118,22 @@ public class WebArchives.HomeView : Gtk.Overlay {
         recents_model.items_changed.connect (() => {
             local_model.invalidate_filter ();
             remote_model.invalidate_filter ();
-            show_all ();
         });
 
         // LOCAL
         Gtk.Box local_header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        box.add (local_header_box);
+        box.append (local_header_box);
 
         Gtk.Label local_header_label = new Gtk.Label (_("Local"));
         local_header_label.set_attributes (attr_list);
         local_header_label.hexpand = true;
         local_header_label.xalign = 0;
-        local_header_box.add (local_header_label);
+        local_header_box.append (local_header_label);
 
         StatusLabel local_last_refreshed = new StatusLabel ();
         local_last_refreshed.hexpand = true;
         local_last_refreshed.halign = Gtk.Align.END;
-        local_header_box.add (local_last_refreshed);
+        local_header_box.append (local_last_refreshed);
         context.tracker.notify["timestamp"].connect (() => {
             local_last_refreshed.timestamp = context.tracker.timestamp;
         });
@@ -149,24 +143,22 @@ public class WebArchives.HomeView : Gtk.Overlay {
             "view-refresh-symbolic"
         );
         local_header_button.tooltip_text = _("Refresh");
-        local_header_button.relief = Gtk.ReliefStyle.NONE;
         local_header_button.clicked.connect (() => {
             context.tracker.refresh ();
         });
         if (!context.tracker.enabled) {
             local_header_button.sensitive = false;
         }
-        local_header_box.add (local_header_button);
+        local_header_box.append (local_header_button);
 
         Gtk.Frame local_frame = new Gtk.Frame (null);
-        local_frame.shadow_type = Gtk.ShadowType.IN;
-        box.add (local_frame);
+        box.append (local_frame);
 
         local_list_box = new Gtk.ListBox ();
         local_list_box.set_selection_mode (Gtk.SelectionMode.NONE);
         local_list_box.row_activated.connect (on_row_activated);
         local_list_box.set_header_func (update_header);
-        local_frame.add (local_list_box);
+        local_frame.set_child (local_list_box);
 
         Gtk.Label local_placeholder;
         if (context.tracker.enabled) {
@@ -176,9 +168,8 @@ public class WebArchives.HomeView : Gtk.Overlay {
             local_placeholder.selectable = true;
         }
         local_placeholder.use_markup = true;
-        local_placeholder.margin = 12;
+        // local_placeholder.margin = 12;
         local_placeholder.wrap = true;
-        local_placeholder.show_all ();
         local_list_box.set_placeholder (local_placeholder);
 
         if (context.tracker.enabled) {
@@ -188,7 +179,6 @@ public class WebArchives.HomeView : Gtk.Overlay {
             local_list_box.bind_model (local_model, list_box_create_row);
             local_model.items_changed.connect (() => {
                 remote_model.invalidate_filter ();
-                show_all ();
             });
         }
 
@@ -196,12 +186,12 @@ public class WebArchives.HomeView : Gtk.Overlay {
         Gtk.Box remote_header_box = new Gtk.Box (
             Gtk.Orientation.HORIZONTAL, 6
         );
-        box.add (remote_header_box);
+        box.append (remote_header_box);
 
         Gtk.Label remote_header_label = new Gtk.Label (_("Remote"));
         remote_header_label.set_attributes (attr_list);
         remote_header_label.xalign = 0;
-        remote_header_box.add (remote_header_label);
+        remote_header_box.append (remote_header_label);
 
         LanguageModel language_model = new LanguageModel (
             context.language_store
@@ -209,16 +199,15 @@ public class WebArchives.HomeView : Gtk.Overlay {
         language_model.set_sort_func (sort_by_language_formated);
         remote_header_comboboxtext = new ComboBoxText ();
         remote_header_comboboxtext.bind_model (language_model);
-        remote_header_comboboxtext.relief = Gtk.ReliefStyle.NONE;
         remote_header_comboboxtext.changed.connect (() => {
 	        language_changed ();
         });
-        remote_header_box.add (remote_header_comboboxtext);
+        remote_header_box.append (remote_header_comboboxtext);
 
         StatusLabel remote_last_refreshed = new StatusLabel ();
         remote_last_refreshed.hexpand = true;
         remote_last_refreshed.halign = Gtk.Align.END;
-        remote_header_box.add (remote_last_refreshed);
+        remote_header_box.append (remote_last_refreshed);
         context.remote.notify["timestamp"].connect (() => {
             remote_last_refreshed.timestamp = context.remote.timestamp;
         });
@@ -235,28 +224,25 @@ public class WebArchives.HomeView : Gtk.Overlay {
             "view-refresh-symbolic"
         );
         remote_header_button.tooltip_text = _("Refresh");
-        remote_header_button.relief = Gtk.ReliefStyle.NONE;
         remote_header_button.clicked.connect (() => {
             context.remote.refresh ();
         });
-        remote_header_box.add (remote_header_button);
+        remote_header_box.append (remote_header_button);
 
         Gtk.Frame remote_frame = new Gtk.Frame (null);
-        remote_frame.shadow_type = Gtk.ShadowType.IN;
-        box.add (remote_frame);
+        box.append (remote_frame);
 
         remote_list_box = new Gtk.ListBox ();
         remote_list_box.set_selection_mode (Gtk.SelectionMode.NONE);
         remote_list_box.row_activated.connect (on_row_activated);
         remote_list_box.set_header_func (update_header);
-        remote_frame.add (remote_list_box);
+        remote_frame.set_child (remote_list_box);
 
         Gtk.Label remote_placeholder;
         remote_placeholder = new Gtk.Label (REMOTE_INFO_MESSAGE);
         remote_placeholder.use_markup = true;
-        remote_placeholder.margin = 12;
+        // remote_placeholder.margin = 12;
         remote_placeholder.wrap = true;
-        remote_placeholder.show_all ();
         remote_list_box.set_placeholder (remote_placeholder);
 
         /**
@@ -271,8 +257,6 @@ public class WebArchives.HomeView : Gtk.Overlay {
 
         remote_model = null;
         language_changed ();
-
-        show_all ();
     }
 
     private void language_changed () {
@@ -291,11 +275,6 @@ public class WebArchives.HomeView : Gtk.Overlay {
         remote_model.set_sort_func (sort_by_title);
 
         remote_list_box.bind_model (remote_model, list_box_create_row);
-        remote_model_callback = remote_model.items_changed.connect (() => {
-            show_all ();
-        });
-
-        show_all ();
     }
 
     private bool local_filter (ArchiveItem archive) {
@@ -436,21 +415,17 @@ public class WebArchives.HomeView : Gtk.Overlay {
     }
 
     private void show_details (ArchiveItem archive) {
-        Gtk.Window win = (Gtk.Window) this.get_toplevel ();
         DetailsDialog details_dialog = new DetailsDialog (archive);
         details_dialog.modal = true;
-        details_dialog.set_transient_for (win);
         details_dialog.default_width = 600;
         details_dialog.default_height = 530;
-        details_dialog.show_all ();
     }
 
     private void ask_for_downloading (ArchiveItem archive) {
-        Gtk.Window win = (Gtk.Window) this.get_toplevel ();
         string espaced_title = Markup.escape_text (archive.title);
 
         Gtk.MessageDialog message_dialog = new Gtk.MessageDialog (
-            win,
+            null,
             Gtk.DialogFlags.MODAL,
             Gtk.MessageType.QUESTION,
             Gtk.ButtonsType.CANCEL,

@@ -14,10 +14,9 @@ public class WebArchives.Notebook : Gtk.Notebook {
         set_group_name ("web-archives-notebook");
 
         page_added.connect (on_page_added);
-        popup_menu.connect (on_popup_menu);
+        // popup_menu.connect (on_popup_menu);
         page_removed.connect (on_page_removed);
 
-        show_all ();
     }
 
     private bool on_popup_menu () {
@@ -32,10 +31,10 @@ public class WebArchives.Notebook : Gtk.Notebook {
     }
 
     private void show_popup_menu (Gtk.Widget label, Gtk.Widget page) {
-        NotebookPopupMenu tab_popup_menu = new NotebookPopupMenu (label);
+        NotebookPopupMenu tab_popup_menu = new NotebookPopupMenu ();
         tab_popup_menu.create_window.connect (() => {
             info ("create-window");
-            create_window (page, 0, 0);
+            create_window (page);
         });
     }
 
@@ -46,7 +45,7 @@ public class WebArchives.Notebook : Gtk.Notebook {
             set_show_tabs (true);
         }
 
-        child_set_property (page, "tab-expand", true);
+        // child_set_property (page, "tab-expand", true);
         set_tab_reorderable (page, true);
         set_tab_detachable (page, true);
 
@@ -56,14 +55,14 @@ public class WebArchives.Notebook : Gtk.Notebook {
             int page_num = page_num (page);
             remove_page (page_num);
         });
-        ulong popup_callback = label.popup_menu.connect(() => {
+        /*ulong popup_callback = label.popup_menu.connect(() => {
             info ("label-popup-menu");
             show_popup_menu (label, page);
             return true;
-        });
+        });*/
 
         close_callbacks.insert (label, close_callback);
-        popup_callbacks.insert (label, popup_callback);
+        // popup_callbacks.insert (label, popup_callback);
         labels.insert (page, label);
     }
 

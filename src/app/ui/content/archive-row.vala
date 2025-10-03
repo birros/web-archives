@@ -11,13 +11,11 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
         this.archive = archive;
 
         Gtk.Box box = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 6);
-        box.margin = 6;
-        add (box);
+        // box.margin = 6;
+        set_child (box);
 
         Gdk.Pixbuf pixbuf;
-        Gtk.Image image = new Gtk.Image.from_icon_name (
-            "image-missing", Gtk.IconSize.DND
-        );
+        Gtk.Image image = new Gtk.Image.from_icon_name ("image-missing");
         try {
             pixbuf = new Gdk.Pixbuf.from_file_at_scale (
                 archive.favicon, 32, 32, true
@@ -27,11 +25,11 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
             warning (error.message);
         }
         image.set_margin_end (6);
-        box.add (image);
+        box.append (image);
 
         Gtk.Box text_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         text_box.set_hexpand (true);
-        box.add (text_box);
+        box.append (text_box);
 
         Pango.AttrList attr_list = new Pango.AttrList ();
         Pango.Attribute attr = Pango.attr_scale_new (Pango.Scale.SMALL);
@@ -41,7 +39,7 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
         title_label.set_vexpand (true);
         title_label.xalign = 0;
         title_label.set_ellipsize (Pango.EllipsizeMode.END);
-        text_box.add (title_label);
+        text_box.append (title_label);
 
 
         Array<string> subtitle_infos = new Array<string> ();
@@ -67,7 +65,7 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
         subtitle_label.set_ellipsize (Pango.EllipsizeMode.END);
         subtitle_label.get_style_context().add_class ("dim-label");
         subtitle_label.set_attributes (attr_list);
-        text_box.add (subtitle_label);
+        text_box.append (subtitle_label);
 
         if (archive.scope == "RECENTS" || archive.scope == "LOCAL") {
             Gtk.Button search_button =
@@ -79,7 +77,7 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
             search_button.clicked.connect (() => {
                 search ();
             });
-            box.add (search_button);
+            box.append (search_button);
 
             Gtk.Button bookmark_button =
                 new Gtk.Button.from_icon_name ("ephy-bookmarks-symbolic");
@@ -90,7 +88,7 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
             bookmark_button.clicked.connect (() => {
                 bookmark ();
             });
-            box.add (bookmark_button);
+            box.append (bookmark_button);
 
             Gtk.Button history_button =
                 new Gtk.Button.from_icon_name (
@@ -103,7 +101,7 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
             history_button.clicked.connect (() => {
                 history ();
             });
-            box.add (history_button);
+            box.append (history_button);
         }
 
         if (archive.scope == "REMOTE") {
@@ -116,51 +114,36 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
             download_button.clicked.connect (() => {
                 download ();
             });
-            box.add (download_button);
+            box.append (download_button);
         }
 
         Gtk.MenuButton more_button = new Gtk.MenuButton ();
-        Gtk.Image more_image = new Gtk.Image.from_icon_name (
-            "view-more-symbolic",
-            Gtk.IconSize.BUTTON
-        );
-        more_button.set_image (more_image);
+        Gtk.Image more_image = new Gtk.Image.from_icon_name ("view-more-symbolic");
+        more_button.set_child (more_image);
         more_button.get_style_context().add_class ("image-button");
         more_button.get_style_context().add_class ("flat");
         more_button.get_style_context().add_class ("circular");
-        box.add (more_button);
+        box.append (more_button);
 
-        Gtk.Popover popover = new Gtk.Popover (more_button);
+        Gtk.Popover popover = new Gtk.Popover ();
         more_button.set_popover (popover);
 
         Gtk.Box popover_box = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
-        popover_box.margin = 10;
-        popover.add (popover_box);
+        // popover_box.margin = 10;
+        popover.set_child (popover_box);
 
-        Gtk.ModelButton details_button = new Gtk.ModelButton ();
-        details_button.label = _("Details");
-        Gtk.Label details_label = details_button.get_child() as Gtk.Label;
-        if (details_label != null) {
-            details_label.xalign = 0;
-        }
-        popover_box.add (details_button);
+        Gtk.Button details_button = new Gtk.Button.with_label (_("Details"));
+        popover_box.append (details_button);
         details_button.clicked.connect (() => {
             details ();
         });
 
         if (archive.scope == "RECENTS") {
-            Gtk.ModelButton remove_button = new Gtk.ModelButton ();
-            remove_button.label = _("Remove");
-            Gtk.Label remove_label = remove_button.get_child() as Gtk.Label;
-            if (remove_label != null) {
-                remove_label.xalign = 0;
-            }
-            popover_box.add (remove_button);
+            Gtk.Button remove_button = new Gtk.Button.with_label (_("Remove"));
+            popover_box.append (remove_button);
             remove_button.clicked.connect (() => {
                 eject ();
             });
         }
-
-        popover_box.show_all ();
     }
 }

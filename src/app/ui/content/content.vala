@@ -11,19 +11,19 @@ public class WebArchives.Content : Gtk.Stack {
         transition_type = Gtk.StackTransitionType.CROSSFADE;
 
         home_view = new HomeView (context);
-        add (home_view);
+        add_child (home_view);
 
         web_view = new WebView (context);
-        add (web_view);
+        add_child (web_view);
 
         search_view = new SearchView (context);
-        add (search_view);
+        add_child (search_view);
 
         bookmark_view = new BookmarkView (context);
-        add (bookmark_view);
+        add_child (bookmark_view);
 
         history_view = new HistoryView (context);
-        add (history_view);
+        add_child (history_view);
 
         context.route_state.notify["route"].connect (on_route);
     }

@@ -1,2 +1,2 @@
 subdir('app')
-subdir('web-extensions')
+#subdir('web-extensions')

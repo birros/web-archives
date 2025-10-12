@@ -6,14 +6,12 @@ public class WebArchives.HistoryView : Gtk.Box {
         this.context = context;
         homogeneous = true;
 
-        Gtk.ScrolledWindow scrolled_window = new Gtk.ScrolledWindow (
-            null, null
-        );
-        add (scrolled_window);
+        Gtk.ScrolledWindow scrolled_window = new Gtk.ScrolledWindow ();
+        append (scrolled_window);
 
-        Hdy.Clamp max_width_bin = new Hdy.Clamp ();
+        Adw.Clamp max_width_bin = new Adw.Clamp ();
         max_width_bin.set_maximum_size (500);
-        scrolled_window.add (max_width_bin);
+        scrolled_window.set_child (max_width_bin);
 
         list_box = new Gtk.ListBox ();
         list_box.margin_end = 6;
@@ -23,16 +21,14 @@ public class WebArchives.HistoryView : Gtk.Box {
         list_box.selection_mode = Gtk.SelectionMode.NONE;
         list_box.row_activated.connect (on_row_activated);
         list_box.set_header_func (update_header);
-        max_width_bin.add (list_box);
+        max_width_bin.set_child (list_box);
 
         Gtk.Label placeholder = new Gtk.Label (_("No browsing history."));
-        placeholder.margin = 12;
+        // placeholder.margin = 12;
         placeholder.wrap = true;
         placeholder.justify = Gtk.Justification.CENTER;
-        placeholder.show_all ();
         list_box.set_placeholder (placeholder);
 
-        show_all ();
 
         context.archive_state.notify["archive"].connect (on_archive);
     }
@@ -77,13 +73,12 @@ public class WebArchives.HistoryView : Gtk.Box {
             string header = date_time.format (_("%e %b %y"));
 
             Gtk.Label label = new Gtk.Label (header);
-            label.margin_top = 9;
-            label.margin_bottom = 9;
-            label.xalign = 0;
+            // label.margin_top = 9;
+            // label.margin_bottom = 9;
+            // label.xalign = 0;
 
             Gtk.Box box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            box.add (label);
-            box.show_all ();
+            box.append (label);
 
             row.set_header (box);
             if (before == null) {
@@ -112,7 +107,6 @@ public class WebArchives.HistoryView : Gtk.Box {
         row.remove_clicked.connect (() => {
             on_remove (history_item);
         });
-        row.show_all ();
         return row;
     }
 }

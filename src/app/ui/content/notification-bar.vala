@@ -7,18 +7,15 @@ public class WebArchives.NotificationBar : Gtk.Frame {
 
         Gtk.Box box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
         label_text = new Gtk.Label (text);
-        Gtk.Button button = new Gtk.Button.from_icon_name (
-            "window-close-symbolic"
-        );
+        Gtk.Button button = new Gtk.Button.from_icon_name ("window-close-symbolic");
 
         label_text.halign = Gtk.Align.START;
         label_text.ellipsize = Pango.EllipsizeMode.END;
-        button.relief = Gtk.ReliefStyle.NONE;
         button.clicked.connect (() => {close ();});
 
-        add (box);
-        box.pack_start (label_text, true);
-        box.add (button);
+        set_child (box);
+        box.append (label_text);
+        box.append (button);
     }
 
     public void set_text (string text) {

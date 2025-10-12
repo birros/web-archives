@@ -57,13 +57,14 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
 
         header_bar = new HeaderBar ();
         header_bar.set_context (context);
-        set_titlebar (header_bar);
+        set_titlebar (header_bar.get_header_bar());
 
-        notebook = new Notebook ();
+        notebook = new Notebook ().get_notebook ();
         notebook.switch_page.connect (on_notebook_switch_page);
         notebook.page_removed.connect (on_notebook_page_removed);
         notebook.create_window.connect (on_notebook_create_window);
-        add (notebook);
+
+        set_child (notebook);
 
         add_tab (label, page, file);
 
@@ -123,7 +124,6 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
             {"<Primary>question"}
         );
 
-        show_all ();
 
         context.new_tab_button_state.clicked.connect (new_tab);
         context.popover_menu_state.new_window.connect (new_window);
@@ -386,7 +386,6 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
         }
 
         notebook.append_page (page_new, label_new);
-        notebook.show_all ();
     }
 
     private void on_notebook_switch_page (Gtk.Widget page, uint page_num) {
@@ -405,7 +404,7 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
     }
 
     private unowned Gtk.Notebook on_notebook_create_window (
-        Gtk.Widget page, int x, int y
+        Gtk.Notebook notebook2, Gtk.Widget page
     ) {
         info ("create-window");
 
@@ -427,7 +426,7 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
          * flatpak is not fixed.
          * See src/app/ui/gtk/file-chooser-native.vala for more details.
          */
-        FileChooserNative dialog = new FileChooserNative (
+        /*FileChooserNative dialog = new FileChooserNative (
             _("Please choose a file"),
             this,
             Gtk.FileChooserAction.OPEN,
@@ -462,7 +461,7 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
                 info ("Unexpected button clicked");
                 break;
             }
-        }
+        }*/
     }
 
     public void set_context (Context context) {

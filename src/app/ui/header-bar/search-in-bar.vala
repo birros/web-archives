@@ -16,16 +16,14 @@ public class WebArchives.SearchInBar : Gtk.Box {
             _("Find next occurrence of the search string");
 
         search_entry.search_changed.connect (on_search_changed);
-        search_entry.key_release_event.connect (on_key_release_event);
-        search_entry.key_press_event.connect (on_key_press_event);
         search_entry.set_max_width_chars (49);
 
         up_button.clicked.connect (on_up);
         down_button.clicked.connect (on_down);
 
-        add (search_entry);
-        add (up_button);
-        add (down_button);
+        append (search_entry);
+        append (up_button);
+        append (down_button);
 
         get_style_context().add_class ("linked");
     }
@@ -42,47 +40,8 @@ public class WebArchives.SearchInBar : Gtk.Box {
         context.search_in_state.text = search_entry.get_text ();
     }
 
-    private bool on_key_release_event (Gdk.EventKey event) {
-        if (event.keyval == Gdk.Key.Escape) {
-            context.route_state.route = RouteState.Route.WEB;
-        }
-        return false;
-    }
-
-    private bool on_key_press_event (Gdk.EventKey event) {
-        switch (event.keyval) {
-            case Gdk.Key.Return:
-            case Gdk.Key.KP_Enter:
-            {
-                context.search_in_state.next ();
-                return true;
-            }
-            case Gdk.Key.Down:
-            {
-                context.search_in_state.key (SearchInState.Key.DOWN);
-                return true;
-            }
-            case Gdk.Key.Up:
-            {
-                context.search_in_state.key (SearchInState.Key.UP);
-                return true;
-            }
-            case Gdk.Key.Page_Up:
-            {
-                context.search_in_state.key (SearchInState.Key.PAGE_UP);
-                return true;
-            }
-            case Gdk.Key.Page_Down:
-            {
-                context.search_in_state.key (SearchInState.Key.PAGE_DOWN);
-                return true;
-            }
-        }
-        return false;
-    }
-
     private void on_focus () {
-        search_entry.grab_focus_without_selecting ();
+        // search_entry.grab_focus_without_selecting ();
     }
 
     private void on_text () {

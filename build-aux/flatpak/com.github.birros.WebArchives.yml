@@ -1,6 +1,6 @@
 app-id: com.github.birros.WebArchives
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '48'
 sdk: org.gnome.Sdk
 command: web-archives
 finish-args:
@@ -88,24 +88,6 @@ modules:
         url: https://github.com/birros/libzim-glib/archive/v4.0.0.tar.gz
         sha256: f5699b35fa4fce9acedb10a518b487c6b7b0050daf25ba661c0a5d9b817de7e5
 
-  - name: libgee
-    build-options:
-      cflags: -Wno-error=incompatible-pointer-types
-    cleanup:
-      - /include
-      - /lib/girepository-1.0
-      - /lib/pkgconfig
-      - /lib/*.la
-      - /share
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/libgee/0.20/libgee-0.20.8.tar.xz
-        sha256: 189815ac143d89867193b0c52b7dc31f3aa108a15f04d6b5dca2b6adfad0b0ee
-
-  #
-  # require
-  #   libgee
-  #
   - name: libisocodes
     cleanup:
       - /include
@@ -119,24 +101,9 @@ modules:
       - type: archive
         url: https://github.com/toddy15/libisocodes/archive/refs/tags/v1.2.5.tar.gz
         sha256: cbf299de4a6ebf9e0f0cab437c1d2844c603fa479a56dbb83cee3b6684f5dc53
-
-  - name: libhandy
-    buildsystem: meson
-    builddir: true
-    cleanup:
-      - /bin
-      - /include
-      - /lib/girepository-1.0
-      - /lib/pkgconfig
-      - /share
-    sources:
-      - type: archive
-        url: https://gitlab.gnome.org/GNOME/libhandy/-/archive/1.8.3/libhandy-1.8.3.tar.gz
-        sha256: 7e7670f5d0a6d0adc24b888da44dab938a6f52472b8944d6dd4e31b6d3569a5f
-
   #
   # require
-  #   libzim-glib, libisocodes, libhandy
+  #   libzim-glib, libisocodes
   #
   - name: web-archives
     buildsystem: meson

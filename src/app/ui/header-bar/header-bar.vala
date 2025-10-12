@@ -1,7 +1,9 @@
-public class WebArchives.HeaderBar : Gtk.HeaderBar {
+public class WebArchives.HeaderBar {
+    private Adw.HeaderBar header;
     private Context context;
+
     private NewTabButton new_tab_button;
-    private MenuButton menu_button;
+    private Gtk.MenuButton menu_button;
     private NavigationBox navigation_box;
     private Gtk.Stack left_stack;
     private Gtk.Stack center_stack;
@@ -19,74 +21,63 @@ public class WebArchives.HeaderBar : Gtk.HeaderBar {
     private ulong route_callback;
 
     public HeaderBar () {
-        this.set_show_close_button (true);
+        header = new Adw.HeaderBar ();
 
-        // left stack
-        left_stack = new Gtk.Stack ();
-        left_stack.transition_type = Gtk.StackTransitionType.CROSSFADE;
-        left_stack.set_homogeneous (false);
-        pack_start (left_stack);
+        // --- Left stack ---
+        left_stack = new Gtk.Stack () { transition_type = Gtk.StackTransitionType.CROSSFADE };
+        header.pack_start (left_stack);
 
         navigation_box = new NavigationBox ();
-        left_stack.add (navigation_box);
+        left_stack.add_child (navigation_box);
 
         back_button = new Gtk.Button.from_icon_name ("go-previous-symbolic");
         back_button.clicked.connect (on_back);
-        left_stack.add (back_button);
+        left_stack.add_child (back_button);
 
-        // center stack
-        center_stack = new Gtk.Stack ();
-        center_stack.transition_type = Gtk.StackTransitionType.CROSSFADE;
-        center_stack.set_homogeneous (false);
-        set_custom_title (center_stack);
+        // --- Center stack ---
+        center_stack = new Gtk.Stack () { transition_type = Gtk.StackTransitionType.CROSSFADE };
+        // header.set_custom_title (center_stack); // can set later if needed
 
         title_bar = new TitleBar ();
-        center_stack.add (title_bar);
+        center_stack.add_child (title_bar);
 
         search_bar = new SearchBar ();
-        center_stack.add (search_bar);
+        center_stack.add_child (search_bar);
 
         search_in_bar = new SearchInBar ();
-        center_stack.add (search_in_bar);
+        center_stack.add_child (search_in_bar);
 
-        // right_box
+        // --- Right box & stack ---
         Gtk.Box right_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        pack_end (right_box);
+        header.pack_end (right_box);
 
-        // right stack
-        right_stack = new Gtk.Stack ();
-        right_stack.transition_type = Gtk.StackTransitionType.CROSSFADE;
-        right_stack.set_homogeneous (false);
-        right_stack.margin_end = 6;
-        right_box.add (right_stack);
+        right_stack = new Gtk.Stack () { transition_type = Gtk.StackTransitionType.CROSSFADE, margin_end = 6 };
+        right_box.append (right_stack);
 
-        // web box
         web_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        right_stack.add (web_box);
+        right_stack.add_child (web_box);
 
         search_button = new Gtk.Button.from_icon_name ("edit-find-symbolic");
         search_button.tooltip_text = _("Search");
         search_button.clicked.connect (on_search);
-        web_box.add (search_button);
+        web_box.append (search_button);
 
         bookmark_button = new BookmarkButton ();
-        web_box.add (bookmark_button);
+        web_box.append (bookmark_button);
 
-        // empty
         empty = new Gtk.Label (null);
-        right_stack.add (empty);
+        right_stack.add_child (empty);
 
-        // window box
         Gtk.Box window_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        right_box.add (window_box);
+        right_box.append (window_box);
 
         new_tab_button = new NewTabButton ();
-        window_box.add (new_tab_button);
+        window_box.append (new_tab_button);
 
-        menu_button = new MenuButton ();
-        window_box.add (menu_button);
-
-        show_all ();
+        menu_button = new Gtk.MenuButton ();
+        menu_button.set_icon_name ("open-menu-symbolic");
+        menu_button.set_popover (new WebArchives.HeaderBarPopover ());
+        window_box.append (menu_button);
     }
 
     private void on_search () {
@@ -99,37 +90,27 @@ public class WebArchives.HeaderBar : Gtk.HeaderBar {
 
     public void set_context (Context context) {
         if (this.context != null) {
-            bool title_connected = SignalHandler.is_connected (
-                this.context.title_state, title_callback
-            );
-            bool route_connected = SignalHandler.is_connected (
-                this.context.route_state, route_callback
-            );
-            if (title_connected) {
+            if (SignalHandler.is_connected (this.context.title_state, title_callback)) {
                 this.context.title_state.disconnect (title_callback);
             }
-            if (route_connected) {
+            if (SignalHandler.is_connected (this.context.route_state, route_callback)) {
                 this.context.route_state.disconnect (route_callback);
             }
         }
 
         this.context = context;
 
-        title_callback = context.title_state.notify["title"].connect (() => {
-            set_title_text ();
-        });
+        title_callback = context.title_state.notify["title"].connect (() => set_title_text ());
         set_title_text ();
 
-        route_callback = context.route_state.notify["route"].connect (() => {
-            update_view ();
-        });
+        route_callback = context.route_state.notify["route"].connect (() => update_view ());
         update_view ();
 
         navigation_box.set_context (context);
         title_bar.set_context (context);
         search_bar.set_context (context);
         search_in_bar.set_context (context);
-        menu_button.set_context (context);
+        ((WebArchives.HeaderBarPopover) menu_button.get_popover ()).set_context (context);
         new_tab_button.set_context (context);
         bookmark_button.set_context (context);
     }
@@ -137,53 +118,45 @@ public class WebArchives.HeaderBar : Gtk.HeaderBar {
     private void update_view () {
         switch (context.route_state.route) {
             case RouteState.Route.HOME:
-            {
                 center_stack.set_visible_child (title_bar);
                 left_stack.set_visible_child (navigation_box);
                 right_stack.set_visible_child (empty);
                 break;
-            }
             case RouteState.Route.WEB:
-            {
                 center_stack.set_visible_child (title_bar);
                 left_stack.set_visible_child (navigation_box);
                 right_stack.set_visible_child (web_box);
                 break;
-            }
             case RouteState.Route.SEARCH:
-            {
                 center_stack.set_visible_child (search_bar);
                 left_stack.set_visible_child (back_button);
                 right_stack.set_visible_child (empty);
-
-                search_bar.grab_focus_without_selecting ();
                 break;
-            }
             case RouteState.Route.SEARCHIN:
-            {
                 center_stack.set_visible_child (search_in_bar);
                 left_stack.set_visible_child (back_button);
                 right_stack.set_visible_child (empty);
-
                 context.search_in_state.focus ();
                 break;
-            }
             case RouteState.Route.BOOKMARK:
             case RouteState.Route.HISTORY:
-            {
                 center_stack.set_visible_child (title_bar);
                 left_stack.set_visible_child (back_button);
                 right_stack.set_visible_child (empty);
                 break;
-            }
         }
     }
 
     private void set_title_text () {
         if (context.route_state.route == RouteState.Route.HOME) {
-            set_title ("WebArchives");
+            // header.set_title ("WebArchives");
         } else {
-            set_title (context.title_state.title + " - WebArchives");
+            // header.set_title (context.title_state.title + " - WebArchives");
         }
     }
+
+    public Adw.HeaderBar get_header_bar () {
+        return header;
+    }
 }
+

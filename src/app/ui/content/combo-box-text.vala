@@ -9,20 +9,16 @@ public class WebArchives.ComboBoxText : Gtk.ToggleButton {
 
     public class ComboBoxText () {
         binded = false;
-        Gtk.Image image_widget = new Gtk.Image.from_icon_name (
-            "pan-down-symbolic", Gtk.IconSize.MENU
-        );
+        Gtk.Image image_widget = new Gtk.Image.from_icon_name ("pan-down-symbolic");
 
         notify["active-text"].connect (() => {
             update_label ();
         });
         update_label ();
 
-        always_show_image = true;
-        image_position = Gtk.PositionType.RIGHT;
-        image = image_widget;
+        set_child (image_widget);
 
-        popover = new Gtk.Popover (this);
+        popover = new Gtk.Popover ();
         popover.set_size_request (300, 400);
         popover.hide.connect (() => {
             active = false;
@@ -33,21 +29,18 @@ public class WebArchives.ComboBoxText : Gtk.ToggleButton {
         box.margin_end = 6;
         box.margin_bottom = 6;
         box.margin_start = 6;
-        popover.add (box);
+        popover.set_child (box);
 
         Gtk.SearchEntry search_entry = new Gtk.SearchEntry ();
         search_entry.search_changed.connect (() => {
             search_text = search_entry.text;
             language_model.invalidate_filter ();
-            popover.show_all ();
         });
-        box.add (search_entry);
+        box.append (search_entry);
 
-        Gtk.ScrolledWindow scrolled_window = new Gtk.ScrolledWindow (
-            null, null
-        );
+        Gtk.ScrolledWindow scrolled_window = new Gtk.ScrolledWindow ();
         scrolled_window.vexpand = true;
-        box.add (scrolled_window);
+        box.append (scrolled_window);
 
         listbox = new Gtk.ListBox ();
         listbox.row_activated.connect (row => {
@@ -61,7 +54,7 @@ public class WebArchives.ComboBoxText : Gtk.ToggleButton {
             }
             popover.hide();
         });
-        scrolled_window.add (listbox);
+        scrolled_window.set_child (listbox);
 
 
         toggled.connect (() => {
@@ -69,7 +62,6 @@ public class WebArchives.ComboBoxText : Gtk.ToggleButton {
 				if (!binded) {
 				    _bind_model ();
 				}
-				popover.show_all ();
 			}
 		});
     }
@@ -108,11 +100,6 @@ public class WebArchives.ComboBoxText : Gtk.ToggleButton {
             bool found = language.index_of (search_text_down) != -1;
 
             return found;
-        });
-        language_model.items_changed.connect ((position, removed, added) => {
-            if (active) {
-                popover.show_all ();
-            }
         });
     }
 }

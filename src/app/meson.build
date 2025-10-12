@@ -18,6 +18,7 @@ web_archives_sources = [
     'main.vala',
     'application.vala',
     'ui/window.vala',
+    'ui/new-window.vala',
     'ui/header-bar/header-bar.vala',
     'ui/header-bar/navigation-box.vala',
     'ui/header-bar/title-bar.vala',
@@ -25,7 +26,6 @@ web_archives_sources = [
     'ui/header-bar/search-in-bar.vala',
     'ui/header-bar/bookmark-button.vala',
     'ui/header-bar/new-tab-button.vala',
-    'ui/header-bar/menu-button.vala',
     'ui/header-bar/popover-menu.vala',
     'ui/header-bar/zoom-box.vala',
     'ui/header-bar/night-mode-button.vala',
@@ -116,7 +116,6 @@ web_archives_sources = [
     'ui/gtk/notebook/notebook.vala',
     'ui/gtk/notebook/notebook-tab-label.vala',
     'ui/gtk/notebook/notebook-popup-menu.vala',
-    'ui/gtk/file-chooser-native.vala',
     resources
 ]
 
@@ -124,19 +123,18 @@ executable(
     'web-archives',
     [config_file, web_archives_sources],
     c_args: [
-        '-DGETTEXT_PACKAGE='+conf.get('GETTEXT_PACKAGE'),
-        '-DHANDY_USE_UNSTABLE_API=true'
+        '-DGETTEXT_PACKAGE='+conf.get('GETTEXT_PACKAGE')
     ],
     dependencies: [
         gtk_dep,
+        adw_dep,
         zim_dep,
         sqlite_dep,
         webkit_dep,
         soup_dep,
         tracker_dep,
         xml_dep,
-        isocodes_dep,
-        handy_dep
+        isocodes_dep
     ],
     install: true
 )

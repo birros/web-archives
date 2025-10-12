@@ -22,10 +22,10 @@ public class WebArchives.NavigationBox : Gtk.Box {
 
         box.get_style_context().add_class ("linked");
 
-        add (home_button);
-        add (box);
-        box.add (previous_button);
-        box.add (next_button);
+        append (home_button);
+        append (box);
+        box.append (previous_button);
+        box.append (next_button);
 
         home_button.clicked.connect (on_home);
         previous_button.clicked.connect (on_previous);

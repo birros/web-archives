@@ -15,17 +15,17 @@ public class WebArchives.ZoomBox : Gtk.Box {
         zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic");
         zoom_out_button.tooltip_text = _("Zoom out");
         zoom_out_button.clicked.connect (on_zoom_out);
-        add (zoom_out_button);
+        append (zoom_out_button);
 
         zoom_label_button = new Gtk.Button.with_label ("100%");
         zoom_label_button.tooltip_text = _("Reset zoom");
         zoom_label_button.clicked.connect (on_zoom_reset);
-        add (zoom_label_button);
+        append (zoom_label_button);
 
         zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic");
         zoom_in_button.tooltip_text = _("Zoom in");
         zoom_in_button.clicked.connect (on_zoom_in);
-        add (zoom_in_button);
+        append (zoom_in_button);
     }
 
     private void on_can_zoom_out () {

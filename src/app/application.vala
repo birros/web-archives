@@ -82,7 +82,8 @@ public class WebArchives.Application : Adw.Application {
 
     protected override void activate () {
         Context window_context = new Context.fork (context, Context.Layer.APP);
-        Window window = new Window (this, window_context);
+        // Window window = new Window (this, window_context);
+        var window = new NewWindow (this, window_context);
 
         window.show ();
 

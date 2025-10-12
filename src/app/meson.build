@@ -18,6 +18,7 @@ web_archives_sources = [
     'main.vala',
     'application.vala',
     'ui/window.vala',
+    'ui/new-window.vala',
     'ui/header-bar/header-bar.vala',
     'ui/header-bar/navigation-box.vala',
     'ui/header-bar/title-bar.vala',

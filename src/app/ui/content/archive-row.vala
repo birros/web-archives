@@ -146,3 +146,4 @@ public class WebArchives.ArchiveRow : Gtk.ListBoxRow {
         }
     }
 }
+

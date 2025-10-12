@@ -1,5 +1,5 @@
-public class WebArchives.HeaderBar : Adw.Bin {
-    private Gtk.HeaderBar header;
+public class WebArchives.HeaderBar {
+    private Adw.HeaderBar header;
     private Context context;
 
     private NewTabButton new_tab_button;
@@ -21,8 +21,7 @@ public class WebArchives.HeaderBar : Adw.Bin {
     private ulong route_callback;
 
     public HeaderBar () {
-        header = new Gtk.HeaderBar ();
-        set_child (header);
+        header = new Adw.HeaderBar ();
 
         // --- Left stack ---
         left_stack = new Gtk.Stack () { transition_type = Gtk.StackTransitionType.CROSSFADE };
@@ -156,7 +155,7 @@ public class WebArchives.HeaderBar : Adw.Bin {
         }
     }
 
-    public Gtk.HeaderBar get_header_bar () {
+    public Adw.HeaderBar get_header_bar () {
         return header;
     }
 }

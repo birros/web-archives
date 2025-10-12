@@ -57,7 +57,7 @@ public class WebArchives.Window : Gtk.ApplicationWindow {
 
         header_bar = new HeaderBar ();
         header_bar.set_context (context);
-        set_titlebar (header_bar);
+        set_titlebar (header_bar.get_header_bar());
 
         notebook = new Notebook ().get_notebook ();
         notebook.switch_page.connect (on_notebook_switch_page);

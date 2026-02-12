@@ -14,6 +14,16 @@ finish-args:
   - --talk-name=org.freedesktop.Tracker3.Miner.Files
   # Used to download files
   - --share=network
+cleanup:
+  - /include
+  - /lib/cmake
+  - /lib/girepository-1.0
+  - /lib/pkgconfig
+  - /share/gir-1.0
+  - /share/vala
+  - '*.la'
+  - '*.a'
+  
 modules:
   - name: xapian-core
     config-opts:
@@ -24,32 +34,15 @@ modules:
       - --disable-documentation
     cleanup:
       - /bin
-      - /include
-      - /lib/pkgconfig
-      - /lib/cmake
-      - /lib/*.la
       - /share
     sources:
       - type: archive
         url: https://oligarchy.co.uk/xapian/1.4.29/xapian-core-1.4.29.tar.xz
         sha256: c55c9bc8613ad3ec2c218eafca088c218ab7cddcba7ef08f3af0e542f4e521bc
 
-  - name: zstd
-    buildsystem: meson
-    builddir: true
-    subdir: build/meson
-    config-opts:
-      - -Dbin_programs=false
-      - -Dbin_contrib=false
-    sources:
-      - type: archive
-        url: https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz
-        sha256: eb33e51f49a15e023950cd7825ca74a4a2b43db8354825ac24fc1b7ee09e6fa3
-
   #
   # require
   #   xapian-core
-  #   zstd
   #
   - name: libzim
     buildsystem: meson
@@ -63,8 +56,6 @@ modules:
       - -Dexamples=false
     cleanup:
       - /bin
-      - /include
-      - /lib/pkgconfig
     sources:
       - type: git
         url: https://github.com/openzim/libzim.git
@@ -79,9 +70,6 @@ modules:
     buildsystem: meson
     builddir: true
     cleanup:
-      - /include
-      - /lib/girepository-1.0
-      - /lib/pkgconfig
       - /share
     sources:
       - type: archive
@@ -89,14 +77,6 @@ modules:
         sha256: f5699b35fa4fce9acedb10a518b487c6b7b0050daf25ba661c0a5d9b817de7e5
 
   - name: libisocodes
-    cleanup:
-      - /include
-      - /lib/girepository-1.0
-      - /lib/pkgconfig
-      - /lib/*.la
-      - /lib/*.a
-      - /share/gir-1.0
-      - /share/vala
     sources:
       - type: archive
         url: https://github.com/toddy15/libisocodes/archive/refs/tags/v1.2.5.tar.gz
